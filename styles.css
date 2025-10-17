@@ -2,24 +2,20 @@
 .squealer {
   font-family: "Squealer", sans-serif;
 }
-h1 {
-  font-family: "Squealer", sans-serif;
-}
-h2 {
+.anton {
   font-family: "Anton", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
-p {
+* {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-style: normal;
+  font-size: 20px;
 }
 .navbar.sticky-top {
   position: sticky !important;
   top: 0;
   z-index: 1050;
-  background-color: black;
+  background-color: #0d0f11;
 }
 .nav-item {
   transition: all 0.3 ease-in-out;
@@ -55,6 +51,15 @@ p {
       0 0 10px #e60000,
       0 0 20px #e60000;
   }
+}
+.clickable {
+  cursor: pointer;
+}
+.card {
+  background-color: #131518;
+}
+.card-date {
+  background-color: #0d0f11;
 }
 
 /* angular:styles/global:styles */

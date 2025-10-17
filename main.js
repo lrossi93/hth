@@ -38558,12 +38558,211 @@ function provideRouterInitializer() {
 // node_modules/@angular/router/fesm2022/router.mjs
 var VERSION4 = new Version("19.2.15");
 
-// src/app/home/home.component.ts
-var HomeComponent = class _HomeComponent {
-  static \u0275fac = function HomeComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _HomeComponent)();
+// src/app/calendar.service.ts
+var CalendarService = class _CalendarService {
+  http;
+  calendarId = "hth.events.calendar@gmail.com";
+  calendarPath = "https://www.googleapis.com/calendar/v3/calendars/";
+  apiKey = "AIzaSyDYzAqjmo_0x17ZLwA8MdcqnzQ5G88qurE";
+  constructor(http) {
+    this.http = http;
+  }
+  getCalendarEventsPromise() {
+    let path = this.calendarPath + this.calendarId + "/events?key=" + this.apiKey + "&singleEvents=true&orderBy=startTime";
+    return this.http.get(path, {
+      responseType: "json"
+    });
+  }
+  isMobileDevice() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    return /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+  }
+  gMapsLink(address) {
+    const encodedAddress = encodeURIComponent(address);
+    if (this.isMobileDevice()) {
+      return `https://www.google.com/maps/search/?query=${encodedAddress}`;
+    } else {
+      return `https://www.google.com/maps/search/?q=${encodedAddress}`;
+    }
+  }
+  static \u0275fac = function CalendarService_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CalendarService)(\u0275\u0275inject(HttpClient));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HomeComponent, selectors: [["app-home"]], decls: 42, vars: 0, consts: [[1, "hero"], [1, "video-background"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/sxa4SvJCol0?autoplay=1&mute=1&controls=0&loop=1&playlist=sxa4SvJCol0&modestbranding=1&showinfo=0`, "frameborder", "0", "allow", "autoplay; fullscreen", "allowfullscreen", ""], [1, "hero-content"], ["src", "/media/hth-logo.png", "alt", "HTH Logo", 1, "p-3", 2, "max-height", "200px"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", "fs-3", 2, "text-align", "justify"], [1, "mt-5", "fw-bold"]], template: function HomeComponent_Template(rf, ctx) {
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _CalendarService, factory: _CalendarService.\u0275fac, providedIn: "root" });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CalendarService, [{
+    type: Injectable,
+    args: [{
+      providedIn: "root"
+    }]
+  }], () => [{ type: HttpClient }], null);
+})();
+
+// src/app/home/home.component.ts
+function HomeComponent_Conditional_12_For_13_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "a", 36);
+    \u0275\u0275text(1);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const link_r1 = ctx.$implicit;
+    \u0275\u0275propertyInterpolate("href", link_r1.value, \u0275\u0275sanitizeUrl);
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(link_r1.name);
+  }
+}
+function HomeComponent_Conditional_12_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 7)(1, "div", 29)(2, "div", 30);
+    \u0275\u0275text(3);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(4, "div", 31)(5, "h3", 32);
+    \u0275\u0275text(6);
+    \u0275\u0275elementEnd();
+    \u0275\u0275element(7, "hr", 33);
+    \u0275\u0275elementStart(8, "div", 34);
+    \u0275\u0275text(9);
+    \u0275\u0275element(10, "br");
+    \u0275\u0275elementStart(11, "div", 35);
+    \u0275\u0275repeaterCreate(12, HomeComponent_Conditional_12_For_13_Template, 2, 2, "a", 36, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275elementEnd()();
+    \u0275\u0275element(14, "hr", 33);
+    \u0275\u0275elementStart(15, "div", 37);
+    \u0275\u0275element(16, "i", 38);
+    \u0275\u0275text(17);
+    \u0275\u0275elementEnd()()()();
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate2(" ", ctx_r1.formatDate(ctx_r1.separateDateAndTime(ctx_r1.nextEvent.start.dateTime).date), " h", ctx_r1.formatTime(ctx_r1.nextEvent.start.dateTime), " ");
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate(ctx_r1.nextEvent.summary);
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate1(" ", ctx_r1.nextEvent.description, "");
+    \u0275\u0275advance(3);
+    \u0275\u0275repeater(ctx_r1.nextEvent.links);
+    \u0275\u0275advance(5);
+    \u0275\u0275textInterpolate1(" ", ctx_r1.nextEvent.location, " ");
+  }
+}
+function HomeComponent_Conditional_13_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 8)(1, "div", 39)(2, "span", 40);
+    \u0275\u0275text(3, "Loading...");
+    \u0275\u0275elementEnd()()();
+  }
+}
+var HomeComponent = class _HomeComponent {
+  calendar;
+  events = [];
+  upcoming = [];
+  past = [];
+  today = /* @__PURE__ */ new Date();
+  nextEvent;
+  loading = false;
+  constructor(calendarService) {
+    this.calendar = calendarService;
+  }
+  ngOnInit() {
+    this.loading = true;
+    this.calendar.getCalendarEventsPromise().subscribe((res) => {
+      let response = res;
+      this.events = response.items;
+      this.filterEvents(this.events);
+      this.nextEvent = this.upcoming[0];
+      console.log(this.nextEvent);
+      this.loading = false;
+    });
+  }
+  filterEvents(events) {
+    let todayYyyyMmDd = this.separateDateAndTime(this.today.toISOString())["date"];
+    for (let i = 0; i < events.length; ++i) {
+      events[i].links = this.extractLinksFromDescription(events[i].description);
+      events[i].description = this.cleanDescription(events[i].description);
+      if (this.separateDateAndTime(events[i].start.dateTime)["date"] >= todayYyyyMmDd) {
+        this.upcoming.push(events[i]);
+      } else {
+        this.past.unshift(events[i]);
+      }
+      console.log("Descrizione evento:", events[i].description);
+      console.log("Link trovati:", events[i].links);
+    }
+    console.log("next");
+    console.log(this.upcoming);
+    console.log("past");
+    console.log(this.past);
+  }
+  cleanDescription(description) {
+    return description.replace(/\[.*?\]/g, "").trim();
+  }
+  //TODO
+  extractLinksFromDescription(description) {
+    const links = [];
+    if (!description)
+      return links;
+    const regex = /\[([^\]]+)\]/g;
+    const matches = description.match(regex);
+    if (!matches)
+      return links;
+    for (const match2 of matches) {
+      const content = match2.slice(1, -1).trim();
+      const parts = content.split(";").map((p) => p.trim()).filter(Boolean);
+      for (const part of parts) {
+        const [key, value] = part.split(")").map((p) => p.trim());
+        if (key && value && value.startsWith("http")) {
+          links.push({ key, value });
+        }
+      }
+    }
+    console.debug("\u{1F517} Links trovati:", links);
+    return links;
+  }
+  extractLinks(text) {
+    if (!text)
+      return [];
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const matches = text.match(urlRegex);
+    return matches || [];
+  }
+  getDescriptionWithLinks(description) {
+    if (!description)
+      return "";
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    return description.replace(urlRegex, (url) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`);
+  }
+  removeLinks(text) {
+    if (!text)
+      return "";
+    const urlRegex = /(https?:\/\/[^\s]+|www\.[^\s]+)/g;
+    return text.replace(urlRegex, "");
+  }
+  separateDateAndTime(datetime) {
+    const date = datetime.split("T")[0];
+    const time = datetime.split("T")[1];
+    return {
+      date,
+      time: time.replace("Z", "")
+    };
+  }
+  formatDate(dateString) {
+    const date = new Date(dateString);
+    return new Intl.DateTimeFormat("it-IT", {
+      day: "2-digit",
+      month: "short",
+      // Abbreviated month
+      year: "numeric"
+    }).format(date);
+  }
+  formatTime(datetimeString) {
+    return datetimeString.slice(11, 16);
+  }
+  static \u0275fac = function HomeComponent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _HomeComponent)(\u0275\u0275directiveInject(CalendarService));
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HomeComponent, selectors: [["app-home"]], decls: 101, vars: 1, consts: [[1, "hero"], [1, "video-background"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/sxa4SvJCol0?autoplay=1&mute=1&controls=0&loop=1&playlist=sxa4SvJCol0&modestbranding=1&showinfo=0`, "frameborder", "0", "allow", "autoplay; fullscreen", "allowfullscreen", ""], [1, "hero-content"], ["src", "/media/hth-logo.png", "alt", "HTH Logo", 1, "p-3", 2, "max-height", "200px"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", "fs-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "text-center"], [1, "mt-5", "anton", "text-uppercase"], [1, "album", "py-3"], [1, "container"], [1, "cards-wrapper"], [1, "card-item"], ["routerLink", "/members/francesco"], [1, "card", "border-0", "rounded-0", "m-3", "box-shadow", "shadow-hover"], ["data-src", "holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail", "alt", "Titolo", "src", "https://placehold.co/300x300", 1, "card-img", "rounded-0"], [1, "card-body", "nav"], [1, "card-title", "anton", "text-uppercase"], [1, "card-text"], [1, "card-footer", "d-flex", "justify-content-end", "align-items-center", "rounded-0"], [1, "text-muted", "text-end"], [1, "fa-solid", "fa-angles-right"], ["routerLink", "/members/andrea"], ["routerLink", "/members/davide"], ["routerLink", "/members/jacopo"], ["routerLink", "/members/eros"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", 2, "text-align", "justify"], [1, "mb-5"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, ""], [3, "href"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "section", 0)(1, "div", 1);
       \u0275\u0275element(2, "iframe", 2);
@@ -38575,65 +38774,115 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275elementStart(7, "h2");
       \u0275\u0275text(8, "AC/DC Tribute Band");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(9, "div", 5)(10, "p");
-      \u0275\u0275text(11, " Gli Highway to Hell non sono una semplice tribute band, ma un\u2019autentica esplosione di energia rock! \u{1F3B8}\u{1F525} Con un sound fedele agli AC/DC, un\u2019attenzione maniacale ai dettagli e una presenza scenica travolgente, portano il pubblico dentro un\u2019esperienza elettrizzante, proprio come in un vero concerto della leggendaria band australiana. ");
+      \u0275\u0275elementStart(9, "div", 5)(10, "h2", 6);
+      \u0275\u0275text(11, "Prossimo concerto");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(12, "h3", 6);
-      \u0275\u0275text(13, " \u{1F4A5} La band: ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(14, "p");
-      \u0275\u0275text(15, " \u{1F3B8} Jacopo \u2013 Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura. ");
+      \u0275\u0275template(12, HomeComponent_Conditional_12_Template, 18, 5, "div", 7)(13, HomeComponent_Conditional_13_Template, 4, 0, "div", 8);
+      \u0275\u0275elementStart(14, "h3", 9);
+      \u0275\u0275text(15, " La band ");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(16, "p");
-      \u0275\u0275text(17, " \u{1F3B8} Francesco \u2013 Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young. ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(18, "p");
-      \u0275\u0275text(19, " \u{1F941} Andrea \u2013 Batteria, una macchina da guerra che richiama la potenza di Chris Slade. ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(20, "p");
-      \u0275\u0275text(21, " \u{1F3A4} Eros \u2013 Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva. ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(22, "p");
-      \u0275\u0275text(23, " \u{1F3B8} Davide \u2013 Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams. ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(24, "h3", 6);
-      \u0275\u0275text(25, " \u26A1 FROM BON TO BRIAN: L\u2019OMAGGIO ALLA STORIA DEGLI AC/DC ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(26, "p");
-      \u0275\u0275text(27, " Oltre al classico show, gli Highway to Hell presentano un\u2019esperienza unica con il format \u201CFrom Bon to Brian\u201D, un viaggio attraverso due epoche leggendarie: ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(28, "p");
-      \u0275\u0275text(29, " \u{1F525} Matteo Giovannone, il miglior interprete di Bon Scott in Italia, con una somiglianza vocale e fisica impressionante. ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(30, "p");
-      \u0275\u0275text(31, " \u{1F3B6} Lorenzo Rossi alla cornamusa, per ricreare le iconiche sonorit\xE0 di brani come \u201CIt\u2019s a Long Way to the Top\u201D. ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(32, "h3", 6);
-      \u0275\u0275text(33, " \u{1F3A4} SYMPHONY OF THUNDER: GLI AC/DC IN VERSIONE SINFONICA ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(34, "p");
-      \u0275\u0275text(35, " Dal 2024, gli Highway to Hell sono i primi in Italia a presentare lo spettacolo \u201CSymphony of Thunder\u201D, un\u2019innovativa fusione tra il rock puro degli AC/DC e la potenza di un\u2019orchestra sinfonica. Un viaggio emozionante tra i pi\xF9 grandi successi della band, da \u201CBack in Black\u201D a \u201CThunderstruck\u201D, reinterpretati in chiave orchestrale per un impatto sonoro senza precedenti! ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(36, "h3", 6);
-      \u0275\u0275text(37, " \u{1F525} UNA BAND DA PALCO, UNA BAND DA EVENTO! ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(38, "p");
-      \u0275\u0275text(39, " Gli Highway to Hell hanno calcato palcoscenici prestigiosi come EICMA, dove per due anni consecutivi sono stati la resident band del palco Motolive, portando il loro show in uno dei pi\xF9 grandi eventi motoristici al mondo. ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(40, "p");
-      \u0275\u0275text(41, " Se cerchi un concerto AC/DC indimenticabile, una tribute band professionale per festival, eventi o motoraduni, gli Highway to Hell sono la scelta giusta per un\u2019esperienza ad alto voltaggio! \u26A1 ");
+      \u0275\u0275text(17, " Gli Highway to Hell non sono una semplice tribute band, ma un\u2019autentica esplosione di energia rock! \u{1F3B8}\u{1F525} Con un sound fedele agli AC/DC, un\u2019attenzione maniacale ai dettagli e una presenza scenica travolgente, portano il pubblico dentro un\u2019esperienza elettrizzante, proprio come in un vero concerto della leggendaria band australiana. ");
       \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(18, "div", 10)(19, "div", 11)(20, "div", 12)(21, "div", 13)(22, "a", 14)(23, "div", 15);
+      \u0275\u0275element(24, "img", 16);
+      \u0275\u0275elementStart(25, "div", 17)(26, "h2", 18);
+      \u0275\u0275text(27, "Francesco");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(28, "p", 19);
+      \u0275\u0275text(29, "Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(30, "div", 20)(31, "small", 21);
+      \u0275\u0275element(32, "i", 22);
+      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275elementStart(33, "div", 13)(34, "a", 23)(35, "div", 15);
+      \u0275\u0275element(36, "img", 16);
+      \u0275\u0275elementStart(37, "div", 17)(38, "h2", 18);
+      \u0275\u0275text(39, "Andrea");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(40, "p", 19);
+      \u0275\u0275text(41, "Batteria, una macchina da guerra che richiama la potenza di Chris Slade.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(42, "div", 20)(43, "small", 21);
+      \u0275\u0275element(44, "i", 22);
+      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275elementStart(45, "div", 13)(46, "a", 24)(47, "div", 15);
+      \u0275\u0275element(48, "img", 16);
+      \u0275\u0275elementStart(49, "div", 17)(50, "h2", 18);
+      \u0275\u0275text(51, "Davide");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(52, "p", 19);
+      \u0275\u0275text(53, "Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(54, "div", 20)(55, "small", 21);
+      \u0275\u0275element(56, "i", 22);
+      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275elementStart(57, "div", 13)(58, "a", 25)(59, "div", 15);
+      \u0275\u0275element(60, "img", 16);
+      \u0275\u0275elementStart(61, "div", 17)(62, "h2", 18);
+      \u0275\u0275text(63, "Jacopo");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(64, "p", 19);
+      \u0275\u0275text(65, "Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(66, "div", 20)(67, "small", 21);
+      \u0275\u0275element(68, "i", 22);
+      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275elementStart(69, "div", 13)(70, "a", 26)(71, "div", 15);
+      \u0275\u0275element(72, "img", 16);
+      \u0275\u0275elementStart(73, "div", 17)(74, "h2", 18);
+      \u0275\u0275text(75, "Eros");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(76, "p", 19);
+      \u0275\u0275text(77, "Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(78, "div", 20)(79, "small", 21);
+      \u0275\u0275element(80, "i", 22);
+      \u0275\u0275elementEnd()()()()()()()();
+      \u0275\u0275elementStart(81, "div", 27)(82, "h3", 6);
+      \u0275\u0275text(83, " \u26A1 FROM BON TO BRIAN: L\u2019OMAGGIO ALLA STORIA DEGLI AC/DC ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(84, "p");
+      \u0275\u0275text(85, " Oltre al classico show, gli Highway to Hell presentano un\u2019esperienza unica con il format \u201CFrom Bon to Brian\u201D, un viaggio attraverso due epoche leggendarie: ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(86, "p");
+      \u0275\u0275text(87, " \u{1F525} Matteo Giovannone, il miglior interprete di Bon Scott in Italia, con una somiglianza vocale e fisica impressionante. ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(88, "p");
+      \u0275\u0275text(89, " \u{1F3B6} Lorenzo Rossi alla cornamusa, per ricreare le iconiche sonorit\xE0 di brani come \u201CIt\u2019s a Long Way to the Top\u201D. ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(90, "h3", 9);
+      \u0275\u0275text(91, " \u{1F3A4} SYMPHONY OF THUNDER: GLI AC/DC IN VERSIONE SINFONICA ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(92, "p");
+      \u0275\u0275text(93, " Dal 2024, gli Highway to Hell sono i primi in Italia a presentare lo spettacolo \u201CSymphony of Thunder\u201D, un\u2019innovativa fusione tra il rock puro degli AC/DC e la potenza di un\u2019orchestra sinfonica. Un viaggio emozionante tra i pi\xF9 grandi successi della band, da \u201CBack in Black\u201D a \u201CThunderstruck\u201D, reinterpretati in chiave orchestrale per un impatto sonoro senza precedenti! ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(94, "h3", 9);
+      \u0275\u0275text(95, " \u{1F525} UNA BAND DA PALCO, UNA BAND DA EVENTO! ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(96, "p");
+      \u0275\u0275text(97, " Gli Highway to Hell hanno calcato palcoscenici prestigiosi come EICMA, dove per due anni consecutivi sono stati la resident band del palco Motolive, portando il loro show in uno dei pi\xF9 grandi eventi motoristici al mondo. ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(98, "p");
+      \u0275\u0275text(99, " Se cerchi un concerto AC/DC indimenticabile, una tribute band professionale per festival, eventi o motoraduni, gli Highway to Hell sono la scelta giusta per un\u2019esperienza ad alto voltaggio! \u26A1 ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(100, "p", 28);
+      \u0275\u0275elementEnd();
     }
-  }, styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100vh;\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  color: white;\n  background: rgba(0, 0, 0, 0.7);\n}\n.video-background[_ngcontent-%COMP%]   iframe[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  height: 100vh;\n  width: calc(100vh * 16 / 9);\n  min-width: 100%;\n  min-height: 100%;\n  transform: translate(-50%, -50%);\n  pointer-events: none;\n  transition: all 0.3s ease-in-out;\n}\n.video-background[_ngcontent-%COMP%]   iframe[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 120%;\n  height: 120%;\n  transform: translate(-50%, -50%);\n  pointer-events: none;\n  transition: all 0.3s ease-in-out;\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);\n}\n.hero[_ngcontent-%COMP%]::before {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background: rgba(0, 0, 0, 0.35);\n  z-index: 0;\n}\n@media (max-width: 768px) {\n  .video-background[_ngcontent-%COMP%]   iframe[_ngcontent-%COMP%] {\n    width: 220%;\n    height: 220%;\n  }\n}\n/*# sourceMappingURL=home.component.css.map */'] });
+    if (rf & 2) {
+      \u0275\u0275advance(12);
+      \u0275\u0275conditional(!ctx.loading ? 12 : ctx.loading ? 13 : -1);
+    }
+  }, dependencies: [RouterLink], styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  height: 100vh;\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  color: white;\n  background: rgba(0, 0, 0, 0.7);\n}\n.video-background[_ngcontent-%COMP%]   iframe[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  height: 100vh;\n  width: calc(100vh * 16 / 9);\n  min-width: 100%;\n  min-height: 100%;\n  transform: translate(-50%, -50%);\n  pointer-events: none;\n  transition: all 0.3s ease-in-out;\n}\n.video-background[_ngcontent-%COMP%]   iframe[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 120%;\n  height: 120%;\n  transform: translate(-50%, -50%);\n  pointer-events: none;\n  transition: all 0.3s ease-in-out;\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);\n}\n.hero[_ngcontent-%COMP%]::before {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background: rgba(0, 0, 0, 0.35);\n  z-index: 0;\n}\n@media (max-width: 768px) {\n  .video-background[_ngcontent-%COMP%]   iframe[_ngcontent-%COMP%] {\n    width: 220%;\n    height: 220%;\n  }\n}\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.card[_ngcontent-%COMP%] {\n  overflow: hidden;\n}\n.card-img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n}\n.card[_ngcontent-%COMP%]:hover   .card-img[_ngcontent-%COMP%] {\n  transform: scale(1.05);\n}\n.card-item[_ngcontent-%COMP%]    > a[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n/*# sourceMappingURL=home.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HomeComponent, [{
     type: Component,
-    args: [{ selector: "app-home", imports: [], template: '<!-- Hero -->\n <section class="hero">\n  <div class="video-background">\n    <iframe\n      src="https://www.youtube.com/embed/sxa4SvJCol0?autoplay=1&mute=1&controls=0&loop=1&playlist=sxa4SvJCol0&modestbranding=1&showinfo=0"\n      frameborder="0"\n      allow="autoplay; fullscreen"\n      allowfullscreen\n    ></iframe>\n  </div>\n\n  <div class="hero-content">\n    <h1>Highway to Hell</h1>\n    <img class="p-3" src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 200px;">\n    <h2>AC/DC Tribute Band</h2>\n  </div>\n</section>\n<!-- <section class="hero">\n    <div class="hero-content">\n        <h1>Highway to Hell</h1>\n        <h2>AC/DC Tribute Band</h2>\n    </div>\n</section> -->\n\n<div class="col-lg-8 mx-auto my-5 mb-0 px-3 fs-3" style="text-align: justify;">\n    <p>\n        Gli Highway to Hell non sono una semplice tribute band, ma un\u2019autentica esplosione di energia rock! \u{1F3B8}\u{1F525} Con un\n        sound fedele agli AC/DC, un\u2019attenzione maniacale ai dettagli e una presenza scenica travolgente, portano il\n        pubblico dentro un\u2019esperienza elettrizzante, proprio come in un vero concerto della leggendaria band\n        australiana.\n    </p>\n    <h3 class="mt-5 fw-bold">\n        \u{1F4A5} La band:\n    </h3>\n    <p>\n        \u{1F3B8} Jacopo \u2013 Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura.\n    </p>\n    <p>\n        \u{1F3B8} Francesco \u2013 Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young.\n    </p>\n    <p>\n        \u{1F941} Andrea \u2013 Batteria, una macchina da guerra che richiama la potenza di Chris Slade.\n    </p>\n    <p>\n        \u{1F3A4} Eros \u2013 Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.\n    </p>\n    <p>\n        \u{1F3B8} Davide \u2013 Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams.\n    </p>\n\n    <h3 class="mt-5 fw-bold">\n        \u26A1 FROM BON TO BRIAN: L\u2019OMAGGIO ALLA STORIA DEGLI AC/DC\n    </h3>\n    <p>\n        Oltre al classico show, gli Highway to Hell presentano un\u2019esperienza unica con il format \u201CFrom Bon to Brian\u201D, un\n        viaggio attraverso due epoche leggendarie:\n    </p>\n    <p>\n        \u{1F525} Matteo Giovannone, il miglior interprete di Bon Scott in Italia, con una somiglianza vocale e fisica\n        impressionante.\n    </p>\n    <p>\n        \u{1F3B6} Lorenzo Rossi alla cornamusa, per ricreare le iconiche sonorit\xE0 di brani come \u201CIt\u2019s a Long Way to the Top\u201D.\n    </p>\n\n    <h3 class="mt-5 fw-bold">\n        \u{1F3A4} SYMPHONY OF THUNDER: GLI AC/DC IN VERSIONE SINFONICA\n    </h3>\n    <p>\n        Dal 2024, gli Highway to Hell sono i primi in Italia a presentare lo spettacolo \u201CSymphony of Thunder\u201D,\n        un\u2019innovativa\n        fusione tra il rock puro degli AC/DC e la potenza di un\u2019orchestra sinfonica. Un viaggio emozionante tra i pi\xF9\n        grandi\n        successi della band, da \u201CBack in Black\u201D a \u201CThunderstruck\u201D, reinterpretati in chiave orchestrale per un impatto\n        sonoro senza precedenti!\n    </p>\n\n    <h3 class="mt-5 fw-bold">\n        \u{1F525} UNA BAND DA PALCO, UNA BAND DA EVENTO!\n    </h3>\n    <p>\n        Gli Highway to Hell hanno calcato palcoscenici prestigiosi come EICMA, dove per due anni consecutivi sono stati\n        la\n        resident band del palco Motolive, portando il loro show in uno dei pi\xF9 grandi eventi motoristici al mondo.\n    </p>\n\n    <p>\n        Se cerchi un concerto AC/DC indimenticabile, una tribute band professionale per festival, eventi o motoraduni,\n        gli\n        Highway to Hell sono la scelta giusta per un\u2019esperienza ad alto voltaggio! \u26A1\n    </p>\n</div>', styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  height: 100vh;\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  color: white;\n  background: rgba(0, 0, 0, 0.7);\n}\n.video-background iframe {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  height: 100vh;\n  width: calc(100vh * 16 / 9);\n  min-width: 100%;\n  min-height: 100%;\n  transform: translate(-50%, -50%);\n  pointer-events: none;\n  transition: all 0.3s ease-in-out;\n}\n.video-background iframe {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 120%;\n  height: 120%;\n  transform: translate(-50%, -50%);\n  pointer-events: none;\n  transition: all 0.3s ease-in-out;\n}\n.hero-content {\n  position: relative;\n  z-index: 1;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);\n}\n.hero::before {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background: rgba(0, 0, 0, 0.35);\n  z-index: 0;\n}\n@media (max-width: 768px) {\n  .video-background iframe {\n    width: 220%;\n    height: 220%;\n  }\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
-  }], null, null);
+    args: [{ selector: "app-home", imports: [RouterLink], template: '<!-- Hero -->\n<section class="hero">\n    <div class="video-background">\n        <iframe\n            src="https://www.youtube.com/embed/sxa4SvJCol0?autoplay=1&mute=1&controls=0&loop=1&playlist=sxa4SvJCol0&modestbranding=1&showinfo=0"\n            frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>\n    </div>\n\n    <div class="hero-content">\n        <h1>Highway to Hell</h1>\n        <img class="p-3" src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 200px;">\n        <h2>AC/DC Tribute Band</h2>\n    </div>\n</section>\n<!-- <section class="hero">\n    <div class="hero-content">\n        <h1>Highway to Hell</h1>\n        <h2>AC/DC Tribute Band</h2>\n    </div>\n</section> -->\n\n<div class="col-lg-8 mx-auto my-5 mb-0 px-3 fs-3" style="text-align: justify;">\n    <h2 class="anton text-uppercase">Prossimo concerto</h2>\n\n    <!--  -->\n    @if(!loading) {\n    <!-- <div class="m-3 border-0 rounded-0 shadow-hover">\n        <div class="row">\n            <div class="col-2 text-uppercase anton fs-2 text-center d-flex align-items-center card-date">\n                {{formatDate(separateDateAndTime(nextEvent.start.dateTime).date)}}\n                <br>\n                h{{formatTime(nextEvent.start.dateTime)}}<br>\n            </div>\n            <div class="col-10 d-flex flex-column card border-0 rounded-0">\n                <h3 class="text-uppercase anton m-3 card-title">{{nextEvent.summary}}</h3>\n                <hr class="m-0">\n                <div class="card-body">\n                    {{nextEvent.description}}<br>\n                    {{nextEvent.links}}\n                </div>\n                <hr class="m-0">\n                <div class="card-body rounded-0">\n                    <i class="fa-solid fa-location-dot"></i> {{nextEvent.location}}\n                </div>\n            </div>\n        </div>\n    </div> -->\n    <div class="m-3 border-0 rounded-0 shadow-hover">\n        <div class="row d-flex flex-wrap align-items-stretch">\n            <!-- Colonna con data e ora -->\n            <div\n                class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">\n                {{formatDate(separateDateAndTime(nextEvent.start.dateTime).date)}} h{{formatTime(nextEvent.start.dateTime)}}\n            </div>\n\n            <!-- Colonna con contenuto principale -->\n            <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">\n                <h3 class="text-uppercase anton m-3 card-title">{{nextEvent.summary}}</h3>\n                <hr class="m-0">\n                <div class="card-body">\n                    {{nextEvent.description}}<br>\n                    <div class="">\n                        @for (link of nextEvent.links; track $index) {\n                            <a href={{link.value}}>{{link.name}}</a>\n                        }\n                    </div>\n                </div>\n                <hr class="m-0">\n                <div class="card-body rounded-0">\n                    <i class="fa-solid fa-location-dot"></i> {{nextEvent.location}}\n                </div>\n            </div>\n        </div>\n    </div>\n\n    }\n    @else if(loading) {\n    <div class="text-center">\n        <div class="spinner-grow" role="status">\n            <span class="visually-hidden">Loading...</span>\n        </div>\n    </div>\n    }\n\n    <!--  -->\n    <h3 class="mt-5 anton text-uppercase">\n        La band\n    </h3>\n    <p>\n        Gli Highway to Hell non sono una semplice tribute band, ma un\u2019autentica esplosione di energia rock! \u{1F3B8}\u{1F525} Con un\n        sound fedele agli AC/DC, un\u2019attenzione maniacale ai dettagli e una presenza scenica travolgente, portano il\n        pubblico dentro un\u2019esperienza elettrizzante, proprio come in un vero concerto della leggendaria band\n        australiana.\n    </p>\n</div>\n\n<div class="album py-3">\n    <div class="container">\n        <div class="cards-wrapper">\n            <div class="card-item">\n                <a routerLink="/members/francesco">\n                    <div class="card border-0 rounded-0 m-3 box-shadow shadow-hover">\n                        <img class="card-img rounded-0"\n                            data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Titolo"\n                            src="https://placehold.co/300x300" />\n                        <div class="card-body nav">\n                            <h2 class="card-title anton text-uppercase">Francesco</h2>\n                            <p class="card-text">Chitarra ritmica, il motore del groove, con un suono potente in\n                                perfetto stile Malcolm Young.</p>\n                        </div>\n                        <div class="card-footer d-flex justify-content-end align-items-center rounded-0">\n                            <small class="text-muted text-end">\n                                <i class="fa-solid fa-angles-right"></i>\n                            </small>\n                        </div>\n                    </div>\n                </a>\n            </div>\n\n            <div class="card-item">\n                <a routerLink="/members/andrea">\n                    <div class="card border-0 rounded-0 m-3 box-shadow shadow-hover">\n                        <img class="card-img rounded-0"\n                            data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Titolo"\n                            src="https://placehold.co/300x300" />\n                        <div class="card-body nav">\n                            <h2 class="card-title anton text-uppercase">Andrea</h2>\n                            <p class="card-text">Batteria, una macchina da guerra che richiama la potenza di Chris\n                                Slade.</p>\n                        </div>\n                        <div class="card-footer d-flex justify-content-end align-items-center rounded-0">\n                            <small class="text-muted text-end">\n                                <i class="fa-solid fa-angles-right"></i>\n                            </small>\n                        </div>\n                    </div>\n                </a>\n            </div>\n\n            <div class="card-item">\n                <a routerLink="/members/davide">\n                    <div class="card border-0 rounded-0 m-3 box-shadow shadow-hover">\n                        <img class="card-img rounded-0"\n                            data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Titolo"\n                            src="https://placehold.co/300x300" />\n                        <div class="card-body nav">\n                            <h2 class="card-title anton text-uppercase">Davide</h2>\n                            <p class="card-text">Basso, colonna portante che mantiene il groove solido e incalzante,\n                                proprio come Cliff Williams.</p>\n                        </div>\n                        <div class="card-footer d-flex justify-content-end align-items-center rounded-0">\n                            <small class="text-muted text-end">\n                                <i class="fa-solid fa-angles-right"></i>\n                            </small>\n                        </div>\n                    </div>\n                </a>\n            </div>\n\n            <div class="card-item">\n                <a routerLink="/members/jacopo">\n                    <div class="card border-0 rounded-0 m-3 box-shadow shadow-hover">\n                        <img class="card-img rounded-0"\n                            data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Titolo"\n                            src="https://placehold.co/300x300" />\n                        <div class="card-body nav">\n                            <h2 class="card-title anton text-uppercase">Jacopo</h2>\n                            <p class="card-text">Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed\n                                energia pura.</p>\n                        </div>\n                        <div class="card-footer d-flex justify-content-end align-items-center rounded-0">\n                            <small class="text-muted text-end">\n                                <i class="fa-solid fa-angles-right"></i>\n                            </small>\n                        </div>\n                    </div>\n                </a>\n            </div>\n\n            <div class="card-item">\n                <a routerLink="/members/eros">\n                    <div class="card border-0 rounded-0 m-3 box-shadow shadow-hover">\n                        <img class="card-img rounded-0"\n                            data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Titolo"\n                            src="https://placehold.co/300x300" />\n                        <div class="card-body nav">\n                            <h2 class="card-title anton text-uppercase">Eros</h2>\n                            <p class="card-text">Voce, un frontman che cattura la potenza di Brian Johnson con una\n                                grinta esplosiva.</p>\n                        </div>\n                        <div class="card-footer d-flex justify-content-end align-items-center rounded-0">\n                            <small class="text-muted text-end">\n                                <i class="fa-solid fa-angles-right"></i>\n                            </small>\n                        </div>\n                    </div>\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class="col-lg-8 mx-auto my-5 mb-0 px-3" style="text-align: justify;">\n    <!-- <div class="container">\n        <div class="row">\n            <div class="card m-2">\n                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">\n                <div class="card-body">\n                    <h5 class="card-title anton text-uppercase anton text-uppercase">\u{1F3B8} Jacopo</h5>\n                    <p class="card-text">\n                        Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura.\n                    </p>\n                </div>\n                <div class="card-footer">\n\n                </div>\n            </div>\n\n            <div class="card m-2">\n                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">\n                <div class="card-body">\n                    <h5 class="card-title anton text-uppercase">\u{1F3B8} Francesco</h5>\n                    <p class="card-text">\n                        Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young.\n                    </p>\n                </div>\n                <div class="card-footer">\n\n                </div>\n            </div>\n\n            <div class="card m-2">\n                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">\n                <div class="card-body">\n                    <h5 class="card-title anton text-uppercase">\u{1F941} Andrea</h5>\n                    <p class="card-text">\n                        Batteria, una macchina da guerra che richiama la potenza di Chris Slade.\n                    </p>\n                </div>\n                <div class="card-footer">\n\n                </div>\n            </div>\n\n            <div class="card m-2">\n                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">\n                <div class="card-body">\n                    <h5 class="card-title anton text-uppercase">\u{1F3A4} Eros</h5>\n                    <p class="card-text">\n                        Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.\n                    </p>\n                </div>\n                <div class="card-footer">\n\n                </div>\n            </div>\n\n            <div class="card m-2">\n                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">\n                <div class="card-body">\n                    <h5 class="card-title anton text-uppercase">\u{1F3B8} Davide</h5>\n                    <p class="card-text">\n                        Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams.\n                    </p>\n                </div>\n                <div class="card-footer">\n\n                </div>\n            </div>\n        </div>\n    </div> -->\n    <!-- <p>\n        \u{1F3B8} Jacopo \u2013 Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura.\n    </p>\n    <p>\n        \u{1F3B8} Francesco \u2013 Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young.\n    </p>\n    <p>\n        \u{1F941} Andrea \u2013 Batteria, una macchina da guerra che richiama la potenza di Chris Slade.\n    </p>\n    <p>\n        \u{1F3A4} Eros \u2013 Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.\n    </p>\n    <p>\n        \u{1F3B8} Davide \u2013 Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams.\n    </p> -->\n\n    <h3 class="anton text-uppercase">\n        \u26A1 FROM BON TO BRIAN: L\u2019OMAGGIO ALLA STORIA DEGLI AC/DC\n    </h3>\n    <p>\n        Oltre al classico show, gli Highway to Hell presentano un\u2019esperienza unica con il format \u201CFrom Bon to Brian\u201D, un\n        viaggio attraverso due epoche leggendarie:\n    </p>\n    <p>\n        \u{1F525} Matteo Giovannone, il miglior interprete di Bon Scott in Italia, con una somiglianza vocale e fisica\n        impressionante.\n    </p>\n    <p>\n        \u{1F3B6} Lorenzo Rossi alla cornamusa, per ricreare le iconiche sonorit\xE0 di brani come \u201CIt\u2019s a Long Way to the Top\u201D.\n    </p>\n\n    <h3 class="mt-5 anton text-uppercase">\n        \u{1F3A4} SYMPHONY OF THUNDER: GLI AC/DC IN VERSIONE SINFONICA\n    </h3>\n    <p>\n        Dal 2024, gli Highway to Hell sono i primi in Italia a presentare lo spettacolo \u201CSymphony of Thunder\u201D,\n        un\u2019innovativa\n        fusione tra il rock puro degli AC/DC e la potenza di un\u2019orchestra sinfonica. Un viaggio emozionante tra i pi\xF9\n        grandi\n        successi della band, da \u201CBack in Black\u201D a \u201CThunderstruck\u201D, reinterpretati in chiave orchestrale per un impatto\n        sonoro senza precedenti!\n    </p>\n\n    <h3 class="mt-5 anton text-uppercase">\n        \u{1F525} UNA BAND DA PALCO, UNA BAND DA EVENTO!\n    </h3>\n    <p>\n        Gli Highway to Hell hanno calcato palcoscenici prestigiosi come EICMA, dove per due anni consecutivi sono stati\n        la\n        resident band del palco Motolive, portando il loro show in uno dei pi\xF9 grandi eventi motoristici al mondo.\n    </p>\n\n    <p>\n        Se cerchi un concerto AC/DC indimenticabile, una tribute band professionale per festival, eventi o motoraduni,\n        gli\n        Highway to Hell sono la scelta giusta per un\u2019esperienza ad alto voltaggio! \u26A1\n    </p>\n    <p class="mb-5">\n\n    </p>\n</div>', styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  height: 100vh;\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  color: white;\n  background: rgba(0, 0, 0, 0.7);\n}\n.video-background iframe {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  height: 100vh;\n  width: calc(100vh * 16 / 9);\n  min-width: 100%;\n  min-height: 100%;\n  transform: translate(-50%, -50%);\n  pointer-events: none;\n  transition: all 0.3s ease-in-out;\n}\n.video-background iframe {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 120%;\n  height: 120%;\n  transform: translate(-50%, -50%);\n  pointer-events: none;\n  transition: all 0.3s ease-in-out;\n}\n.hero-content {\n  position: relative;\n  z-index: 1;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);\n}\n.hero::before {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background: rgba(0, 0, 0, 0.35);\n  z-index: 0;\n}\n@media (max-width: 768px) {\n  .video-background iframe {\n    width: 220%;\n    height: 220%;\n  }\n}\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.card {\n  overflow: hidden;\n}\n.card-img {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n}\n.card:hover .card-img {\n  transform: scale(1.05);\n}\n.card-item > a {\n  text-decoration: none;\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
+  }], () => [{ type: CalendarService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HomeComponent, { className: "HomeComponent", filePath: "src/app/home/home.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HomeComponent, { className: "HomeComponent", filePath: "src/app/home/home.component.ts", lineNumber: 11 });
 })();
 
 // src/app/page-not-found/page-not-found.component.ts
@@ -38751,10 +39000,1269 @@ var FrancescoComponent = class _FrancescoComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FrancescoComponent, { className: "FrancescoComponent", filePath: "src/app/members/francesco/francesco.component.ts", lineNumber: 9 });
 })();
 
+// node_modules/@ngx-translate/core/fesm2022/ngx-translate-core.mjs
+var MissingTranslationHandler = class {
+};
+var DefaultMissingTranslationHandler = class _DefaultMissingTranslationHandler {
+  handle(params) {
+    return params.key;
+  }
+  static \u0275fac = function DefaultMissingTranslationHandler_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _DefaultMissingTranslationHandler)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _DefaultMissingTranslationHandler,
+    factory: _DefaultMissingTranslationHandler.\u0275fac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DefaultMissingTranslationHandler, [{
+    type: Injectable
+  }], null, null);
+})();
+var TranslateCompiler = class {
+};
+var TranslateNoOpCompiler = class _TranslateNoOpCompiler extends TranslateCompiler {
+  compile(value, lang) {
+    void lang;
+    return value;
+  }
+  compileTranslations(translations, lang) {
+    void lang;
+    return translations;
+  }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275TranslateNoOpCompiler_BaseFactory;
+    return function TranslateNoOpCompiler_Factory(__ngFactoryType__) {
+      return (\u0275TranslateNoOpCompiler_BaseFactory || (\u0275TranslateNoOpCompiler_BaseFactory = \u0275\u0275getInheritedFactory(_TranslateNoOpCompiler)))(__ngFactoryType__ || _TranslateNoOpCompiler);
+    };
+  })();
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _TranslateNoOpCompiler,
+    factory: _TranslateNoOpCompiler.\u0275fac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateNoOpCompiler, [{
+    type: Injectable
+  }], null, null);
+})();
+var TranslateLoader = class {
+};
+var TranslateNoOpLoader = class _TranslateNoOpLoader extends TranslateLoader {
+  getTranslation(lang) {
+    void lang;
+    return of({});
+  }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275TranslateNoOpLoader_BaseFactory;
+    return function TranslateNoOpLoader_Factory(__ngFactoryType__) {
+      return (\u0275TranslateNoOpLoader_BaseFactory || (\u0275TranslateNoOpLoader_BaseFactory = \u0275\u0275getInheritedFactory(_TranslateNoOpLoader)))(__ngFactoryType__ || _TranslateNoOpLoader);
+    };
+  })();
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _TranslateNoOpLoader,
+    factory: _TranslateNoOpLoader.\u0275fac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateNoOpLoader, [{
+    type: Injectable
+  }], null, null);
+})();
+function equals(o1, o2) {
+  if (o1 === o2) return true;
+  if (o1 === null || o2 === null) return false;
+  if (o1 !== o1 && o2 !== o2) return true;
+  const t1 = typeof o1, t2 = typeof o2;
+  let length;
+  if (t1 == t2 && t1 == "object") {
+    if (Array.isArray(o1)) {
+      if (!Array.isArray(o2)) return false;
+      if ((length = o1.length) == o2.length) {
+        for (let key = 0; key < length; key++) {
+          if (!equals(o1[key], o2[key])) return false;
+        }
+        return true;
+      }
+    } else {
+      if (Array.isArray(o2)) {
+        return false;
+      }
+      if (isDict(o1) && isDict(o2)) {
+        const keySet = /* @__PURE__ */ Object.create(null);
+        for (const key in o1) {
+          if (!equals(o1[key], o2[key])) {
+            return false;
+          }
+          keySet[key] = true;
+        }
+        for (const key in o2) {
+          if (!(key in keySet) && typeof o2[key] !== "undefined") {
+            return false;
+          }
+        }
+        return true;
+      }
+    }
+  }
+  return false;
+}
+function isDefinedAndNotNull(value) {
+  return typeof value !== "undefined" && value !== null;
+}
+function isDefined(value) {
+  return value !== void 0;
+}
+function isDict(value) {
+  return isObject(value) && !isArray3(value) && value !== null;
+}
+function isObject(value) {
+  return typeof value === "object" && value !== null;
+}
+function isArray3(value) {
+  return Array.isArray(value);
+}
+function isString(value) {
+  return typeof value === "string";
+}
+function isFunction3(value) {
+  return typeof value === "function";
+}
+function cloneDeep(value) {
+  if (isArray3(value)) {
+    return value.map((item) => cloneDeep(item));
+  } else if (isDict(value)) {
+    const cloned = {};
+    Object.keys(value).forEach((key) => {
+      cloned[key] = cloneDeep(value[key]);
+    });
+    return cloned;
+  } else {
+    return value;
+  }
+}
+function mergeDeep(target, source) {
+  if (!isObject(target)) {
+    return cloneDeep(source);
+  }
+  const output = cloneDeep(target);
+  if (isObject(output) && isObject(source)) {
+    Object.keys(source).forEach((key) => {
+      if (isDict(source[key])) {
+        if (key in target) {
+          output[key] = mergeDeep(target[key], source[key]);
+        } else {
+          Object.assign(output, {
+            [key]: source[key]
+          });
+        }
+      } else {
+        Object.assign(output, {
+          [key]: source[key]
+        });
+      }
+    });
+  }
+  return output;
+}
+function getValue(target, key) {
+  const keys = key.split(".");
+  key = "";
+  do {
+    key += keys.shift();
+    const isLastKey = !keys.length;
+    if (isDefinedAndNotNull(target)) {
+      if (isDict(target) && isDefined(target[key]) && (isDict(target[key]) || isArray3(target[key]) || isLastKey)) {
+        target = target[key];
+        key = "";
+        continue;
+      }
+      if (isArray3(target)) {
+        const index = parseInt(key, 10);
+        if (isDefined(target[index]) && (isDict(target[index]) || isArray3(target[index]) || isLastKey)) {
+          target = target[index];
+          key = "";
+          continue;
+        }
+      }
+    }
+    if (isLastKey) {
+      target = void 0;
+      continue;
+    }
+    key += ".";
+  } while (keys.length);
+  return target;
+}
+function insertValue(target, key, value) {
+  return mergeDeep(target, createNestedObject(key, value));
+}
+function createNestedObject(dotSeparatedKey, value) {
+  return dotSeparatedKey.split(".").reduceRight((acc, key) => ({
+    [key]: acc
+  }), value);
+}
+var TranslateParser = class {
+};
+var TranslateDefaultParser = class _TranslateDefaultParser extends TranslateParser {
+  templateMatcher = /{{\s?([^{}\s]*)\s?}}/g;
+  interpolate(expr, params) {
+    if (isString(expr)) {
+      return this.interpolateString(expr, params);
+    } else if (isFunction3(expr)) {
+      return this.interpolateFunction(expr, params);
+    }
+    return void 0;
+  }
+  interpolateFunction(fn, params) {
+    return fn(params);
+  }
+  interpolateString(expr, params) {
+    if (!params) {
+      return expr;
+    }
+    return expr.replace(this.templateMatcher, (substring, key) => {
+      const replacement = this.getInterpolationReplacement(params, key);
+      return replacement !== void 0 ? replacement : substring;
+    });
+  }
+  /**
+   * Returns the replacement for an interpolation parameter
+   * @params:
+   */
+  getInterpolationReplacement(params, key) {
+    return this.formatValue(getValue(params, key));
+  }
+  /**
+   * Converts a value into a useful string representation.
+   * @param value The value to format.
+   * @returns A string representation of the value.
+   */
+  formatValue(value) {
+    if (isString(value)) {
+      return value;
+    }
+    if (typeof value === "number" || typeof value === "boolean") {
+      return value.toString();
+    }
+    if (value === null) {
+      return "null";
+    }
+    if (isArray3(value)) {
+      return value.join(", ");
+    }
+    if (isObject(value)) {
+      if (typeof value.toString === "function" && value.toString !== Object.prototype.toString) {
+        return value.toString();
+      }
+      return JSON.stringify(value);
+    }
+    return void 0;
+  }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275TranslateDefaultParser_BaseFactory;
+    return function TranslateDefaultParser_Factory(__ngFactoryType__) {
+      return (\u0275TranslateDefaultParser_BaseFactory || (\u0275TranslateDefaultParser_BaseFactory = \u0275\u0275getInheritedFactory(_TranslateDefaultParser)))(__ngFactoryType__ || _TranslateDefaultParser);
+    };
+  })();
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _TranslateDefaultParser,
+    factory: _TranslateDefaultParser.\u0275fac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateDefaultParser, [{
+    type: Injectable
+  }], null, null);
+})();
+var TranslateStore = class _TranslateStore {
+  _onTranslationChange = new Subject();
+  _onLangChange = new Subject();
+  _onFallbackLangChange = new Subject();
+  fallbackLang = null;
+  currentLang;
+  translations = {};
+  languages = [];
+  getTranslations(language) {
+    return this.translations[language];
+  }
+  setTranslations(language, translations, extend) {
+    this.translations[language] = extend && this.hasTranslationFor(language) ? mergeDeep(this.translations[language], translations) : translations;
+    this.addLanguages([language]);
+    this._onTranslationChange.next({
+      lang: language,
+      translations: this.getTranslations(language)
+    });
+  }
+  getLanguages() {
+    return this.languages;
+  }
+  getCurrentLang() {
+    return this.currentLang;
+  }
+  getFallbackLang() {
+    return this.fallbackLang;
+  }
+  /**
+   * Changes the fallback lang
+   */
+  setFallbackLang(lang, emitChange = true) {
+    this.fallbackLang = lang;
+    if (emitChange) {
+      this._onFallbackLangChange.next({
+        lang,
+        translations: this.translations[lang]
+      });
+    }
+  }
+  setCurrentLang(lang, emitChange = true) {
+    this.currentLang = lang;
+    if (emitChange) {
+      this._onLangChange.next({
+        lang,
+        translations: this.translations[lang]
+      });
+    }
+  }
+  /**
+   * An Observable to listen to translation change events
+   * onTranslationChange.subscribe((params: TranslationChangeEvent) => {
+   *     // do something
+   * });
+   */
+  get onTranslationChange() {
+    return this._onTranslationChange.asObservable();
+  }
+  /**
+   * An Observable to listen to lang change events
+   * onLangChange.subscribe((params: LangChangeEvent) => {
+   *     // do something
+   * });
+   */
+  get onLangChange() {
+    return this._onLangChange.asObservable();
+  }
+  /**
+   * An Observable to listen to fallback lang change events
+   * onFallbackLangChange.subscribe((params: FallbackLangChangeEvent) => {
+   *     // do something
+   * });
+   */
+  get onFallbackLangChange() {
+    return this._onFallbackLangChange.asObservable();
+  }
+  addLanguages(languages) {
+    this.languages = Array.from(/* @__PURE__ */ new Set([...this.languages, ...languages]));
+  }
+  hasTranslationFor(lang) {
+    return typeof this.translations[lang] !== "undefined";
+  }
+  deleteTranslations(lang) {
+    delete this.translations[lang];
+  }
+  getTranslation(key) {
+    let text = this.getValue(this.currentLang, key);
+    if (text === void 0 && this.fallbackLang != null && this.fallbackLang !== this.currentLang) {
+      text = this.getValue(this.fallbackLang, key);
+    }
+    return text;
+  }
+  getValue(language, key) {
+    return getValue(this.getTranslations(language), key);
+  }
+  static \u0275fac = function TranslateStore_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _TranslateStore)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _TranslateStore,
+    factory: _TranslateStore.\u0275fac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateStore, [{
+    type: Injectable
+  }], null, null);
+})();
+var TRANSLATE_SERVICE_CONFIG = new InjectionToken("TRANSLATE_CONFIG");
+var makeObservable = (value) => {
+  return isObservable(value) ? value : of(value);
+};
+var TranslateService = class _TranslateService {
+  loadingTranslations;
+  pending = false;
+  _translationRequests = {};
+  lastUseLanguage = null;
+  currentLoader = inject(TranslateLoader);
+  compiler = inject(TranslateCompiler);
+  parser = inject(TranslateParser);
+  missingTranslationHandler = inject(MissingTranslationHandler);
+  store = inject(TranslateStore);
+  extend = false;
+  /**
+   * An Observable to listen to translation change events
+   * onTranslationChange.subscribe((params: TranslationChangeEvent) => {
+   *     // do something
+   * });
+   */
+  get onTranslationChange() {
+    return this.store.onTranslationChange;
+  }
+  /**
+   * An Observable to listen to lang change events
+   * onLangChange.subscribe((params: LangChangeEvent) => {
+   *     // do something
+   * });
+   */
+  get onLangChange() {
+    return this.store.onLangChange;
+  }
+  /**
+   * An Observable to listen to fallback lang change events
+   * onFallbackLangChange.subscribe((params: FallbackLangChangeEvent) => {
+   *     // do something
+   * });
+   */
+  get onFallbackLangChange() {
+    return this.store.onFallbackLangChange;
+  }
+  /**
+   * @deprecated Use onFallbackLangChange() instead
+   */
+  get onDefaultLangChange() {
+    return this.store.onFallbackLangChange;
+  }
+  constructor() {
+    const config2 = __spreadValues({
+      extend: false,
+      fallbackLang: null
+    }, inject(TRANSLATE_SERVICE_CONFIG, {
+      optional: true
+    }));
+    if (config2.lang) {
+      this.use(config2.lang);
+    }
+    if (config2.fallbackLang) {
+      this.setFallbackLang(config2.fallbackLang);
+    }
+    if (config2.extend) {
+      this.extend = true;
+    }
+  }
+  /**
+   * Sets the fallback language to use if a translation is not found in the
+   * current language
+   */
+  setFallbackLang(lang) {
+    if (!this.getFallbackLang()) {
+      this.store.setFallbackLang(lang, false);
+    }
+    const pending = this.loadOrExtendLanguage(lang);
+    if (isObservable(pending)) {
+      pending.pipe(take(1)).subscribe({
+        next: () => {
+          this.store.setFallbackLang(lang);
+        },
+        error: () => {
+        }
+      });
+      return pending;
+    }
+    this.store.setFallbackLang(lang);
+    return of(this.store.getTranslations(lang));
+  }
+  /**
+   * Changes the lang currently used
+   */
+  use(lang) {
+    this.lastUseLanguage = lang;
+    if (!this.getCurrentLang()) {
+      this.store.setCurrentLang(lang, false);
+    }
+    const pending = this.loadOrExtendLanguage(lang);
+    if (isObservable(pending)) {
+      pending.pipe(take(1)).subscribe({
+        next: () => {
+          this.changeLang(lang);
+        },
+        error: () => {
+        }
+      });
+      return pending;
+    }
+    this.changeLang(lang);
+    return of(this.store.getTranslations(lang));
+  }
+  /**
+   * Retrieves the given translations
+   */
+  loadOrExtendLanguage(lang) {
+    if (!this.store.hasTranslationFor(lang) || this.extend) {
+      this._translationRequests[lang] = this._translationRequests[lang] || this.loadAndCompileTranslations(lang);
+      return this._translationRequests[lang];
+    }
+    return void 0;
+  }
+  /**
+   * Changes the current lang
+   */
+  changeLang(lang) {
+    if (lang !== this.lastUseLanguage) {
+      return;
+    }
+    this.store.setCurrentLang(lang);
+  }
+  getCurrentLang() {
+    return this.store.getCurrentLang();
+  }
+  loadAndCompileTranslations(lang) {
+    this.pending = true;
+    const loadingTranslations = this.currentLoader.getTranslation(lang).pipe(shareReplay(1), take(1));
+    this.loadingTranslations = loadingTranslations.pipe(map((res) => this.compiler.compileTranslations(res, lang)), shareReplay(1), take(1));
+    this.loadingTranslations.subscribe({
+      next: (res) => {
+        this.store.setTranslations(lang, res, this.extend);
+        this.pending = false;
+      },
+      error: (err) => {
+        void err;
+        this.pending = false;
+      }
+    });
+    return loadingTranslations;
+  }
+  /**
+   * Manually sets an object of translations for a given language
+   * after passing it through the compiler
+   */
+  setTranslation(lang, translations, shouldMerge = false) {
+    const interpolatableTranslations = this.compiler.compileTranslations(translations, lang);
+    this.store.setTranslations(lang, interpolatableTranslations, shouldMerge || this.extend);
+  }
+  getLangs() {
+    return this.store.getLanguages();
+  }
+  /**
+   * Add available languages
+   */
+  addLangs(languages) {
+    this.store.addLanguages(languages);
+  }
+  getParsedResultForKey(key, interpolateParams2) {
+    const textToInterpolate = this.getTextToInterpolate(key);
+    if (isDefinedAndNotNull(textToInterpolate)) {
+      return this.runInterpolation(textToInterpolate, interpolateParams2);
+    }
+    const res = this.missingTranslationHandler.handle(__spreadValues({
+      key,
+      translateService: this
+    }, interpolateParams2 !== void 0 && {
+      interpolateParams: interpolateParams2
+    }));
+    return res !== void 0 ? res : key;
+  }
+  /**
+   * Gets the fallback language. null if none is defined
+   */
+  getFallbackLang() {
+    return this.store.getFallbackLang();
+  }
+  getTextToInterpolate(key) {
+    return this.store.getTranslation(key);
+  }
+  runInterpolation(translations, interpolateParams2) {
+    if (!isDefinedAndNotNull(translations)) {
+      return;
+    }
+    if (isArray3(translations)) {
+      return this.runInterpolationOnArray(translations, interpolateParams2);
+    }
+    if (isDict(translations)) {
+      return this.runInterpolationOnDict(translations, interpolateParams2);
+    }
+    return this.parser.interpolate(translations, interpolateParams2);
+  }
+  runInterpolationOnArray(translations, interpolateParams2) {
+    return translations.map((translation) => this.runInterpolation(translation, interpolateParams2));
+  }
+  runInterpolationOnDict(translations, interpolateParams2) {
+    const result = {};
+    for (const key in translations) {
+      const res = this.runInterpolation(translations[key], interpolateParams2);
+      if (res !== void 0) {
+        result[key] = res;
+      }
+    }
+    return result;
+  }
+  /**
+   * Returns the parsed result of the translations
+   */
+  getParsedResult(key, interpolateParams2) {
+    return key instanceof Array ? this.getParsedResultForArray(key, interpolateParams2) : this.getParsedResultForKey(key, interpolateParams2);
+  }
+  getParsedResultForArray(key, interpolateParams2) {
+    const result = {};
+    let observables = false;
+    for (const k of key) {
+      result[k] = this.getParsedResultForKey(k, interpolateParams2);
+      observables = observables || isObservable(result[k]);
+    }
+    if (!observables) {
+      return result;
+    }
+    const sources = key.map((k) => makeObservable(result[k]));
+    return forkJoin(sources).pipe(map((arr) => {
+      const obj = {};
+      arr.forEach((value, index) => {
+        obj[key[index]] = value;
+      });
+      return obj;
+    }));
+  }
+  /**
+   * Gets the translated value of a key (or an array of keys)
+   * @returns the translated key, or an object of translated keys
+   */
+  get(key, interpolateParams2) {
+    if (!isDefinedAndNotNull(key) || !key.length) {
+      throw new Error(`Parameter "key" is required and cannot be empty`);
+    }
+    if (this.pending) {
+      return this.loadingTranslations.pipe(concatMap(() => {
+        return makeObservable(this.getParsedResult(key, interpolateParams2));
+      }));
+    }
+    return makeObservable(this.getParsedResult(key, interpolateParams2));
+  }
+  /**
+   * Returns a stream of translated values of a key (or an array of keys) which updates
+   * whenever the translation changes.
+   * @returns A stream of the translated key, or an object of translated keys
+   */
+  getStreamOnTranslationChange(key, interpolateParams2) {
+    if (!isDefinedAndNotNull(key) || !key.length) {
+      throw new Error(`Parameter "key" is required and cannot be empty`);
+    }
+    return concat(defer(() => this.get(key, interpolateParams2)), this.onTranslationChange.pipe(switchMap(() => {
+      const res = this.getParsedResult(key, interpolateParams2);
+      return makeObservable(res);
+    })));
+  }
+  /**
+   * Returns a stream of translated values of a key (or an array of keys) which updates
+   * whenever the language changes.
+   * @returns A stream of the translated key, or an object of translated keys
+   */
+  stream(key, interpolateParams2) {
+    if (!isDefinedAndNotNull(key) || !key.length) {
+      throw new Error(`Parameter "key" required`);
+    }
+    return concat(defer(() => this.get(key, interpolateParams2)), this.onLangChange.pipe(switchMap(() => {
+      const res = this.getParsedResult(key, interpolateParams2);
+      return makeObservable(res);
+    })));
+  }
+  /**
+   * Returns a translation instantly from the internal state of loaded translation.
+   * All rules regarding the current language, the preferred language of even fallback languages
+   * will be used except any promise handling.
+   */
+  instant(key, interpolateParams2) {
+    if (!isDefinedAndNotNull(key) || key.length === 0) {
+      throw new Error('Parameter "key" is required and cannot be empty');
+    }
+    const result = this.getParsedResult(key, interpolateParams2);
+    if (isObservable(result)) {
+      if (Array.isArray(key)) {
+        return key.reduce((acc, currKey) => {
+          acc[currKey] = currKey;
+          return acc;
+        }, {});
+      }
+      return key;
+    }
+    return result;
+  }
+  /**
+   * Sets the translated value of a key, after compiling it
+   */
+  set(key, translation, lang = this.getCurrentLang()) {
+    this.store.setTranslations(lang, insertValue(this.store.getTranslations(lang), key, isString(translation) ? this.compiler.compile(translation, lang) : this.compiler.compileTranslations(translation, lang)), false);
+  }
+  /**
+   * Allows reloading the lang file from the file
+   */
+  reloadLang(lang) {
+    this.resetLang(lang);
+    return this.loadAndCompileTranslations(lang);
+  }
+  /**
+   * Deletes inner translation
+   */
+  resetLang(lang) {
+    delete this._translationRequests[lang];
+    this.store.deleteTranslations(lang);
+  }
+  /**
+   * Returns the language code name from the browser, e.g. "de"
+   */
+  static getBrowserLang() {
+    if (typeof window === "undefined" || !window.navigator) {
+      return void 0;
+    }
+    const browserLang = this.getBrowserCultureLang();
+    return browserLang ? browserLang.split(/[-_]/)[0] : void 0;
+  }
+  /**
+   * Returns the culture language code name from the browser, e.g. "de-DE"
+   */
+  static getBrowserCultureLang() {
+    if (typeof window === "undefined" || typeof window.navigator === "undefined") {
+      return void 0;
+    }
+    return window.navigator.languages ? window.navigator.languages[0] : window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage;
+  }
+  getBrowserLang() {
+    return _TranslateService.getBrowserLang();
+  }
+  getBrowserCultureLang() {
+    return _TranslateService.getBrowserCultureLang();
+  }
+  /** Deprecations **/
+  /**
+   * @deprecated use `getFallbackLang()`
+   */
+  get defaultLang() {
+    return this.getFallbackLang();
+  }
+  /**
+   * The lang currently used
+   * @deprecated use `getCurrentLang()`
+   */
+  get currentLang() {
+    return this.store.getCurrentLang();
+  }
+  /**
+   * @deprecated use `getLangs()`
+   */
+  get langs() {
+    return this.store.getLanguages();
+  }
+  /**
+   * Sets the  language to use as a fallback
+   * @deprecated use setFallbackLanguage()
+   */
+  setDefaultLang(lang) {
+    return this.setFallbackLang(lang);
+  }
+  /**
+   * Gets the fallback language used
+   * @deprecated use getFallbackLang()
+   */
+  getDefaultLang() {
+    return this.getFallbackLang();
+  }
+  static \u0275fac = function TranslateService_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _TranslateService)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _TranslateService,
+    factory: _TranslateService.\u0275fac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateService, [{
+    type: Injectable
+  }], () => [], null);
+})();
+var TranslateDirective = class _TranslateDirective {
+  translateService = inject(TranslateService);
+  element = inject(ElementRef);
+  _ref = inject(ChangeDetectorRef);
+  key;
+  lastParams;
+  currentParams;
+  onLangChangeSub;
+  onFallbackLangChangeSub;
+  onTranslationChangeSub;
+  set translate(key) {
+    if (key) {
+      this.key = key;
+      this.checkNodes();
+    }
+  }
+  set translateParams(params) {
+    if (!equals(this.currentParams, params)) {
+      this.currentParams = params;
+      this.checkNodes(true);
+    }
+  }
+  constructor() {
+    if (!this.onTranslationChangeSub) {
+      this.onTranslationChangeSub = this.translateService.onTranslationChange.subscribe((event) => {
+        if (event.lang === this.translateService.currentLang) {
+          this.checkNodes(true, event.translations);
+        }
+      });
+    }
+    if (!this.onLangChangeSub) {
+      this.onLangChangeSub = this.translateService.onLangChange.subscribe((event) => {
+        this.checkNodes(true, event.translations);
+      });
+    }
+    if (!this.onFallbackLangChangeSub) {
+      this.onFallbackLangChangeSub = this.translateService.onFallbackLangChange.subscribe((event) => {
+        void event;
+        this.checkNodes(true);
+      });
+    }
+  }
+  ngAfterViewChecked() {
+    this.checkNodes();
+  }
+  checkNodes(forceUpdate = false, translations) {
+    let nodes = this.element.nativeElement.childNodes;
+    if (!nodes.length) {
+      this.setContent(this.element.nativeElement, this.key);
+      nodes = this.element.nativeElement.childNodes;
+    }
+    nodes.forEach((n) => {
+      const node = n;
+      if (node.nodeType === 3) {
+        let key;
+        if (forceUpdate) {
+          node.lastKey = null;
+        }
+        if (isDefinedAndNotNull(node.lookupKey)) {
+          key = node.lookupKey;
+        } else if (this.key) {
+          key = this.key;
+        } else {
+          const content = this.getContent(node);
+          const trimmedContent = content.trim();
+          if (trimmedContent.length) {
+            node.lookupKey = trimmedContent;
+            if (content !== node.currentValue) {
+              key = trimmedContent;
+              node.originalContent = content || node.originalContent;
+            } else if (node.originalContent) {
+              key = node.originalContent.trim();
+            }
+          }
+        }
+        this.updateValue(key, node, translations);
+      }
+    });
+  }
+  updateValue(key, node, translations) {
+    if (key) {
+      if (node.lastKey === key && this.lastParams === this.currentParams) {
+        return;
+      }
+      this.lastParams = this.currentParams;
+      const onTranslation = (res) => {
+        if (res !== key || !node.lastKey) {
+          node.lastKey = key;
+        }
+        if (!node.originalContent) {
+          node.originalContent = this.getContent(node);
+        }
+        if (isString(res)) {
+          node.currentValue = res;
+        } else if (!isDefinedAndNotNull(res)) {
+          node.currentValue = node.originalContent || key;
+        } else {
+          node.currentValue = JSON.stringify(res);
+        }
+        this.setContent(node, this.key ? node.currentValue : node.originalContent.replace(key, node.currentValue));
+        this._ref.markForCheck();
+      };
+      if (isDefinedAndNotNull(translations)) {
+        const res = this.translateService.getParsedResult(key, this.currentParams);
+        if (isObservable(res)) {
+          res.subscribe({
+            next: onTranslation
+          });
+        } else {
+          onTranslation(res);
+        }
+      } else {
+        this.translateService.get(key, this.currentParams).subscribe(onTranslation);
+      }
+    }
+  }
+  getContent(node) {
+    return isDefinedAndNotNull(node.textContent) ? node.textContent : node.data;
+  }
+  setContent(node, content) {
+    if (isDefinedAndNotNull(node.textContent)) {
+      node.textContent = content;
+    } else {
+      node.data = content;
+    }
+  }
+  ngOnDestroy() {
+    if (this.onLangChangeSub) {
+      this.onLangChangeSub.unsubscribe();
+    }
+    if (this.onFallbackLangChangeSub) {
+      this.onFallbackLangChangeSub.unsubscribe();
+    }
+    if (this.onTranslationChangeSub) {
+      this.onTranslationChangeSub.unsubscribe();
+    }
+  }
+  static \u0275fac = function TranslateDirective_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _TranslateDirective)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _TranslateDirective,
+    selectors: [["", "translate", ""], ["", "ngx-translate", ""]],
+    inputs: {
+      translate: "translate",
+      translateParams: "translateParams"
+    }
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateDirective, [{
+    type: Directive,
+    args: [{
+      // eslint-disable-next-line @angular-eslint/directive-selector
+      selector: "[translate],[ngx-translate]",
+      standalone: true
+    }]
+  }], () => [], {
+    translate: [{
+      type: Input
+    }],
+    translateParams: [{
+      type: Input
+    }]
+  });
+})();
+var TranslatePipe = class _TranslatePipe {
+  translate = inject(TranslateService);
+  _ref = inject(ChangeDetectorRef);
+  value = "";
+  lastKey = null;
+  lastParams = [];
+  onTranslationChange;
+  onLangChange;
+  onFallbackLangChange;
+  updateValue(key, interpolateParams2, translations) {
+    const onTranslation = (res) => {
+      this.value = res !== void 0 ? res : key;
+      this.lastKey = key;
+      this._ref.markForCheck();
+    };
+    if (translations) {
+      const res = this.translate.getParsedResult(key, interpolateParams2);
+      if (isObservable(res)) {
+        res.subscribe(onTranslation);
+      } else {
+        onTranslation(res);
+      }
+    }
+    this.translate.get(key, interpolateParams2).subscribe(onTranslation);
+  }
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+  transform(query, ...args) {
+    if (!query || !query.length) {
+      return query;
+    }
+    if (equals(query, this.lastKey) && equals(args, this.lastParams)) {
+      return this.value;
+    }
+    let interpolateParams2 = void 0;
+    if (isDefinedAndNotNull(args[0]) && args.length) {
+      if (isString(args[0]) && args[0].length) {
+        const validArgs = args[0].replace(/(')?([a-zA-Z0-9_]+)(')?(\s)?:/g, '"$2":').replace(/:(\s)?(')(.*?)(')/g, ':"$3"');
+        try {
+          interpolateParams2 = JSON.parse(validArgs);
+        } catch (e) {
+          void e;
+          throw new SyntaxError(`Wrong parameter in TranslatePipe. Expected a valid Object, received: ${args[0]}`);
+        }
+      } else if (isDict(args[0])) {
+        interpolateParams2 = args[0];
+      }
+    }
+    this.lastKey = query;
+    this.lastParams = args;
+    this.updateValue(query, interpolateParams2);
+    this._dispose();
+    if (!this.onTranslationChange) {
+      this.onTranslationChange = this.translate.onTranslationChange.subscribe((event) => {
+        if (this.lastKey && event.lang === this.translate.getCurrentLang() || event.lang === this.translate.getFallbackLang()) {
+          this.lastKey = null;
+          this.updateValue(query, interpolateParams2, event.translations);
+        }
+      });
+    }
+    if (!this.onLangChange) {
+      this.onLangChange = this.translate.onLangChange.subscribe((event) => {
+        if (this.lastKey) {
+          this.lastKey = null;
+          this.updateValue(query, interpolateParams2, event.translations);
+        }
+      });
+    }
+    if (!this.onFallbackLangChange) {
+      this.onFallbackLangChange = this.translate.onFallbackLangChange.subscribe(() => {
+        if (this.lastKey) {
+          this.lastKey = null;
+          this.updateValue(query, interpolateParams2);
+        }
+      });
+    }
+    return this.value;
+  }
+  /**
+   * Clean any existing subscription to change events
+   */
+  _dispose() {
+    if (typeof this.onTranslationChange !== "undefined") {
+      this.onTranslationChange.unsubscribe();
+      this.onTranslationChange = void 0;
+    }
+    if (typeof this.onLangChange !== "undefined") {
+      this.onLangChange.unsubscribe();
+      this.onLangChange = void 0;
+    }
+    if (typeof this.onFallbackLangChange !== "undefined") {
+      this.onFallbackLangChange.unsubscribe();
+      this.onFallbackLangChange = void 0;
+    }
+  }
+  ngOnDestroy() {
+    this._dispose();
+  }
+  static \u0275fac = function TranslatePipe_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _TranslatePipe)();
+  };
+  static \u0275pipe = /* @__PURE__ */ \u0275\u0275definePipe({
+    name: "translate",
+    type: _TranslatePipe,
+    pure: false
+  });
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _TranslatePipe,
+    factory: _TranslatePipe.\u0275fac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslatePipe, [{
+    type: Injectable
+  }, {
+    type: Pipe,
+    args: [{
+      name: "translate",
+      standalone: true,
+      pure: false
+      // required to update the value when the promise is resolved
+    }]
+  }], null, null);
+})();
+function provideTranslateLoader(loader) {
+  return {
+    provide: TranslateLoader,
+    useClass: loader
+  };
+}
+function provideTranslateCompiler(compiler) {
+  return {
+    provide: TranslateCompiler,
+    useClass: compiler
+  };
+}
+function provideTranslateParser(parser) {
+  return {
+    provide: TranslateParser,
+    useClass: parser
+  };
+}
+function provideMissingTranslationHandler(handler) {
+  return {
+    provide: MissingTranslationHandler,
+    useClass: handler
+  };
+}
+function defaultProviders(config2 = {}, provideStore) {
+  const providers = [];
+  if (config2.loader) {
+    providers.push(config2.loader);
+  }
+  if (config2.compiler) {
+    providers.push(config2.compiler);
+  }
+  if (config2.parser) {
+    providers.push(config2.parser);
+  }
+  if (config2.missingTranslationHandler) {
+    providers.push(config2.missingTranslationHandler);
+  }
+  if (provideStore) {
+    providers.push(TranslateStore);
+  }
+  if (config2.useDefaultLang || config2.defaultLanguage) {
+    console.warn("The `useDefaultLang` and `defaultLanguage` options are deprecated. Please use `fallbackLang` instead.");
+    if (config2.useDefaultLang === true && config2.defaultLanguage) {
+      config2.fallbackLang = config2.defaultLanguage;
+    }
+  }
+  const serviceConfig = {
+    fallbackLang: config2.fallbackLang ?? null,
+    lang: config2.lang,
+    extend: config2.extend ?? false
+  };
+  providers.push({
+    provide: TRANSLATE_SERVICE_CONFIG,
+    useValue: serviceConfig
+  });
+  providers.push({
+    provide: TranslateService,
+    useClass: TranslateService,
+    deps: [TranslateStore, TranslateLoader, TranslateCompiler, TranslateParser, MissingTranslationHandler, TRANSLATE_SERVICE_CONFIG]
+  });
+  return providers;
+}
+var TranslateModule = class _TranslateModule {
+  /**
+   * Use this method in your root module to provide the TranslateService
+   */
+  static forRoot(config2 = {}) {
+    return {
+      ngModule: _TranslateModule,
+      providers: [...defaultProviders(__spreadValues({
+        compiler: provideTranslateCompiler(TranslateNoOpCompiler),
+        parser: provideTranslateParser(TranslateDefaultParser),
+        loader: provideTranslateLoader(TranslateNoOpLoader),
+        missingTranslationHandler: provideMissingTranslationHandler(DefaultMissingTranslationHandler)
+      }, config2), true)]
+    };
+  }
+  /**
+   * Use this method in your other (non-root) modules to import the directive/pipe
+   */
+  static forChild(config2 = {}) {
+    return {
+      ngModule: _TranslateModule,
+      providers: [...defaultProviders(config2, config2.isolate ?? false)]
+    };
+  }
+  static \u0275fac = function TranslateModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _TranslateModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _TranslateModule,
+    imports: [TranslatePipe, TranslateDirective],
+    exports: [TranslatePipe, TranslateDirective]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({});
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateModule, [{
+    type: NgModule,
+    args: [{
+      imports: [TranslatePipe, TranslateDirective],
+      exports: [TranslatePipe, TranslateDirective]
+    }]
+  }], null, null);
+})();
+
+// src/app/services/shared.service.ts
+var SharedService = class _SharedService {
+  translate;
+  router;
+  viewportScroller;
+  activeLink = "default";
+  language = "en";
+  constructor(translate, router, viewportScroller) {
+    this.translate = translate;
+    this.router = router;
+    this.viewportScroller = viewportScroller;
+    this.languageSetup();
+    this.updateActiveLink(this.router.url);
+    this.router.events.subscribe(() => {
+      this.updateActiveLink(this.router.url);
+    });
+  }
+  ngOnInit() {
+  }
+  switchLanguage(lang) {
+    this.translate.use(lang);
+    this.language = lang;
+    localStorage.setItem("hth_lang", lang);
+  }
+  languageSetup() {
+    this.translate.setFallbackLang("en");
+    let localLanguage = localStorage.getItem("hth_lang");
+    if (localLanguage != void 0) {
+      this.translate.use(localLanguage);
+      this.language = localLanguage;
+    } else {
+      this.translate.use("en");
+      this.language = "en";
+    }
+  }
+  updateActiveLink(url) {
+    if (url === "/" || url === "/home") {
+      this.activeLink = "home";
+    } else if (url.startsWith("/concerts")) {
+      this.activeLink = "concerts";
+    } else if (url.startsWith("/projects")) {
+      this.activeLink = "projects";
+    } else if (url.startsWith("/bio")) {
+      this.activeLink = "bio";
+    } else if (url.startsWith("/contacts")) {
+      this.activeLink = "contacts";
+    } else if (url.startsWith("/members")) {
+      this.activeLink = url.split("/", 3)[1] + "/" + url.split("/", 3)[2];
+    } else {
+      this.activeLink = "";
+    }
+  }
+  navigate(dest) {
+    this.activeLink = dest;
+    this.router.navigate([dest]);
+    this.triggerCloseButtonClick();
+  }
+  triggerCloseButtonClick() {
+    const closeButton = document.querySelector(".btn-close");
+    if (closeButton) {
+      closeButton.click();
+    } else {
+      console.warn("Bottone di chiusura non trovato.");
+    }
+  }
+  scrollUp() {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
+  static \u0275fac = function SharedService_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _SharedService)(\u0275\u0275inject(TranslateService), \u0275\u0275inject(Router), \u0275\u0275inject(ViewportScroller));
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _SharedService, factory: _SharedService.\u0275fac, providedIn: "root" });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(SharedService, [{
+    type: Injectable,
+    args: [{
+      providedIn: "root"
+    }]
+  }], () => [{ type: TranslateService }, { type: Router }, { type: ViewportScroller }], null);
+})();
+
 // src/app/members/davide/davide.component.ts
 var DavideComponent = class _DavideComponent {
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    console.log(this.shared.activeLink);
+  }
   static \u0275fac = function DavideComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _DavideComponent)();
+    return new (__ngFactoryType__ || _DavideComponent)(\u0275\u0275directiveInject(SharedService));
   };
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DavideComponent, selectors: [["app-davide"]], decls: 2, vars: 0, consts: [[1, "squealer"]], template: function DavideComponent_Template(rf, ctx) {
     if (rf & 1) {
@@ -38768,16 +40276,21 @@ var DavideComponent = class _DavideComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DavideComponent, [{
     type: Component,
     args: [{ selector: "app-davide", imports: [], template: '<h1 class="squealer">Davide</h1>' }]
-  }], null, null);
+  }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(DavideComponent, { className: "DavideComponent", filePath: "src/app/members/davide/davide.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(DavideComponent, { className: "DavideComponent", filePath: "src/app/members/davide/davide.component.ts", lineNumber: 10 });
 })();
 
 // src/app/members/andrea/andrea.component.ts
 var AndreaComponent = class _AndreaComponent {
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    console.log(this.shared.activeLink);
+  }
   static \u0275fac = function AndreaComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _AndreaComponent)();
+    return new (__ngFactoryType__ || _AndreaComponent)(\u0275\u0275directiveInject(SharedService));
   };
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AndreaComponent, selectors: [["app-andrea"]], decls: 2, vars: 0, consts: [[1, "squealer"]], template: function AndreaComponent_Template(rf, ctx) {
     if (rf & 1) {
@@ -38791,10 +40304,10 @@ var AndreaComponent = class _AndreaComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AndreaComponent, [{
     type: Component,
     args: [{ selector: "app-andrea", imports: [], template: '<h1 class="squealer">Andrea</h1>' }]
-  }], null, null);
+  }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AndreaComponent, { className: "AndreaComponent", filePath: "src/app/members/andrea/andrea.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AndreaComponent, { className: "AndreaComponent", filePath: "src/app/members/andrea/andrea.component.ts", lineNumber: 10 });
 })();
 
 // src/app/members/lorenzo/lorenzo.component.ts
@@ -43379,1178 +44892,6 @@ var NoopAnimationsModule = class _NoopAnimationsModule {
   }], null, null);
 })();
 
-// node_modules/@ngx-translate/core/fesm2022/ngx-translate-core.mjs
-var MissingTranslationHandler = class {
-};
-var DefaultMissingTranslationHandler = class _DefaultMissingTranslationHandler {
-  handle(params) {
-    return params.key;
-  }
-  static \u0275fac = function DefaultMissingTranslationHandler_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _DefaultMissingTranslationHandler)();
-  };
-  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
-    token: _DefaultMissingTranslationHandler,
-    factory: _DefaultMissingTranslationHandler.\u0275fac
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DefaultMissingTranslationHandler, [{
-    type: Injectable
-  }], null, null);
-})();
-var TranslateCompiler = class {
-};
-var TranslateNoOpCompiler = class _TranslateNoOpCompiler extends TranslateCompiler {
-  compile(value, lang) {
-    void lang;
-    return value;
-  }
-  compileTranslations(translations, lang) {
-    void lang;
-    return translations;
-  }
-  static \u0275fac = /* @__PURE__ */ (() => {
-    let \u0275TranslateNoOpCompiler_BaseFactory;
-    return function TranslateNoOpCompiler_Factory(__ngFactoryType__) {
-      return (\u0275TranslateNoOpCompiler_BaseFactory || (\u0275TranslateNoOpCompiler_BaseFactory = \u0275\u0275getInheritedFactory(_TranslateNoOpCompiler)))(__ngFactoryType__ || _TranslateNoOpCompiler);
-    };
-  })();
-  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
-    token: _TranslateNoOpCompiler,
-    factory: _TranslateNoOpCompiler.\u0275fac
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateNoOpCompiler, [{
-    type: Injectable
-  }], null, null);
-})();
-var TranslateLoader = class {
-};
-var TranslateNoOpLoader = class _TranslateNoOpLoader extends TranslateLoader {
-  getTranslation(lang) {
-    void lang;
-    return of({});
-  }
-  static \u0275fac = /* @__PURE__ */ (() => {
-    let \u0275TranslateNoOpLoader_BaseFactory;
-    return function TranslateNoOpLoader_Factory(__ngFactoryType__) {
-      return (\u0275TranslateNoOpLoader_BaseFactory || (\u0275TranslateNoOpLoader_BaseFactory = \u0275\u0275getInheritedFactory(_TranslateNoOpLoader)))(__ngFactoryType__ || _TranslateNoOpLoader);
-    };
-  })();
-  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
-    token: _TranslateNoOpLoader,
-    factory: _TranslateNoOpLoader.\u0275fac
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateNoOpLoader, [{
-    type: Injectable
-  }], null, null);
-})();
-function equals(o1, o2) {
-  if (o1 === o2) return true;
-  if (o1 === null || o2 === null) return false;
-  if (o1 !== o1 && o2 !== o2) return true;
-  const t1 = typeof o1, t2 = typeof o2;
-  let length;
-  if (t1 == t2 && t1 == "object") {
-    if (Array.isArray(o1)) {
-      if (!Array.isArray(o2)) return false;
-      if ((length = o1.length) == o2.length) {
-        for (let key = 0; key < length; key++) {
-          if (!equals(o1[key], o2[key])) return false;
-        }
-        return true;
-      }
-    } else {
-      if (Array.isArray(o2)) {
-        return false;
-      }
-      if (isDict(o1) && isDict(o2)) {
-        const keySet = /* @__PURE__ */ Object.create(null);
-        for (const key in o1) {
-          if (!equals(o1[key], o2[key])) {
-            return false;
-          }
-          keySet[key] = true;
-        }
-        for (const key in o2) {
-          if (!(key in keySet) && typeof o2[key] !== "undefined") {
-            return false;
-          }
-        }
-        return true;
-      }
-    }
-  }
-  return false;
-}
-function isDefinedAndNotNull(value) {
-  return typeof value !== "undefined" && value !== null;
-}
-function isDefined(value) {
-  return value !== void 0;
-}
-function isDict(value) {
-  return isObject(value) && !isArray3(value) && value !== null;
-}
-function isObject(value) {
-  return typeof value === "object" && value !== null;
-}
-function isArray3(value) {
-  return Array.isArray(value);
-}
-function isString(value) {
-  return typeof value === "string";
-}
-function isFunction3(value) {
-  return typeof value === "function";
-}
-function cloneDeep(value) {
-  if (isArray3(value)) {
-    return value.map((item) => cloneDeep(item));
-  } else if (isDict(value)) {
-    const cloned = {};
-    Object.keys(value).forEach((key) => {
-      cloned[key] = cloneDeep(value[key]);
-    });
-    return cloned;
-  } else {
-    return value;
-  }
-}
-function mergeDeep(target, source) {
-  if (!isObject(target)) {
-    return cloneDeep(source);
-  }
-  const output = cloneDeep(target);
-  if (isObject(output) && isObject(source)) {
-    Object.keys(source).forEach((key) => {
-      if (isDict(source[key])) {
-        if (key in target) {
-          output[key] = mergeDeep(target[key], source[key]);
-        } else {
-          Object.assign(output, {
-            [key]: source[key]
-          });
-        }
-      } else {
-        Object.assign(output, {
-          [key]: source[key]
-        });
-      }
-    });
-  }
-  return output;
-}
-function getValue(target, key) {
-  const keys = key.split(".");
-  key = "";
-  do {
-    key += keys.shift();
-    const isLastKey = !keys.length;
-    if (isDefinedAndNotNull(target)) {
-      if (isDict(target) && isDefined(target[key]) && (isDict(target[key]) || isArray3(target[key]) || isLastKey)) {
-        target = target[key];
-        key = "";
-        continue;
-      }
-      if (isArray3(target)) {
-        const index = parseInt(key, 10);
-        if (isDefined(target[index]) && (isDict(target[index]) || isArray3(target[index]) || isLastKey)) {
-          target = target[index];
-          key = "";
-          continue;
-        }
-      }
-    }
-    if (isLastKey) {
-      target = void 0;
-      continue;
-    }
-    key += ".";
-  } while (keys.length);
-  return target;
-}
-function insertValue(target, key, value) {
-  return mergeDeep(target, createNestedObject(key, value));
-}
-function createNestedObject(dotSeparatedKey, value) {
-  return dotSeparatedKey.split(".").reduceRight((acc, key) => ({
-    [key]: acc
-  }), value);
-}
-var TranslateParser = class {
-};
-var TranslateDefaultParser = class _TranslateDefaultParser extends TranslateParser {
-  templateMatcher = /{{\s?([^{}\s]*)\s?}}/g;
-  interpolate(expr, params) {
-    if (isString(expr)) {
-      return this.interpolateString(expr, params);
-    } else if (isFunction3(expr)) {
-      return this.interpolateFunction(expr, params);
-    }
-    return void 0;
-  }
-  interpolateFunction(fn, params) {
-    return fn(params);
-  }
-  interpolateString(expr, params) {
-    if (!params) {
-      return expr;
-    }
-    return expr.replace(this.templateMatcher, (substring, key) => {
-      const replacement = this.getInterpolationReplacement(params, key);
-      return replacement !== void 0 ? replacement : substring;
-    });
-  }
-  /**
-   * Returns the replacement for an interpolation parameter
-   * @params:
-   */
-  getInterpolationReplacement(params, key) {
-    return this.formatValue(getValue(params, key));
-  }
-  /**
-   * Converts a value into a useful string representation.
-   * @param value The value to format.
-   * @returns A string representation of the value.
-   */
-  formatValue(value) {
-    if (isString(value)) {
-      return value;
-    }
-    if (typeof value === "number" || typeof value === "boolean") {
-      return value.toString();
-    }
-    if (value === null) {
-      return "null";
-    }
-    if (isArray3(value)) {
-      return value.join(", ");
-    }
-    if (isObject(value)) {
-      if (typeof value.toString === "function" && value.toString !== Object.prototype.toString) {
-        return value.toString();
-      }
-      return JSON.stringify(value);
-    }
-    return void 0;
-  }
-  static \u0275fac = /* @__PURE__ */ (() => {
-    let \u0275TranslateDefaultParser_BaseFactory;
-    return function TranslateDefaultParser_Factory(__ngFactoryType__) {
-      return (\u0275TranslateDefaultParser_BaseFactory || (\u0275TranslateDefaultParser_BaseFactory = \u0275\u0275getInheritedFactory(_TranslateDefaultParser)))(__ngFactoryType__ || _TranslateDefaultParser);
-    };
-  })();
-  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
-    token: _TranslateDefaultParser,
-    factory: _TranslateDefaultParser.\u0275fac
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateDefaultParser, [{
-    type: Injectable
-  }], null, null);
-})();
-var TranslateStore = class _TranslateStore {
-  _onTranslationChange = new Subject();
-  _onLangChange = new Subject();
-  _onFallbackLangChange = new Subject();
-  fallbackLang = null;
-  currentLang;
-  translations = {};
-  languages = [];
-  getTranslations(language) {
-    return this.translations[language];
-  }
-  setTranslations(language, translations, extend) {
-    this.translations[language] = extend && this.hasTranslationFor(language) ? mergeDeep(this.translations[language], translations) : translations;
-    this.addLanguages([language]);
-    this._onTranslationChange.next({
-      lang: language,
-      translations: this.getTranslations(language)
-    });
-  }
-  getLanguages() {
-    return this.languages;
-  }
-  getCurrentLang() {
-    return this.currentLang;
-  }
-  getFallbackLang() {
-    return this.fallbackLang;
-  }
-  /**
-   * Changes the fallback lang
-   */
-  setFallbackLang(lang, emitChange = true) {
-    this.fallbackLang = lang;
-    if (emitChange) {
-      this._onFallbackLangChange.next({
-        lang,
-        translations: this.translations[lang]
-      });
-    }
-  }
-  setCurrentLang(lang, emitChange = true) {
-    this.currentLang = lang;
-    if (emitChange) {
-      this._onLangChange.next({
-        lang,
-        translations: this.translations[lang]
-      });
-    }
-  }
-  /**
-   * An Observable to listen to translation change events
-   * onTranslationChange.subscribe((params: TranslationChangeEvent) => {
-   *     // do something
-   * });
-   */
-  get onTranslationChange() {
-    return this._onTranslationChange.asObservable();
-  }
-  /**
-   * An Observable to listen to lang change events
-   * onLangChange.subscribe((params: LangChangeEvent) => {
-   *     // do something
-   * });
-   */
-  get onLangChange() {
-    return this._onLangChange.asObservable();
-  }
-  /**
-   * An Observable to listen to fallback lang change events
-   * onFallbackLangChange.subscribe((params: FallbackLangChangeEvent) => {
-   *     // do something
-   * });
-   */
-  get onFallbackLangChange() {
-    return this._onFallbackLangChange.asObservable();
-  }
-  addLanguages(languages) {
-    this.languages = Array.from(/* @__PURE__ */ new Set([...this.languages, ...languages]));
-  }
-  hasTranslationFor(lang) {
-    return typeof this.translations[lang] !== "undefined";
-  }
-  deleteTranslations(lang) {
-    delete this.translations[lang];
-  }
-  getTranslation(key) {
-    let text = this.getValue(this.currentLang, key);
-    if (text === void 0 && this.fallbackLang != null && this.fallbackLang !== this.currentLang) {
-      text = this.getValue(this.fallbackLang, key);
-    }
-    return text;
-  }
-  getValue(language, key) {
-    return getValue(this.getTranslations(language), key);
-  }
-  static \u0275fac = function TranslateStore_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _TranslateStore)();
-  };
-  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
-    token: _TranslateStore,
-    factory: _TranslateStore.\u0275fac
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateStore, [{
-    type: Injectable
-  }], null, null);
-})();
-var TRANSLATE_SERVICE_CONFIG = new InjectionToken("TRANSLATE_CONFIG");
-var makeObservable = (value) => {
-  return isObservable(value) ? value : of(value);
-};
-var TranslateService = class _TranslateService {
-  loadingTranslations;
-  pending = false;
-  _translationRequests = {};
-  lastUseLanguage = null;
-  currentLoader = inject(TranslateLoader);
-  compiler = inject(TranslateCompiler);
-  parser = inject(TranslateParser);
-  missingTranslationHandler = inject(MissingTranslationHandler);
-  store = inject(TranslateStore);
-  extend = false;
-  /**
-   * An Observable to listen to translation change events
-   * onTranslationChange.subscribe((params: TranslationChangeEvent) => {
-   *     // do something
-   * });
-   */
-  get onTranslationChange() {
-    return this.store.onTranslationChange;
-  }
-  /**
-   * An Observable to listen to lang change events
-   * onLangChange.subscribe((params: LangChangeEvent) => {
-   *     // do something
-   * });
-   */
-  get onLangChange() {
-    return this.store.onLangChange;
-  }
-  /**
-   * An Observable to listen to fallback lang change events
-   * onFallbackLangChange.subscribe((params: FallbackLangChangeEvent) => {
-   *     // do something
-   * });
-   */
-  get onFallbackLangChange() {
-    return this.store.onFallbackLangChange;
-  }
-  /**
-   * @deprecated Use onFallbackLangChange() instead
-   */
-  get onDefaultLangChange() {
-    return this.store.onFallbackLangChange;
-  }
-  constructor() {
-    const config2 = __spreadValues({
-      extend: false,
-      fallbackLang: null
-    }, inject(TRANSLATE_SERVICE_CONFIG, {
-      optional: true
-    }));
-    if (config2.lang) {
-      this.use(config2.lang);
-    }
-    if (config2.fallbackLang) {
-      this.setFallbackLang(config2.fallbackLang);
-    }
-    if (config2.extend) {
-      this.extend = true;
-    }
-  }
-  /**
-   * Sets the fallback language to use if a translation is not found in the
-   * current language
-   */
-  setFallbackLang(lang) {
-    if (!this.getFallbackLang()) {
-      this.store.setFallbackLang(lang, false);
-    }
-    const pending = this.loadOrExtendLanguage(lang);
-    if (isObservable(pending)) {
-      pending.pipe(take(1)).subscribe({
-        next: () => {
-          this.store.setFallbackLang(lang);
-        },
-        error: () => {
-        }
-      });
-      return pending;
-    }
-    this.store.setFallbackLang(lang);
-    return of(this.store.getTranslations(lang));
-  }
-  /**
-   * Changes the lang currently used
-   */
-  use(lang) {
-    this.lastUseLanguage = lang;
-    if (!this.getCurrentLang()) {
-      this.store.setCurrentLang(lang, false);
-    }
-    const pending = this.loadOrExtendLanguage(lang);
-    if (isObservable(pending)) {
-      pending.pipe(take(1)).subscribe({
-        next: () => {
-          this.changeLang(lang);
-        },
-        error: () => {
-        }
-      });
-      return pending;
-    }
-    this.changeLang(lang);
-    return of(this.store.getTranslations(lang));
-  }
-  /**
-   * Retrieves the given translations
-   */
-  loadOrExtendLanguage(lang) {
-    if (!this.store.hasTranslationFor(lang) || this.extend) {
-      this._translationRequests[lang] = this._translationRequests[lang] || this.loadAndCompileTranslations(lang);
-      return this._translationRequests[lang];
-    }
-    return void 0;
-  }
-  /**
-   * Changes the current lang
-   */
-  changeLang(lang) {
-    if (lang !== this.lastUseLanguage) {
-      return;
-    }
-    this.store.setCurrentLang(lang);
-  }
-  getCurrentLang() {
-    return this.store.getCurrentLang();
-  }
-  loadAndCompileTranslations(lang) {
-    this.pending = true;
-    const loadingTranslations = this.currentLoader.getTranslation(lang).pipe(shareReplay(1), take(1));
-    this.loadingTranslations = loadingTranslations.pipe(map((res) => this.compiler.compileTranslations(res, lang)), shareReplay(1), take(1));
-    this.loadingTranslations.subscribe({
-      next: (res) => {
-        this.store.setTranslations(lang, res, this.extend);
-        this.pending = false;
-      },
-      error: (err) => {
-        void err;
-        this.pending = false;
-      }
-    });
-    return loadingTranslations;
-  }
-  /**
-   * Manually sets an object of translations for a given language
-   * after passing it through the compiler
-   */
-  setTranslation(lang, translations, shouldMerge = false) {
-    const interpolatableTranslations = this.compiler.compileTranslations(translations, lang);
-    this.store.setTranslations(lang, interpolatableTranslations, shouldMerge || this.extend);
-  }
-  getLangs() {
-    return this.store.getLanguages();
-  }
-  /**
-   * Add available languages
-   */
-  addLangs(languages) {
-    this.store.addLanguages(languages);
-  }
-  getParsedResultForKey(key, interpolateParams2) {
-    const textToInterpolate = this.getTextToInterpolate(key);
-    if (isDefinedAndNotNull(textToInterpolate)) {
-      return this.runInterpolation(textToInterpolate, interpolateParams2);
-    }
-    const res = this.missingTranslationHandler.handle(__spreadValues({
-      key,
-      translateService: this
-    }, interpolateParams2 !== void 0 && {
-      interpolateParams: interpolateParams2
-    }));
-    return res !== void 0 ? res : key;
-  }
-  /**
-   * Gets the fallback language. null if none is defined
-   */
-  getFallbackLang() {
-    return this.store.getFallbackLang();
-  }
-  getTextToInterpolate(key) {
-    return this.store.getTranslation(key);
-  }
-  runInterpolation(translations, interpolateParams2) {
-    if (!isDefinedAndNotNull(translations)) {
-      return;
-    }
-    if (isArray3(translations)) {
-      return this.runInterpolationOnArray(translations, interpolateParams2);
-    }
-    if (isDict(translations)) {
-      return this.runInterpolationOnDict(translations, interpolateParams2);
-    }
-    return this.parser.interpolate(translations, interpolateParams2);
-  }
-  runInterpolationOnArray(translations, interpolateParams2) {
-    return translations.map((translation) => this.runInterpolation(translation, interpolateParams2));
-  }
-  runInterpolationOnDict(translations, interpolateParams2) {
-    const result = {};
-    for (const key in translations) {
-      const res = this.runInterpolation(translations[key], interpolateParams2);
-      if (res !== void 0) {
-        result[key] = res;
-      }
-    }
-    return result;
-  }
-  /**
-   * Returns the parsed result of the translations
-   */
-  getParsedResult(key, interpolateParams2) {
-    return key instanceof Array ? this.getParsedResultForArray(key, interpolateParams2) : this.getParsedResultForKey(key, interpolateParams2);
-  }
-  getParsedResultForArray(key, interpolateParams2) {
-    const result = {};
-    let observables = false;
-    for (const k of key) {
-      result[k] = this.getParsedResultForKey(k, interpolateParams2);
-      observables = observables || isObservable(result[k]);
-    }
-    if (!observables) {
-      return result;
-    }
-    const sources = key.map((k) => makeObservable(result[k]));
-    return forkJoin(sources).pipe(map((arr) => {
-      const obj = {};
-      arr.forEach((value, index) => {
-        obj[key[index]] = value;
-      });
-      return obj;
-    }));
-  }
-  /**
-   * Gets the translated value of a key (or an array of keys)
-   * @returns the translated key, or an object of translated keys
-   */
-  get(key, interpolateParams2) {
-    if (!isDefinedAndNotNull(key) || !key.length) {
-      throw new Error(`Parameter "key" is required and cannot be empty`);
-    }
-    if (this.pending) {
-      return this.loadingTranslations.pipe(concatMap(() => {
-        return makeObservable(this.getParsedResult(key, interpolateParams2));
-      }));
-    }
-    return makeObservable(this.getParsedResult(key, interpolateParams2));
-  }
-  /**
-   * Returns a stream of translated values of a key (or an array of keys) which updates
-   * whenever the translation changes.
-   * @returns A stream of the translated key, or an object of translated keys
-   */
-  getStreamOnTranslationChange(key, interpolateParams2) {
-    if (!isDefinedAndNotNull(key) || !key.length) {
-      throw new Error(`Parameter "key" is required and cannot be empty`);
-    }
-    return concat(defer(() => this.get(key, interpolateParams2)), this.onTranslationChange.pipe(switchMap(() => {
-      const res = this.getParsedResult(key, interpolateParams2);
-      return makeObservable(res);
-    })));
-  }
-  /**
-   * Returns a stream of translated values of a key (or an array of keys) which updates
-   * whenever the language changes.
-   * @returns A stream of the translated key, or an object of translated keys
-   */
-  stream(key, interpolateParams2) {
-    if (!isDefinedAndNotNull(key) || !key.length) {
-      throw new Error(`Parameter "key" required`);
-    }
-    return concat(defer(() => this.get(key, interpolateParams2)), this.onLangChange.pipe(switchMap(() => {
-      const res = this.getParsedResult(key, interpolateParams2);
-      return makeObservable(res);
-    })));
-  }
-  /**
-   * Returns a translation instantly from the internal state of loaded translation.
-   * All rules regarding the current language, the preferred language of even fallback languages
-   * will be used except any promise handling.
-   */
-  instant(key, interpolateParams2) {
-    if (!isDefinedAndNotNull(key) || key.length === 0) {
-      throw new Error('Parameter "key" is required and cannot be empty');
-    }
-    const result = this.getParsedResult(key, interpolateParams2);
-    if (isObservable(result)) {
-      if (Array.isArray(key)) {
-        return key.reduce((acc, currKey) => {
-          acc[currKey] = currKey;
-          return acc;
-        }, {});
-      }
-      return key;
-    }
-    return result;
-  }
-  /**
-   * Sets the translated value of a key, after compiling it
-   */
-  set(key, translation, lang = this.getCurrentLang()) {
-    this.store.setTranslations(lang, insertValue(this.store.getTranslations(lang), key, isString(translation) ? this.compiler.compile(translation, lang) : this.compiler.compileTranslations(translation, lang)), false);
-  }
-  /**
-   * Allows reloading the lang file from the file
-   */
-  reloadLang(lang) {
-    this.resetLang(lang);
-    return this.loadAndCompileTranslations(lang);
-  }
-  /**
-   * Deletes inner translation
-   */
-  resetLang(lang) {
-    delete this._translationRequests[lang];
-    this.store.deleteTranslations(lang);
-  }
-  /**
-   * Returns the language code name from the browser, e.g. "de"
-   */
-  static getBrowserLang() {
-    if (typeof window === "undefined" || !window.navigator) {
-      return void 0;
-    }
-    const browserLang = this.getBrowserCultureLang();
-    return browserLang ? browserLang.split(/[-_]/)[0] : void 0;
-  }
-  /**
-   * Returns the culture language code name from the browser, e.g. "de-DE"
-   */
-  static getBrowserCultureLang() {
-    if (typeof window === "undefined" || typeof window.navigator === "undefined") {
-      return void 0;
-    }
-    return window.navigator.languages ? window.navigator.languages[0] : window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage;
-  }
-  getBrowserLang() {
-    return _TranslateService.getBrowserLang();
-  }
-  getBrowserCultureLang() {
-    return _TranslateService.getBrowserCultureLang();
-  }
-  /** Deprecations **/
-  /**
-   * @deprecated use `getFallbackLang()`
-   */
-  get defaultLang() {
-    return this.getFallbackLang();
-  }
-  /**
-   * The lang currently used
-   * @deprecated use `getCurrentLang()`
-   */
-  get currentLang() {
-    return this.store.getCurrentLang();
-  }
-  /**
-   * @deprecated use `getLangs()`
-   */
-  get langs() {
-    return this.store.getLanguages();
-  }
-  /**
-   * Sets the  language to use as a fallback
-   * @deprecated use setFallbackLanguage()
-   */
-  setDefaultLang(lang) {
-    return this.setFallbackLang(lang);
-  }
-  /**
-   * Gets the fallback language used
-   * @deprecated use getFallbackLang()
-   */
-  getDefaultLang() {
-    return this.getFallbackLang();
-  }
-  static \u0275fac = function TranslateService_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _TranslateService)();
-  };
-  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
-    token: _TranslateService,
-    factory: _TranslateService.\u0275fac
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateService, [{
-    type: Injectable
-  }], () => [], null);
-})();
-var TranslateDirective = class _TranslateDirective {
-  translateService = inject(TranslateService);
-  element = inject(ElementRef);
-  _ref = inject(ChangeDetectorRef);
-  key;
-  lastParams;
-  currentParams;
-  onLangChangeSub;
-  onFallbackLangChangeSub;
-  onTranslationChangeSub;
-  set translate(key) {
-    if (key) {
-      this.key = key;
-      this.checkNodes();
-    }
-  }
-  set translateParams(params) {
-    if (!equals(this.currentParams, params)) {
-      this.currentParams = params;
-      this.checkNodes(true);
-    }
-  }
-  constructor() {
-    if (!this.onTranslationChangeSub) {
-      this.onTranslationChangeSub = this.translateService.onTranslationChange.subscribe((event) => {
-        if (event.lang === this.translateService.currentLang) {
-          this.checkNodes(true, event.translations);
-        }
-      });
-    }
-    if (!this.onLangChangeSub) {
-      this.onLangChangeSub = this.translateService.onLangChange.subscribe((event) => {
-        this.checkNodes(true, event.translations);
-      });
-    }
-    if (!this.onFallbackLangChangeSub) {
-      this.onFallbackLangChangeSub = this.translateService.onFallbackLangChange.subscribe((event) => {
-        void event;
-        this.checkNodes(true);
-      });
-    }
-  }
-  ngAfterViewChecked() {
-    this.checkNodes();
-  }
-  checkNodes(forceUpdate = false, translations) {
-    let nodes = this.element.nativeElement.childNodes;
-    if (!nodes.length) {
-      this.setContent(this.element.nativeElement, this.key);
-      nodes = this.element.nativeElement.childNodes;
-    }
-    nodes.forEach((n) => {
-      const node = n;
-      if (node.nodeType === 3) {
-        let key;
-        if (forceUpdate) {
-          node.lastKey = null;
-        }
-        if (isDefinedAndNotNull(node.lookupKey)) {
-          key = node.lookupKey;
-        } else if (this.key) {
-          key = this.key;
-        } else {
-          const content = this.getContent(node);
-          const trimmedContent = content.trim();
-          if (trimmedContent.length) {
-            node.lookupKey = trimmedContent;
-            if (content !== node.currentValue) {
-              key = trimmedContent;
-              node.originalContent = content || node.originalContent;
-            } else if (node.originalContent) {
-              key = node.originalContent.trim();
-            }
-          }
-        }
-        this.updateValue(key, node, translations);
-      }
-    });
-  }
-  updateValue(key, node, translations) {
-    if (key) {
-      if (node.lastKey === key && this.lastParams === this.currentParams) {
-        return;
-      }
-      this.lastParams = this.currentParams;
-      const onTranslation = (res) => {
-        if (res !== key || !node.lastKey) {
-          node.lastKey = key;
-        }
-        if (!node.originalContent) {
-          node.originalContent = this.getContent(node);
-        }
-        if (isString(res)) {
-          node.currentValue = res;
-        } else if (!isDefinedAndNotNull(res)) {
-          node.currentValue = node.originalContent || key;
-        } else {
-          node.currentValue = JSON.stringify(res);
-        }
-        this.setContent(node, this.key ? node.currentValue : node.originalContent.replace(key, node.currentValue));
-        this._ref.markForCheck();
-      };
-      if (isDefinedAndNotNull(translations)) {
-        const res = this.translateService.getParsedResult(key, this.currentParams);
-        if (isObservable(res)) {
-          res.subscribe({
-            next: onTranslation
-          });
-        } else {
-          onTranslation(res);
-        }
-      } else {
-        this.translateService.get(key, this.currentParams).subscribe(onTranslation);
-      }
-    }
-  }
-  getContent(node) {
-    return isDefinedAndNotNull(node.textContent) ? node.textContent : node.data;
-  }
-  setContent(node, content) {
-    if (isDefinedAndNotNull(node.textContent)) {
-      node.textContent = content;
-    } else {
-      node.data = content;
-    }
-  }
-  ngOnDestroy() {
-    if (this.onLangChangeSub) {
-      this.onLangChangeSub.unsubscribe();
-    }
-    if (this.onFallbackLangChangeSub) {
-      this.onFallbackLangChangeSub.unsubscribe();
-    }
-    if (this.onTranslationChangeSub) {
-      this.onTranslationChangeSub.unsubscribe();
-    }
-  }
-  static \u0275fac = function TranslateDirective_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _TranslateDirective)();
-  };
-  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
-    type: _TranslateDirective,
-    selectors: [["", "translate", ""], ["", "ngx-translate", ""]],
-    inputs: {
-      translate: "translate",
-      translateParams: "translateParams"
-    }
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateDirective, [{
-    type: Directive,
-    args: [{
-      // eslint-disable-next-line @angular-eslint/directive-selector
-      selector: "[translate],[ngx-translate]",
-      standalone: true
-    }]
-  }], () => [], {
-    translate: [{
-      type: Input
-    }],
-    translateParams: [{
-      type: Input
-    }]
-  });
-})();
-var TranslatePipe = class _TranslatePipe {
-  translate = inject(TranslateService);
-  _ref = inject(ChangeDetectorRef);
-  value = "";
-  lastKey = null;
-  lastParams = [];
-  onTranslationChange;
-  onLangChange;
-  onFallbackLangChange;
-  updateValue(key, interpolateParams2, translations) {
-    const onTranslation = (res) => {
-      this.value = res !== void 0 ? res : key;
-      this.lastKey = key;
-      this._ref.markForCheck();
-    };
-    if (translations) {
-      const res = this.translate.getParsedResult(key, interpolateParams2);
-      if (isObservable(res)) {
-        res.subscribe(onTranslation);
-      } else {
-        onTranslation(res);
-      }
-    }
-    this.translate.get(key, interpolateParams2).subscribe(onTranslation);
-  }
-  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-  transform(query, ...args) {
-    if (!query || !query.length) {
-      return query;
-    }
-    if (equals(query, this.lastKey) && equals(args, this.lastParams)) {
-      return this.value;
-    }
-    let interpolateParams2 = void 0;
-    if (isDefinedAndNotNull(args[0]) && args.length) {
-      if (isString(args[0]) && args[0].length) {
-        const validArgs = args[0].replace(/(')?([a-zA-Z0-9_]+)(')?(\s)?:/g, '"$2":').replace(/:(\s)?(')(.*?)(')/g, ':"$3"');
-        try {
-          interpolateParams2 = JSON.parse(validArgs);
-        } catch (e) {
-          void e;
-          throw new SyntaxError(`Wrong parameter in TranslatePipe. Expected a valid Object, received: ${args[0]}`);
-        }
-      } else if (isDict(args[0])) {
-        interpolateParams2 = args[0];
-      }
-    }
-    this.lastKey = query;
-    this.lastParams = args;
-    this.updateValue(query, interpolateParams2);
-    this._dispose();
-    if (!this.onTranslationChange) {
-      this.onTranslationChange = this.translate.onTranslationChange.subscribe((event) => {
-        if (this.lastKey && event.lang === this.translate.getCurrentLang() || event.lang === this.translate.getFallbackLang()) {
-          this.lastKey = null;
-          this.updateValue(query, interpolateParams2, event.translations);
-        }
-      });
-    }
-    if (!this.onLangChange) {
-      this.onLangChange = this.translate.onLangChange.subscribe((event) => {
-        if (this.lastKey) {
-          this.lastKey = null;
-          this.updateValue(query, interpolateParams2, event.translations);
-        }
-      });
-    }
-    if (!this.onFallbackLangChange) {
-      this.onFallbackLangChange = this.translate.onFallbackLangChange.subscribe(() => {
-        if (this.lastKey) {
-          this.lastKey = null;
-          this.updateValue(query, interpolateParams2);
-        }
-      });
-    }
-    return this.value;
-  }
-  /**
-   * Clean any existing subscription to change events
-   */
-  _dispose() {
-    if (typeof this.onTranslationChange !== "undefined") {
-      this.onTranslationChange.unsubscribe();
-      this.onTranslationChange = void 0;
-    }
-    if (typeof this.onLangChange !== "undefined") {
-      this.onLangChange.unsubscribe();
-      this.onLangChange = void 0;
-    }
-    if (typeof this.onFallbackLangChange !== "undefined") {
-      this.onFallbackLangChange.unsubscribe();
-      this.onFallbackLangChange = void 0;
-    }
-  }
-  ngOnDestroy() {
-    this._dispose();
-  }
-  static \u0275fac = function TranslatePipe_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _TranslatePipe)();
-  };
-  static \u0275pipe = /* @__PURE__ */ \u0275\u0275definePipe({
-    name: "translate",
-    type: _TranslatePipe,
-    pure: false
-  });
-  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
-    token: _TranslatePipe,
-    factory: _TranslatePipe.\u0275fac
-  });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslatePipe, [{
-    type: Injectable
-  }, {
-    type: Pipe,
-    args: [{
-      name: "translate",
-      standalone: true,
-      pure: false
-      // required to update the value when the promise is resolved
-    }]
-  }], null, null);
-})();
-function provideTranslateLoader(loader) {
-  return {
-    provide: TranslateLoader,
-    useClass: loader
-  };
-}
-function provideTranslateCompiler(compiler) {
-  return {
-    provide: TranslateCompiler,
-    useClass: compiler
-  };
-}
-function provideTranslateParser(parser) {
-  return {
-    provide: TranslateParser,
-    useClass: parser
-  };
-}
-function provideMissingTranslationHandler(handler) {
-  return {
-    provide: MissingTranslationHandler,
-    useClass: handler
-  };
-}
-function defaultProviders(config2 = {}, provideStore) {
-  const providers = [];
-  if (config2.loader) {
-    providers.push(config2.loader);
-  }
-  if (config2.compiler) {
-    providers.push(config2.compiler);
-  }
-  if (config2.parser) {
-    providers.push(config2.parser);
-  }
-  if (config2.missingTranslationHandler) {
-    providers.push(config2.missingTranslationHandler);
-  }
-  if (provideStore) {
-    providers.push(TranslateStore);
-  }
-  if (config2.useDefaultLang || config2.defaultLanguage) {
-    console.warn("The `useDefaultLang` and `defaultLanguage` options are deprecated. Please use `fallbackLang` instead.");
-    if (config2.useDefaultLang === true && config2.defaultLanguage) {
-      config2.fallbackLang = config2.defaultLanguage;
-    }
-  }
-  const serviceConfig = {
-    fallbackLang: config2.fallbackLang ?? null,
-    lang: config2.lang,
-    extend: config2.extend ?? false
-  };
-  providers.push({
-    provide: TRANSLATE_SERVICE_CONFIG,
-    useValue: serviceConfig
-  });
-  providers.push({
-    provide: TranslateService,
-    useClass: TranslateService,
-    deps: [TranslateStore, TranslateLoader, TranslateCompiler, TranslateParser, MissingTranslationHandler, TRANSLATE_SERVICE_CONFIG]
-  });
-  return providers;
-}
-var TranslateModule = class _TranslateModule {
-  /**
-   * Use this method in your root module to provide the TranslateService
-   */
-  static forRoot(config2 = {}) {
-    return {
-      ngModule: _TranslateModule,
-      providers: [...defaultProviders(__spreadValues({
-        compiler: provideTranslateCompiler(TranslateNoOpCompiler),
-        parser: provideTranslateParser(TranslateDefaultParser),
-        loader: provideTranslateLoader(TranslateNoOpLoader),
-        missingTranslationHandler: provideMissingTranslationHandler(DefaultMissingTranslationHandler)
-      }, config2), true)]
-    };
-  }
-  /**
-   * Use this method in your other (non-root) modules to import the directive/pipe
-   */
-  static forChild(config2 = {}) {
-    return {
-      ngModule: _TranslateModule,
-      providers: [...defaultProviders(config2, config2.isolate ?? false)]
-    };
-  }
-  static \u0275fac = function TranslateModule_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _TranslateModule)();
-  };
-  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
-    type: _TranslateModule,
-    imports: [TranslatePipe, TranslateDirective],
-    exports: [TranslatePipe, TranslateDirective]
-  });
-  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({});
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateModule, [{
-    type: NgModule,
-    args: [{
-      imports: [TranslatePipe, TranslateDirective],
-      exports: [TranslatePipe, TranslateDirective]
-    }]
-  }], null, null);
-})();
-
 // node_modules/@ngx-translate/http-loader/fesm2022/ngx-translate-http-loader.mjs
 var TRANSLATE_HTTP_LOADER_CONFIG = new InjectionToken("TRANSLATE_HTTP_LOADER_CONFIG");
 var TranslateHttpLoader = class _TranslateHttpLoader {
@@ -44621,88 +44962,6 @@ var appConfig = {
   ]
 };
 
-// src/app/services/shared.service.ts
-var SharedService = class _SharedService {
-  translate;
-  router;
-  viewportScroller;
-  activeLink = "default";
-  language = "en";
-  constructor(translate, router, viewportScroller) {
-    this.translate = translate;
-    this.router = router;
-    this.viewportScroller = viewportScroller;
-    this.languageSetup();
-    this.updateActiveLink(this.router.url);
-    this.router.events.subscribe(() => {
-      this.updateActiveLink(this.router.url);
-    });
-  }
-  ngOnInit() {
-  }
-  switchLanguage(lang) {
-    this.translate.use(lang);
-    this.language = lang;
-    localStorage.setItem("hth_lang", lang);
-  }
-  languageSetup() {
-    this.translate.setFallbackLang("en");
-    let localLanguage = localStorage.getItem("hth_lang");
-    if (localLanguage != void 0) {
-      this.translate.use(localLanguage);
-      this.language = localLanguage;
-    } else {
-      this.translate.use("en");
-      this.language = "en";
-    }
-  }
-  updateActiveLink(url) {
-    if (url === "/" || url === "/home") {
-      this.activeLink = "home";
-    } else if (url.startsWith("/concerts")) {
-      this.activeLink = "concerts";
-    } else if (url.startsWith("/projects")) {
-      this.activeLink = "projects";
-    } else if (url.startsWith("/bio")) {
-      this.activeLink = "bio";
-    } else if (url.startsWith("/members")) {
-      this.activeLink = "members";
-    } else if (url.startsWith("/contacts")) {
-      this.activeLink = "contacts";
-    } else {
-      this.activeLink = "";
-    }
-  }
-  navigate(dest) {
-    this.activeLink = dest;
-    this.router.navigate([dest]);
-    this.triggerCloseButtonClick();
-  }
-  triggerCloseButtonClick() {
-    const closeButton = document.querySelector(".btn-close");
-    if (closeButton) {
-      closeButton.click();
-    } else {
-      console.warn("Bottone di chiusura non trovato.");
-    }
-  }
-  scrollUp() {
-    this.viewportScroller.scrollToPosition([0, 0]);
-  }
-  static \u0275fac = function SharedService_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _SharedService)(\u0275\u0275inject(TranslateService), \u0275\u0275inject(Router), \u0275\u0275inject(ViewportScroller));
-  };
-  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _SharedService, factory: _SharedService.\u0275fac, providedIn: "root" });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(SharedService, [{
-    type: Injectable,
-    args: [{
-      providedIn: "root"
-    }]
-  }], () => [{ type: TranslateService }, { type: Router }, { type: ViewportScroller }], null);
-})();
-
 // src/app/header/header.component.ts
 function HeaderComponent_Conditional_63_Template(rf, ctx) {
   if (rf & 1) {
@@ -44730,11 +44989,11 @@ var HeaderComponent = class _HeaderComponent {
   static \u0275fac = function HeaderComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _HeaderComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 76, vars: 16, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "m-2", "glow-pulse", 3, "click"], ["src", "/media/hth-logo.png", "alt", "HTH Logo", 2, "max-height", "50px"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3"], [1, "nav-item", "m-2"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/projects", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/bio", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown"], ["id", "membersDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/members/jacopo", 1, "dropdown-item", "clickable", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/members/eros", 1, "dropdown-item", "clickable", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/members/francesco", 1, "dropdown-item", "clickable", 3, "click"], ["routerLink", "/members/davide", 1, "dropdown-item", "clickable", 3, "click"], ["routerLink", "/members/andrea", 1, "dropdown-item", "clickable", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/members/lorenzo", 1, "dropdown-item", "clickable", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/members/matteo", 1, "dropdown-item", "clickable", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase"], [1, "dropdown-item", "clickable", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 76, vars: 34, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", 3, "click"], ["src", "/media/hth-logo.png", "alt", "HTH Logo", 2, "max-height", "50px"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/projects", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/bio", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "membersDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "membersDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/members/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/members/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/members/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/members/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/members/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/members/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/members/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
-      \u0275\u0275elementStart(0, "nav", 1)(1, "div", 2)(2, "a", 3);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_2_listener() {
+      \u0275\u0275elementStart(0, "nav", 1)(1, "div", 2)(2, "span", 3);
+      \u0275\u0275listener("click", function HeaderComponent_Template_span_click_2_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.navigate("home"));
       });
@@ -44840,25 +45099,25 @@ var HeaderComponent = class _HeaderComponent {
       });
       \u0275\u0275text(59, "Contacts");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(60, "li", 18)(61, "button", 33);
+      \u0275\u0275elementStart(60, "li", 33)(61, "button", 34);
       \u0275\u0275text(62);
       \u0275\u0275template(63, HeaderComponent_Conditional_63_Template, 1, 0)(64, HeaderComponent_Conditional_64_Template, 1, 0)(65, HeaderComponent_Conditional_65_Template, 1, 0);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(66, "ul", 20)(67, "li")(68, "a", 34);
+      \u0275\u0275elementStart(66, "ul", 35)(67, "li")(68, "a", 36);
       \u0275\u0275listener("click", function HeaderComponent_Template_a_click_68_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.switchLanguage("en"));
       });
       \u0275\u0275text(69, "EN \u{1F1EC}\u{1F1E7}");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(70, "li")(71, "a", 34);
+      \u0275\u0275elementStart(70, "li")(71, "a", 36);
       \u0275\u0275listener("click", function HeaderComponent_Template_a_click_71_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.switchLanguage("it"));
       });
       \u0275\u0275text(72, "IT \u{1F1EE}\u{1F1F9}");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(73, "li")(74, "a", 34);
+      \u0275\u0275elementStart(73, "li")(74, "a", 36);
       \u0275\u0275listener("click", function HeaderComponent_Template_a_click_74_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.switchLanguage("de"));
@@ -44867,9 +45126,7 @@ var HeaderComponent = class _HeaderComponent {
       \u0275\u0275elementEnd()()()()()()()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(2);
-      \u0275\u0275classProp("active", ctx.shared.activeLink === "home");
-      \u0275\u0275advance(12);
+      \u0275\u0275advance(14);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "home" || ctx.shared.activeLink === "");
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "concerts");
@@ -44878,18 +45135,38 @@ var HeaderComponent = class _HeaderComponent {
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "bio");
       \u0275\u0275advance(3);
-      \u0275\u0275classProp("active", ctx.shared.activeLink === "members");
-      \u0275\u0275advance(32);
+      \u0275\u0275classProp("active", ctx.shared.activeLink.includes("members"));
+      \u0275\u0275advance(4);
+      \u0275\u0275classProp("active", ctx.shared.activeLink.includes("jacopo"));
+      \u0275\u0275advance(4);
+      \u0275\u0275classProp("active", ctx.shared.activeLink.includes("eros"));
+      \u0275\u0275advance(4);
+      \u0275\u0275classProp("active", ctx.shared.activeLink.includes("francesco"));
+      \u0275\u0275advance(4);
+      \u0275\u0275classProp("active", ctx.shared.activeLink.includes("davide"));
+      \u0275\u0275advance(4);
+      \u0275\u0275classProp("active", ctx.shared.activeLink.includes("andrea"));
+      \u0275\u0275advance(4);
+      \u0275\u0275classProp("active", ctx.shared.activeLink.includes("lorenzo"));
+      \u0275\u0275advance(4);
+      \u0275\u0275classProp("active", ctx.shared.activeLink.includes("matteo"));
+      \u0275\u0275advance(4);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "contacts");
       \u0275\u0275advance(4);
       \u0275\u0275textInterpolate1(" ", ctx.shared.language, " ");
       \u0275\u0275advance();
       \u0275\u0275conditional(ctx.shared.language == "en" ? 63 : ctx.shared.language == "it" ? 64 : ctx.shared.language == "de" ? 65 : -1);
+      \u0275\u0275advance(5);
+      \u0275\u0275classProp("active", ctx.shared.language == "en");
+      \u0275\u0275advance(3);
+      \u0275\u0275classProp("active", ctx.shared.language == "it");
+      \u0275\u0275advance(3);
+      \u0275\u0275classProp("active", ctx.shared.language == "de");
     }
   }, dependencies: [
     RouterLink,
     TranslateModule
-  ], styles: ["\n\n.dropdown-menu.lang-dropdown[_ngcontent-%COMP%] {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item[_ngcontent-%COMP%] {\n  transition: 0.1s all ease-in-out;\n}\n.dropdown-item[_ngcontent-%COMP%]:active {\n  background-color: #e60000;\n}\n.nav-link.btn[_ngcontent-%COMP%] {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn[_ngcontent-%COMP%]:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active[_ngcontent-%COMP%], \n.nav-link.btn.router-link-active[_ngcontent-%COMP%] {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n/*# sourceMappingURL=header.component.css.map */"] });
+  ], styles: ["\n\n.dropdown-menu.lang-dropdown[_ngcontent-%COMP%] {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item.active[_ngcontent-%COMP%] {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na[_ngcontent-%COMP%]:active {\n  background-color: #e60000;\n}\n.nav-link.btn[_ngcontent-%COMP%] {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn[_ngcontent-%COMP%]:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active[_ngcontent-%COMP%], \n.nav-link.btn.router-link-active[_ngcontent-%COMP%] {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n/*# sourceMappingURL=header.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HeaderComponent, [{
@@ -44897,11 +45174,11 @@ var HeaderComponent = class _HeaderComponent {
     args: [{ selector: "app-header", imports: [
       RouterLink,
       TranslateModule
-    ], template: `<nav class="navbar navbar-expand-lg sticky-top squealer">
+    ], template: `<nav class="navbar navbar-expand-lg sticky-top squealer  py-0">
     <div class="container-fluid">
-        <a class="navbar-brand clickable m-2 glow-pulse" [class.active]="shared.activeLink==='home'" (click)="navigate('home')">
+        <span class="navbar-brand clickable my-1" (click)="navigate('home')">
             <img src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 50px;">
-        </a>
+        </span>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -44913,42 +45190,42 @@ var HeaderComponent = class _HeaderComponent {
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item m-2"><a class="nav-link btn" [class.active]="shared.activeLink==='home' || shared.activeLink === ''" routerLink="/" (click)="shared.triggerCloseButtonClick()">Home</a></li>
-                    <li class="nav-item m-2"><a class="nav-link btn" [class.active]="shared.activeLink==='concerts'" routerLink="/concerts" (click)="shared.triggerCloseButtonClick()">Concerts</a></li>
-                    <li class="nav-item m-2"><a class="nav-link btn" [class.active]="shared.activeLink==='projects'" routerLink="/projects" (click)="shared.triggerCloseButtonClick()">Projects</a></li>
-                    <li class="nav-item m-2"><a class="nav-link btn" [class.active]="shared.activeLink==='bio'" routerLink="/bio" (click)="shared.triggerCloseButtonClick()">Bio</a></li>
-                    <li class="nav-item m-2 dropdown">
-                        <button class="nav-link btn w-100 text-center dropdown-toggle" [class.active]="shared.activeLink==='members'" id="membersDropdown" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-uppercase">
+                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='home' || shared.activeLink === ''" routerLink="/" (click)="shared.triggerCloseButtonClick()">Home</a></li>
+                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='concerts'" routerLink="/concerts" (click)="shared.triggerCloseButtonClick()">Concerts</a></li>
+                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='projects'" routerLink="/projects" (click)="shared.triggerCloseButtonClick()">Projects</a></li>
+                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='bio'" routerLink="/bio" (click)="shared.triggerCloseButtonClick()">Bio</a></li>
+                    <li class="nav-item m-2 dropdown anton">
+                        <button class="nav-link btn w-100 text-center text-uppercase dropdown-toggle" [class.active]="shared.activeLink.includes('members')" id="membersDropdown" data-bs-toggle="dropdown" aria-expanded="false" type="button">
                             Members
                         </button>
-                        <ul class="dropdown-menu lang-dropdown text-center" aria-labelledby="langDropdown">
+                        <ul class="dropdown-menu lang-dropdown text-center" aria-labelledby="membersDropdown">
                             <li>
-                                <a class="dropdown-item clickable" routerLink="/members/jacopo" (click)="shared.triggerCloseButtonClick()">Jacopo <i class="fa-solid fa-guitar"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('jacopo')" routerLink="/members/jacopo" (click)="shared.triggerCloseButtonClick()">Jacopo <i class="fa-solid fa-guitar"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable" routerLink="/members/eros" (click)="shared.triggerCloseButtonClick()">Eros <i class="fa-solid fa-microphone"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('eros')" routerLink="/members/eros" (click)="shared.triggerCloseButtonClick()">Eros <i class="fa-solid fa-microphone"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable" routerLink="/members/francesco" (click)="shared.triggerCloseButtonClick()">Francesco <i class="fa-solid fa-guitar"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('francesco')" routerLink="/members/francesco" (click)="shared.triggerCloseButtonClick()">Francesco <i class="fa-solid fa-guitar"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable" routerLink="/members/davide" (click)="shared.triggerCloseButtonClick()">Davide <i class="fa-solid fa-guitar"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('davide')" routerLink="/members/davide" (click)="shared.triggerCloseButtonClick()">Davide <i class="fa-solid fa-guitar"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable" routerLink="/members/andrea" (click)="shared.triggerCloseButtonClick()">Andrea <i class="fa-solid fa-drum"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('andrea')" routerLink="/members/andrea" (click)="shared.triggerCloseButtonClick()">Andrea <i class="fa-solid fa-drum"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable" routerLink="/members/lorenzo" (click)="shared.triggerCloseButtonClick()">Lorenzo <i class="fa-solid fa-music"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('lorenzo')" routerLink="/members/lorenzo" (click)="shared.triggerCloseButtonClick()">Lorenzo <i class="fa-solid fa-music"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable" routerLink="/members/matteo" (click)="shared.triggerCloseButtonClick()">Matteo <i class="fa-solid fa-microphone"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('matteo')" routerLink="/members/matteo" (click)="shared.triggerCloseButtonClick()">Matteo <i class="fa-solid fa-microphone"></i></a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item m-2"><a class="nav-link btn" [class.active]="shared.activeLink==='contacts'" routerLink="/contacts" (click)="shared.triggerCloseButtonClick()">Contacts</a></li>
+                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='contacts'" routerLink="/contacts" (click)="shared.triggerCloseButtonClick()">Contacts</a></li>
                     <li class="nav-item m-2 dropdown">
-                        <button class="nav-link btn w-100 text-center dropdown-toggle text-uppercase" id="langDropdown"
+                        <button class="nav-link btn w-100 text-center dropdown-toggle text-uppercase anton" id="langDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false" type="button">
                             {{shared.language}} 
                             @if(shared.language == 'en') {
@@ -44963,13 +45240,13 @@ var HeaderComponent = class _HeaderComponent {
                         </button>
                         <ul class="dropdown-menu lang-dropdown text-center" aria-labelledby="langDropdown">
                             <li>
-                                <a class="dropdown-item clickable" (click)="shared.switchLanguage('en')">EN \u{1F1EC}\u{1F1E7}</a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.language == 'en'" (click)="shared.switchLanguage('en')">EN \u{1F1EC}\u{1F1E7}</a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable" (click)="shared.switchLanguage('it')">IT \u{1F1EE}\u{1F1F9}</a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.language == 'it'" (click)="shared.switchLanguage('it')">IT \u{1F1EE}\u{1F1F9}</a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable" (click)="shared.switchLanguage('de')">DE \u{1F1E9}\u{1F1EA}</a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.language == 'de'" (click)="shared.switchLanguage('de')">DE \u{1F1E9}\u{1F1EA}</a>
                             </li>
                         </ul>
                     </li>
@@ -44978,7 +45255,7 @@ var HeaderComponent = class _HeaderComponent {
         </div>
     </div>
 </nav>
-<!--/header-->`, styles: ["/* src/app/header/header.component.css */\n.dropdown-menu.lang-dropdown {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item {\n  transition: 0.1s all ease-in-out;\n}\n.dropdown-item:active {\n  background-color: #e60000;\n}\n.nav-link.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active,\n.nav-link.btn.router-link-active {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n/*# sourceMappingURL=header.component.css.map */\n"] }]
+<!--/header-->`, styles: ["/* src/app/header/header.component.css */\n.dropdown-menu.lang-dropdown {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item.active {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na:active {\n  background-color: #e60000;\n}\n.nav-link.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active,\n.nav-link.btn.router-link-active {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n/*# sourceMappingURL=header.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -44994,7 +45271,7 @@ var FooterComponent = class _FooterComponent {
   static \u0275fac = function FooterComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _FooterComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], decls: 20, vars: 1, consts: [[1, "text-center"], [1, "container"], [1, "", 2, "display", "flex", "flex-wrap", "wrap", "flex-direction", "row", "align-items", "center", "justify-content", "center"], ["data-mdb-ripple-init", "", "href", "https://www.instagram.com/lrossi.xyz/", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "shadow", "rounded-circle", "circle", "m-3", "gradient-text"], [1, "fab", "fa-instagram"], ["data-mdb-ripple-init", "", "href", "https://www.facebook.com/lrossi93music", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "shadow", "rounded-circle", "circle", "m-3", "gradient-text"], [1, "fab", "fa-facebook-f"], ["data-mdb-ripple-init", "", "href", "https://www.youtube.com/@lrossi", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "shadow", "rounded-circle", "circle", "m-3", "gradient-text"], [1, "fab", "fa-youtube"], [1, "fab", "fa-tiktok"], [1, "text-center", "p-3"], ["href", "https://lrossi.xyz", "target", "_blank"], ["routerLink", "/privacy-policy", 1, "m-0", "p-0", "clickable"]], template: function FooterComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], decls: 20, vars: 1, consts: [[1, "text-center"], [1, "container"], [1, "", 2, "display", "flex", "flex-wrap", "wrap", "flex-direction", "row", "align-items", "center", "justify-content", "center"], ["data-mdb-ripple-init", "", "href", "https://www.instagram.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-instagram"], ["data-mdb-ripple-init", "", "href", "https://www.facebook.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-facebook"], ["data-mdb-ripple-init", "", "href", "https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-youtube"], ["data-mdb-ripple-init", "", "href", "https://www.tiktok.com/@hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-tiktok"], [1, "text-center", "p-3", "anton"], ["href", "https://lrossi.xyz", "target", "_blank", 1, "anton"], ["routerLink", "/privacy-policy", 1, "m-0", "p-0", "clickable", "anton"]], template: function FooterComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "footer", 0)(1, "div", 1)(2, "div", 2)(3, "a", 3);
       \u0275\u0275element(4, "i", 4);
@@ -45005,18 +45282,18 @@ var FooterComponent = class _FooterComponent {
       \u0275\u0275elementStart(7, "a", 7);
       \u0275\u0275element(8, "i", 8);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(9, "a", 7);
-      \u0275\u0275element(10, "i", 9);
+      \u0275\u0275elementStart(9, "a", 9);
+      \u0275\u0275element(10, "i", 10);
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(11, "div", 10);
+      \u0275\u0275elementStart(11, "div", 11);
       \u0275\u0275text(12);
       \u0275\u0275element(13, "br");
       \u0275\u0275text(14, " Designed by ");
-      \u0275\u0275elementStart(15, "a", 11);
+      \u0275\u0275elementStart(15, "a", 12);
       \u0275\u0275text(16, "Lorenzo Rossi");
       \u0275\u0275elementEnd();
       \u0275\u0275text(17, " | ");
-      \u0275\u0275elementStart(18, "a", 12);
+      \u0275\u0275elementStart(18, "a", 13);
       \u0275\u0275text(19, "Privacy Policy");
       \u0275\u0275elementEnd()()();
     }
@@ -45024,16 +45301,18 @@ var FooterComponent = class _FooterComponent {
       \u0275\u0275advance(12);
       \u0275\u0275textInterpolate1(" \xA9", ctx.year, " Highway to Hell - AC/DC Tribute Band ");
     }
-  }, styles: ["\n\nfooter[_ngcontent-%COMP%] {\n  background-color: black;\n}\n/*# sourceMappingURL=footer.component.css.map */"] });
+  }, dependencies: [RouterLink], styles: ["\n\nfooter[_ngcontent-%COMP%] {\n  background-color: #0d0f11;\n}\n.btn[_ngcontent-%COMP%] {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.btn[_ngcontent-%COMP%]:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  opacity: 0.9;\n}\n/*# sourceMappingURL=footer.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FooterComponent, [{
     type: Component,
-    args: [{ selector: "app-footer", imports: [], template: '<!-- Footer -->\n<footer class="text-center">\n  <!-- Grid container -->\n  <div class="container">\n    <!-- Section: Social media -->\n    <div class="" style="display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;">\n      \n        <!-- Instagram -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 shadow rounded-circle circle m-3 gradient-text" href="https://www.instagram.com/lrossi.xyz/" target="_blank" role="button">\n            <i class="fab fa-instagram"></i>\n        </a>\n\n        <!-- Facebook -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 shadow rounded-circle circle m-3 gradient-text" href="https://www.facebook.com/lrossi93music" target="_blank" role="button">\n            <i class="fab fa-facebook-f"></i>\n        </a>\n\n        <!-- YouTube -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 shadow rounded-circle circle m-3 gradient-text" href="https://www.youtube.com/@lrossi" target="_blank" role="button">\n            <i class="fab fa-youtube"></i>\n        </a>\n\n        <!-- TikTok -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 shadow rounded-circle circle m-3 gradient-text" href="https://www.youtube.com/@lrossi" target="_blank" role="button">\n            <i class="fab fa-tiktok"></i>\n        </a>\n\n      <!-- Spotify\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 shadow rounded-circle circle m-3 gradient-text"\n        href="https://open.spotify.com/artist/4kilGmYROQxMyEAMmTP82v" target="_blank" role="button"><i\n          class="fab fa-spotify"></i></a> -->\n\n      <!-- Soundcloud\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 shadow rounded-circle circle m-3 gradient-text"\n        href="https://soundcloud.com/lrossi93" target="_blank" role="button"><i class="fab fa-soundcloud"></i></a> -->\n    </div>\n    <!-- Section: Social media -->\n    <!-- Section: Links -->\n  </div>\n  <!-- Grid container -->\n\n  <!-- Copyright -->\n  <div class="text-center p-3">\n    &#169;{{year}} Highway to Hell - AC/DC Tribute Band\n    <br>\n    Designed by <a href="https://lrossi.xyz" target="_blank">Lorenzo Rossi</a> | <a class="m-0 p-0 clickable" routerLink="/privacy-policy">Privacy Policy</a>\n  </div>\n  <!-- Copyright -->\n</footer>\n<!-- Footer -->\n<!--/footer-->', styles: ["/* src/app/footer/footer.component.css */\nfooter {\n  background-color: black;\n}\n/*# sourceMappingURL=footer.component.css.map */\n"] }]
+    args: [{ selector: "app-footer", imports: [
+      RouterLink
+    ], template: '<!-- Footer -->\n<footer class="text-center">\n  <!-- Grid container -->\n  <div class="container">\n    <!-- Section: Social media -->\n    <div class="" style="display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;">\n      \n        <!-- Instagram -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.instagram.com/hthtribute" target="_blank" role="button">\n            <i class="fab fa-instagram"></i>\n        </a>\n\n        <!-- Facebook -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.facebook.com/hthtribute" target="_blank" role="button">\n            <i class="fab fa-facebook"></i>\n        </a>\n\n        <!-- YouTube -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g" target="_blank" role="button">\n            <i class="fab fa-youtube"></i>\n        </a>\n\n        <!-- TikTok -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.tiktok.com/@hthtribute" target="_blank" role="button">\n            <i class="fab fa-tiktok"></i>\n        </a>\n\n      <!-- Spotify\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3 gradient-text"\n        href="https://open.spotify.com/artist/4kilGmYROQxMyEAMmTP82v" target="_blank" role="button"><i\n          class="fab fa-spotify"></i></a> -->\n\n      <!-- Soundcloud\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3 gradient-text"\n        href="https://soundcloud.com/lrossi93" target="_blank" role="button"><i class="fab fa-soundcloud"></i></a> -->\n    </div>\n    <!-- Section: Social media -->\n    <!-- Section: Links -->\n  </div>\n  <!-- Grid container -->\n\n  <!-- Copyright -->\n  <div class="text-center p-3 anton">\n    &#169;{{year}} Highway to Hell - AC/DC Tribute Band\n    <br>\n    Designed by <a class="anton" href="https://lrossi.xyz" target="_blank">Lorenzo Rossi</a> | <a class="m-0 p-0 clickable anton" routerLink="/privacy-policy">Privacy Policy</a>\n  </div>\n  <!-- Copyright -->\n</footer>\n<!-- Footer -->\n<!--/footer-->', styles: ["/* src/app/footer/footer.component.css */\nfooter {\n  background-color: #0d0f11;\n}\n.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  opacity: 0.9;\n}\n/*# sourceMappingURL=footer.component.css.map */\n"] }]
   }], () => [], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FooterComponent, { className: "FooterComponent", filePath: "src/app/footer/footer.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FooterComponent, { className: "FooterComponent", filePath: "src/app/footer/footer.component.ts", lineNumber: 12 });
 })();
 
 // src/app/app.component.ts
