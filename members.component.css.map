@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/members/members.component.css"],
+  "sourcesContent": [".card {\n    overflow: hidden;\n    /* nasconde le parti che escono dell'immagine */\n}\n\n.card-img {\n    width: 100%;\n    height: auto;\n    object-fit: cover;\n    transition: transform 0.3s ease;\n    display: block;\n}\n\n.card:hover .card-img {\n    transform: scale(1.05);\n    /* zoom interno */\n}\n\n.card-item>a {\n  text-decoration: none;\n}"],
+  "mappings": ";AAAA,CAAC;AACG,YAAU;AAEd;AAEA,CAAC;AACG,SAAO;AACP,UAAQ;AACR,cAAY;AACZ,cAAY,UAAU,KAAK;AAC3B,WAAS;AACb;AAEA,CAbC,IAaI,OAAO,CARX;AASG,aAAW,MAAM;AAErB;AAEA,CAAC,UAAS,EAAC;AACT,mBAAiB;AACnB;",
+  "names": []
+}

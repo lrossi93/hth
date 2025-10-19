@@ -1,0 +1,81 @@
+/* src/styles.css */
+.squealer {
+  font-family: "Squealer", sans-serif;
+}
+.anton {
+  font-family: "Anton", sans-serif;
+}
+* {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+}
+a {
+  color: #ff3333;
+  text-decoration: none;
+  transition: all ease-in-out 0.3s;
+}
+a:hover {
+  color: white;
+  text-shadow:
+    0 0 10px #ff3333,
+    0 0 20px #ff3333,
+    0 0 30px #ff0000;
+}
+.navbar.sticky-top {
+  position: sticky !important;
+  top: 0;
+  z-index: 1050;
+  background-color: #0d0f11;
+}
+.nav-item {
+  transition: all 0.3 ease-in-out;
+}
+.nav-link.active {
+  color: #fff;
+  text-shadow: 0 0 5px #e60000 !important;
+}
+.nav-link:hover {
+  text-shadow: 0 0 5px #e60000 !important;
+}
+.glow-pulse {
+  color: #e60000;
+  text-shadow: 0 0 5px #e60000;
+  animation: glowPulse 2s infinite;
+}
+@keyframes glowPulse {
+  0% {
+    text-shadow:
+      0 0 5px #e60000,
+      0 0 10px #e60000,
+      0 0 20px #e60000;
+  }
+  50% {
+    text-shadow:
+      0 0 20px #ff1a1a,
+      0 0 40px #ff1a1a,
+      0 0 60px #ff1a1a;
+  }
+  100% {
+    text-shadow:
+      0 0 5px #e60000,
+      0 0 10px #e60000,
+      0 0 20px #e60000;
+  }
+}
+.clickable {
+  cursor: pointer;
+}
+.card {
+  background-color: #131518;
+}
+.card-date {
+  background-color: #0d0f11;
+}
+.btn-primary {
+  background-color: #ff1a1a;
+}
+
+/* angular:styles/global:styles */
+/*# sourceMappingURL=styles.css.map */
