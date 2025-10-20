@@ -23,6 +23,11 @@ a:hover {
     0 0 20px #ff3333,
     0 0 30px #ff0000;
 }
+h1.huge {
+  font-size: 80px;
+  color: white;
+  -webkit-text-stroke: 2px black;
+}
 .navbar.sticky-top {
   position: sticky !important;
   top: 0;
@@ -75,6 +80,15 @@ a:hover {
 }
 .btn-primary {
   background-color: #ff1a1a;
+  transition: all ease-in-out 0.3s;
+}
+.shadow-hover {
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+.shadow-hover:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 /* angular:styles/global:styles */

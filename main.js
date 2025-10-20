@@ -38558,493 +38558,6 @@ function provideRouterInitializer() {
 // node_modules/@angular/router/fesm2022/router.mjs
 var VERSION4 = new Version("19.2.15");
 
-// src/app/calendar.service.ts
-var CalendarService = class _CalendarService {
-  http;
-  calendarId = "hth.events.calendar@gmail.com";
-  calendarPath = "https://www.googleapis.com/calendar/v3/calendars/";
-  apiKey = "AIzaSyDYzAqjmo_0x17ZLwA8MdcqnzQ5G88qurE";
-  constructor(http) {
-    this.http = http;
-  }
-  getCalendarEventsPromise() {
-    let path = this.calendarPath + this.calendarId + "/events?key=" + this.apiKey + "&singleEvents=true&orderBy=startTime";
-    return this.http.get(path, {
-      responseType: "json"
-    });
-  }
-  isMobileDevice() {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    return /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
-  }
-  gMapsLink(address) {
-    const encodedAddress = encodeURIComponent(address);
-    if (this.isMobileDevice()) {
-      return `https://www.google.com/maps/search/?query=${encodedAddress}`;
-    } else {
-      return `https://www.google.com/maps/search/?q=${encodedAddress}`;
-    }
-  }
-  static \u0275fac = function CalendarService_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _CalendarService)(\u0275\u0275inject(HttpClient));
-  };
-  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _CalendarService, factory: _CalendarService.\u0275fac, providedIn: "root" });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CalendarService, [{
-    type: Injectable,
-    args: [{
-      providedIn: "root"
-    }]
-  }], () => [{ type: HttpClient }], null);
-})();
-
-// src/app/home/home.component.ts
-var _c0 = ["heroVideo"];
-function HomeComponent_Conditional_13_Conditional_0_For_15_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "a", 28);
-    \u0275\u0275element(1, "i", 29);
-    \u0275\u0275text(2);
-    \u0275\u0275elementEnd();
-    \u0275\u0275element(3, "br");
-  }
-  if (rf & 2) {
-    const link_r1 = ctx.$implicit;
-    \u0275\u0275propertyInterpolate("href", link_r1.value, \u0275\u0275sanitizeUrl);
-    \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1("\xA0", link_r1.key, "");
-  }
-}
-function HomeComponent_Conditional_13_Conditional_0_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 12);
-    \u0275\u0275text(1, "Prossimo concerto");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(2, "div", 18)(3, "div", 19)(4, "div", 20);
-    \u0275\u0275text(5);
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(6, "div", 21)(7, "h3", 22);
-    \u0275\u0275text(8);
-    \u0275\u0275elementEnd();
-    \u0275\u0275element(9, "hr", 23);
-    \u0275\u0275elementStart(10, "div", 24);
-    \u0275\u0275text(11);
-    \u0275\u0275element(12, "br");
-    \u0275\u0275elementStart(13, "div", 25);
-    \u0275\u0275repeaterCreate(14, HomeComponent_Conditional_13_Conditional_0_For_15_Template, 4, 2, null, null, \u0275\u0275repeaterTrackByIndex);
-    \u0275\u0275elementEnd()();
-    \u0275\u0275element(16, "hr", 23);
-    \u0275\u0275elementStart(17, "div", 26);
-    \u0275\u0275element(18, "i", 27);
-    \u0275\u0275text(19);
-    \u0275\u0275elementEnd()()()();
-  }
-  if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext(2);
-    \u0275\u0275advance(5);
-    \u0275\u0275textInterpolate2(" ", ctx_r1.formatDate(ctx_r1.separateDateAndTime(ctx_r1.nextEvent.start.dateTime).date), " h", ctx_r1.formatTime(ctx_r1.nextEvent.start.dateTime), " ");
-    \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate(ctx_r1.nextEvent.summary);
-    \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate1(" ", ctx_r1.nextEvent.description, "");
-    \u0275\u0275advance(3);
-    \u0275\u0275repeater(ctx_r1.nextEvent.links);
-    \u0275\u0275advance(5);
-    \u0275\u0275textInterpolate1(" ", ctx_r1.nextEvent.location, " ");
-  }
-}
-function HomeComponent_Conditional_13_Conditional_1_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 12);
-    \u0275\u0275text(1, "Non ci sono eventi in programma...");
-    \u0275\u0275elementEnd();
-  }
-}
-function HomeComponent_Conditional_13_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275template(0, HomeComponent_Conditional_13_Conditional_0_Template, 20, 5)(1, HomeComponent_Conditional_13_Conditional_1_Template, 2, 0, "h2", 12);
-    \u0275\u0275elementStart(2, "div", 9)(3, "button", 16);
-    \u0275\u0275text(4, " Prossimi concerti\xA0");
-    \u0275\u0275element(5, "i", 17);
-    \u0275\u0275elementEnd()();
-  }
-  if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275conditional(ctx_r1.events.length > 0 ? 0 : ctx_r1.events.length == 0 ? 1 : -1);
-  }
-}
-function HomeComponent_Conditional_14_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 9)(1, "h2", 30);
-    \u0275\u0275text(2, "Caricamento...");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 31)(4, "span", 32);
-    \u0275\u0275text(5, "Loading...");
-    \u0275\u0275elementEnd()()();
-  }
-}
-var HomeComponent = class _HomeComponent {
-  calendar;
-  events = [];
-  upcoming = [];
-  past = [];
-  today = /* @__PURE__ */ new Date();
-  nextEvent;
-  heroVideo;
-  loading = false;
-  constructor(calendarService) {
-    this.calendar = calendarService;
-  }
-  ngAfterViewInit() {
-    const video = this.heroVideo.nativeElement;
-    video.muted = true;
-    video.play().catch((err) => console.warn("Autoplay bloccato:", err));
-  }
-  ngOnInit() {
-    this.loading = true;
-    this.calendar.getCalendarEventsPromise().subscribe((res) => {
-      let response = res;
-      this.events = response.items;
-      this.filterEvents(this.events);
-      this.nextEvent = this.upcoming[0];
-      console.log(this.nextEvent);
-      this.loading = false;
-    });
-  }
-  filterEvents(events) {
-    let todayYyyyMmDd = this.separateDateAndTime(this.today.toISOString())["date"];
-    for (let i = 0; i < events.length; ++i) {
-      events[i].links = this.extractLinksFromDescription(events[i].description);
-      events[i].description = this.cleanDescription(events[i].description);
-      if (this.separateDateAndTime(events[i].start.dateTime)["date"] >= todayYyyyMmDd) {
-        this.upcoming.push(events[i]);
-      } else {
-        this.past.unshift(events[i]);
-      }
-      console.log("Descrizione evento:", events[i].description);
-      console.log("Link trovati:", events[i].links);
-    }
-    console.log("next");
-    console.log(this.upcoming);
-    console.log("past");
-    console.log(this.past);
-  }
-  cleanDescription(description) {
-    return description.replace(/\[.*?\]/g, "").trim();
-  }
-  extractLinksFromDescription(description) {
-    let links = [];
-    if (!description) {
-      links = void 0;
-      return links;
-    }
-    let linksString = description.substring(description.indexOf("["));
-    links = this.parseTextLinkPairs(linksString);
-    return links;
-  }
-  parseTextLinkPairs(str) {
-    str = str.trim().replace(/^\[|\]$/g, "");
-    const pairs = str.split(";").filter(Boolean);
-    const result = pairs.map((pair) => {
-      let [key, value] = pair.split("@");
-      key = key?.trim().replace(/^['"]|['"]$/g, "") || "";
-      value = value?.trim() || "";
-      return { key, value };
-    });
-    return result;
-  }
-  extractLinks(text) {
-    if (!text)
-      return [];
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-    const matches = text.match(urlRegex);
-    return matches || [];
-  }
-  getDescriptionWithLinks(description) {
-    if (!description)
-      return "";
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-    return description.replace(urlRegex, (url) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`);
-  }
-  removeLinks(text) {
-    if (!text)
-      return "";
-    const urlRegex = /(https?:\/\/[^\s]+|www\.[^\s]+)/g;
-    return text.replace(urlRegex, "");
-  }
-  separateDateAndTime(datetime) {
-    const date = datetime.split("T")[0];
-    const time = datetime.split("T")[1];
-    return {
-      date,
-      time: time.replace("Z", "")
-    };
-  }
-  formatDate(dateString) {
-    const date = new Date(dateString);
-    return new Intl.DateTimeFormat("it-IT", {
-      day: "2-digit",
-      month: "short",
-      // Abbreviated month
-      year: "numeric"
-    }).format(date);
-  }
-  formatTime(datetimeString) {
-    return datetimeString.slice(11, 16);
-  }
-  static \u0275fac = function HomeComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _HomeComponent)(\u0275\u0275directiveInject(CalendarService));
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HomeComponent, selectors: [["app-home"]], viewQuery: function HomeComponent_Query(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275viewQuery(_c0, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.heroVideo = _t.first);
-    }
-  }, decls: 43, vars: 1, consts: [["heroVideo", ""], [1, "hero", "shadow"], [1, "video-background"], ["autoplay", "", "muted", "", "loop", "", "playsinline", "", "preload", "auto"], ["src", "/media/home/hth-promo-big-show-edit.mp4", "type", "video/mp4"], [1, "hero-content"], [1, ""], ["src", "/media/hth-logo.png", "alt", "HTH Logo", 1, "p-3", 2, "max-height", "200px"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "mt-5", "anton", "text-uppercase"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase"], ["routerLink", "/members/matteo"], ["routerLink", "/members/lorenzo"], [1, "mb-5"], ["routerLink", "/concerts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt-lightning"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["target", "_blank", 3, "href"], [1, "fa-solid", "fa-link"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function HomeComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275elementStart(0, "section", 1)(1, "div", 2)(2, "video", 3, 0);
-      \u0275\u0275element(4, "source", 4);
-      \u0275\u0275text(5, " Il tuo browser non supporta questo video. ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(6, "div", 5)(7, "h1", 6);
-      \u0275\u0275text(8, "Highway to Hell");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(9, "img", 7);
-      \u0275\u0275elementStart(10, "h2");
-      \u0275\u0275text(11, "AC/DC Tribute Band");
-      \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(12, "div", 8);
-      \u0275\u0275template(13, HomeComponent_Conditional_13_Template, 6, 1)(14, HomeComponent_Conditional_14_Template, 6, 0, "div", 9);
-      \u0275\u0275elementStart(15, "h3", 10);
-      \u0275\u0275text(16, " La band ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(17, "p");
-      \u0275\u0275text(18, " Gli Highway to Hell non sono una semplice tribute band, ma un\u2019autentica esplosione di energia rock! Con un sound fedele agli AC/DC, un\u2019attenzione maniacale ai dettagli e una presenza scenica travolgente, portano il pubblico dentro un\u2019esperienza elettrizzante, proprio come in un vero concerto della leggendaria band australiana. ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(19, "div", 11)(20, "h3", 12);
-      \u0275\u0275text(21, " FROM BON TO BRIAN: L\u2019OMAGGIO ALLA STORIA DEGLI AC/DC ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(22, "p");
-      \u0275\u0275text(23, " Oltre al classico show, gli Highway to Hell presentano un\u2019esperienza unica con il format \u201CFrom Bon to Brian\u201D, un viaggio attraverso due epoche leggendarie: ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(24, "p")(25, "a", 13);
-      \u0275\u0275text(26, "Matteo Giovannone");
-      \u0275\u0275elementEnd();
-      \u0275\u0275text(27, ", il miglior interprete di Bon Scott in Italia, con una somiglianza vocale e fisica impressionante. ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(28, "p")(29, "a", 14);
-      \u0275\u0275text(30, "Lorenzo Rossi");
-      \u0275\u0275elementEnd();
-      \u0275\u0275text(31, " alla cornamusa, per ricreare le iconiche sonorit\xE0 di brani come \u201CIt\u2019s a Long Way to the Top\u201D. ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(32, "h3", 10);
-      \u0275\u0275text(33, " SYMPHONY OF THUNDER: GLI AC/DC IN VERSIONE SINFONICA ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(34, "p");
-      \u0275\u0275text(35, " Dal 2024, gli Highway to Hell sono i primi in Italia a presentare lo spettacolo \u201CSymphony of Thunder\u201D, un\u2019innovativa fusione tra il rock puro degli AC/DC e la potenza di un\u2019orchestra sinfonica. Un viaggio emozionante tra i pi\xF9 grandi successi della band, da \u201CBack in Black\u201D a \u201CThunderstruck\u201D, reinterpretati in chiave orchestrale per un impatto sonoro senza precedenti! ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(36, "h3", 10);
-      \u0275\u0275text(37, " UNA BAND DA PALCO, UNA BAND DA EVENTO! ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(38, "p");
-      \u0275\u0275text(39, " Gli Highway to Hell hanno calcato palcoscenici prestigiosi come EICMA, dove per due anni consecutivi sono stati la resident band del palco Motolive, portando il loro show in uno dei pi\xF9 grandi eventi motoristici al mondo. ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(40, "p");
-      \u0275\u0275text(41, " Se cerchi un concerto AC/DC indimenticabile, una tribute band professionale per festival, eventi o motoraduni, gli Highway to Hell sono la scelta giusta per un\u2019esperienza ad alto voltaggio! ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(42, "p", 15);
-      \u0275\u0275elementEnd();
-    }
-    if (rf & 2) {
-      \u0275\u0275advance(13);
-      \u0275\u0275conditional(!ctx.loading ? 13 : ctx.loading ? 14 : -1);
-    }
-  }, dependencies: [RouterLink], styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n  background: rgba(0, 0, 0, 1);\n}\n.video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  min-width: 100%;\n  min-height: 100%;\n  object-fit: cover;\n  opacity: 0.6;\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero[_ngcontent-%COMP%] {\n    height: 100vh;\n  }\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 2rem;\n  }\n  .hero-content[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n/*# sourceMappingURL=home.component.css.map */'] });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HomeComponent, [{
-    type: Component,
-    args: [{ selector: "app-home", imports: [RouterLink], template: '<!-- Hero -->\n<!-- <section class="hero">\n    <div class="video-background">\n            <video autoplay muted loop playsinline preload="auto" class="img-fluid">\n                <source src="/media/home/hth-promo-big-show.mov" type="video/mp4">\n                Il tuo browser non supporta questo video.\n            </video>\n    </div>\n\n    <div class="hero-content">\n        <h1>Highway to Hell</h1>\n        <img class="p-3" src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 200px;">\n        <h2>AC/DC Tribute Band</h2>\n    </div>\n</section> -->\n\n<!-- Hero -->\n<section class="hero shadow">\n    <div class="video-background">\n        <video #heroVideo autoplay muted loop playsinline preload="auto">\n            <source src="/media/home/hth-promo-big-show-edit.mp4" type="video/mp4">\n            Il tuo browser non supporta questo video.\n        </video>\n    </div>\n\n    <div class="hero-content">\n        <h1 class="">Highway to Hell</h1>\n        <img class="p-3" src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 200px;">\n        <h2>AC/DC Tribute Band</h2>\n    </div>\n</section>\n\n\n<!-- <section class="hero">\n    <div class="hero-content">\n        <h1>Highway to Hell</h1>\n        <h2>AC/DC Tribute Band</h2>\n    </div>\n</section> -->\n\n<div class="col-lg-8 mx-auto my-5 mb-0 px-3 fs-3" style="text-align: justify;">\n    <!--  -->\n    @if(!loading) {\n        @if(events.length > 0) {\n        <h2 class="anton text-uppercase">Prossimo concerto</h2>\n        <div class="m-3 border-0 rounded-0 shadow-hover">\n            <div class="row d-flex flex-wrap align-items-stretch">\n                <!-- Colonna con data e ora -->\n                <div\n                    class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">\n                    {{formatDate(separateDateAndTime(nextEvent.start.dateTime).date)}}\n                    h{{formatTime(nextEvent.start.dateTime)}}\n                </div>\n\n                <!-- Colonna con contenuto principale -->\n                <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">\n                    <h3 class="text-uppercase anton m-3 card-title">{{nextEvent.summary}}</h3>\n                    <hr class="m-0">\n                    <div class="card-body">\n                        {{nextEvent.description}}<br>\n                        <div class="m-1">\n                            @for (link of nextEvent.links; track $index) {\n                            <a target="_blank" href={{link.value}}><i\n                                    class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>\n                            }\n                        </div>\n                    </div>\n                    <hr class="m-0">\n                    <div class="card-body rounded-0">\n                        <i class="fa-solid fa-location-dot"></i> {{nextEvent.location}}\n                    </div>\n                </div>\n            </div>\n        </div>\n        }\n\n        @else if(events.length == 0) {\n            <h2 class="anton text-uppercase">Non ci sono eventi in programma...</h2>\n        }\n\n        <div class="text-center">\n            <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" routerLink="/concerts">\n                Prossimi concerti&nbsp;<i class="fa-solid fa-bolt-lightning"></i>\n            </button>\n        </div>\n    }\n    @else if(loading) {\n    <div class="text-center">\n        <h2 class="anton">Caricamento...</h2>\n        <div class="spinner-grow" role="status">\n            <span class="visually-hidden">Loading...</span>\n        </div>\n    </div>\n    }\n\n    <!--  -->\n    <h3 class="mt-5 anton text-uppercase">\n        La band\n    </h3>\n    <p>\n        Gli Highway to Hell non sono una semplice tribute band, ma un\u2019autentica esplosione di energia rock! Con un\n        sound fedele agli AC/DC, un\u2019attenzione maniacale ai dettagli e una presenza scenica travolgente, portano il\n        pubblico dentro un\u2019esperienza elettrizzante, proprio come in un vero concerto della leggendaria band\n        australiana.\n    </p>\n</div>\n\n\n\n<div class="col-lg-8 mx-auto my-5 mb-0 px-3" style="text-align: justify;">\n    <!-- <div class="container">\n        <div class="row">\n            <div class="card m-2">\n                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">\n                <div class="card-body">\n                    <h5 class="card-title anton text-uppercase anton text-uppercase">\u{1F3B8} Jacopo</h5>\n                    <p class="card-text">\n                        Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura.\n                    </p>\n                </div>\n                <div class="card-footer">\n\n                </div>\n            </div>\n\n            <div class="card m-2">\n                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">\n                <div class="card-body">\n                    <h5 class="card-title anton text-uppercase">\u{1F3B8} Francesco</h5>\n                    <p class="card-text">\n                        Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young.\n                    </p>\n                </div>\n                <div class="card-footer">\n\n                </div>\n            </div>\n\n            <div class="card m-2">\n                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">\n                <div class="card-body">\n                    <h5 class="card-title anton text-uppercase">\u{1F941} Andrea</h5>\n                    <p class="card-text">\n                        Batteria, una macchina da guerra che richiama la potenza di Chris Slade.\n                    </p>\n                </div>\n                <div class="card-footer">\n\n                </div>\n            </div>\n\n            <div class="card m-2">\n                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">\n                <div class="card-body">\n                    <h5 class="card-title anton text-uppercase">\u{1F3A4} Eros</h5>\n                    <p class="card-text">\n                        Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.\n                    </p>\n                </div>\n                <div class="card-footer">\n\n                </div>\n            </div>\n\n            <div class="card m-2">\n                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">\n                <div class="card-body">\n                    <h5 class="card-title anton text-uppercase">\u{1F3B8} Davide</h5>\n                    <p class="card-text">\n                        Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams.\n                    </p>\n                </div>\n                <div class="card-footer">\n\n                </div>\n            </div>\n        </div>\n    </div> -->\n    <!-- <p>\n        \u{1F3B8} Jacopo \u2013 Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura.\n    </p>\n    <p>\n        \u{1F3B8} Francesco \u2013 Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young.\n    </p>\n    <p>\n        \u{1F941} Andrea \u2013 Batteria, una macchina da guerra che richiama la potenza di Chris Slade.\n    </p>\n    <p>\n        \u{1F3A4} Eros \u2013 Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.\n    </p>\n    <p>\n        \u{1F3B8} Davide \u2013 Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams.\n    </p> -->\n\n    <h3 class="anton text-uppercase">\n        FROM BON TO BRIAN: L\u2019OMAGGIO ALLA STORIA DEGLI AC/DC\n    </h3>\n    <p>\n        Oltre al classico show, gli Highway to Hell presentano un\u2019esperienza unica con il format \u201CFrom Bon to Brian\u201D, un\n        viaggio attraverso due epoche leggendarie:\n    </p>\n    <p>\n        <a routerLink="/members/matteo">Matteo Giovannone</a>, il miglior interprete di Bon Scott in Italia, con una somiglianza vocale e fisica\n        impressionante.\n    </p>\n    <p>\n        <a routerLink="/members/lorenzo">Lorenzo Rossi</a> alla cornamusa, per ricreare le iconiche sonorit\xE0 di brani come \u201CIt\u2019s a Long Way to the Top\u201D.\n    </p>\n\n    <h3 class="mt-5 anton text-uppercase">\n        SYMPHONY OF THUNDER: GLI AC/DC IN VERSIONE SINFONICA\n    </h3>\n    <p>\n        Dal 2024, gli Highway to Hell sono i primi in Italia a presentare lo spettacolo \u201CSymphony of Thunder\u201D,\n        un\u2019innovativa\n        fusione tra il rock puro degli AC/DC e la potenza di un\u2019orchestra sinfonica. Un viaggio emozionante tra i pi\xF9\n        grandi\n        successi della band, da \u201CBack in Black\u201D a \u201CThunderstruck\u201D, reinterpretati in chiave orchestrale per un impatto\n        sonoro senza precedenti!\n    </p>\n\n    <h3 class="mt-5 anton text-uppercase">\n        UNA BAND DA PALCO, UNA BAND DA EVENTO!\n    </h3>\n    <p>\n        Gli Highway to Hell hanno calcato palcoscenici prestigiosi come EICMA, dove per due anni consecutivi sono stati\n        la\n        resident band del palco Motolive, portando il loro show in uno dei pi\xF9 grandi eventi motoristici al mondo.\n    </p>\n\n    <p>\n        Se cerchi un concerto AC/DC indimenticabile, una tribute band professionale per festival, eventi o motoraduni,\n        gli\n        Highway to Hell sono la scelta giusta per un\u2019esperienza ad alto voltaggio!\n    </p>\n    <p class="mb-5">\n\n    </p>\n</div>', styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  overflow: hidden;\n}\n.video-background {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n  background: rgba(0, 0, 0, 1);\n}\n.video-background video {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  min-width: 100%;\n  min-height: 100%;\n  object-fit: cover;\n  opacity: 0.6;\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero {\n    height: 100vh;\n  }\n  .video-background video {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content h1 {\n    font-size: 2rem;\n  }\n  .hero-content h2 {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
-  }], () => [{ type: CalendarService }], { heroVideo: [{
-    type: ViewChild,
-    args: ["heroVideo"]
-  }] });
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HomeComponent, { className: "HomeComponent", filePath: "src/app/home/home.component.ts", lineNumber: 11 });
-})();
-
-// src/app/page-not-found/page-not-found.component.ts
-var PageNotFoundComponent = class _PageNotFoundComponent {
-  static \u0275fac = function PageNotFoundComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _PageNotFoundComponent)();
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PageNotFoundComponent, selectors: [["app-page-not-found"]], decls: 2, vars: 0, template: function PageNotFoundComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275elementStart(0, "p");
-      \u0275\u0275text(1, "page-not-found works!");
-      \u0275\u0275elementEnd();
-    }
-  }, encapsulation: 2 });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PageNotFoundComponent, [{
-    type: Component,
-    args: [{ selector: "app-page-not-found", imports: [], template: "<p>page-not-found works!</p>\n" }]
-  }], null, null);
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PageNotFoundComponent, { className: "PageNotFoundComponent", filePath: "src/app/page-not-found/page-not-found.component.ts", lineNumber: 9 });
-})();
-
-// src/app/members/members.component.ts
-var MembersComponent = class _MembersComponent {
-  static \u0275fac = function MembersComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _MembersComponent)();
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MembersComponent, selectors: [["app-members"]], decls: 64, vars: 0, consts: [[1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3"], [1, "album", "py-3"], [1, "container"], [1, "cards-wrapper"], [1, "card-item"], ["routerLink", "/members/francesco"], [1, "card", "border-0", "rounded-0", "m-3", "box-shadow", "shadow-hover"], ["data-src", "holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail", "alt", "Titolo", "src", "https://placehold.co/300x300", 1, "card-img", "rounded-0"], [1, "card-body", "nav"], [1, "card-title", "anton", "text-uppercase"], [1, "card-text"], [1, "card-footer", "d-flex", "justify-content-end", "align-items-center", "rounded-0"], [1, "text-muted", "text-end"], [1, "fa-solid", "fa-angles-right"], ["routerLink", "/members/andrea"], ["routerLink", "/members/davide"], ["routerLink", "/members/jacopo"], ["routerLink", "/members/eros"]], template: function MembersComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "div", 4)(5, "a", 5)(6, "div", 6);
-      \u0275\u0275element(7, "img", 7);
-      \u0275\u0275elementStart(8, "div", 8)(9, "h2", 9);
-      \u0275\u0275text(10, "Francesco");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(11, "p", 10);
-      \u0275\u0275text(12, "Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young.");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(13, "div", 11)(14, "small", 12);
-      \u0275\u0275element(15, "i", 13);
-      \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(16, "div", 4)(17, "a", 14)(18, "div", 6);
-      \u0275\u0275element(19, "img", 7);
-      \u0275\u0275elementStart(20, "div", 8)(21, "h2", 9);
-      \u0275\u0275text(22, "Andrea");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(23, "p", 10);
-      \u0275\u0275text(24, "Batteria, una macchina da guerra che richiama la potenza di Chris Slade.");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(25, "div", 11)(26, "small", 12);
-      \u0275\u0275element(27, "i", 13);
-      \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(28, "div", 4)(29, "a", 15)(30, "div", 6);
-      \u0275\u0275element(31, "img", 7);
-      \u0275\u0275elementStart(32, "div", 8)(33, "h2", 9);
-      \u0275\u0275text(34, "Davide");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(35, "p", 10);
-      \u0275\u0275text(36, "Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams.");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(37, "div", 11)(38, "small", 12);
-      \u0275\u0275element(39, "i", 13);
-      \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(40, "div", 4)(41, "a", 16)(42, "div", 6);
-      \u0275\u0275element(43, "img", 7);
-      \u0275\u0275elementStart(44, "div", 8)(45, "h2", 9);
-      \u0275\u0275text(46, "Jacopo");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(47, "p", 10);
-      \u0275\u0275text(48, "Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura.");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(49, "div", 11)(50, "small", 12);
-      \u0275\u0275element(51, "i", 13);
-      \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(52, "div", 4)(53, "a", 17)(54, "div", 6);
-      \u0275\u0275element(55, "img", 7);
-      \u0275\u0275elementStart(56, "div", 8)(57, "h2", 9);
-      \u0275\u0275text(58, "Eros");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(59, "p", 10);
-      \u0275\u0275text(60, "Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(61, "div", 11)(62, "small", 12);
-      \u0275\u0275element(63, "i", 13);
-      \u0275\u0275elementEnd()()()()()()()()();
-    }
-  }, styles: ["\n\n.card[_ngcontent-%COMP%] {\n  overflow: hidden;\n}\n.card-img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n}\n.card[_ngcontent-%COMP%]:hover   .card-img[_ngcontent-%COMP%] {\n  transform: scale(1.05);\n}\n.card-item[_ngcontent-%COMP%]    > a[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n/*# sourceMappingURL=members.component.css.map */"] });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MembersComponent, [{
-    type: Component,
-    args: [{ selector: "app-members", imports: [], template: '<div class="col-lg-8 mx-auto my-5 mb-0 px-3">\n    <div class="album py-3">\n        <div class="container">\n            <div class="cards-wrapper">\n                <div class="card-item">\n                    <a routerLink="/members/francesco">\n                        <div class="card border-0 rounded-0 m-3 box-shadow shadow-hover">\n                            <img class="card-img rounded-0"\n                                data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"\n                                alt="Titolo" src="https://placehold.co/300x300" />\n                            <div class="card-body nav">\n                                <h2 class="card-title anton text-uppercase">Francesco</h2>\n                                <p class="card-text">Chitarra ritmica, il motore del groove, con un suono potente in\n                                    perfetto stile Malcolm Young.</p>\n                            </div>\n                            <div class="card-footer d-flex justify-content-end align-items-center rounded-0">\n                                <small class="text-muted text-end">\n                                    <i class="fa-solid fa-angles-right"></i>\n                                </small>\n                            </div>\n                        </div>\n                    </a>\n                </div>\n\n                <div class="card-item">\n                    <a routerLink="/members/andrea">\n                        <div class="card border-0 rounded-0 m-3 box-shadow shadow-hover">\n                            <img class="card-img rounded-0"\n                                data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"\n                                alt="Titolo" src="https://placehold.co/300x300" />\n                            <div class="card-body nav">\n                                <h2 class="card-title anton text-uppercase">Andrea</h2>\n                                <p class="card-text">Batteria, una macchina da guerra che richiama la potenza di Chris\n                                    Slade.</p>\n                            </div>\n                            <div class="card-footer d-flex justify-content-end align-items-center rounded-0">\n                                <small class="text-muted text-end">\n                                    <i class="fa-solid fa-angles-right"></i>\n                                </small>\n                            </div>\n                        </div>\n                    </a>\n                </div>\n\n                <div class="card-item">\n                    <a routerLink="/members/davide">\n                        <div class="card border-0 rounded-0 m-3 box-shadow shadow-hover">\n                            <img class="card-img rounded-0"\n                                data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"\n                                alt="Titolo" src="https://placehold.co/300x300" />\n                            <div class="card-body nav">\n                                <h2 class="card-title anton text-uppercase">Davide</h2>\n                                <p class="card-text">Basso, colonna portante che mantiene il groove solido e incalzante,\n                                    proprio come Cliff Williams.</p>\n                            </div>\n                            <div class="card-footer d-flex justify-content-end align-items-center rounded-0">\n                                <small class="text-muted text-end">\n                                    <i class="fa-solid fa-angles-right"></i>\n                                </small>\n                            </div>\n                        </div>\n                    </a>\n                </div>\n\n                <div class="card-item">\n                    <a routerLink="/members/jacopo">\n                        <div class="card border-0 rounded-0 m-3 box-shadow shadow-hover">\n                            <img class="card-img rounded-0"\n                                data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"\n                                alt="Titolo" src="https://placehold.co/300x300" />\n                            <div class="card-body nav">\n                                <h2 class="card-title anton text-uppercase">Jacopo</h2>\n                                <p class="card-text">Chitarra solista, incarna lo spirito di Angus Young con riff\n                                    iconici ed\n                                    energia pura.</p>\n                            </div>\n                            <div class="card-footer d-flex justify-content-end align-items-center rounded-0">\n                                <small class="text-muted text-end">\n                                    <i class="fa-solid fa-angles-right"></i>\n                                </small>\n                            </div>\n                        </div>\n                    </a>\n                </div>\n\n                <div class="card-item">\n                    <a routerLink="/members/eros">\n                        <div class="card border-0 rounded-0 m-3 box-shadow shadow-hover">\n                            <img class="card-img rounded-0"\n                                data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail"\n                                alt="Titolo" src="https://placehold.co/300x300" />\n                            <div class="card-body nav">\n                                <h2 class="card-title anton text-uppercase">Eros</h2>\n                                <p class="card-text">Voce, un frontman che cattura la potenza di Brian Johnson con una\n                                    grinta esplosiva.</p>\n                            </div>\n                            <div class="card-footer d-flex justify-content-end align-items-center rounded-0">\n                                <small class="text-muted text-end">\n                                    <i class="fa-solid fa-angles-right"></i>\n                                </small>\n                            </div>\n                        </div>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>', styles: ["/* src/app/members/members.component.css */\n.card {\n  overflow: hidden;\n}\n.card-img {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n}\n.card:hover .card-img {\n  transform: scale(1.05);\n}\n.card-item > a {\n  text-decoration: none;\n}\n/*# sourceMappingURL=members.component.css.map */\n"] }]
-  }], null, null);
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(MembersComponent, { className: "MembersComponent", filePath: "src/app/members/members.component.ts", lineNumber: 9 });
-})();
-
-// src/app/members/jacopo/jacopo.component.ts
-var JacopoComponent = class _JacopoComponent {
-  static \u0275fac = function JacopoComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _JacopoComponent)();
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _JacopoComponent, selectors: [["app-jacopo"]], decls: 2, vars: 0, consts: [[1, "squealer"]], template: function JacopoComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275elementStart(0, "h1", 0);
-      \u0275\u0275text(1, "Jacopo");
-      \u0275\u0275elementEnd();
-    }
-  }, encapsulation: 2 });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(JacopoComponent, [{
-    type: Component,
-    args: [{ selector: "app-jacopo", imports: [], template: '<h1 class="squealer">Jacopo</h1>' }]
-  }], null, null);
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(JacopoComponent, { className: "JacopoComponent", filePath: "src/app/members/jacopo/jacopo.component.ts", lineNumber: 9 });
-})();
-
-// src/app/members/eros/eros.component.ts
-var ErosComponent = class _ErosComponent {
-  static \u0275fac = function ErosComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _ErosComponent)();
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ErosComponent, selectors: [["app-eros"]], decls: 2, vars: 0, consts: [[1, "squealer"]], template: function ErosComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275elementStart(0, "h1", 0);
-      \u0275\u0275text(1, "Eros");
-      \u0275\u0275elementEnd();
-    }
-  }, encapsulation: 2 });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ErosComponent, [{
-    type: Component,
-    args: [{ selector: "app-eros", imports: [], template: '<h1 class="squealer">Eros</h1>' }]
-  }], null, null);
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ErosComponent, { className: "ErosComponent", filePath: "src/app/members/eros/eros.component.ts", lineNumber: 9 });
-})();
-
-// src/app/members/francesco/francesco.component.ts
-var FrancescoComponent = class _FrancescoComponent {
-  static \u0275fac = function FrancescoComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _FrancescoComponent)();
-  };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FrancescoComponent, selectors: [["app-francesco"]], decls: 2, vars: 0, consts: [[1, "squealer"]], template: function FrancescoComponent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275elementStart(0, "h1", 0);
-      \u0275\u0275text(1, "Francesco");
-      \u0275\u0275elementEnd();
-    }
-  }, encapsulation: 2 });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FrancescoComponent, [{
-    type: Component,
-    args: [{ selector: "app-francesco", imports: [], template: '<h1 class="squealer">Francesco</h1>' }]
-  }], null, null);
-})();
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FrancescoComponent, { className: "FrancescoComponent", filePath: "src/app/members/francesco/francesco.component.ts", lineNumber: 9 });
-})();
-
 // node_modules/@ngx-translate/core/fesm2022/ngx-translate-core.mjs
 var MissingTranslationHandler = class {
 };
@@ -40217,6 +39730,1023 @@ var TranslateModule = class _TranslateModule {
   }], null, null);
 })();
 
+// src/app/calendar.service.ts
+var CalendarService = class _CalendarService {
+  http;
+  calendarId = "hth.events.calendar@gmail.com";
+  calendarPath = "https://www.googleapis.com/calendar/v3/calendars/";
+  apiKey = "AIzaSyDYzAqjmo_0x17ZLwA8MdcqnzQ5G88qurE";
+  constructor(http) {
+    this.http = http;
+  }
+  getCalendarEventsPromise() {
+    let path = this.calendarPath + this.calendarId + "/events?key=" + this.apiKey + "&singleEvents=true&orderBy=startTime";
+    return this.http.get(path, {
+      responseType: "json"
+    });
+  }
+  isMobileDevice() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    return /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+  }
+  gMapsLink(address) {
+    const encodedAddress = encodeURIComponent(address);
+    if (this.isMobileDevice()) {
+      return `https://www.google.com/maps/search/?query=${encodedAddress}`;
+    } else {
+      return `https://www.google.com/maps/search/?q=${encodedAddress}`;
+    }
+  }
+  static \u0275fac = function CalendarService_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CalendarService)(\u0275\u0275inject(HttpClient));
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _CalendarService, factory: _CalendarService.\u0275fac, providedIn: "root" });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CalendarService, [{
+    type: Injectable,
+    args: [{
+      providedIn: "root"
+    }]
+  }], () => [{ type: HttpClient }], null);
+})();
+
+// src/app/home/home.component.ts
+var _c0 = ["heroVideo"];
+function HomeComponent_Conditional_9_Conditional_0_Conditional_12_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275text(0);
+    \u0275\u0275element(1, "br");
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext(3);
+    \u0275\u0275textInterpolate1(" ", ctx_r0.nextEvent.description, "");
+  }
+}
+function HomeComponent_Conditional_9_Conditional_0_For_15_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "a", 34);
+    \u0275\u0275element(1, "i", 35);
+    \u0275\u0275text(2);
+    \u0275\u0275elementEnd();
+    \u0275\u0275element(3, "br");
+  }
+  if (rf & 2) {
+    const link_r2 = ctx.$implicit;
+    \u0275\u0275property("href", link_r2.value, \u0275\u0275sanitizeUrl);
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate1("\xA0", link_r2.key, "");
+  }
+}
+function HomeComponent_Conditional_9_Conditional_0_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "h2", 11);
+    \u0275\u0275text(1);
+    \u0275\u0275pipe(2, "translate");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(3, "div", 24)(4, "div", 25)(5, "div", 26);
+    \u0275\u0275text(6);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(7, "div", 27)(8, "h3", 28);
+    \u0275\u0275text(9);
+    \u0275\u0275elementEnd();
+    \u0275\u0275element(10, "hr", 29);
+    \u0275\u0275elementStart(11, "div", 30);
+    \u0275\u0275template(12, HomeComponent_Conditional_9_Conditional_0_Conditional_12_Template, 2, 1);
+    \u0275\u0275elementStart(13, "div", 31);
+    \u0275\u0275repeaterCreate(14, HomeComponent_Conditional_9_Conditional_0_For_15_Template, 4, 2, null, null, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275elementEnd()();
+    \u0275\u0275element(16, "hr", 29);
+    \u0275\u0275elementStart(17, "div", 32);
+    \u0275\u0275element(18, "i", 33);
+    \u0275\u0275text(19);
+    \u0275\u0275elementEnd()()()();
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext(2);
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 6, "Next concert"));
+    \u0275\u0275advance(5);
+    \u0275\u0275textInterpolate2(" ", ctx_r0.formatDate(ctx_r0.separateDateAndTime(ctx_r0.nextEvent.start.dateTime).date), " h", ctx_r0.formatTime(ctx_r0.nextEvent.start.dateTime), " ");
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate(ctx_r0.nextEvent.summary);
+    \u0275\u0275advance(3);
+    \u0275\u0275conditional(ctx_r0.nextEvent.description != "" ? 12 : -1);
+    \u0275\u0275advance(2);
+    \u0275\u0275repeater(ctx_r0.nextEvent.links);
+    \u0275\u0275advance(5);
+    \u0275\u0275textInterpolate1(" ", ctx_r0.nextEvent.location, " ");
+  }
+}
+function HomeComponent_Conditional_9_Conditional_1_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "h2", 11);
+    \u0275\u0275text(1);
+    \u0275\u0275pipe(2, "translate");
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, "There are no planned upcoming events..."));
+  }
+}
+function HomeComponent_Conditional_9_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275template(0, HomeComponent_Conditional_9_Conditional_0_Template, 20, 8)(1, HomeComponent_Conditional_9_Conditional_1_Template, 3, 3, "h2", 11);
+    \u0275\u0275elementStart(2, "div", 7)(3, "button", 23);
+    \u0275\u0275text(4);
+    \u0275\u0275pipe(5, "translate");
+    \u0275\u0275element(6, "i", 14);
+    \u0275\u0275elementEnd()();
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext();
+    \u0275\u0275conditional(ctx_r0.events.length > 0 ? 0 : ctx_r0.events.length == 0 ? 1 : -1);
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 2, "Next concerts"), "\xA0");
+  }
+}
+function HomeComponent_Conditional_10_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 7)(1, "h2", 36);
+    \u0275\u0275text(2);
+    \u0275\u0275pipe(3, "translate");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(4, "div", 37)(5, "span", 38);
+    \u0275\u0275text(6);
+    \u0275\u0275pipe(7, "translate");
+    \u0275\u0275elementEnd()()();
+  }
+  if (rf & 2) {
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(3, 2, "Loading..."));
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(7, 4, "Loading..."));
+  }
+}
+var HomeComponent = class _HomeComponent {
+  sanitizer;
+  calendar;
+  events = [];
+  upcoming = [];
+  past = [];
+  today = /* @__PURE__ */ new Date();
+  nextEvent;
+  heroVideo;
+  loading = false;
+  constructor(calendarService, sanitizer) {
+    this.sanitizer = sanitizer;
+    this.calendar = calendarService;
+  }
+  ngAfterViewInit() {
+    const video = this.heroVideo.nativeElement;
+    video.muted = true;
+    video.play().catch((err) => console.warn("Autoplay bloccato:", err));
+  }
+  ngOnInit() {
+    this.loading = true;
+    this.calendar.getCalendarEventsPromise().subscribe((res) => {
+      let response = res;
+      this.events = response.items;
+      this.filterEvents(this.events);
+      this.nextEvent = this.upcoming[0];
+      console.log(this.nextEvent);
+      this.loading = false;
+    });
+  }
+  filterEvents(events) {
+    let todayYyyyMmDd = this.separateDateAndTime(this.today.toISOString())["date"];
+    for (let i = 0; i < events.length; ++i) {
+      events[i].links = this.extractLinksFromDescription(events[i].description);
+      events[i].description = this.cleanDescription(events[i].description);
+      if (this.separateDateAndTime(events[i].start.dateTime)["date"] >= todayYyyyMmDd) {
+        this.upcoming.push(events[i]);
+      } else {
+        this.past.unshift(events[i]);
+      }
+      console.log("Descrizione evento:", events[i].description);
+      console.log("Link trovati:", events[i].links);
+    }
+    console.log("next");
+    console.log(this.upcoming);
+    console.log("past");
+    console.log(this.past);
+  }
+  cleanDescription(description) {
+    return description.replace(/\[.*?\]/g, "").trim();
+  }
+  extractLinksFromDescription(description) {
+    let links = [];
+    if (!description) {
+      links = void 0;
+      return links;
+    }
+    let linksString = description.substring(description.indexOf("["));
+    let parsedLinks = this.parseTextLinkPairs(linksString);
+    links = parsedLinks.map((link) => ({
+      key: link.key,
+      value: this.sanitizer.bypassSecurityTrustUrl(link.value.replace(/<.*?>/g, ""))
+    }));
+    return links;
+  }
+  parseTextLinkPairs(str) {
+    str = str.trim().replace(/^\[|\]$/g, "");
+    const pairs = str.split(";").filter(Boolean);
+    const result = pairs.map((pair) => {
+      let [key, value] = pair.split("@");
+      key = key?.trim().replace(/^['"]|['"]$/g, "") || "";
+      value = value?.trim() || "";
+      value = value.replace(/<.*?>/g, "");
+      return { key, value };
+    });
+    return result;
+  }
+  extractLinks(text) {
+    if (!text)
+      return [];
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const matches = text.match(urlRegex);
+    return matches || [];
+  }
+  // getDescriptionWithLinks(description: string): string {
+  //   if (!description) return '';
+  //   const urlRegex = /(https?:\/\/[^\s]+)/g;
+  //   return description.replace(
+  //     urlRegex,
+  //     (url) =>
+  //       `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`
+  //   );
+  // }
+  removeLinks(text) {
+    if (!text)
+      return "";
+    const urlRegex = /(https?:\/\/[^\s]+|www\.[^\s]+)/g;
+    return text.replace(urlRegex, "");
+  }
+  separateDateAndTime(datetime) {
+    const date = datetime.split("T")[0];
+    const time = datetime.split("T")[1];
+    return {
+      date,
+      time: time.replace("Z", "")
+    };
+  }
+  formatDate(dateString) {
+    const date = new Date(dateString);
+    return new Intl.DateTimeFormat("it-IT", {
+      day: "2-digit",
+      month: "short",
+      // Abbreviated month
+      year: "numeric"
+    }).format(date);
+  }
+  formatTime(datetimeString) {
+    return datetimeString.slice(11, 16);
+  }
+  static \u0275fac = function HomeComponent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _HomeComponent)(\u0275\u0275directiveInject(CalendarService), \u0275\u0275directiveInject(DomSanitizer));
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HomeComponent, selectors: [["app-home"]], viewQuery: function HomeComponent_Query(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275viewQuery(_c0, 5);
+    }
+    if (rf & 2) {
+      let _t;
+      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.heroVideo = _t.first);
+    }
+  }, decls: 69, vars: 46, consts: [["heroVideo", ""], [1, "hero", "shadow"], [1, "video-background"], ["autoplay", "", "muted", "", "loop", "", "playsinline", "", "preload", "auto"], ["src", "/media/home/hth-promo-big-show-edit.mp4", "type", "video/mp4"], [1, "hero-content"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "banner-container", "py-3", "mt-5"], ["src", "/media/home/hero-img.jpg", "alt", "The band", 1, "banner-bg"], [1, "banner-content", "col-lg-8", "mx-auto", "my-3", "px-3", "text-justify"], [1, "anton", "text-uppercase"], [1, "fw-normal", 2, "text-align", "justify"], ["routerLink", "/band", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", 2, "text-align", "justify"], ["routerLink", "/band/matteo"], ["routerLink", "/band/lorenzo"], [1, "mt-5", "anton", "text-uppercase"], ["routerLink", "/projects", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "py-3", "mt-5", 2, "background-color", "black"], [1, "col-lg-8", "mx-auto", "my-3", "px-3", 2, "text-align", "justify"], ["routerLink", "/contacts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], ["routerLink", "/concerts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["target", "_blank", 3, "href"], [1, "fa-solid", "fa-link"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function HomeComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275elementStart(0, "section", 1)(1, "div", 2)(2, "video", 3, 0);
+      \u0275\u0275element(4, "source", 4);
+      \u0275\u0275text(5);
+      \u0275\u0275pipe(6, "translate");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275element(7, "div", 5);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(8, "div", 6);
+      \u0275\u0275template(9, HomeComponent_Conditional_9_Template, 7, 4)(10, HomeComponent_Conditional_10_Template, 8, 6, "div", 7);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(11, "div", 8);
+      \u0275\u0275element(12, "img", 9);
+      \u0275\u0275elementStart(13, "div", 10)(14, "h3", 11);
+      \u0275\u0275text(15);
+      \u0275\u0275pipe(16, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(17, "p", 12);
+      \u0275\u0275text(18);
+      \u0275\u0275pipe(19, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(20, "div", 7)(21, "button", 13);
+      \u0275\u0275text(22);
+      \u0275\u0275pipe(23, "translate");
+      \u0275\u0275element(24, "i", 14);
+      \u0275\u0275elementEnd()()()();
+      \u0275\u0275elementStart(25, "div", 15)(26, "h3", 11);
+      \u0275\u0275text(27);
+      \u0275\u0275pipe(28, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(29, "p");
+      \u0275\u0275text(30);
+      \u0275\u0275pipe(31, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(32, "p")(33, "a", 16);
+      \u0275\u0275text(34, "Matteo Giovannone");
+      \u0275\u0275elementEnd();
+      \u0275\u0275text(35);
+      \u0275\u0275pipe(36, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(37, "p")(38, "a", 17);
+      \u0275\u0275text(39, "Lorenzo Rossi");
+      \u0275\u0275elementEnd();
+      \u0275\u0275text(40);
+      \u0275\u0275pipe(41, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(42, "h3", 18);
+      \u0275\u0275text(43);
+      \u0275\u0275pipe(44, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(45, "p");
+      \u0275\u0275text(46);
+      \u0275\u0275pipe(47, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(48, "div", 7)(49, "button", 19);
+      \u0275\u0275text(50);
+      \u0275\u0275pipe(51, "translate");
+      \u0275\u0275element(52, "i", 14);
+      \u0275\u0275elementEnd()()();
+      \u0275\u0275elementStart(53, "div", 20)(54, "div", 21)(55, "h3", 18);
+      \u0275\u0275text(56);
+      \u0275\u0275pipe(57, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(58, "p");
+      \u0275\u0275text(59);
+      \u0275\u0275pipe(60, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(61, "p");
+      \u0275\u0275text(62);
+      \u0275\u0275pipe(63, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(64, "div", 7)(65, "button", 22);
+      \u0275\u0275text(66);
+      \u0275\u0275pipe(67, "translate");
+      \u0275\u0275element(68, "i", 14);
+      \u0275\u0275elementEnd()()()();
+    }
+    if (rf & 2) {
+      \u0275\u0275advance(5);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(6, 16, "Your browser does not support this video."), " ");
+      \u0275\u0275advance(4);
+      \u0275\u0275conditional(!ctx.loading ? 9 : ctx.loading ? 10 : -1);
+      \u0275\u0275advance(6);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(16, 18, "The band"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(19, 20, "Highway to Hell isn't just a simple tribute band, but an authentic rock energy explosion! With an AC/DC faithful sound, obsessive attention to detail and an overwhelming stage presence, they will take the audience on an electrifying journey, just like at a real concert by the legendary Australian band."), " ");
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 22, "Discover the band"), "\xA0");
+      \u0275\u0275advance(5);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(28, 24, "From Bon to Brian: a tribute to the history of AC/DC"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(31, 26, "Besides the classical show, Highway to Hell introduce you to a unique experience under the \u201CFrom Bon to Brian\u201D format, a journey across two legendary ages:"), " ");
+      \u0275\u0275advance(5);
+      \u0275\u0275textInterpolate1(", ", \u0275\u0275pipeBind1(36, 28, "the best italian Bon Scott interpreter, with an impressive vocal and physical resemblance."), " ");
+      \u0275\u0275advance(5);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(41, 30, "on his bagpipes, to recreate the iconic sound of tracks such as \u201CIt\u2019s a Long Way to the Top\u201D."), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(44, 32, "Symphony of Thunder: AC/DC Symphonic Version"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(47, 34, "Since 2024, Highway to Hell were the first to introduce the \u201CSymphony of Thunder\u201D show in Italy: an innovative fusion between AC/DC's pure rock and the power of a symphonic orchestra. An exciting journey through AC/DC's greatest hits, from \u201CBack in Black\u201D to \u201CThunderstruck\u201D, reimagined for orchestra for an unprecedented sound impact!"), " ");
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(51, 36, "Discover our projects"), "\xA0");
+      \u0275\u0275advance(6);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(57, 38, "A band for your stage, a band for your event!"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(60, 40, "Highway to Hell surfed prestigious stages such as EICMA, where they have been their Motolive stage resident band, bringing their show to one of the world's largest motorsport events."), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(63, 42, "If your're looking for an unforgettable AC/DC concert or a professional tribute band for festivals, events or motorcycle rallies, Highway to Hell are the perfect choice for a high voltage experience!"), " ");
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(67, 44, "Get in touch!"), "\xA0");
+    }
+  }, dependencies: [
+    RouterLink,
+    TranslateModule,
+    TranslatePipe
+  ], styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  height: calc(100vh - 60px);\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n@media (hover: hover) and (pointer: fine) {\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%]:hover {\n    transform: translate(-50%, -50%) scale(1.05);\n  }\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero[_ngcontent-%COMP%] {\n    height: 100vh;\n  }\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 2rem;\n  }\n  .hero-content[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n}\n/*# sourceMappingURL=home.component.css.map */'] });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HomeComponent, [{
+    type: Component,
+    args: [{ selector: "app-home", imports: [
+      RouterLink,
+      TranslateModule
+    ], template: `<!-- Hero -->
+<!-- <section class="hero">
+    <div class="video-background">
+            <video autoplay muted loop playsinline preload="auto" class="img-fluid">
+                <source src="/media/home/hth-promo-big-show.mov" type="video/mp4">
+                Il tuo browser non supporta questo video.
+            </video>
+    </div>
+
+    <div class="hero-content">
+        <h1>Highway to Hell</h1>
+        <img class="p-3" src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 200px;">
+        <h2>AC/DC Tribute Band</h2>
+    </div>
+</section> -->
+
+<!-- Hero -->
+<section class="hero shadow">
+    <div class="video-background">
+        <video #heroVideo autoplay muted loop playsinline preload="auto">
+            <source src="/media/home/hth-promo-big-show-edit.mp4" type="video/mp4">
+            {{'Your browser does not support this video.' | translate}}
+        </video>
+    </div>
+
+    <div class="hero-content">
+        <!-- <h1 class="">Highway to Hell</h1>
+        <img class="p-3" src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 200px;">
+        <h2>AC/DC Tribute Band</h2> -->
+    </div>
+</section>
+
+
+<!-- <section class="hero">
+    <div class="hero-content">
+        <h1>Highway to Hell</h1>
+        <h2>AC/DC Tribute Band</h2>
+    </div>
+</section> -->
+
+<div class="col-lg-8 mx-auto my-5 mb-0 px-3 fs-3" style="text-align: justify;">
+    <!--  -->
+    @if(!loading) {
+    @if(events.length > 0) {
+    <h2 class="anton text-uppercase">{{'Next concert' | translate}}</h2>
+    <div class="m-3 border-0 rounded-0 shadow-hover">
+        <div class="row d-flex flex-wrap align-items-stretch">
+            
+            <div
+                class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">
+                {{formatDate(separateDateAndTime(nextEvent.start.dateTime).date)}}
+                h{{formatTime(nextEvent.start.dateTime)}}
+            </div>
+
+            <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">
+                <h3 class="text-uppercase anton m-3 card-title">{{nextEvent.summary}}</h3>
+                <hr class="m-0">
+                <div class="card-body">
+                    @if(nextEvent.description != ""){
+                        {{nextEvent.description}}<br>
+                    }
+                    <div class="m-1">
+                        @for (link of nextEvent.links; track $index) {
+                            <a target="_blank" [href]="link.value"><i class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
+                        }
+                    </div>
+                </div>
+                <hr class="m-0">
+                <div class="card-body rounded-0">
+                    <i class="fa-solid fa-location-dot"></i> {{nextEvent.location}}
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
+    @else if(events.length == 0) {
+    <h2 class="anton text-uppercase">{{'There are no planned upcoming events...' | translate}}</h2>
+    }
+
+    <div class="text-center">
+        <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" routerLink="/concerts">
+            {{'Next concerts' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
+        </button>
+    </div>
+    }
+    @else if(loading) {
+    <div class="text-center">
+        <h2 class="anton">{{'Loading...' | translate}}</h2>
+        <div class="spinner-grow" role="status">
+            <span class="visually-hidden">{{'Loading...' | translate}}</span>
+        </div>
+    </div>
+    }
+</div>
+
+<!-- Banner con call to action -->
+<div class="banner-container py-3 mt-5">
+    <img src="/media/home/hero-img.jpg" alt="The band" class="banner-bg" />
+
+    <div class="banner-content col-lg-8 mx-auto my-3 px-3 text-justify">
+        <h3 class="anton text-uppercase">
+            {{'The band' | translate}}
+        </h3>
+        <p class="fw-normal" style="text-align: justify;">
+            {{"Highway to Hell isn't just a simple tribute band, but an authentic rock energy explosion! With an AC/DC faithful sound, obsessive attention to detail and an overwhelming stage presence, they will take the audience on an electrifying journey, just like at a real concert by the legendary Australian band." | translate}}
+        </p>
+        <div class="text-center">
+            <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0"
+                routerLink="/band">
+                {{'Discover the band' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-lg-8 mx-auto my-5 mb-0 px-3" style="text-align: justify;">
+    <!-- <div class="container">
+        <div class="row">
+            <div class="card m-2">
+                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title anton text-uppercase anton text-uppercase">\u{1F3B8} Jacopo</h5>
+                    <p class="card-text">
+                        Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura.
+                    </p>
+                </div>
+                <div class="card-footer">
+
+                </div>
+            </div>
+
+            <div class="card m-2">
+                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title anton text-uppercase">\u{1F3B8} Francesco</h5>
+                    <p class="card-text">
+                        Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young.
+                    </p>
+                </div>
+                <div class="card-footer">
+
+                </div>
+            </div>
+
+            <div class="card m-2">
+                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title anton text-uppercase">\u{1F941} Andrea</h5>
+                    <p class="card-text">
+                        Batteria, una macchina da guerra che richiama la potenza di Chris Slade.
+                    </p>
+                </div>
+                <div class="card-footer">
+
+                </div>
+            </div>
+
+            <div class="card m-2">
+                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title anton text-uppercase">\u{1F3A4} Eros</h5>
+                    <p class="card-text">
+                        Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.
+                    </p>
+                </div>
+                <div class="card-footer">
+
+                </div>
+            </div>
+
+            <div class="card m-2">
+                <img src="https://placehold.co/350x350" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title anton text-uppercase">\u{1F3B8} Davide</h5>
+                    <p class="card-text">
+                        Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams.
+                    </p>
+                </div>
+                <div class="card-footer">
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <p>
+        \u{1F3B8} Jacopo \u2013 Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura.
+    </p>
+    <p>
+        \u{1F3B8} Francesco \u2013 Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young.
+    </p>
+    <p>
+        \u{1F941} Andrea \u2013 Batteria, una macchina da guerra che richiama la potenza di Chris Slade.
+    </p>
+    <p>
+        \u{1F3A4} Eros \u2013 Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.
+    </p>
+    <p>
+        \u{1F3B8} Davide \u2013 Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams.
+    </p> -->
+
+    <h3 class="anton text-uppercase">
+        {{'From Bon to Brian: a tribute to the history of AC/DC' | translate}}
+    </h3>
+    <p>
+        {{'Besides the classical show, Highway to Hell introduce you to a unique experience under the \u201CFrom Bon to Brian\u201D format, a journey across two legendary ages:' | translate}}
+    </p>
+    <p>
+        <a routerLink="/band/matteo">Matteo Giovannone</a>, {{'the best italian Bon Scott interpreter, with an impressive vocal and physical resemblance.' | translate}}
+    </p>
+    <p>
+        <a routerLink="/band/lorenzo">Lorenzo Rossi</a> {{'on his bagpipes, to recreate the iconic sound of tracks such as \u201CIt\u2019s a Long Way to the Top\u201D.' | translate}}
+    </p>
+
+    <h3 class="mt-5 anton text-uppercase">
+        {{'Symphony of Thunder: AC/DC Symphonic Version' | translate}}
+    </h3>
+    <p>
+        {{"Since 2024, Highway to Hell were the first to introduce the \u201CSymphony of Thunder\u201D show in Italy: an innovative fusion between AC/DC's pure rock and the power of a symphonic orchestra. An exciting journey through AC/DC's greatest hits, from \u201CBack in Black\u201D to \u201CThunderstruck\u201D, reimagined for orchestra for an unprecedented sound impact!" | translate}}
+    </p>
+    <div class="text-center">
+        <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" routerLink="/projects">
+            {{'Discover our projects' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Banner con call to action -->
+<div class="py-3 mt-5" style="background-color: black;">
+    <div class="col-lg-8 mx-auto my-3 px-3" style="text-align: justify;">
+        <h3 class="mt-5 anton text-uppercase">
+            {{'A band for your stage, a band for your event!' | translate}}
+        </h3>
+        <p>
+            {{"Highway to Hell surfed prestigious stages such as EICMA, where they have been their Motolive stage resident band, bringing their show to one of the world's largest motorsport events." | translate}}
+        </p>
+
+        <p>
+            {{"If your're looking for an unforgettable AC/DC concert or a professional tribute band for festivals, events or motorcycle rallies, Highway to Hell are the perfect choice for a high voltage experience!" | translate}}
+        </p>
+        <div class="text-center">
+            <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0"
+                routerLink="/contacts">
+                {{'Get in touch!' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
+            </button>
+        </div>
+    </div>
+</div>`, styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  width: 100%;\n  height: calc(100vh - 60px);\n  overflow: hidden;\n}\n.video-background {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background video {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .video-background video {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n@media (hover: hover) and (pointer: fine) {\n  .video-background video:hover {\n    transform: translate(-50%, -50%) scale(1.05);\n  }\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero {\n    height: 100vh;\n  }\n  .video-background video {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content h1 {\n    font-size: 2rem;\n  }\n  .hero-content h2 {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content {\n  position: relative;\n  z-index: 1;\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
+  }], () => [{ type: CalendarService }, { type: DomSanitizer }], { heroVideo: [{
+    type: ViewChild,
+    args: ["heroVideo"]
+  }] });
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HomeComponent, { className: "HomeComponent", filePath: "src/app/home/home.component.ts", lineNumber: 22 });
+})();
+
+// src/app/page-not-found/page-not-found.component.ts
+var PageNotFoundComponent = class _PageNotFoundComponent {
+  static \u0275fac = function PageNotFoundComponent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _PageNotFoundComponent)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PageNotFoundComponent, selectors: [["app-page-not-found"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function PageNotFoundComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
+      \u0275\u0275text(2, " 404: page not found! ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
+      \u0275\u0275text(5, "Sorry...");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275elementEnd()();
+    }
+  }, encapsulation: 2 });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PageNotFoundComponent, [{
+    type: Component,
+    args: [{ selector: "app-page-not-found", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        404: page not found!\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Sorry...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+  }], null, null);
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PageNotFoundComponent, { className: "PageNotFoundComponent", filePath: "src/app/page-not-found/page-not-found.component.ts", lineNumber: 9 });
+})();
+
+// src/app/members/members.component.ts
+var MembersComponent = class _MembersComponent {
+  static \u0275fac = function MembersComponent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MembersComponent)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MembersComponent, selectors: [["app-members"]], decls: 95, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-10", "my-5", "mx-auto", "px-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase", "my-5"], [1, "cards-wrapper", "mx-3"], [1, "card-item"], ["routerLink", "/band/francesco"], [1, "card", "border-0", "rounded-0", "m-1", "mb-3", "box-shadow", "shadow-hover"], ["src", "https://placehold.co/300x300", "alt", "Francesco", 1, "card-img", "rounded-0"], [1, "card-body", "nav"], [1, "card-title", "anton", "text-uppercase"], [1, "card-text"], [1, "card-footer", "d-flex", "justify-content-end", "align-items-center", "rounded-0"], [1, "text-muted", "text-end"], [1, "fa-solid", "fa-bolt"], ["routerLink", "/band/andrea"], ["src", "https://placehold.co/300x300", "alt", "Andrea", 1, "card-img", "rounded-0"], ["routerLink", "/band/davide"], ["src", "https://placehold.co/300x300", "alt", "Davide", 1, "card-img", "rounded-0"], ["routerLink", "/band/jacopo"], ["src", "https://placehold.co/300x300", "alt", "Jacopo", 1, "card-img", "rounded-0"], ["routerLink", "/band/eros"], ["src", "https://placehold.co/300x300", "alt", "Eros", 1, "card-img", "rounded-0"], ["routerLink", "/band/lorenzo"], ["src", "media/band/lorenzo.jpeg", "alt", "Lorenzo", 1, "card-img", "rounded-0"], ["src", "https://placehold.co/300x300", "alt", "Matteo", 1, "card-img", "rounded-0"]], template: function MembersComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
+      \u0275\u0275text(2, " Band ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
+      \u0275\u0275text(5, "componenti");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(6, "div", 3)(7, "div", 4)(8, "a", 5)(9, "div", 6);
+      \u0275\u0275element(10, "img", 7);
+      \u0275\u0275elementStart(11, "div", 8)(12, "h2", 9);
+      \u0275\u0275text(13, "Francesco");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(14, "p", 10);
+      \u0275\u0275text(15, "Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(16, "div", 11)(17, "small", 12);
+      \u0275\u0275element(18, "i", 13);
+      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275elementStart(19, "div", 4)(20, "a", 14)(21, "div", 6);
+      \u0275\u0275element(22, "img", 15);
+      \u0275\u0275elementStart(23, "div", 8)(24, "h2", 9);
+      \u0275\u0275text(25, "Andrea");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(26, "p", 10);
+      \u0275\u0275text(27, "Batteria, una macchina da guerra che richiama la potenza di Chris Slade.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(28, "div", 11)(29, "small", 12);
+      \u0275\u0275element(30, "i", 13);
+      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275elementStart(31, "div", 4)(32, "a", 16)(33, "div", 6);
+      \u0275\u0275element(34, "img", 17);
+      \u0275\u0275elementStart(35, "div", 8)(36, "h2", 9);
+      \u0275\u0275text(37, "Davide");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(38, "p", 10);
+      \u0275\u0275text(39, "Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(40, "div", 11)(41, "small", 12);
+      \u0275\u0275element(42, "i", 13);
+      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275elementStart(43, "div", 4)(44, "a", 18)(45, "div", 6);
+      \u0275\u0275element(46, "img", 19);
+      \u0275\u0275elementStart(47, "div", 8)(48, "h2", 9);
+      \u0275\u0275text(49, "Jacopo");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(50, "p", 10);
+      \u0275\u0275text(51, "Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(52, "div", 11)(53, "small", 12);
+      \u0275\u0275element(54, "i", 13);
+      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275elementStart(55, "div", 4)(56, "a", 20)(57, "div", 6);
+      \u0275\u0275element(58, "img", 21);
+      \u0275\u0275elementStart(59, "div", 8)(60, "h2", 9);
+      \u0275\u0275text(61, "Eros");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(62, "p", 10);
+      \u0275\u0275text(63, "Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(64, "div", 11)(65, "small", 12);
+      \u0275\u0275element(66, "i", 13);
+      \u0275\u0275elementEnd()()()()()()();
+      \u0275\u0275elementStart(67, "div", 1)(68, "h2", 2);
+      \u0275\u0275text(69, "Collaborazioni");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(70, "div", 3)(71, "div", 4)(72, "a", 22)(73, "div", 6);
+      \u0275\u0275element(74, "img", 23);
+      \u0275\u0275elementStart(75, "div", 8)(76, "h2", 9);
+      \u0275\u0275text(77, "Lorenzo");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(78, "p", 10);
+      \u0275\u0275text(79, " Il rombo della sua cornamusa incendier\xE0 il palco a ritmo di \u201CIt's a Long Way to the Top\u201D e \u201CThunderstruck\u201D. ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(80, "div", 11)(81, "small", 12);
+      \u0275\u0275element(82, "i", 13);
+      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275elementStart(83, "div", 4)(84, "a", 14)(85, "div", 6);
+      \u0275\u0275element(86, "img", 24);
+      \u0275\u0275elementStart(87, "div", 8)(88, "h2", 9);
+      \u0275\u0275text(89, "Matteo");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(90, "p", 10);
+      \u0275\u0275text(91, " Conosciuto anche come \u201CThe Italian Bon Scott\u201D, \xE8 uno dei due protagonisti dello show \u201CFrom Bon to Brian\u201D. ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(92, "div", 11)(93, "small", 12);
+      \u0275\u0275element(94, "i", 13);
+      \u0275\u0275elementEnd()()()()()()()();
+    }
+  }, styles: ["\n\n.card[_ngcontent-%COMP%] {\n  overflow: hidden;\n}\n.card-img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n  aspect-ratio: 1/1;\n}\n.card[_ngcontent-%COMP%]:hover   .card-img[_ngcontent-%COMP%] {\n  transform: scale(1.05);\n}\n.card-item[_ngcontent-%COMP%]    > a[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  gap: 3rem;\n}\n.card[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 1 1 100%;\n  max-width: 100%;\n}\n@media (min-width: 768px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 1 1 calc(50% - 2rem);\n    max-width: calc(50% - 2rem);\n  }\n}\n@media (min-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 1 1 calc(33.333% - 2rem);\n    max-width: calc(33.333% - 2rem);\n  }\n}\na[_ngcontent-%COMP%]:hover {\n  text-shadow: none;\n}\n.card[_ngcontent-%COMP%]:hover   .card-footer[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]   i[_ngcontent-%COMP%] {\n  color: white;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  transition: all 0.3s ease;\n}\n.card-footer[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]   i[_ngcontent-%COMP%] {\n  color: inherit;\n  text-shadow: none;\n  transition: all 0.3s ease;\n}\n/*# sourceMappingURL=members.component.css.map */"] });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MembersComponent, [{
+    type: Component,
+    args: [{ selector: "app-members", imports: [], template: `<!-- <div class="col-lg-8 mx-auto my-5 mb-0 px-3">
+    
+</div> -->
+<div>
+    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">
+        Band
+    </h1>
+    <div class="col-lg-10 my-5 mx-auto px-3" style="text-align: justify;">
+        <h2 class="anton text-uppercase my-5">componenti</h2>
+        <div class="cards-wrapper mx-3">
+        
+            <div class="card-item">
+                <a routerLink="/band/francesco">
+                    <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
+                        <img class="card-img rounded-0" src="https://placehold.co/300x300" alt="Francesco" />
+                        <div class="card-body nav">
+                            <h2 class="card-title anton text-uppercase">Francesco</h2>
+                            <p class="card-text">Chitarra ritmica, il motore del groove, con un suono potente in
+                                perfetto stile Malcolm Young.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
+                            <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a routerLink="/band/andrea">
+                    <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
+                        <img class="card-img rounded-0" src="https://placehold.co/300x300" alt="Andrea" />
+                        <div class="card-body nav">
+                            <h2 class="card-title anton text-uppercase">Andrea</h2>
+                            <p class="card-text">Batteria, una macchina da guerra che richiama la potenza di Chris
+                                Slade.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
+                            <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a routerLink="/band/davide">
+                    <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
+                        <img class="card-img rounded-0" src="https://placehold.co/300x300" alt="Davide" />
+                        <div class="card-body nav">
+                            <h2 class="card-title anton text-uppercase">Davide</h2>
+                            <p class="card-text">Basso, colonna portante che mantiene il groove solido e incalzante,
+                                proprio come Cliff Williams.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
+                            <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a routerLink="/band/jacopo">
+                    <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
+                        <img class="card-img rounded-0" src="https://placehold.co/300x300" alt="Jacopo" />
+                        <div class="card-body nav">
+                            <h2 class="card-title anton text-uppercase">Jacopo</h2>
+                            <p class="card-text">Chitarra solista, incarna lo spirito di Angus Young con riff
+                                iconici ed energia pura.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
+                            <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a routerLink="/band/eros">
+                    <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
+                        <img class="card-img rounded-0" src="https://placehold.co/300x300" alt="Eros" />
+                        <div class="card-body nav">
+                            <h2 class="card-title anton text-uppercase">Eros</h2>
+                            <p class="card-text">Voce, un frontman che cattura la potenza di Brian Johnson con una
+                                grinta esplosiva.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
+                            <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-10 my-5 mx-auto px-3" style="text-align: justify;">
+        <h2 class="anton text-uppercase my-5">Collaborazioni</h2>
+        <div class="cards-wrapper mx-3">
+        
+            <div class="card-item">
+                <a routerLink="/band/lorenzo">
+                    <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
+                        <img class="card-img rounded-0" src="media/band/lorenzo.jpeg" alt="Lorenzo" />
+                        <div class="card-body nav">
+                            <h2 class="card-title anton text-uppercase">Lorenzo</h2>
+                            <p class="card-text">
+                                Il rombo della sua cornamusa incendier\xE0 il palco a ritmo di \u201CIt's a Long Way to the Top\u201D e \u201CThunderstruck\u201D.
+                            </p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
+                            <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a routerLink="/band/andrea">
+                    <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
+                        <img class="card-img rounded-0" src="https://placehold.co/300x300" alt="Matteo" />
+                        <div class="card-body nav">
+                            <h2 class="card-title anton text-uppercase">Matteo</h2>
+                            <p class="card-text">
+                                Conosciuto anche come \u201CThe Italian Bon Scott\u201D, \xE8 uno dei due protagonisti dello show \u201CFrom Bon to Brian\u201D.
+                            </p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
+                            <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</div>`, styles: ["/* src/app/members/members.component.css */\n.card {\n  overflow: hidden;\n}\n.card-img {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n  aspect-ratio: 1/1;\n}\n.card:hover .card-img {\n  transform: scale(1.05);\n}\n.card-item > a {\n  text-decoration: none;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  gap: 3rem;\n}\n.card {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n}\n.card-item {\n  flex: 1 1 100%;\n  max-width: 100%;\n}\n@media (min-width: 768px) {\n  .card-item {\n    flex: 1 1 calc(50% - 2rem);\n    max-width: calc(50% - 2rem);\n  }\n}\n@media (min-width: 992px) {\n  .card-item {\n    flex: 1 1 calc(33.333% - 2rem);\n    max-width: calc(33.333% - 2rem);\n  }\n}\na:hover {\n  text-shadow: none;\n}\n.card:hover .card-footer small i {\n  color: white;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  transition: all 0.3s ease;\n}\n.card-footer small i {\n  color: inherit;\n  text-shadow: none;\n  transition: all 0.3s ease;\n}\n/*# sourceMappingURL=members.component.css.map */\n"] }]
+  }], null, null);
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(MembersComponent, { className: "MembersComponent", filePath: "src/app/members/members.component.ts", lineNumber: 9 });
+})();
+
+// src/app/members/jacopo/jacopo.component.ts
+var JacopoComponent = class _JacopoComponent {
+  static \u0275fac = function JacopoComponent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _JacopoComponent)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _JacopoComponent, selectors: [["app-jacopo"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function JacopoComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
+      \u0275\u0275text(2, " Jacopo ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
+      \u0275\u0275text(5, "Work in progress...");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275elementEnd()();
+    }
+  }, encapsulation: 2 });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(JacopoComponent, [{
+    type: Component,
+    args: [{ selector: "app-jacopo", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Jacopo\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+  }], null, null);
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(JacopoComponent, { className: "JacopoComponent", filePath: "src/app/members/jacopo/jacopo.component.ts", lineNumber: 9 });
+})();
+
+// src/app/members/eros/eros.component.ts
+var ErosComponent = class _ErosComponent {
+  static \u0275fac = function ErosComponent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _ErosComponent)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ErosComponent, selectors: [["app-eros"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function ErosComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
+      \u0275\u0275text(2, " Eros ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
+      \u0275\u0275text(5, "Work in progress...");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275elementEnd()();
+    }
+  }, encapsulation: 2 });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ErosComponent, [{
+    type: Component,
+    args: [{ selector: "app-eros", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Eros\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+  }], null, null);
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ErosComponent, { className: "ErosComponent", filePath: "src/app/members/eros/eros.component.ts", lineNumber: 9 });
+})();
+
+// src/app/members/francesco/francesco.component.ts
+var FrancescoComponent = class _FrancescoComponent {
+  static \u0275fac = function FrancescoComponent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _FrancescoComponent)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FrancescoComponent, selectors: [["app-francesco"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function FrancescoComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
+      \u0275\u0275text(2, " Francesco ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
+      \u0275\u0275text(5, "Work in progress...");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275elementEnd()();
+    }
+  }, encapsulation: 2 });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FrancescoComponent, [{
+    type: Component,
+    args: [{ selector: "app-francesco", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Francesco\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+  }], null, null);
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FrancescoComponent, { className: "FrancescoComponent", filePath: "src/app/members/francesco/francesco.component.ts", lineNumber: 9 });
+})();
+
 // src/app/services/shared.service.ts
 var SharedService = class _SharedService {
   translate;
@@ -40263,7 +40793,7 @@ var SharedService = class _SharedService {
       this.activeLink = "bio";
     } else if (url.startsWith("/contacts")) {
       this.activeLink = "contacts";
-    } else if (url.startsWith("/members")) {
+    } else if (url.startsWith("/band")) {
       this.activeLink = url.split("/", 3)[1] + "/" + url.split("/", 3)[2];
     } else {
       this.activeLink = "";
@@ -40309,18 +40839,23 @@ var DavideComponent = class _DavideComponent {
   static \u0275fac = function DavideComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _DavideComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DavideComponent, selectors: [["app-davide"]], decls: 2, vars: 0, consts: [[1, "squealer"]], template: function DavideComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DavideComponent, selectors: [["app-davide"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function DavideComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "h1", 0);
-      \u0275\u0275text(1, "Davide");
+      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
+      \u0275\u0275text(2, " Davide ");
       \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
+      \u0275\u0275text(5, "Work in progress...");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275elementEnd()();
     }
   }, encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DavideComponent, [{
     type: Component,
-    args: [{ selector: "app-davide", imports: [], template: '<h1 class="squealer">Davide</h1>' }]
+    args: [{ selector: "app-davide", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Davide\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -40337,18 +40872,23 @@ var AndreaComponent = class _AndreaComponent {
   static \u0275fac = function AndreaComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AndreaComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AndreaComponent, selectors: [["app-andrea"]], decls: 2, vars: 0, consts: [[1, "squealer"]], template: function AndreaComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AndreaComponent, selectors: [["app-andrea"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function AndreaComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "h1", 0);
-      \u0275\u0275text(1, "Andrea");
+      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
+      \u0275\u0275text(2, " Andrea ");
       \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
+      \u0275\u0275text(5, "Work in progress...");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275elementEnd()();
     }
   }, encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AndreaComponent, [{
     type: Component,
-    args: [{ selector: "app-andrea", imports: [], template: '<h1 class="squealer">Andrea</h1>' }]
+    args: [{ selector: "app-andrea", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Andrea\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -40360,18 +40900,23 @@ var LorenzoComponent = class _LorenzoComponent {
   static \u0275fac = function LorenzoComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _LorenzoComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LorenzoComponent, selectors: [["app-lorenzo"]], decls: 2, vars: 0, consts: [[1, "squealer"]], template: function LorenzoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LorenzoComponent, selectors: [["app-lorenzo"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function LorenzoComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "h1", 0);
-      \u0275\u0275text(1, "Lorenzo");
+      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
+      \u0275\u0275text(2, " Lorenzo ");
       \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
+      \u0275\u0275text(5, "Work in progress...");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275elementEnd()();
     }
   }, encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LorenzoComponent, [{
     type: Component,
-    args: [{ selector: "app-lorenzo", imports: [], template: '<h1 class="squealer">Lorenzo</h1>' }]
+    args: [{ selector: "app-lorenzo", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Lorenzo\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
   }], null, null);
 })();
 (() => {
@@ -40383,18 +40928,23 @@ var MatteoComponent = class _MatteoComponent {
   static \u0275fac = function MatteoComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _MatteoComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MatteoComponent, selectors: [["app-matteo"]], decls: 2, vars: 0, consts: [[1, "squealer"]], template: function MatteoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MatteoComponent, selectors: [["app-matteo"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function MatteoComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "h1", 0);
-      \u0275\u0275text(1, "Matteo");
+      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
+      \u0275\u0275text(2, " Matteo ");
       \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
+      \u0275\u0275text(5, "Work in progress...");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275elementEnd()();
     }
   }, encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatteoComponent, [{
     type: Component,
-    args: [{ selector: "app-matteo", imports: [], template: '<h1 class="squealer">Matteo</h1>' }]
+    args: [{ selector: "app-matteo", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Matteo\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
   }], null, null);
 })();
 (() => {
@@ -40406,18 +40956,23 @@ var BioComponent = class _BioComponent {
   static \u0275fac = function BioComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _BioComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _BioComponent, selectors: [["app-bio"]], decls: 2, vars: 0, template: function BioComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _BioComponent, selectors: [["app-bio"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function BioComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "p");
-      \u0275\u0275text(1, "bio works!");
+      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
+      \u0275\u0275text(2, " Bio ");
       \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
+      \u0275\u0275text(5, "Work in progress...");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275elementEnd()();
     }
   }, encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(BioComponent, [{
     type: Component,
-    args: [{ selector: "app-bio", imports: [], template: "<p>bio works!</p>\n" }]
+    args: [{ selector: "app-bio", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Bio\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
   }], null, null);
 })();
 (() => {
@@ -40425,176 +40980,132 @@ var BioComponent = class _BioComponent {
 })();
 
 // src/app/concerts/concerts.component.ts
-function ConcertsComponent_Conditional_1_Conditional_0_Conditional_0_For_3_For_13_Template(rf, ctx) {
+function ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_Conditional_9_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "a", 13);
-    \u0275\u0275element(1, "i", 14);
+    \u0275\u0275text(0);
+    \u0275\u0275element(1, "br");
+  }
+  if (rf & 2) {
+    const event_r1 = \u0275\u0275nextContext().$implicit;
+    \u0275\u0275textInterpolate1(" ", event_r1.description, "");
+  }
+}
+function ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_For_12_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "a", 14);
+    \u0275\u0275element(1, "i", 15);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd();
     \u0275\u0275element(3, "br");
   }
   if (rf & 2) {
-    const link_r1 = ctx.$implicit;
-    \u0275\u0275propertyInterpolate("href", link_r1.value, \u0275\u0275sanitizeUrl);
+    const link_r2 = ctx.$implicit;
+    \u0275\u0275property("href", link_r2.value, \u0275\u0275sanitizeUrl);
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1("\xA0", link_r1.key, "");
+    \u0275\u0275textInterpolate1("\xA0", link_r2.key, "");
   }
 }
-function ConcertsComponent_Conditional_1_Conditional_0_Conditional_0_For_3_Template(rf, ctx) {
+function ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 3)(1, "div", 4)(2, "div", 5);
+    \u0275\u0275elementStart(0, "div", 4)(1, "div", 5)(2, "div", 6);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 6)(5, "h3", 7);
+    \u0275\u0275elementStart(4, "div", 7)(5, "h3", 8);
     \u0275\u0275text(6);
     \u0275\u0275elementEnd();
-    \u0275\u0275element(7, "hr", 8);
-    \u0275\u0275elementStart(8, "div", 9);
-    \u0275\u0275text(9);
-    \u0275\u0275element(10, "br");
-    \u0275\u0275elementStart(11, "div", 10);
-    \u0275\u0275repeaterCreate(12, ConcertsComponent_Conditional_1_Conditional_0_Conditional_0_For_3_For_13_Template, 4, 2, null, null, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275element(7, "hr", 9);
+    \u0275\u0275elementStart(8, "div", 10);
+    \u0275\u0275template(9, ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_Conditional_9_Template, 2, 1);
+    \u0275\u0275elementStart(10, "div", 11);
+    \u0275\u0275repeaterCreate(11, ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_For_12_Template, 4, 2, null, null, \u0275\u0275repeaterTrackByIndex);
     \u0275\u0275elementEnd()();
-    \u0275\u0275element(14, "hr", 8);
-    \u0275\u0275elementStart(15, "div", 11);
-    \u0275\u0275element(16, "i", 12);
-    \u0275\u0275text(17);
+    \u0275\u0275element(13, "hr", 9);
+    \u0275\u0275elementStart(14, "div", 12);
+    \u0275\u0275element(15, "i", 13);
+    \u0275\u0275text(16);
     \u0275\u0275elementEnd()()()();
   }
   if (rf & 2) {
-    const event_r2 = ctx.$implicit;
+    const event_r1 = ctx.$implicit;
     const ctx_r2 = \u0275\u0275nextContext(4);
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate2(" ", ctx_r2.formatDate(ctx_r2.separateDateAndTime(event_r2.start.dateTime).date), " h", ctx_r2.formatTime(event_r2.start.dateTime), " ");
+    \u0275\u0275textInterpolate2(" ", ctx_r2.formatDate(ctx_r2.separateDateAndTime(event_r1.start.dateTime).date), " h", ctx_r2.formatTime(event_r1.start.dateTime), " ");
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate(event_r2.summary);
+    \u0275\u0275textInterpolate(event_r1.summary);
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate1(" ", event_r2.description, "");
-    \u0275\u0275advance(3);
-    \u0275\u0275repeater(event_r2.links);
+    \u0275\u0275conditional(event_r1.description != "" ? 9 : -1);
+    \u0275\u0275advance(2);
+    \u0275\u0275repeater(event_r1.links);
     \u0275\u0275advance(5);
-    \u0275\u0275textInterpolate1(" ", event_r2.location, " ");
+    \u0275\u0275textInterpolate1(" ", event_r1.location, " ");
   }
 }
-function ConcertsComponent_Conditional_1_Conditional_0_Conditional_0_Template(rf, ctx) {
+function ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 2);
-    \u0275\u0275text(1, "Prossimi concerti");
+    \u0275\u0275elementStart(0, "h2", 3);
+    \u0275\u0275text(1);
+    \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275repeaterCreate(2, ConcertsComponent_Conditional_1_Conditional_0_Conditional_0_For_3_Template, 18, 5, "div", 3, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275repeaterCreate(3, ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_Template, 17, 5, "div", 4, \u0275\u0275repeaterTrackByIndex);
   }
   if (rf & 2) {
     const ctx_r2 = \u0275\u0275nextContext(3);
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, "Next concerts"));
     \u0275\u0275advance(2);
     \u0275\u0275repeater(ctx_r2.upcoming);
   }
 }
-function ConcertsComponent_Conditional_1_Conditional_0_Conditional_1_For_3_For_13_Template(rf, ctx) {
+function ConcertsComponent_Conditional_4_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "a", 13);
-    \u0275\u0275element(1, "i", 14);
-    \u0275\u0275text(2);
-    \u0275\u0275elementEnd();
-    \u0275\u0275element(3, "br");
-  }
-  if (rf & 2) {
-    const link_r4 = ctx.$implicit;
-    \u0275\u0275propertyInterpolate("href", link_r4.value, \u0275\u0275sanitizeUrl);
-    \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1("\xA0", link_r4.key, "");
-  }
-}
-function ConcertsComponent_Conditional_1_Conditional_0_Conditional_1_For_3_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 3)(1, "div", 4)(2, "div", 5);
-    \u0275\u0275text(3);
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 6)(5, "h3", 7);
-    \u0275\u0275text(6);
-    \u0275\u0275elementEnd();
-    \u0275\u0275element(7, "hr", 8);
-    \u0275\u0275elementStart(8, "div", 9);
-    \u0275\u0275text(9);
-    \u0275\u0275element(10, "br");
-    \u0275\u0275elementStart(11, "div", 10);
-    \u0275\u0275repeaterCreate(12, ConcertsComponent_Conditional_1_Conditional_0_Conditional_1_For_3_For_13_Template, 4, 2, null, null, \u0275\u0275repeaterTrackByIndex);
-    \u0275\u0275elementEnd()();
-    \u0275\u0275element(14, "hr", 8);
-    \u0275\u0275elementStart(15, "div", 11);
-    \u0275\u0275element(16, "i", 12);
-    \u0275\u0275text(17);
-    \u0275\u0275elementEnd()()()();
-  }
-  if (rf & 2) {
-    const event_r5 = ctx.$implicit;
-    const ctx_r2 = \u0275\u0275nextContext(4);
-    \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate2(" ", ctx_r2.formatDate(ctx_r2.separateDateAndTime(event_r5.start.dateTime).date), " h", ctx_r2.formatTime(event_r5.start.dateTime), " ");
-    \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate(event_r5.summary);
-    \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate1(" ", event_r5.description, "");
-    \u0275\u0275advance(3);
-    \u0275\u0275repeater(event_r5.links);
-    \u0275\u0275advance(5);
-    \u0275\u0275textInterpolate1(" ", event_r5.location, " ");
-  }
-}
-function ConcertsComponent_Conditional_1_Conditional_0_Conditional_1_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 2);
-    \u0275\u0275text(1, "Eventi passati");
-    \u0275\u0275elementEnd();
-    \u0275\u0275repeaterCreate(2, ConcertsComponent_Conditional_1_Conditional_0_Conditional_1_For_3_Template, 18, 5, "div", 3, \u0275\u0275repeaterTrackByIndex);
-  }
-  if (rf & 2) {
-    const ctx_r2 = \u0275\u0275nextContext(3);
-    \u0275\u0275advance(2);
-    \u0275\u0275repeater(ctx_r2.past);
-  }
-}
-function ConcertsComponent_Conditional_1_Conditional_0_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275template(0, ConcertsComponent_Conditional_1_Conditional_0_Conditional_0_Template, 4, 0)(1, ConcertsComponent_Conditional_1_Conditional_0_Conditional_1_Template, 4, 0);
+    \u0275\u0275template(0, ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_Template, 5, 3);
   }
   if (rf & 2) {
     const ctx_r2 = \u0275\u0275nextContext(2);
     \u0275\u0275conditional(ctx_r2.upcoming.length > 0 ? 0 : -1);
-    \u0275\u0275advance();
-    \u0275\u0275conditional(ctx_r2.past.length > 0 ? 1 : -1);
   }
 }
-function ConcertsComponent_Conditional_1_Conditional_1_Template(rf, ctx) {
+function ConcertsComponent_Conditional_4_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 2);
+    \u0275\u0275elementStart(0, "h2", 3);
     \u0275\u0275text(1, "Non ci sono eventi in programma...");
     \u0275\u0275elementEnd();
   }
 }
-function ConcertsComponent_Conditional_1_Template(rf, ctx) {
+function ConcertsComponent_Conditional_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275template(0, ConcertsComponent_Conditional_1_Conditional_0_Template, 2, 2)(1, ConcertsComponent_Conditional_1_Conditional_1_Template, 2, 0, "h2", 2);
+    \u0275\u0275template(0, ConcertsComponent_Conditional_4_Conditional_0_Template, 1, 1)(1, ConcertsComponent_Conditional_4_Conditional_1_Template, 2, 0, "h2", 3);
   }
   if (rf & 2) {
     const ctx_r2 = \u0275\u0275nextContext();
     \u0275\u0275conditional(ctx_r2.events.length > 0 ? 0 : ctx_r2.events.length == 0 ? 1 : -1);
   }
 }
-function ConcertsComponent_Conditional_2_Template(rf, ctx) {
+function ConcertsComponent_Conditional_5_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 1)(1, "h2", 15);
-    \u0275\u0275text(2, "Caricamento...");
+    \u0275\u0275elementStart(0, "div", 2)(1, "h2", 16);
+    \u0275\u0275text(2);
+    \u0275\u0275pipe(3, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 16)(4, "span", 17);
-    \u0275\u0275text(5, "Loading...");
+    \u0275\u0275elementStart(4, "div", 17)(5, "span", 18);
+    \u0275\u0275text(6);
+    \u0275\u0275pipe(7, "translate");
     \u0275\u0275elementEnd()()();
+  }
+  if (rf & 2) {
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(3, 2, "Loading..."));
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(7, 4, "Loading..."));
   }
 }
 var ConcertsComponent = class _ConcertsComponent {
   calendar;
   events = [];
   upcoming = [];
+  upcomingShown = [];
   past = [];
+  pastShown = [];
   today = /* @__PURE__ */ new Date();
   loading = false;
   constructor(calendarService) {
@@ -40686,29 +41197,190 @@ var ConcertsComponent = class _ConcertsComponent {
   formatTime(datetimeString) {
     return datetimeString.slice(11, 16);
   }
+  setupHiddenShows() {
+    let maxLength = this.upcoming.length < 5 ? this.upcoming.length : 5;
+    let i = 0;
+    console.warn("Upcoming:");
+    console.log(this.upcoming);
+    while (this.upcomingShown.length < maxLength) {
+      this.upcomingShown.push(this.upcoming[i]);
+      this.upcoming.splice(i, 1);
+      ++i;
+    }
+    console.warn("Upcoming Shown");
+    console.log(this.upcomingShown);
+    console.warn("Upcoming MINUS shown:");
+    console.log(this.upcoming);
+    maxLength = this.past.length < 1 ? this.past.length : 1;
+    i = 0;
+    console.warn("Past:");
+    console.log(this.past);
+    while (this.pastShown.length < maxLength) {
+      this.pastShown.push(this.past[i]);
+      this.past.splice(i, 1);
+      ++i;
+    }
+    console.warn("Past shown:");
+    console.log(this.pastShown);
+  }
+  //load next n events from "upcoming"
+  loadMoreUpcoming(n) {
+    let maxLength = this.upcoming.length < n ? this.upcoming.length : n;
+    console.log("MaxLength: " + maxLength);
+    for (let i = 0; i < maxLength; ++i) {
+      this.upcomingShown.push(this.upcoming[i]);
+    }
+    this.upcoming.splice(1, maxLength);
+    console.warn("Upcoming Shown");
+    console.log(this.upcomingShown);
+    console.warn("Upcoming MINUS shown:");
+    console.log(this.upcoming);
+  }
+  loadMorePast(n) {
+    let maxLength = this.past.length < n ? this.past.length : n;
+    console.log("MaxLength: " + maxLength);
+    for (let i = 0; i < maxLength; ++i) {
+      this.pastShown.push(this.past[i]);
+    }
+    this.past.splice(1, maxLength);
+    console.warn("past Shown");
+    console.log(this.pastShown);
+    console.warn("past MINUS shown:");
+    console.log(this.past);
+  }
   static \u0275fac = function ConcertsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ConcertsComponent)(\u0275\u0275directiveInject(CalendarService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 3, vars: 1, consts: [[1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "anton", "text-uppercase"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["target", "_blank", 3, "href"], [1, "fa-solid", "fa-link"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function ConcertsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 6, vars: 4, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "anton", "text-uppercase"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["target", "_blank", 3, "href"], [1, "fa-solid", "fa-link"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function ConcertsComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div", 0);
-      \u0275\u0275template(1, ConcertsComponent_Conditional_1_Template, 2, 1)(2, ConcertsComponent_Conditional_2_Template, 6, 0, "div", 1);
+      \u0275\u0275elementStart(0, "h1", 0);
+      \u0275\u0275text(1);
+      \u0275\u0275pipe(2, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(3, "div", 1);
+      \u0275\u0275template(4, ConcertsComponent_Conditional_4_Template, 2, 1)(5, ConcertsComponent_Conditional_5_Template, 8, 6, "div", 2);
       \u0275\u0275elementEnd();
     }
     if (rf & 2) {
       \u0275\u0275advance();
-      \u0275\u0275conditional(!ctx.loading ? 1 : ctx.loading ? 2 : -1);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(2, 2, "Concerts"), "\n");
+      \u0275\u0275advance(3);
+      \u0275\u0275conditional(!ctx.loading ? 4 : ctx.loading ? 5 : -1);
     }
-  }, styles: ["\n\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n/*# sourceMappingURL=concerts.component.css.map */"] });
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n/*# sourceMappingURL=concerts.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ConcertsComponent, [{
     type: Component,
-    args: [{ selector: "app-concerts", imports: [], template: '<div class="col-lg-8 mx-auto my-5 mb-0 px-3 fs-3" style="text-align: justify;">\n    <!--  -->\n    @if(!loading) {\n        @if(events.length > 0) {\n            @if(upcoming.length > 0) {\n                <h2 class="anton text-uppercase">Prossimi concerti</h2>\n                @for(event of upcoming; track $index){\n                    <div class="m-3 border-0 rounded-0 shadow-hover">\n                        <div class="row d-flex flex-wrap align-items-stretch">\n                            <!-- Colonna con data e ora -->\n                            <div\n                                class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">\n                                {{formatDate(separateDateAndTime(event.start.dateTime).date)}}\n                                h{{formatTime(event.start.dateTime)}}\n                            </div>\n\n                            <!-- Colonna con contenuto principale -->\n                            <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">\n                                <h3 class="text-uppercase anton m-3 card-title">{{event.summary}}</h3>\n                                <hr class="m-0">\n                                <div class="card-body">\n                                    {{event.description}}<br>\n                                    <div class="m-1">\n                                        @for (link of event.links; track $index) {\n                                        <a target="_blank" href={{link.value}}><i\n                                                class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>\n                                        }\n                                    </div>\n                                </div>\n                                <hr class="m-0">\n                                <div class="card-body rounded-0">\n                                    <i class="fa-solid fa-location-dot"></i> {{event.location}}\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                }\n            }\n            @if(past.length > 0) {\n                <h2 class="anton text-uppercase">Eventi passati</h2>\n                @for(event of past; track $index) {\n                    <div class="m-3 border-0 rounded-0 shadow-hover">\n                        <div class="row d-flex flex-wrap align-items-stretch">\n                            <!-- Colonna con data e ora -->\n                            <div\n                                class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">\n                                {{formatDate(separateDateAndTime(event.start.dateTime).date)}}\n                                h{{formatTime(event.start.dateTime)}}\n                            </div>\n\n                            <!-- Colonna con contenuto principale -->\n                            <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">\n                                <h3 class="text-uppercase anton m-3 card-title">{{event.summary}}</h3>\n                                <hr class="m-0">\n                                <div class="card-body">\n                                    {{event.description}}<br>\n                                    <div class="m-1">\n                                        @for (link of event.links; track $index) {\n                                        <a target="_blank" href={{link.value}}><i\n                                                class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>\n                                        }\n                                    </div>\n                                </div>\n                                <hr class="m-0">\n                                <div class="card-body rounded-0">\n                                    <i class="fa-solid fa-location-dot"></i> {{event.location}}\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                }\n            }\n        }\n\n        @else if(events.length == 0) {\n            <h2 class="anton text-uppercase">Non ci sono eventi in programma...</h2>\n        }\n    }\n    @else if(loading) {\n        <div class="text-center">\n            <h2 class="anton">Caricamento...</h2>\n            <div class="spinner-grow" role="status">\n                <span class="visually-hidden">Loading...</span>\n            </div>\n        </div>\n    }\n</div>', styles: ["/* src/app/concerts/concerts.component.css */\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n/*# sourceMappingURL=concerts.component.css.map */\n"] }]
+    args: [{ selector: "app-concerts", imports: [
+      TranslateModule
+    ], template: `<h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">
+    {{'Concerts' | translate}}
+</h1>
+<div class="col-lg-8 mx-auto my-5 px-3 fs-3" style="text-align: justify;">
+    <!--  -->
+    @if(!loading) {
+        @if(events.length > 0) {
+            @if(upcoming.length > 0) {
+                <h2 class="anton text-uppercase">{{'Next concerts' | translate}}</h2>
+                @for(event of upcoming; track $index){
+                    <div class="m-3 border-0 rounded-0 shadow-hover">
+                        <div class="row d-flex flex-wrap align-items-stretch">
+                            <!-- Colonna con data e ora -->
+                            <div
+                                class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">
+                                {{formatDate(separateDateAndTime(event.start.dateTime).date)}}
+                                h{{formatTime(event.start.dateTime)}}
+                            </div>
+
+                            <!-- Colonna con contenuto principale -->
+                            <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">
+                                <h3 class="text-uppercase anton m-3 card-title">{{event.summary}}</h3>
+                                <hr class="m-0">
+                                <div class="card-body">
+                                    @if(event.description != ""){
+                                        {{event.description}}<br>
+                                    }
+                                    <div class="m-1">
+                                        @for (link of event.links; track $index) {
+                                            <a target="_blank" [href]="link.value"><i class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
+                                        }
+                                    </div>
+                                </div>
+                                <hr class="m-0">
+                                <div class="card-body rounded-0">
+                                    <i class="fa-solid fa-location-dot"></i> {{event.location}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            <!-- @if(upcoming.length > 0) {
+                <div class="text-center">
+                    <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" (click)="loadMoreUpcoming(5)">
+                        Mostra altro&nbsp;<i class="fa-solid fa-bolt-lightning"></i>
+                    </button>
+                </div>
+            } -->
+            <!-- @if(past.length > 0) {
+                <h2 class="anton text-uppercase">Eventi passati</h2>
+                @for(event of pastShown; track $index) {
+                    <div class="m-3 border-0 rounded-0 shadow-hover">
+                        <div class="row d-flex flex-wrap align-items-stretch">
+                            <div
+                                class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">
+                                {{formatDate(separateDateAndTime(event.start.dateTime).date)}}
+                                h{{formatTime(event.start.dateTime)}}
+                            </div>
+
+                            <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">
+                                <h3 class="text-uppercase anton m-3 card-title">{{event.summary}}</h3>
+                                <hr class="m-0">
+                                <div class="card-body">
+                                    {{event.description}}<br>
+                                    <div class="m-1">
+                                        @for (link of event.links; track $index) {
+                                        <a target="_blank" href={{link.value}}><i
+                                                class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
+                                        }
+                                    </div>
+                                </div>
+                                <hr class="m-0">
+                                <div class="card-body rounded-0">
+                                    <i class="fa-solid fa-location-dot"></i> {{event.location}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            @if(past.length > 0) {
+                <div class="text-center">
+                    <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" (click)="loadMorePast(5)">
+                        Mostra altro&nbsp;<i class="fa-solid fa-bolt-lightning"></i>
+                    </button>
+                </div>
+            } -->
+        }
+
+        @else if(events.length == 0) {
+            <h2 class="anton text-uppercase">Non ci sono eventi in programma...</h2>
+        }
+    }
+    @else if(loading) {
+        <div class="text-center">
+            <h2 class="anton">{{'Loading...'| translate}}</h2>
+            <div class="spinner-grow" role="status">
+                <span class="visually-hidden">{{'Loading...'| translate}}</span>
+            </div>
+        </div>
+    }
+</div>`, styles: ["/* src/app/concerts/concerts.component.css */\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n/*# sourceMappingURL=concerts.component.css.map */\n"] }]
   }], () => [{ type: CalendarService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ConcertsComponent, { className: "ConcertsComponent", filePath: "src/app/concerts/concerts.component.ts", lineNumber: 10 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ConcertsComponent, { className: "ConcertsComponent", filePath: "src/app/concerts/concerts.component.ts", lineNumber: 13 });
 })();
 
 // src/app/projects/projects.component.ts
@@ -40716,22 +41388,42 @@ var ProjectsComponent = class _ProjectsComponent {
   static \u0275fac = function ProjectsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ProjectsComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectsComponent, selectors: [["app-projects"]], decls: 2, vars: 0, template: function ProjectsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectsComponent, selectors: [["app-projects"]], decls: 8, vars: 3, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function ProjectsComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "p");
-      \u0275\u0275text(1, "projects works!");
+      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
+      \u0275\u0275text(2);
+      \u0275\u0275pipe(3, "translate");
       \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(4, "div", 1)(5, "h2", 2);
+      \u0275\u0275text(6, "Work in progress...");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(7, "img", 3);
+      \u0275\u0275elementEnd()();
     }
-  }, encapsulation: 2 });
+    if (rf & 2) {
+      \u0275\u0275advance(2);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(3, 1, "Projects"), " ");
+    }
+  }, dependencies: [TranslateModule, TranslatePipe], encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ProjectsComponent, [{
     type: Component,
-    args: [{ selector: "app-projects", imports: [], template: "<p>projects works!</p>\n" }]
+    args: [{ selector: "app-projects", imports: [
+      TranslateModule
+    ], template: `<div>
+    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">
+        {{'Projects' | translate}}
+    </h1>
+    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">
+        <h2 class="title text-uppercase anton">Work in progress...</h2>
+        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">
+    </div>
+</div>` }]
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ProjectsComponent, { className: "ProjectsComponent", filePath: "src/app/projects/projects.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ProjectsComponent, { className: "ProjectsComponent", filePath: "src/app/projects/projects.component.ts", lineNumber: 12 });
 })();
 
 // src/app/contacts/contacts.component.ts
@@ -40739,22 +41431,42 @@ var ContactsComponent = class _ContactsComponent {
   static \u0275fac = function ContactsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ContactsComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactsComponent, selectors: [["app-contacts"]], decls: 2, vars: 0, template: function ContactsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactsComponent, selectors: [["app-contacts"]], decls: 8, vars: 3, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function ContactsComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "p");
-      \u0275\u0275text(1, "contacts works!");
+      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
+      \u0275\u0275text(2);
+      \u0275\u0275pipe(3, "translate");
       \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(4, "div", 1)(5, "h2", 2);
+      \u0275\u0275text(6, "Work in progress...");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(7, "img", 3);
+      \u0275\u0275elementEnd()();
     }
-  }, encapsulation: 2 });
+    if (rf & 2) {
+      \u0275\u0275advance(2);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(3, 1, "Contacts"), " ");
+    }
+  }, dependencies: [TranslateModule, TranslatePipe], encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ContactsComponent, [{
     type: Component,
-    args: [{ selector: "app-contacts", imports: [], template: "<p>contacts works!</p>\n" }]
+    args: [{ selector: "app-contacts", imports: [
+      TranslateModule
+    ], template: `<div>
+    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">
+        {{'Contacts' | translate}}
+    </h1>
+    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">
+        <h2 class="title text-uppercase anton">Work in progress...</h2>
+        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">
+    </div>
+</div>` }]
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ContactsComponent, { className: "ContactsComponent", filePath: "src/app/contacts/contacts.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ContactsComponent, { className: "ContactsComponent", filePath: "src/app/contacts/contacts.component.ts", lineNumber: 12 });
 })();
 
 // src/app/privacy-policy/privacy-policy.component.ts
@@ -40762,10 +41474,10 @@ var PrivacyPolicyComponent = class _PrivacyPolicyComponent {
   static \u0275fac = function PrivacyPolicyComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _PrivacyPolicyComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PrivacyPolicyComponent, selectors: [["app-privacy-policy"]], decls: 2, vars: 0, template: function PrivacyPolicyComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PrivacyPolicyComponent, selectors: [["app-privacy-policy"]], decls: 2, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"]], template: function PrivacyPolicyComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "p");
-      \u0275\u0275text(1, "privacy-policy works!");
+      \u0275\u0275elementStart(0, "h1", 0);
+      \u0275\u0275text(1, " Privacy Policy\n");
       \u0275\u0275elementEnd();
     }
   }, encapsulation: 2 });
@@ -40773,7 +41485,7 @@ var PrivacyPolicyComponent = class _PrivacyPolicyComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PrivacyPolicyComponent, [{
     type: Component,
-    args: [{ selector: "app-privacy-policy", imports: [], template: "<p>privacy-policy works!</p>\n" }]
+    args: [{ selector: "app-privacy-policy", imports: [], template: '<h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n    Privacy Policy\n</h1>' }]
   }], null, null);
 })();
 (() => {
@@ -40784,14 +41496,14 @@ var PrivacyPolicyComponent = class _PrivacyPolicyComponent {
 var routes = [
   { path: "", component: HomeComponent },
   { path: "home", redirectTo: "", pathMatch: "full" },
-  { path: "members", component: MembersComponent },
-  { path: "members/jacopo", component: JacopoComponent },
-  { path: "members/eros", component: ErosComponent },
-  { path: "members/francesco", component: FrancescoComponent },
-  { path: "members/davide", component: DavideComponent },
-  { path: "members/andrea", component: AndreaComponent },
-  { path: "members/lorenzo", component: LorenzoComponent },
-  { path: "members/matteo", component: MatteoComponent },
+  { path: "band", component: MembersComponent },
+  { path: "band/jacopo", component: JacopoComponent },
+  { path: "band/eros", component: ErosComponent },
+  { path: "band/francesco", component: FrancescoComponent },
+  { path: "band/davide", component: DavideComponent },
+  { path: "band/andrea", component: AndreaComponent },
+  { path: "band/lorenzo", component: LorenzoComponent },
+  { path: "band/matteo", component: MatteoComponent },
   { path: "bio", component: BioComponent },
   { path: "concerts", component: ConcertsComponent },
   { path: "projects", component: ProjectsComponent },
@@ -45272,17 +45984,17 @@ var appConfig = {
 };
 
 // src/app/header/header.component.ts
-function HeaderComponent_Conditional_63_Template(rf, ctx) {
+function HeaderComponent_Conditional_68_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0, " \u{1F1EC}\u{1F1E7} ");
   }
 }
-function HeaderComponent_Conditional_64_Template(rf, ctx) {
+function HeaderComponent_Conditional_69_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0, " \u{1F1EE}\u{1F1F9} ");
   }
 }
-function HeaderComponent_Conditional_65_Template(rf, ctx) {
+function HeaderComponent_Conditional_70_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0, " \u{1F1E9}\u{1F1EA} ");
   }
@@ -45298,7 +46010,7 @@ var HeaderComponent = class _HeaderComponent {
   static \u0275fac = function HeaderComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _HeaderComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 76, vars: 34, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", 3, "click"], ["src", "/media/hth-logo.png", "alt", "HTH Logo", 2, "max-height", "50px"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/projects", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/bio", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "membersDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "membersDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/members/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/members/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/members/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/members/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/members/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/members/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/members/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 81, vars: 46, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", "squealer", 3, "click"], ["src", "/media/hth-logo.png", "alt", "HTH Logo", 2, "max-height", "50px"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end", "border-0", "shadow"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/projects", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/bio", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "bandDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "bandDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/band/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/band/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/band/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/band/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/band/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
       \u0275\u0275elementStart(0, "nav", 1)(1, "div", 2)(2, "span", 3);
@@ -45307,144 +46019,155 @@ var HeaderComponent = class _HeaderComponent {
         return \u0275\u0275resetView(ctx.navigate("home"));
       });
       \u0275\u0275element(3, "img", 4);
+      \u0275\u0275text(4, "\xA0Highway to Hell ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(4, "button", 5);
-      \u0275\u0275element(5, "span", 6);
+      \u0275\u0275elementStart(5, "button", 5);
+      \u0275\u0275element(6, "span", 6);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(6, "div", 7, 0)(8, "div", 8);
-      \u0275\u0275element(9, "img", 9)(10, "button", 10);
+      \u0275\u0275elementStart(7, "div", 7, 0)(9, "div", 8);
+      \u0275\u0275element(10, "img", 9)(11, "button", 10);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(11, "div", 11)(12, "ul", 12)(13, "li", 13)(14, "a", 14);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_14_listener() {
+      \u0275\u0275elementStart(12, "div", 11)(13, "ul", 12)(14, "li", 13)(15, "a", 14);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_15_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(15, "Home");
+      \u0275\u0275text(16, "Home");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(16, "li", 13)(17, "a", 15);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_17_listener() {
+      \u0275\u0275elementStart(17, "li", 13)(18, "a", 15);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_18_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(18, "Concerts");
+      \u0275\u0275text(19);
+      \u0275\u0275pipe(20, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(19, "li", 13)(20, "a", 16);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_20_listener() {
+      \u0275\u0275elementStart(21, "li", 13)(22, "a", 16);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_22_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(21, "Projects");
+      \u0275\u0275text(23);
+      \u0275\u0275pipe(24, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(22, "li", 13)(23, "a", 17);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_23_listener() {
+      \u0275\u0275elementStart(25, "li", 13)(26, "a", 17);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_26_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(24, "Bio");
+      \u0275\u0275text(27, "Bio");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(25, "li", 18)(26, "button", 19);
-      \u0275\u0275text(27, " Members ");
+      \u0275\u0275elementStart(28, "li", 18)(29, "button", 19);
+      \u0275\u0275text(30);
+      \u0275\u0275pipe(31, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(28, "ul", 20)(29, "li")(30, "a", 21);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_30_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(31, "Jacopo ");
-      \u0275\u0275element(32, "i", 22);
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(33, "li")(34, "a", 23);
+      \u0275\u0275elementStart(32, "ul", 20)(33, "li")(34, "a", 21);
       \u0275\u0275listener("click", function HeaderComponent_Template_a_click_34_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(35, "Eros ");
-      \u0275\u0275element(36, "i", 24);
+      \u0275\u0275text(35, "Jacopo ");
+      \u0275\u0275element(36, "i", 22);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(37, "li")(38, "a", 25);
+      \u0275\u0275elementStart(37, "li")(38, "a", 23);
       \u0275\u0275listener("click", function HeaderComponent_Template_a_click_38_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(39, "Francesco ");
-      \u0275\u0275element(40, "i", 22);
+      \u0275\u0275text(39, "Eros ");
+      \u0275\u0275element(40, "i", 24);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(41, "li")(42, "a", 26);
+      \u0275\u0275elementStart(41, "li")(42, "a", 25);
       \u0275\u0275listener("click", function HeaderComponent_Template_a_click_42_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(43, "Davide ");
+      \u0275\u0275text(43, "Francesco ");
       \u0275\u0275element(44, "i", 22);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(45, "li")(46, "a", 27);
+      \u0275\u0275elementStart(45, "li")(46, "a", 26);
       \u0275\u0275listener("click", function HeaderComponent_Template_a_click_46_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(47, "Andrea ");
-      \u0275\u0275element(48, "i", 28);
+      \u0275\u0275text(47, "Davide ");
+      \u0275\u0275element(48, "i", 22);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(49, "li")(50, "a", 29);
+      \u0275\u0275elementStart(49, "li")(50, "a", 27);
       \u0275\u0275listener("click", function HeaderComponent_Template_a_click_50_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(51, "Lorenzo ");
-      \u0275\u0275element(52, "i", 30);
+      \u0275\u0275text(51, "Andrea ");
+      \u0275\u0275element(52, "i", 28);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(53, "li")(54, "a", 31);
+      \u0275\u0275elementStart(53, "li")(54, "a", 29);
       \u0275\u0275listener("click", function HeaderComponent_Template_a_click_54_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(55, "Matteo ");
-      \u0275\u0275element(56, "i", 24);
-      \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(57, "li", 13)(58, "a", 32);
+      \u0275\u0275text(55, "Lorenzo ");
+      \u0275\u0275element(56, "i", 30);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(57, "li")(58, "a", 31);
       \u0275\u0275listener("click", function HeaderComponent_Template_a_click_58_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(59, "Contacts");
+      \u0275\u0275text(59, "Matteo ");
+      \u0275\u0275element(60, "i", 24);
+      \u0275\u0275elementEnd()()()();
+      \u0275\u0275elementStart(61, "li", 13)(62, "a", 32);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_62_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
+      });
+      \u0275\u0275text(63);
+      \u0275\u0275pipe(64, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(60, "li", 33)(61, "button", 34);
-      \u0275\u0275text(62);
-      \u0275\u0275template(63, HeaderComponent_Conditional_63_Template, 1, 0)(64, HeaderComponent_Conditional_64_Template, 1, 0)(65, HeaderComponent_Conditional_65_Template, 1, 0);
+      \u0275\u0275elementStart(65, "li", 33)(66, "button", 34);
+      \u0275\u0275text(67);
+      \u0275\u0275template(68, HeaderComponent_Conditional_68_Template, 1, 0)(69, HeaderComponent_Conditional_69_Template, 1, 0)(70, HeaderComponent_Conditional_70_Template, 1, 0);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(66, "ul", 35)(67, "li")(68, "a", 36);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_68_listener() {
+      \u0275\u0275elementStart(71, "ul", 35)(72, "li")(73, "a", 36);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_73_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.switchLanguage("en"));
       });
-      \u0275\u0275text(69, "EN \u{1F1EC}\u{1F1E7}");
+      \u0275\u0275text(74, "EN \u{1F1EC}\u{1F1E7}");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(70, "li")(71, "a", 36);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_71_listener() {
+      \u0275\u0275elementStart(75, "li")(76, "a", 36);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_76_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.switchLanguage("it"));
       });
-      \u0275\u0275text(72, "IT \u{1F1EE}\u{1F1F9}");
+      \u0275\u0275text(77, "IT \u{1F1EE}\u{1F1F9}");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(73, "li")(74, "a", 36);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_74_listener() {
+      \u0275\u0275elementStart(78, "li")(79, "a", 36);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_79_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.switchLanguage("de"));
       });
-      \u0275\u0275text(75, "DE \u{1F1E9}\u{1F1EA}");
+      \u0275\u0275text(80, "DE \u{1F1E9}\u{1F1EA}");
       \u0275\u0275elementEnd()()()()()()()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(14);
+      \u0275\u0275advance(15);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "home" || ctx.shared.activeLink === "");
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "concerts");
+      \u0275\u0275advance();
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(20, 38, "Concerts"));
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "projects");
+      \u0275\u0275advance();
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(24, 40, "Projects"));
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "bio");
       \u0275\u0275advance(3);
-      \u0275\u0275classProp("active", ctx.shared.activeLink.includes("members"));
+      \u0275\u0275classProp("active", ctx.shared.activeLink.includes("band"));
+      \u0275\u0275advance();
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(31, 42, "Band"), " ");
       \u0275\u0275advance(4);
       \u0275\u0275classProp("active", ctx.shared.activeLink.includes("jacopo"));
       \u0275\u0275advance(4);
@@ -45461,10 +46184,12 @@ var HeaderComponent = class _HeaderComponent {
       \u0275\u0275classProp("active", ctx.shared.activeLink.includes("matteo"));
       \u0275\u0275advance(4);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "contacts");
+      \u0275\u0275advance();
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(64, 44, "Contacts"));
       \u0275\u0275advance(4);
       \u0275\u0275textInterpolate1(" ", ctx.shared.language, " ");
       \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.shared.language == "en" ? 63 : ctx.shared.language == "it" ? 64 : ctx.shared.language == "de" ? 65 : -1);
+      \u0275\u0275conditional(ctx.shared.language == "en" ? 68 : ctx.shared.language == "it" ? 69 : ctx.shared.language == "de" ? 70 : -1);
       \u0275\u0275advance(5);
       \u0275\u0275classProp("active", ctx.shared.language == "en");
       \u0275\u0275advance(3);
@@ -45474,8 +46199,9 @@ var HeaderComponent = class _HeaderComponent {
     }
   }, dependencies: [
     RouterLink,
-    TranslateModule
-  ], styles: ["\n\n.dropdown-menu.lang-dropdown[_ngcontent-%COMP%] {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item.active[_ngcontent-%COMP%] {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na[_ngcontent-%COMP%]:active {\n  background-color: #e60000;\n}\n.nav-link.btn[_ngcontent-%COMP%] {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn[_ngcontent-%COMP%]:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active[_ngcontent-%COMP%], \n.nav-link.btn.router-link-active[_ngcontent-%COMP%] {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n/*# sourceMappingURL=header.component.css.map */"] });
+    TranslateModule,
+    TranslatePipe
+  ], styles: ["\n\n.dropdown-menu.lang-dropdown[_ngcontent-%COMP%] {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item.active[_ngcontent-%COMP%] {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na[_ngcontent-%COMP%]:active {\n  background-color: #e60000;\n}\n.nav-link.btn[_ngcontent-%COMP%] {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn[_ngcontent-%COMP%]:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active[_ngcontent-%COMP%], \n.nav-link.btn.router-link-active[_ngcontent-%COMP%] {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n.offcanvas[_ngcontent-%COMP%] {\n  background-color: #0d0f11;\n}\n/*# sourceMappingURL=header.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HeaderComponent, [{
@@ -45485,14 +46211,14 @@ var HeaderComponent = class _HeaderComponent {
       TranslateModule
     ], template: `<nav class="navbar navbar-expand-lg sticky-top squealer  py-0">
     <div class="container-fluid">
-        <span class="navbar-brand clickable my-1" (click)="navigate('home')">
-            <img src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 50px;">
+        <span class="navbar-brand clickable my-1 squealer" (click)="navigate('home')">
+            <img src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 50px;">&nbsp;Highway to Hell
         </span>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" #offcanvasNavbar
+        <div class="offcanvas offcanvas-end border-0 shadow" tabindex="-1" id="offcanvasNavbar" #offcanvasNavbar
             aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <img src="" alt="" style="max-height: 30px;">
@@ -45501,38 +46227,38 @@ var HeaderComponent = class _HeaderComponent {
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-uppercase">
                     <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='home' || shared.activeLink === ''" routerLink="/" (click)="shared.triggerCloseButtonClick()">Home</a></li>
-                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='concerts'" routerLink="/concerts" (click)="shared.triggerCloseButtonClick()">Concerts</a></li>
-                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='projects'" routerLink="/projects" (click)="shared.triggerCloseButtonClick()">Projects</a></li>
+                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='concerts'" routerLink="/concerts" (click)="shared.triggerCloseButtonClick()">{{'Concerts' | translate}}</a></li>
+                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='projects'" routerLink="/projects" (click)="shared.triggerCloseButtonClick()">{{'Projects' | translate}}</a></li>
                     <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='bio'" routerLink="/bio" (click)="shared.triggerCloseButtonClick()">Bio</a></li>
                     <li class="nav-item m-2 dropdown anton">
-                        <button class="nav-link btn w-100 text-center text-uppercase dropdown-toggle" [class.active]="shared.activeLink.includes('members')" id="membersDropdown" data-bs-toggle="dropdown" aria-expanded="false" type="button">
-                            Members
+                        <button class="nav-link btn w-100 text-center text-uppercase dropdown-toggle" [class.active]="shared.activeLink.includes('band')" id="bandDropdown" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+                            {{'Band' | translate}}
                         </button>
-                        <ul class="dropdown-menu lang-dropdown text-center" aria-labelledby="membersDropdown">
+                        <ul class="dropdown-menu lang-dropdown text-center" aria-labelledby="bandDropdown">
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('jacopo')" routerLink="/members/jacopo" (click)="shared.triggerCloseButtonClick()">Jacopo <i class="fa-solid fa-guitar"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('jacopo')" routerLink="/band/jacopo" (click)="shared.triggerCloseButtonClick()">Jacopo <i class="fa-solid fa-guitar"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('eros')" routerLink="/members/eros" (click)="shared.triggerCloseButtonClick()">Eros <i class="fa-solid fa-microphone"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('eros')" routerLink="/band/eros" (click)="shared.triggerCloseButtonClick()">Eros <i class="fa-solid fa-microphone"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('francesco')" routerLink="/members/francesco" (click)="shared.triggerCloseButtonClick()">Francesco <i class="fa-solid fa-guitar"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('francesco')" routerLink="/band/francesco" (click)="shared.triggerCloseButtonClick()">Francesco <i class="fa-solid fa-guitar"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('davide')" routerLink="/members/davide" (click)="shared.triggerCloseButtonClick()">Davide <i class="fa-solid fa-guitar"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('davide')" routerLink="/band/davide" (click)="shared.triggerCloseButtonClick()">Davide <i class="fa-solid fa-guitar"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('andrea')" routerLink="/members/andrea" (click)="shared.triggerCloseButtonClick()">Andrea <i class="fa-solid fa-drum"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('andrea')" routerLink="/band/andrea" (click)="shared.triggerCloseButtonClick()">Andrea <i class="fa-solid fa-drum"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('lorenzo')" routerLink="/members/lorenzo" (click)="shared.triggerCloseButtonClick()">Lorenzo <i class="fa-solid fa-music"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('lorenzo')" routerLink="/band/lorenzo" (click)="shared.triggerCloseButtonClick()">Lorenzo <i class="fa-solid fa-music"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('matteo')" routerLink="/members/matteo" (click)="shared.triggerCloseButtonClick()">Matteo <i class="fa-solid fa-microphone"></i></a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('matteo')" routerLink="/band/matteo" (click)="shared.triggerCloseButtonClick()">Matteo <i class="fa-solid fa-microphone"></i></a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='contacts'" routerLink="/contacts" (click)="shared.triggerCloseButtonClick()">Contacts</a></li>
+                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='contacts'" routerLink="/contacts" (click)="shared.triggerCloseButtonClick()">{{'Contacts' | translate}}</a></li>
                     <li class="nav-item m-2 dropdown">
                         <button class="nav-link btn w-100 text-center dropdown-toggle text-uppercase anton" id="langDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false" type="button">
@@ -45564,7 +46290,7 @@ var HeaderComponent = class _HeaderComponent {
         </div>
     </div>
 </nav>
-<!--/header-->`, styles: ["/* src/app/header/header.component.css */\n.dropdown-menu.lang-dropdown {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item.active {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na:active {\n  background-color: #e60000;\n}\n.nav-link.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active,\n.nav-link.btn.router-link-active {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n/*# sourceMappingURL=header.component.css.map */\n"] }]
+<!--/header-->`, styles: ["/* src/app/header/header.component.css */\n.dropdown-menu.lang-dropdown {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item.active {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na:active {\n  background-color: #e60000;\n}\n.nav-link.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active,\n.nav-link.btn.router-link-active {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n.offcanvas {\n  background-color: #0d0f11;\n}\n/*# sourceMappingURL=header.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -45580,7 +46306,7 @@ var FooterComponent = class _FooterComponent {
   static \u0275fac = function FooterComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _FooterComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], decls: 20, vars: 1, consts: [[1, "text-center"], [1, "container"], [1, "", 2, "display", "flex", "flex-wrap", "wrap", "flex-direction", "row", "align-items", "center", "justify-content", "center"], ["data-mdb-ripple-init", "", "href", "https://www.instagram.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-instagram"], ["data-mdb-ripple-init", "", "href", "https://www.facebook.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-facebook"], ["data-mdb-ripple-init", "", "href", "https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-youtube"], ["data-mdb-ripple-init", "", "href", "https://www.tiktok.com/@hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-tiktok"], [1, "text-center", "p-3"], ["href", "https://lrossi.xyz", "target", "_blank", 1, ""], ["routerLink", "/privacy-policy", 1, "m-0", "p-0", "clickable"]], template: function FooterComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], decls: 22, vars: 1, consts: [[1, "text-center"], [1, "container"], [1, "", 2, "display", "flex", "flex-wrap", "wrap", "flex-direction", "row", "align-items", "center", "justify-content", "center"], ["data-mdb-ripple-init", "", "href", "https://www.instagram.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-instagram"], ["data-mdb-ripple-init", "", "href", "https://www.facebook.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-facebook"], ["data-mdb-ripple-init", "", "href", "https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-youtube"], ["data-mdb-ripple-init", "", "href", "https://www.tiktok.com/@hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-tiktok"], [1, "text-center", "p-3"], ["href", "https://lrossi.xyz", "target", "_blank", 1, ""], [1, "fa-solid", "fa-bolt"], ["routerLink", "/privacy-policy", 1, "m-0", "p-0", "clickable"]], template: function FooterComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "footer", 0)(1, "div", 1)(2, "div", 2)(3, "a", 3);
       \u0275\u0275element(4, "i", 4);
@@ -45601,9 +46327,11 @@ var FooterComponent = class _FooterComponent {
       \u0275\u0275elementStart(15, "a", 12);
       \u0275\u0275text(16, "Lorenzo Rossi");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(17, " | ");
-      \u0275\u0275elementStart(18, "a", 13);
-      \u0275\u0275text(19, "Privacy Policy");
+      \u0275\u0275text(17, "\xA0");
+      \u0275\u0275element(18, "i", 13);
+      \u0275\u0275text(19, "\xA0");
+      \u0275\u0275elementStart(20, "a", 14);
+      \u0275\u0275text(21, "Privacy Policy");
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
@@ -45617,7 +46345,7 @@ var FooterComponent = class _FooterComponent {
     type: Component,
     args: [{ selector: "app-footer", imports: [
       RouterLink
-    ], template: '<!-- Footer -->\n<footer class="text-center">\n  <!-- Grid container -->\n  <div class="container">\n    <!-- Section: Social media -->\n    <div class="" style="display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;">\n      \n        <!-- Instagram -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.instagram.com/hthtribute" target="_blank" role="button">\n            <i class="fab fa-instagram"></i>\n        </a>\n\n        <!-- Facebook -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.facebook.com/hthtribute" target="_blank" role="button">\n            <i class="fab fa-facebook"></i>\n        </a>\n\n        <!-- YouTube -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g" target="_blank" role="button">\n            <i class="fab fa-youtube"></i>\n        </a>\n\n        <!-- TikTok -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.tiktok.com/@hthtribute" target="_blank" role="button">\n            <i class="fab fa-tiktok"></i>\n        </a>\n\n      <!-- Spotify\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3 gradient-text"\n        href="https://open.spotify.com/artist/4kilGmYROQxMyEAMmTP82v" target="_blank" role="button"><i\n          class="fab fa-spotify"></i></a> -->\n\n      <!-- Soundcloud\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3 gradient-text"\n        href="https://soundcloud.com/lrossi93" target="_blank" role="button"><i class="fab fa-soundcloud"></i></a> -->\n    </div>\n    <!-- Section: Social media -->\n    <!-- Section: Links -->\n  </div>\n  <!-- Grid container -->\n\n  <!-- Copyright -->\n  <div class="text-center p-3 ">\n    &#169;{{year}}&nbsp;Highway to Hell - AC/DC Tribute Band\n    <br>\n    Designed by <a class="" href="https://lrossi.xyz" target="_blank">Lorenzo Rossi</a> | <a class="m-0 p-0 clickable " routerLink="/privacy-policy">Privacy Policy</a>\n  </div>\n  <!-- Copyright -->\n</footer>\n<!-- Footer -->\n<!--/footer-->', styles: ["/* src/app/footer/footer.component.css */\nfooter {\n  background-color: #0d0f11;\n}\n.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  opacity: 0.9;\n}\n/*# sourceMappingURL=footer.component.css.map */\n"] }]
+    ], template: '<!-- Footer -->\n<footer class="text-center">\n  <!-- Grid container -->\n  <div class="container">\n    <!-- Section: Social media -->\n    <div class="" style="display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;">\n      \n        <!-- Instagram -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.instagram.com/hthtribute" target="_blank" role="button">\n            <i class="fab fa-instagram"></i>\n        </a>\n\n        <!-- Facebook -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.facebook.com/hthtribute" target="_blank" role="button">\n            <i class="fab fa-facebook"></i>\n        </a>\n\n        <!-- YouTube -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g" target="_blank" role="button">\n            <i class="fab fa-youtube"></i>\n        </a>\n\n        <!-- TikTok -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.tiktok.com/@hthtribute" target="_blank" role="button">\n            <i class="fab fa-tiktok"></i>\n        </a>\n\n      <!-- Spotify\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3 gradient-text"\n        href="https://open.spotify.com/artist/4kilGmYROQxMyEAMmTP82v" target="_blank" role="button"><i\n          class="fab fa-spotify"></i></a> -->\n\n      <!-- Soundcloud\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3 gradient-text"\n        href="https://soundcloud.com/lrossi93" target="_blank" role="button"><i class="fab fa-soundcloud"></i></a> -->\n    </div>\n    <!-- Section: Social media -->\n    <!-- Section: Links -->\n  </div>\n  <!-- Grid container -->\n\n  <!-- Copyright -->\n  <div class="text-center p-3 ">\n    &#169;{{year}}&nbsp;Highway to Hell - AC/DC Tribute Band\n    <br>\n    Designed by <a class="" href="https://lrossi.xyz" target="_blank">Lorenzo Rossi</a>&nbsp;<i class="fa-solid fa-bolt"></i>&nbsp;<a class="m-0 p-0 clickable " routerLink="/privacy-policy">Privacy Policy</a>\n  </div>\n  <!-- Copyright -->\n</footer>\n<!-- Footer -->\n<!--/footer-->', styles: ["/* src/app/footer/footer.component.css */\nfooter {\n  background-color: #0d0f11;\n}\n.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  opacity: 0.9;\n}\n/*# sourceMappingURL=footer.component.css.map */\n"] }]
   }], () => [], null);
 })();
 (() => {
