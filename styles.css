@@ -90,6 +90,29 @@ h1.huge {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
+.image-text {
+  font-size: 20vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.bg-title {
+  background-color: #0d0f11;
+}
+.bg-grad {
+  background-color: #000000;
+  background-image:
+    linear-gradient(
+      to bottom,
+      #0d0f11,
+      #212529);
+}
 
 /* angular:styles/global:styles */
 /*# sourceMappingURL=styles.css.map */

@@ -40130,7 +40130,7 @@ var HomeComponent = class _HomeComponent {
     RouterLink,
     TranslateModule,
     TranslatePipe
-  ], styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  height: calc(100vh - 60px);\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n@media (hover: hover) and (pointer: fine) {\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%]:hover {\n    transform: translate(-50%, -50%) scale(1.05);\n  }\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero[_ngcontent-%COMP%] {\n    height: 100vh;\n  }\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 2rem;\n  }\n  .hero-content[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n}\n/*# sourceMappingURL=home.component.css.map */'] });
+  ], styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  height: calc(100vh - 60px);\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero[_ngcontent-%COMP%] {\n    height: 100vh;\n  }\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 2rem;\n  }\n  .hero-content[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n}\n/*# sourceMappingURL=home.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HomeComponent, [{
@@ -40386,7 +40386,7 @@ var HomeComponent = class _HomeComponent {
             </button>
         </div>
     </div>
-</div>`, styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  width: 100%;\n  height: calc(100vh - 60px);\n  overflow: hidden;\n}\n.video-background {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background video {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .video-background video {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n@media (hover: hover) and (pointer: fine) {\n  .video-background video:hover {\n    transform: translate(-50%, -50%) scale(1.05);\n  }\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero {\n    height: 100vh;\n  }\n  .video-background video {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content h1 {\n    font-size: 2rem;\n  }\n  .hero-content h2 {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content {\n  position: relative;\n  z-index: 1;\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
+</div>`, styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  width: 100%;\n  height: calc(100vh - 60px);\n  overflow: hidden;\n}\n.video-background {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background video {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .video-background video {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero {\n    height: 100vh;\n  }\n  .video-background video {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content h1 {\n    font-size: 2rem;\n  }\n  .hero-content h2 {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content {\n  position: relative;\n  z-index: 1;\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
   }], () => [{ type: CalendarService }, { type: DomSanitizer }], { heroVideo: [{
     type: ViewChild,
     args: ["heroVideo"]
@@ -40429,107 +40429,117 @@ var MembersComponent = class _MembersComponent {
   static \u0275fac = function MembersComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _MembersComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MembersComponent, selectors: [["app-members"]], decls: 95, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-10", "my-5", "mx-auto", "px-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase", "my-5"], [1, "cards-wrapper", "mx-3"], [1, "card-item"], ["routerLink", "/band/francesco"], [1, "card", "border-0", "rounded-0", "m-1", "mb-3", "box-shadow", "shadow-hover"], ["src", "https://placehold.co/300x300", "alt", "Francesco", 1, "card-img", "rounded-0"], [1, "card-body", "nav"], [1, "card-title", "anton", "text-uppercase"], [1, "card-text"], [1, "card-footer", "d-flex", "justify-content-end", "align-items-center", "rounded-0"], [1, "text-muted", "text-end"], [1, "fa-solid", "fa-bolt"], ["routerLink", "/band/andrea"], ["src", "https://placehold.co/300x300", "alt", "Andrea", 1, "card-img", "rounded-0"], ["routerLink", "/band/davide"], ["src", "https://placehold.co/300x300", "alt", "Davide", 1, "card-img", "rounded-0"], ["routerLink", "/band/jacopo"], ["src", "https://placehold.co/300x300", "alt", "Jacopo", 1, "card-img", "rounded-0"], ["routerLink", "/band/eros"], ["src", "https://placehold.co/300x300", "alt", "Eros", 1, "card-img", "rounded-0"], ["routerLink", "/band/lorenzo"], ["src", "media/band/lorenzo.jpeg", "alt", "Lorenzo", 1, "card-img", "rounded-0"], ["src", "https://placehold.co/300x300", "alt", "Matteo", 1, "card-img", "rounded-0"]], template: function MembersComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MembersComponent, selectors: [["app-members"]], decls: 99, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-10", "my-5", "mx-auto", "px-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase", "my-5"], [1, "cards-wrapper", "mx-3"], [1, "card-item"], ["routerLink", "/band/francesco"], [1, "card", "border-0", "rounded-0", "m-1", "mb-3", "box-shadow", "shadow-hover"], ["src", "media/band/francesco/francesco.jpg", "alt", "Francesco", 1, "card-img", "rounded-0"], [1, "card-body", "nav"], [1, "card-title", "anton", "text-uppercase"], [1, "card-text"], [1, "card-footer", "d-flex", "justify-content-end", "align-items-center", "rounded-0"], [1, "text-muted", "text-end"], [1, "fa-solid", "fa-bolt"], ["routerLink", "/band/andrea"], ["src", "media/band/andrea/andrea.jpg", "alt", "Andrea", 1, "card-img", "rounded-0"], ["routerLink", "/band/davide"], ["src", "media/band/davide/davide.jpg", "alt", "Davide", 1, "card-img", "rounded-0"], ["routerLink", "/band/jacopo"], ["src", "media/band/jacopo/jacopo.jpg", "alt", "Jacopo", 1, "card-img", "rounded-0"], ["routerLink", "/band/eros"], ["src", "media/band/eros/eros.jpg", "alt", "Eros", 1, "card-img", "rounded-0"], ["routerLink", "/band/lorenzo"], ["src", "media/band/lorenzo/lorenzo.jpg", "alt", "Lorenzo", 1, "card-img", "rounded-0"], ["routerLink", "/band/matteo"], ["src", "media/band/matteo/matteo.jpg", "alt", "Matteo", 1, "card-img", "rounded-0"]], template: function MembersComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
-      \u0275\u0275text(2, " Band ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
-      \u0275\u0275text(5, "componenti");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(6, "div", 3)(7, "div", 4)(8, "a", 5)(9, "div", 6);
-      \u0275\u0275element(10, "img", 7);
-      \u0275\u0275elementStart(11, "div", 8)(12, "h2", 9);
-      \u0275\u0275text(13, "Francesco");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(14, "p", 10);
-      \u0275\u0275text(15, "Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young.");
+      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
+      \u0275\u0275text(3, " Band ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(16, "div", 11)(17, "small", 12);
-      \u0275\u0275element(18, "i", 13);
+      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
+      \u0275\u0275text(6, " \xA0 ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
+      \u0275\u0275text(9, "componenti");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(10, "div", 6)(11, "div", 7)(12, "a", 8)(13, "div", 9);
+      \u0275\u0275element(14, "img", 10);
+      \u0275\u0275elementStart(15, "div", 11)(16, "h2", 12);
+      \u0275\u0275text(17, "Francesco");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(18, "p", 13);
+      \u0275\u0275text(19, "Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young.");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(20, "div", 14)(21, "small", 15);
+      \u0275\u0275element(22, "i", 16);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(19, "div", 4)(20, "a", 14)(21, "div", 6);
-      \u0275\u0275element(22, "img", 15);
-      \u0275\u0275elementStart(23, "div", 8)(24, "h2", 9);
-      \u0275\u0275text(25, "Andrea");
+      \u0275\u0275elementStart(23, "div", 7)(24, "a", 17)(25, "div", 9);
+      \u0275\u0275element(26, "img", 18);
+      \u0275\u0275elementStart(27, "div", 11)(28, "h2", 12);
+      \u0275\u0275text(29, "Andrea");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(26, "p", 10);
-      \u0275\u0275text(27, "Batteria, una macchina da guerra che richiama la potenza di Chris Slade.");
+      \u0275\u0275elementStart(30, "p", 13);
+      \u0275\u0275text(31, "Batteria, una macchina da guerra che richiama la potenza di Chris Slade.");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(28, "div", 11)(29, "small", 12);
-      \u0275\u0275element(30, "i", 13);
+      \u0275\u0275elementStart(32, "div", 14)(33, "small", 15);
+      \u0275\u0275element(34, "i", 16);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(31, "div", 4)(32, "a", 16)(33, "div", 6);
-      \u0275\u0275element(34, "img", 17);
-      \u0275\u0275elementStart(35, "div", 8)(36, "h2", 9);
-      \u0275\u0275text(37, "Davide");
+      \u0275\u0275elementStart(35, "div", 7)(36, "a", 19)(37, "div", 9);
+      \u0275\u0275element(38, "img", 20);
+      \u0275\u0275elementStart(39, "div", 11)(40, "h2", 12);
+      \u0275\u0275text(41, "Davide");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(38, "p", 10);
-      \u0275\u0275text(39, "Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams.");
+      \u0275\u0275elementStart(42, "p", 13);
+      \u0275\u0275text(43, "Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams.");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(40, "div", 11)(41, "small", 12);
-      \u0275\u0275element(42, "i", 13);
+      \u0275\u0275elementStart(44, "div", 14)(45, "small", 15);
+      \u0275\u0275element(46, "i", 16);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(43, "div", 4)(44, "a", 18)(45, "div", 6);
-      \u0275\u0275element(46, "img", 19);
-      \u0275\u0275elementStart(47, "div", 8)(48, "h2", 9);
-      \u0275\u0275text(49, "Jacopo");
+      \u0275\u0275elementStart(47, "div", 7)(48, "a", 21)(49, "div", 9);
+      \u0275\u0275element(50, "img", 22);
+      \u0275\u0275elementStart(51, "div", 11)(52, "h2", 12);
+      \u0275\u0275text(53, "Jacopo");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(50, "p", 10);
-      \u0275\u0275text(51, "Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura.");
+      \u0275\u0275elementStart(54, "p", 13);
+      \u0275\u0275text(55, "Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura.");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(52, "div", 11)(53, "small", 12);
-      \u0275\u0275element(54, "i", 13);
+      \u0275\u0275elementStart(56, "div", 14)(57, "small", 15);
+      \u0275\u0275element(58, "i", 16);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(55, "div", 4)(56, "a", 20)(57, "div", 6);
-      \u0275\u0275element(58, "img", 21);
-      \u0275\u0275elementStart(59, "div", 8)(60, "h2", 9);
-      \u0275\u0275text(61, "Eros");
+      \u0275\u0275elementStart(59, "div", 7)(60, "a", 23)(61, "div", 9);
+      \u0275\u0275element(62, "img", 24);
+      \u0275\u0275elementStart(63, "div", 11)(64, "h2", 12);
+      \u0275\u0275text(65, "Eros");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(62, "p", 10);
-      \u0275\u0275text(63, "Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.");
+      \u0275\u0275elementStart(66, "p", 13);
+      \u0275\u0275text(67, "Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(64, "div", 11)(65, "small", 12);
-      \u0275\u0275element(66, "i", 13);
+      \u0275\u0275elementStart(68, "div", 14)(69, "small", 15);
+      \u0275\u0275element(70, "i", 16);
       \u0275\u0275elementEnd()()()()()()();
-      \u0275\u0275elementStart(67, "div", 1)(68, "h2", 2);
-      \u0275\u0275text(69, "Collaborazioni");
+      \u0275\u0275elementStart(71, "div", 4)(72, "h2", 5);
+      \u0275\u0275text(73, "Collaborazioni");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(70, "div", 3)(71, "div", 4)(72, "a", 22)(73, "div", 6);
-      \u0275\u0275element(74, "img", 23);
-      \u0275\u0275elementStart(75, "div", 8)(76, "h2", 9);
-      \u0275\u0275text(77, "Lorenzo");
+      \u0275\u0275elementStart(74, "div", 6)(75, "div", 7)(76, "a", 25)(77, "div", 9);
+      \u0275\u0275element(78, "img", 26);
+      \u0275\u0275elementStart(79, "div", 11)(80, "h2", 12);
+      \u0275\u0275text(81, "Lorenzo");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(78, "p", 10);
-      \u0275\u0275text(79, " Il rombo della sua cornamusa incendier\xE0 il palco a ritmo di \u201CIt's a Long Way to the Top\u201D e \u201CThunderstruck\u201D. ");
+      \u0275\u0275elementStart(82, "p", 13);
+      \u0275\u0275text(83, " Il rombo della sua cornamusa incendier\xE0 il palco a ritmo di \u201CIt's a Long Way to the Top\u201D e \u201CThunderstruck\u201D. ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(80, "div", 11)(81, "small", 12);
-      \u0275\u0275element(82, "i", 13);
+      \u0275\u0275elementStart(84, "div", 14)(85, "small", 15);
+      \u0275\u0275element(86, "i", 16);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(83, "div", 4)(84, "a", 14)(85, "div", 6);
-      \u0275\u0275element(86, "img", 24);
-      \u0275\u0275elementStart(87, "div", 8)(88, "h2", 9);
-      \u0275\u0275text(89, "Matteo");
+      \u0275\u0275elementStart(87, "div", 7)(88, "a", 27)(89, "div", 9);
+      \u0275\u0275element(90, "img", 28);
+      \u0275\u0275elementStart(91, "div", 11)(92, "h2", 12);
+      \u0275\u0275text(93, "Matteo");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(90, "p", 10);
-      \u0275\u0275text(91, " Conosciuto anche come \u201CThe Italian Bon Scott\u201D, \xE8 uno dei due protagonisti dello show \u201CFrom Bon to Brian\u201D. ");
+      \u0275\u0275elementStart(94, "p", 13);
+      \u0275\u0275text(95, " Conosciuto anche come \u201CThe Italian Bon Scott\u201D, \xE8 uno dei due protagonisti dello show \u201CFrom Bon to Brian\u201D. ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(92, "div", 11)(93, "small", 12);
-      \u0275\u0275element(94, "i", 13);
+      \u0275\u0275elementStart(96, "div", 14)(97, "small", 15);
+      \u0275\u0275element(98, "i", 16);
       \u0275\u0275elementEnd()()()()()()()();
     }
-  }, styles: ["\n\n.card[_ngcontent-%COMP%] {\n  overflow: hidden;\n}\n.card-img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n  aspect-ratio: 1/1;\n}\n.card[_ngcontent-%COMP%]:hover   .card-img[_ngcontent-%COMP%] {\n  transform: scale(1.05);\n}\n.card-item[_ngcontent-%COMP%]    > a[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  gap: 3rem;\n}\n.card[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 1 1 100%;\n  max-width: 100%;\n}\n@media (min-width: 768px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 1 1 calc(50% - 2rem);\n    max-width: calc(50% - 2rem);\n  }\n}\n@media (min-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 1 1 calc(33.333% - 2rem);\n    max-width: calc(33.333% - 2rem);\n  }\n}\na[_ngcontent-%COMP%]:hover {\n  text-shadow: none;\n}\n.card[_ngcontent-%COMP%]:hover   .card-footer[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]   i[_ngcontent-%COMP%] {\n  color: white;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  transition: all 0.3s ease;\n}\n.card-footer[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]   i[_ngcontent-%COMP%] {\n  color: inherit;\n  text-shadow: none;\n  transition: all 0.3s ease;\n}\n/*# sourceMappingURL=members.component.css.map */"] });
+  }, dependencies: [RouterLink], styles: ["\n\n.card[_ngcontent-%COMP%] {\n  overflow: hidden;\n}\n.card-img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n  aspect-ratio: 1/1;\n}\n.card[_ngcontent-%COMP%]:hover   .card-img[_ngcontent-%COMP%] {\n  transform: scale(1.05);\n}\n.card-item[_ngcontent-%COMP%]    > a[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  gap: 3rem;\n}\n.card[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 1 1 100%;\n  max-width: 100%;\n}\n@media (min-width: 768px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 1 1 calc(50% - 2rem);\n    max-width: calc(50% - 2rem);\n  }\n}\n@media (min-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 1 1 calc(33.333% - 2rem);\n    max-width: calc(33.333% - 2rem);\n  }\n}\na[_ngcontent-%COMP%]:hover {\n  text-shadow: none;\n}\n.card[_ngcontent-%COMP%]:hover   .card-footer[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]   i[_ngcontent-%COMP%] {\n  color: white;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  transition: all 0.3s ease;\n}\n.card-footer[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]   i[_ngcontent-%COMP%] {\n  color: inherit;\n  text-shadow: none;\n  transition: all 0.3s ease;\n}\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/band.jpg);\n}\n/*# sourceMappingURL=members.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MembersComponent, [{
     type: Component,
-    args: [{ selector: "app-members", imports: [], template: `<!-- <div class="col-lg-8 mx-auto my-5 mb-0 px-3">
+    args: [{ selector: "app-members", imports: [RouterLink], template: `<!-- <div class="col-lg-8 mx-auto my-5 mb-0 px-3">
     
 </div> -->
 <div>
-    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">
-        Band
-    </h1>
+    <div class="container-fluid bg-title">
+            <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
+                Band
+            </h1>
+        </div>
+        <div class="bg-grad">
+            <h1 class="text-center p-0 m-0">
+                &nbsp;
+            </h1>
+        </div>
     <div class="col-lg-10 my-5 mx-auto px-3" style="text-align: justify;">
         <h2 class="anton text-uppercase my-5">componenti</h2>
         <div class="cards-wrapper mx-3">
@@ -40537,7 +40547,7 @@ var MembersComponent = class _MembersComponent {
             <div class="card-item">
                 <a routerLink="/band/francesco">
                     <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
-                        <img class="card-img rounded-0" src="https://placehold.co/300x300" alt="Francesco" />
+                        <img class="card-img rounded-0" src="media/band/francesco/francesco.jpg" alt="Francesco" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Francesco</h2>
                             <p class="card-text">Chitarra ritmica, il motore del groove, con un suono potente in
@@ -40553,7 +40563,7 @@ var MembersComponent = class _MembersComponent {
             <div class="card-item">
                 <a routerLink="/band/andrea">
                     <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
-                        <img class="card-img rounded-0" src="https://placehold.co/300x300" alt="Andrea" />
+                        <img class="card-img rounded-0" src="media/band/andrea/andrea.jpg" alt="Andrea" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Andrea</h2>
                             <p class="card-text">Batteria, una macchina da guerra che richiama la potenza di Chris
@@ -40569,7 +40579,7 @@ var MembersComponent = class _MembersComponent {
             <div class="card-item">
                 <a routerLink="/band/davide">
                     <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
-                        <img class="card-img rounded-0" src="https://placehold.co/300x300" alt="Davide" />
+                        <img class="card-img rounded-0" src="media/band/davide/davide.jpg" alt="Davide" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Davide</h2>
                             <p class="card-text">Basso, colonna portante che mantiene il groove solido e incalzante,
@@ -40585,7 +40595,7 @@ var MembersComponent = class _MembersComponent {
             <div class="card-item">
                 <a routerLink="/band/jacopo">
                     <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
-                        <img class="card-img rounded-0" src="https://placehold.co/300x300" alt="Jacopo" />
+                        <img class="card-img rounded-0" src="media/band/jacopo/jacopo.jpg" alt="Jacopo" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Jacopo</h2>
                             <p class="card-text">Chitarra solista, incarna lo spirito di Angus Young con riff
@@ -40601,7 +40611,7 @@ var MembersComponent = class _MembersComponent {
             <div class="card-item">
                 <a routerLink="/band/eros">
                     <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
-                        <img class="card-img rounded-0" src="https://placehold.co/300x300" alt="Eros" />
+                        <img class="card-img rounded-0" src="media/band/eros/eros.jpg" alt="Eros" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Eros</h2>
                             <p class="card-text">Voce, un frontman che cattura la potenza di Brian Johnson con una
@@ -40623,7 +40633,7 @@ var MembersComponent = class _MembersComponent {
             <div class="card-item">
                 <a routerLink="/band/lorenzo">
                     <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
-                        <img class="card-img rounded-0" src="media/band/lorenzo.jpeg" alt="Lorenzo" />
+                        <img class="card-img rounded-0" src="media/band/lorenzo/lorenzo.jpg" alt="Lorenzo" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Lorenzo</h2>
                             <p class="card-text">
@@ -40638,9 +40648,9 @@ var MembersComponent = class _MembersComponent {
             </div>
 
             <div class="card-item">
-                <a routerLink="/band/andrea">
+                <a routerLink="/band/matteo">
                     <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
-                        <img class="card-img rounded-0" src="https://placehold.co/300x300" alt="Matteo" />
+                        <img class="card-img rounded-0" src="media/band/matteo/matteo.jpg" alt="Matteo" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Matteo</h2>
                             <p class="card-text">
@@ -40656,11 +40666,11 @@ var MembersComponent = class _MembersComponent {
         </div>
     </div>
     
-</div>`, styles: ["/* src/app/members/members.component.css */\n.card {\n  overflow: hidden;\n}\n.card-img {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n  aspect-ratio: 1/1;\n}\n.card:hover .card-img {\n  transform: scale(1.05);\n}\n.card-item > a {\n  text-decoration: none;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  gap: 3rem;\n}\n.card {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n}\n.card-item {\n  flex: 1 1 100%;\n  max-width: 100%;\n}\n@media (min-width: 768px) {\n  .card-item {\n    flex: 1 1 calc(50% - 2rem);\n    max-width: calc(50% - 2rem);\n  }\n}\n@media (min-width: 992px) {\n  .card-item {\n    flex: 1 1 calc(33.333% - 2rem);\n    max-width: calc(33.333% - 2rem);\n  }\n}\na:hover {\n  text-shadow: none;\n}\n.card:hover .card-footer small i {\n  color: white;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  transition: all 0.3s ease;\n}\n.card-footer small i {\n  color: inherit;\n  text-shadow: none;\n  transition: all 0.3s ease;\n}\n/*# sourceMappingURL=members.component.css.map */\n"] }]
+</div>`, styles: ["/* src/app/members/members.component.css */\n.card {\n  overflow: hidden;\n}\n.card-img {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n  aspect-ratio: 1/1;\n}\n.card:hover .card-img {\n  transform: scale(1.05);\n}\n.card-item > a {\n  text-decoration: none;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  gap: 3rem;\n}\n.card {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n}\n.card-item {\n  flex: 1 1 100%;\n  max-width: 100%;\n}\n@media (min-width: 768px) {\n  .card-item {\n    flex: 1 1 calc(50% - 2rem);\n    max-width: calc(50% - 2rem);\n  }\n}\n@media (min-width: 992px) {\n  .card-item {\n    flex: 1 1 calc(33.333% - 2rem);\n    max-width: calc(33.333% - 2rem);\n  }\n}\na:hover {\n  text-shadow: none;\n}\n.card:hover .card-footer small i {\n  color: white;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  transition: all 0.3s ease;\n}\n.card-footer small i {\n  color: inherit;\n  text-shadow: none;\n  transition: all 0.3s ease;\n}\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/band.jpg);\n}\n/*# sourceMappingURL=members.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(MembersComponent, { className: "MembersComponent", filePath: "src/app/members/members.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(MembersComponent, { className: "MembersComponent", filePath: "src/app/members/members.component.ts", lineNumber: 10 });
 })();
 
 // src/app/members/jacopo/jacopo.component.ts
@@ -40668,23 +40678,26 @@ var JacopoComponent = class _JacopoComponent {
   static \u0275fac = function JacopoComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _JacopoComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _JacopoComponent, selectors: [["app-jacopo"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function JacopoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _JacopoComponent, selectors: [["app-jacopo"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function JacopoComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
-      \u0275\u0275text(2, " Jacopo ");
+      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
+      \u0275\u0275text(3, " Jacopo ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
+      \u0275\u0275text(6, " \xA0 ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
+      \u0275\u0275text(9, "Work in progress...");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
-      \u0275\u0275text(5, "Work in progress...");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275element(10, "img", 6);
       \u0275\u0275elementEnd()();
     }
-  }, encapsulation: 2 });
+  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/jacopo/jacopo-title.jpg);\n}\n/*# sourceMappingURL=jacopo.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(JacopoComponent, [{
     type: Component,
-    args: [{ selector: "app-jacopo", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Jacopo\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+    args: [{ selector: "app-jacopo", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Jacopo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/jacopo/jacopo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/jacopo/jacopo-title.jpg);\n}\n/*# sourceMappingURL=jacopo.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
@@ -40696,23 +40709,26 @@ var ErosComponent = class _ErosComponent {
   static \u0275fac = function ErosComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ErosComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ErosComponent, selectors: [["app-eros"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function ErosComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ErosComponent, selectors: [["app-eros"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function ErosComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
-      \u0275\u0275text(2, " Eros ");
+      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
+      \u0275\u0275text(3, " Eros ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
+      \u0275\u0275text(6, " \xA0 ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
+      \u0275\u0275text(9, "Work in progress...");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
-      \u0275\u0275text(5, "Work in progress...");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275element(10, "img", 6);
       \u0275\u0275elementEnd()();
     }
-  }, encapsulation: 2 });
+  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/eros/eros-title.jpg);\n}\n/*# sourceMappingURL=eros.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ErosComponent, [{
     type: Component,
-    args: [{ selector: "app-eros", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Eros\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+    args: [{ selector: "app-eros", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Eros\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/eros/eros.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/eros/eros-title.jpg);\n}\n/*# sourceMappingURL=eros.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
@@ -40724,23 +40740,26 @@ var FrancescoComponent = class _FrancescoComponent {
   static \u0275fac = function FrancescoComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _FrancescoComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FrancescoComponent, selectors: [["app-francesco"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function FrancescoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FrancescoComponent, selectors: [["app-francesco"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function FrancescoComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
-      \u0275\u0275text(2, " Francesco ");
+      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
+      \u0275\u0275text(3, " Francesco ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
+      \u0275\u0275text(6, " \xA0 ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
+      \u0275\u0275text(9, "Work in progress...");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
-      \u0275\u0275text(5, "Work in progress...");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275element(10, "img", 6);
       \u0275\u0275elementEnd()();
     }
-  }, encapsulation: 2 });
+  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/francesco/francesco-title.jpg);\n}\n/*# sourceMappingURL=francesco.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FrancescoComponent, [{
     type: Component,
-    args: [{ selector: "app-francesco", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Francesco\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+    args: [{ selector: "app-francesco", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Francesco\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/francesco/francesco.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/francesco/francesco-title.jpg);\n}\n/*# sourceMappingURL=francesco.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
@@ -40839,23 +40858,26 @@ var DavideComponent = class _DavideComponent {
   static \u0275fac = function DavideComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _DavideComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DavideComponent, selectors: [["app-davide"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function DavideComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DavideComponent, selectors: [["app-davide"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function DavideComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
-      \u0275\u0275text(2, " Davide ");
+      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
+      \u0275\u0275text(3, " Davide ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
+      \u0275\u0275text(6, " \xA0 ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
+      \u0275\u0275text(9, "Work in progress...");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
-      \u0275\u0275text(5, "Work in progress...");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275element(10, "img", 6);
       \u0275\u0275elementEnd()();
     }
-  }, encapsulation: 2 });
+  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/davide/davide-title.jpg);\n}\n/*# sourceMappingURL=davide.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DavideComponent, [{
     type: Component,
-    args: [{ selector: "app-davide", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Davide\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+    args: [{ selector: "app-davide", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Davide\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/davide/davide.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/davide/davide-title.jpg);\n}\n/*# sourceMappingURL=davide.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -40872,23 +40894,26 @@ var AndreaComponent = class _AndreaComponent {
   static \u0275fac = function AndreaComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AndreaComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AndreaComponent, selectors: [["app-andrea"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function AndreaComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AndreaComponent, selectors: [["app-andrea"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function AndreaComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
-      \u0275\u0275text(2, " Andrea ");
+      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
+      \u0275\u0275text(3, " Andrea ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
+      \u0275\u0275text(6, " \xA0 ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
+      \u0275\u0275text(9, "Work in progress...");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
-      \u0275\u0275text(5, "Work in progress...");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275element(10, "img", 6);
       \u0275\u0275elementEnd()();
     }
-  }, encapsulation: 2 });
+  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(/media/band/andrea/andrea-title-4.jpg);\n}\n/*# sourceMappingURL=andrea.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AndreaComponent, [{
     type: Component,
-    args: [{ selector: "app-andrea", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Andrea\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+    args: [{ selector: "app-andrea", imports: [], template: '<div>\n<div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Andrea\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/andrea/andrea.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(/media/band/andrea/andrea-title-4.jpg);\n}\n/*# sourceMappingURL=andrea.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -40900,23 +40925,26 @@ var LorenzoComponent = class _LorenzoComponent {
   static \u0275fac = function LorenzoComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _LorenzoComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LorenzoComponent, selectors: [["app-lorenzo"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function LorenzoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LorenzoComponent, selectors: [["app-lorenzo"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function LorenzoComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
-      \u0275\u0275text(2, " Lorenzo ");
+      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
+      \u0275\u0275text(3, " Lorenzo ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
+      \u0275\u0275text(6, " \xA0 ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
+      \u0275\u0275text(9, "Work in progress...");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
-      \u0275\u0275text(5, "Work in progress...");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275element(10, "img", 6);
       \u0275\u0275elementEnd()();
     }
-  }, encapsulation: 2 });
+  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/lorenzo/lorenzo-title.jpg);\n}\n/*# sourceMappingURL=lorenzo.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LorenzoComponent, [{
     type: Component,
-    args: [{ selector: "app-lorenzo", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Lorenzo\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+    args: [{ selector: "app-lorenzo", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Lorenzo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/lorenzo/lorenzo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/lorenzo/lorenzo-title.jpg);\n}\n/*# sourceMappingURL=lorenzo.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
@@ -40928,23 +40956,26 @@ var MatteoComponent = class _MatteoComponent {
   static \u0275fac = function MatteoComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _MatteoComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MatteoComponent, selectors: [["app-matteo"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function MatteoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MatteoComponent, selectors: [["app-matteo"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function MatteoComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
-      \u0275\u0275text(2, " Matteo ");
+      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
+      \u0275\u0275text(3, " Matteo ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
+      \u0275\u0275text(6, " \xA0 ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
+      \u0275\u0275text(9, "Work in progress...");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
-      \u0275\u0275text(5, "Work in progress...");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275element(10, "img", 6);
       \u0275\u0275elementEnd()();
     }
-  }, encapsulation: 2 });
+  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/matteo/matteo-title.jpg);\n}\n/*# sourceMappingURL=matteo.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatteoComponent, [{
     type: Component,
-    args: [{ selector: "app-matteo", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Matteo\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+    args: [{ selector: "app-matteo", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Matteo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/matteo/matteo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/matteo/matteo-title.jpg);\n}\n/*# sourceMappingURL=matteo.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
@@ -40956,23 +40987,26 @@ var BioComponent = class _BioComponent {
   static \u0275fac = function BioComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _BioComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _BioComponent, selectors: [["app-bio"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function BioComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _BioComponent, selectors: [["app-bio"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function BioComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
-      \u0275\u0275text(2, " Bio ");
+      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
+      \u0275\u0275text(3, " Bio ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
+      \u0275\u0275text(6, " \xA0 ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
+      \u0275\u0275text(9, "Work in progress...");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
-      \u0275\u0275text(5, "Work in progress...");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275element(10, "img", 6);
       \u0275\u0275elementEnd()();
     }
-  }, encapsulation: 2 });
+  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/bio/bio.jpg);\n}\n/*# sourceMappingURL=bio.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(BioComponent, [{
     type: Component,
-    args: [{ selector: "app-bio", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        Bio\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+    args: [{ selector: "app-bio", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n            <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n                Bio\n            </h1>\n        </div>\n        <div class="bg-grad">\n            <h1 class="text-center p-0 m-0">\n                &nbsp;\n            </h1>\n        </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/bio/bio.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/bio/bio.jpg);\n}\n/*# sourceMappingURL=bio.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
@@ -40980,7 +41014,7 @@ var BioComponent = class _BioComponent {
 })();
 
 // src/app/concerts/concerts.component.ts
-function ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_Conditional_9_Template(rf, ctx) {
+function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Conditional_9_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0);
     \u0275\u0275element(1, "br");
@@ -40990,10 +41024,10 @@ function ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_Condi
     \u0275\u0275textInterpolate1(" ", event_r1.description, "");
   }
 }
-function ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_For_12_Template(rf, ctx) {
+function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_For_12_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "a", 14);
-    \u0275\u0275element(1, "i", 15);
+    \u0275\u0275elementStart(0, "a", 17);
+    \u0275\u0275element(1, "i", 18);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd();
     \u0275\u0275element(3, "br");
@@ -41005,23 +41039,23 @@ function ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_For_1
     \u0275\u0275textInterpolate1("\xA0", link_r2.key, "");
   }
 }
-function ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_Template(rf, ctx) {
+function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 4)(1, "div", 5)(2, "div", 6);
+    \u0275\u0275elementStart(0, "div", 7)(1, "div", 8)(2, "div", 9);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 7)(5, "h3", 8);
+    \u0275\u0275elementStart(4, "div", 10)(5, "h3", 11);
     \u0275\u0275text(6);
     \u0275\u0275elementEnd();
-    \u0275\u0275element(7, "hr", 9);
-    \u0275\u0275elementStart(8, "div", 10);
-    \u0275\u0275template(9, ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_Conditional_9_Template, 2, 1);
-    \u0275\u0275elementStart(10, "div", 11);
-    \u0275\u0275repeaterCreate(11, ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_For_12_Template, 4, 2, null, null, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275element(7, "hr", 12);
+    \u0275\u0275elementStart(8, "div", 13);
+    \u0275\u0275template(9, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Conditional_9_Template, 2, 1);
+    \u0275\u0275elementStart(10, "div", 14);
+    \u0275\u0275repeaterCreate(11, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_For_12_Template, 4, 2, null, null, \u0275\u0275repeaterTrackByIndex);
     \u0275\u0275elementEnd()();
-    \u0275\u0275element(13, "hr", 9);
-    \u0275\u0275elementStart(14, "div", 12);
-    \u0275\u0275element(15, "i", 13);
+    \u0275\u0275element(13, "hr", 12);
+    \u0275\u0275elementStart(14, "div", 15);
+    \u0275\u0275element(15, "i", 16);
     \u0275\u0275text(16);
     \u0275\u0275elementEnd()()()();
   }
@@ -41040,13 +41074,13 @@ function ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_Templ
     \u0275\u0275textInterpolate1(" ", event_r1.location, " ");
   }
 }
-function ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_Template(rf, ctx) {
+function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 3);
+    \u0275\u0275elementStart(0, "h2", 6);
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275repeaterCreate(3, ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_For_4_Template, 17, 5, "div", 4, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275repeaterCreate(3, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Template, 17, 5, "div", 7, \u0275\u0275repeaterTrackByIndex);
   }
   if (rf & 2) {
     const ctx_r2 = \u0275\u0275nextContext(3);
@@ -41056,38 +41090,38 @@ function ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_Template(rf
     \u0275\u0275repeater(ctx_r2.upcoming);
   }
 }
-function ConcertsComponent_Conditional_4_Conditional_0_Template(rf, ctx) {
+function ConcertsComponent_Conditional_9_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275template(0, ConcertsComponent_Conditional_4_Conditional_0_Conditional_0_Template, 5, 3);
+    \u0275\u0275template(0, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_Template, 5, 3);
   }
   if (rf & 2) {
     const ctx_r2 = \u0275\u0275nextContext(2);
     \u0275\u0275conditional(ctx_r2.upcoming.length > 0 ? 0 : -1);
   }
 }
-function ConcertsComponent_Conditional_4_Conditional_1_Template(rf, ctx) {
+function ConcertsComponent_Conditional_9_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 3);
+    \u0275\u0275elementStart(0, "h2", 6);
     \u0275\u0275text(1, "Non ci sono eventi in programma...");
     \u0275\u0275elementEnd();
   }
 }
-function ConcertsComponent_Conditional_4_Template(rf, ctx) {
+function ConcertsComponent_Conditional_9_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275template(0, ConcertsComponent_Conditional_4_Conditional_0_Template, 1, 1)(1, ConcertsComponent_Conditional_4_Conditional_1_Template, 2, 0, "h2", 3);
+    \u0275\u0275template(0, ConcertsComponent_Conditional_9_Conditional_0_Template, 1, 1)(1, ConcertsComponent_Conditional_9_Conditional_1_Template, 2, 0, "h2", 6);
   }
   if (rf & 2) {
     const ctx_r2 = \u0275\u0275nextContext();
     \u0275\u0275conditional(ctx_r2.events.length > 0 ? 0 : ctx_r2.events.length == 0 ? 1 : -1);
   }
 }
-function ConcertsComponent_Conditional_5_Template(rf, ctx) {
+function ConcertsComponent_Conditional_10_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 2)(1, "h2", 16);
+    \u0275\u0275elementStart(0, "div", 5)(1, "h2", 19);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 17)(5, "span", 18);
+    \u0275\u0275elementStart(4, "div", 20)(5, "span", 21);
     \u0275\u0275text(6);
     \u0275\u0275pipe(7, "translate");
     \u0275\u0275elementEnd()()();
@@ -41251,132 +41285,144 @@ var ConcertsComponent = class _ConcertsComponent {
   static \u0275fac = function ConcertsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ConcertsComponent)(\u0275\u0275directiveInject(CalendarService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 6, vars: 4, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "anton", "text-uppercase"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["target", "_blank", 3, "href"], [1, "fa-solid", "fa-link"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function ConcertsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 11, vars: 4, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "anton", "text-uppercase"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["target", "_blank", 3, "href"], [1, "fa-solid", "fa-link"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function ConcertsComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "h1", 0);
-      \u0275\u0275text(1);
-      \u0275\u0275pipe(2, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(3, "div", 1);
-      \u0275\u0275template(4, ConcertsComponent_Conditional_4_Template, 2, 1)(5, ConcertsComponent_Conditional_5_Template, 8, 6, "div", 2);
-      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
+      \u0275\u0275text(3);
+      \u0275\u0275pipe(4, "translate");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(5, "div", 2)(6, "h1", 3);
+      \u0275\u0275text(7, " \xA0 ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(8, "div", 4);
+      \u0275\u0275template(9, ConcertsComponent_Conditional_9_Template, 2, 1)(10, ConcertsComponent_Conditional_10_Template, 8, 6, "div", 5);
+      \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
-      \u0275\u0275advance();
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(2, 2, "Concerts"), "\n");
       \u0275\u0275advance(3);
-      \u0275\u0275conditional(!ctx.loading ? 4 : ctx.loading ? 5 : -1);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 2, "Concerts"), " ");
+      \u0275\u0275advance(6);
+      \u0275\u0275conditional(!ctx.loading ? 9 : ctx.loading ? 10 : -1);
     }
-  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n/*# sourceMappingURL=concerts.component.css.map */"] });
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/concerts/concerts.jpg);\n}\n/*# sourceMappingURL=concerts.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ConcertsComponent, [{
     type: Component,
     args: [{ selector: "app-concerts", imports: [
       TranslateModule
-    ], template: `<h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">
-    {{'Concerts' | translate}}
-</h1>
-<div class="col-lg-8 mx-auto my-5 px-3 fs-3" style="text-align: justify;">
-    <!--  -->
-    @if(!loading) {
-        @if(events.length > 0) {
-            @if(upcoming.length > 0) {
-                <h2 class="anton text-uppercase">{{'Next concerts' | translate}}</h2>
-                @for(event of upcoming; track $index){
-                    <div class="m-3 border-0 rounded-0 shadow-hover">
-                        <div class="row d-flex flex-wrap align-items-stretch">
-                            <!-- Colonna con data e ora -->
-                            <div
-                                class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">
-                                {{formatDate(separateDateAndTime(event.start.dateTime).date)}}
-                                h{{formatTime(event.start.dateTime)}}
-                            </div>
-
-                            <!-- Colonna con contenuto principale -->
-                            <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">
-                                <h3 class="text-uppercase anton m-3 card-title">{{event.summary}}</h3>
-                                <hr class="m-0">
-                                <div class="card-body">
-                                    @if(event.description != ""){
-                                        {{event.description}}<br>
-                                    }
-                                    <div class="m-1">
-                                        @for (link of event.links; track $index) {
-                                            <a target="_blank" [href]="link.value"><i class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
-                                        }
-                                    </div>
-                                </div>
-                                <hr class="m-0">
-                                <div class="card-body rounded-0">
-                                    <i class="fa-solid fa-location-dot"></i> {{event.location}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                }
-            }
-            <!-- @if(upcoming.length > 0) {
-                <div class="text-center">
-                    <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" (click)="loadMoreUpcoming(5)">
-                        Mostra altro&nbsp;<i class="fa-solid fa-bolt-lightning"></i>
-                    </button>
-                </div>
-            } -->
-            <!-- @if(past.length > 0) {
-                <h2 class="anton text-uppercase">Eventi passati</h2>
-                @for(event of pastShown; track $index) {
-                    <div class="m-3 border-0 rounded-0 shadow-hover">
-                        <div class="row d-flex flex-wrap align-items-stretch">
-                            <div
-                                class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">
-                                {{formatDate(separateDateAndTime(event.start.dateTime).date)}}
-                                h{{formatTime(event.start.dateTime)}}
-                            </div>
-
-                            <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">
-                                <h3 class="text-uppercase anton m-3 card-title">{{event.summary}}</h3>
-                                <hr class="m-0">
-                                <div class="card-body">
-                                    {{event.description}}<br>
-                                    <div class="m-1">
-                                        @for (link of event.links; track $index) {
-                                        <a target="_blank" href={{link.value}}><i
-                                                class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
-                                        }
-                                    </div>
-                                </div>
-                                <hr class="m-0">
-                                <div class="card-body rounded-0">
-                                    <i class="fa-solid fa-location-dot"></i> {{event.location}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                }
-            }
-            @if(past.length > 0) {
-                <div class="text-center">
-                    <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" (click)="loadMorePast(5)">
-                        Mostra altro&nbsp;<i class="fa-solid fa-bolt-lightning"></i>
-                    </button>
-                </div>
-            } -->
-        }
-
-        @else if(events.length == 0) {
-            <h2 class="anton text-uppercase">Non ci sono eventi in programma...</h2>
-        }
-    }
-    @else if(loading) {
-        <div class="text-center">
-            <h2 class="anton">{{'Loading...'| translate}}</h2>
-            <div class="spinner-grow" role="status">
-                <span class="visually-hidden">{{'Loading...'| translate}}</span>
-            </div>
+    ], template: `<div>
+    <div class="container-fluid bg-title">
+            <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
+                {{'Concerts' | translate}}
+            </h1>
         </div>
-    }
-</div>`, styles: ["/* src/app/concerts/concerts.component.css */\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n/*# sourceMappingURL=concerts.component.css.map */\n"] }]
+        <div class="bg-grad">
+            <h1 class="text-center p-0 m-0">
+                &nbsp;
+            </h1>
+        </div>
+    <div class="col-lg-8 mx-auto my-5 px-3 fs-3" style="text-align: justify;">
+        <!--  -->
+        @if(!loading) {
+            @if(events.length > 0) {
+                @if(upcoming.length > 0) {
+                    <h2 class="anton text-uppercase">{{'Next concerts' | translate}}</h2>
+                    @for(event of upcoming; track $index){
+                        <div class="m-3 border-0 rounded-0 shadow-hover">
+                            <div class="row d-flex flex-wrap align-items-stretch">
+                                <!-- Colonna con data e ora -->
+                                <div
+                                    class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">
+                                    {{formatDate(separateDateAndTime(event.start.dateTime).date)}}
+                                    h{{formatTime(event.start.dateTime)}}
+                                </div>
+
+                                <!-- Colonna con contenuto principale -->
+                                <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">
+                                    <h3 class="text-uppercase anton m-3 card-title">{{event.summary}}</h3>
+                                    <hr class="m-0">
+                                    <div class="card-body">
+                                        @if(event.description != ""){
+                                            {{event.description}}<br>
+                                        }
+                                        <div class="m-1">
+                                            @for (link of event.links; track $index) {
+                                                <a target="_blank" [href]="link.value"><i class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
+                                            }
+                                        </div>
+                                    </div>
+                                    <hr class="m-0">
+                                    <div class="card-body rounded-0">
+                                        <i class="fa-solid fa-location-dot"></i> {{event.location}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                <!-- @if(upcoming.length > 0) {
+                    <div class="text-center">
+                        <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" (click)="loadMoreUpcoming(5)">
+                            Mostra altro&nbsp;<i class="fa-solid fa-bolt-lightning"></i>
+                        </button>
+                    </div>
+                } -->
+                <!-- @if(past.length > 0) {
+                    <h2 class="anton text-uppercase">Eventi passati</h2>
+                    @for(event of pastShown; track $index) {
+                        <div class="m-3 border-0 rounded-0 shadow-hover">
+                            <div class="row d-flex flex-wrap align-items-stretch">
+                                <div
+                                    class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">
+                                    {{formatDate(separateDateAndTime(event.start.dateTime).date)}}
+                                    h{{formatTime(event.start.dateTime)}}
+                                </div>
+
+                                <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">
+                                    <h3 class="text-uppercase anton m-3 card-title">{{event.summary}}</h3>
+                                    <hr class="m-0">
+                                    <div class="card-body">
+                                        {{event.description}}<br>
+                                        <div class="m-1">
+                                            @for (link of event.links; track $index) {
+                                            <a target="_blank" href={{link.value}}><i
+                                                    class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
+                                            }
+                                        </div>
+                                    </div>
+                                    <hr class="m-0">
+                                    <div class="card-body rounded-0">
+                                        <i class="fa-solid fa-location-dot"></i> {{event.location}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                @if(past.length > 0) {
+                    <div class="text-center">
+                        <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" (click)="loadMorePast(5)">
+                            Mostra altro&nbsp;<i class="fa-solid fa-bolt-lightning"></i>
+                        </button>
+                    </div>
+                } -->
+            }
+
+            @else if(events.length == 0) {
+                <h2 class="anton text-uppercase">Non ci sono eventi in programma...</h2>
+            }
+        }
+        @else if(loading) {
+            <div class="text-center">
+                <h2 class="anton">{{'Loading...'| translate}}</h2>
+                <div class="spinner-grow" role="status">
+                    <span class="visually-hidden">{{'Loading...'| translate}}</span>
+                </div>
+            </div>
+        }
+    </div>
+</div>`, styles: ["/* src/app/concerts/concerts.component.css */\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/concerts/concerts.jpg);\n}\n/*# sourceMappingURL=concerts.component.css.map */\n"] }]
   }], () => [{ type: CalendarService }], null);
 })();
 (() => {
@@ -41388,23 +41434,26 @@ var ProjectsComponent = class _ProjectsComponent {
   static \u0275fac = function ProjectsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ProjectsComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectsComponent, selectors: [["app-projects"]], decls: 8, vars: 3, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function ProjectsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectsComponent, selectors: [["app-projects"]], decls: 12, vars: 3, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function ProjectsComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
-      \u0275\u0275text(2);
-      \u0275\u0275pipe(3, "translate");
+      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
+      \u0275\u0275text(3);
+      \u0275\u0275pipe(4, "translate");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(5, "div", 2)(6, "h1", 3);
+      \u0275\u0275text(7, " \xA0 ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(8, "div", 4)(9, "h2", 5);
+      \u0275\u0275text(10, "Work in progress...");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(4, "div", 1)(5, "h2", 2);
-      \u0275\u0275text(6, "Work in progress...");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(7, "img", 3);
+      \u0275\u0275element(11, "img", 6);
       \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(2);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(3, 1, "Projects"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 1, "Projects"), " ");
     }
-  }, dependencies: [TranslateModule, TranslatePipe], encapsulation: 2 });
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/projects/projects.jpg);\n}\n/*# sourceMappingURL=projects.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ProjectsComponent, [{
@@ -41412,14 +41461,21 @@ var ProjectsComponent = class _ProjectsComponent {
     args: [{ selector: "app-projects", imports: [
       TranslateModule
     ], template: `<div>
-    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">
-        {{'Projects' | translate}}
-    </h1>
+    <div class="container-fluid bg-title">
+        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
+            {{'Projects' | translate}}
+        </h1>
+    </div>
+    <div class="bg-grad">
+        <h1 class="text-center p-0 m-0">
+            &nbsp;
+        </h1>
+    </div>
     <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">
         <h2 class="title text-uppercase anton">Work in progress...</h2>
         <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">
     </div>
-</div>` }]
+</div>`, styles: ["/* src/app/projects/projects.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/projects/projects.jpg);\n}\n/*# sourceMappingURL=projects.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
@@ -41431,23 +41487,26 @@ var ContactsComponent = class _ContactsComponent {
   static \u0275fac = function ContactsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ContactsComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactsComponent, selectors: [["app-contacts"]], decls: 8, vars: 3, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function ContactsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactsComponent, selectors: [["app-contacts"]], decls: 12, vars: 3, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function ContactsComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
-      \u0275\u0275text(2);
-      \u0275\u0275pipe(3, "translate");
+      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
+      \u0275\u0275text(3);
+      \u0275\u0275pipe(4, "translate");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(5, "div", 2)(6, "h1", 3);
+      \u0275\u0275text(7, " \xA0 ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(8, "div", 4)(9, "h2", 5);
+      \u0275\u0275text(10, "Work in progress...");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(4, "div", 1)(5, "h2", 2);
-      \u0275\u0275text(6, "Work in progress...");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(7, "img", 3);
+      \u0275\u0275element(11, "img", 6);
       \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(2);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(3, 1, "Contacts"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 1, "Contacts"), " ");
     }
-  }, dependencies: [TranslateModule, TranslatePipe], encapsulation: 2 });
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/contacts/contacts.jpg);\n}\n/*# sourceMappingURL=contacts.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ContactsComponent, [{
@@ -41455,14 +41514,21 @@ var ContactsComponent = class _ContactsComponent {
     args: [{ selector: "app-contacts", imports: [
       TranslateModule
     ], template: `<div>
-    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">
-        {{'Contacts' | translate}}
-    </h1>
+    <div class="container-fluid bg-title">
+            <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
+                {{'Contacts' | translate}}
+            </h1>
+        </div>
+        <div class="bg-grad">
+            <h1 class="text-center p-0 m-0">
+                &nbsp;
+            </h1>
+        </div>
     <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">
         <h2 class="title text-uppercase anton">Work in progress...</h2>
         <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">
     </div>
-</div>` }]
+</div>`, styles: ["/* src/app/contacts/contacts.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/contacts/contacts.jpg);\n}\n/*# sourceMappingURL=contacts.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
@@ -46010,7 +46076,7 @@ var HeaderComponent = class _HeaderComponent {
   static \u0275fac = function HeaderComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _HeaderComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 81, vars: 46, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", "squealer", 3, "click"], ["src", "/media/hth-logo.png", "alt", "HTH Logo", 2, "max-height", "50px"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end", "border-0", "shadow"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/projects", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/bio", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "bandDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "bandDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/band/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/band/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/band/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/band/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/band/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 81, vars: 46, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0", "my-0"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", "squealer", 3, "click"], ["src", "/media/hth-logo.png", "alt", "HTH Logo", 2, "max-height", "50px"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end", "border-0"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/projects", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/bio", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "bandDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "bandDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/band/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/band/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/band/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/band/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/band/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
       \u0275\u0275elementStart(0, "nav", 1)(1, "div", 2)(2, "span", 3);
@@ -46209,7 +46275,7 @@ var HeaderComponent = class _HeaderComponent {
     args: [{ selector: "app-header", imports: [
       RouterLink,
       TranslateModule
-    ], template: `<nav class="navbar navbar-expand-lg sticky-top squealer  py-0">
+    ], template: `<nav class="navbar navbar-expand-lg sticky-top squealer py-0 my-0">
     <div class="container-fluid">
         <span class="navbar-brand clickable my-1 squealer" (click)="navigate('home')">
             <img src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 50px;">&nbsp;Highway to Hell
@@ -46218,7 +46284,7 @@ var HeaderComponent = class _HeaderComponent {
             aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end border-0 shadow" tabindex="-1" id="offcanvasNavbar" #offcanvasNavbar
+        <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="offcanvasNavbar" #offcanvasNavbar
             aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <img src="" alt="" style="max-height: 30px;">
