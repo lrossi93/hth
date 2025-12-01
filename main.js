@@ -39771,76 +39771,166 @@ var CalendarService = class _CalendarService {
   }], () => [{ type: HttpClient }], null);
 })();
 
+// src/app/services/shared.service.ts
+var SharedService = class _SharedService {
+  translate;
+  router;
+  viewportScroller;
+  activeLink = "default";
+  language = "en";
+  constructor(translate, router, viewportScroller) {
+    this.translate = translate;
+    this.router = router;
+    this.viewportScroller = viewportScroller;
+    this.languageSetup();
+    this.updateActiveLink(this.router.url);
+    this.router.events.subscribe(() => {
+      this.updateActiveLink(this.router.url);
+    });
+  }
+  ngOnInit() {
+  }
+  switchLanguage(lang) {
+    this.translate.use(lang);
+    this.language = lang;
+    localStorage.setItem("hth_lang", lang);
+  }
+  languageSetup() {
+    this.translate.setFallbackLang("en");
+    let localLanguage = localStorage.getItem("hth_lang");
+    if (localLanguage != void 0) {
+      this.translate.use(localLanguage);
+      this.language = localLanguage;
+    } else {
+      this.translate.use("en");
+      this.language = "en";
+    }
+  }
+  updateActiveLink(url) {
+    if (url === "/" || url === "/home") {
+      this.activeLink = "home";
+    } else if (url.startsWith("/concerts")) {
+      this.activeLink = "concerts";
+    } else if (url.startsWith("/projects")) {
+      this.activeLink = "projects";
+    } else if (url.startsWith("/bio")) {
+      this.activeLink = "bio";
+    } else if (url.startsWith("/contacts")) {
+      this.activeLink = "contacts";
+    } else if (url.startsWith("/band")) {
+      this.activeLink = url.split("/", 3)[1] + "/" + url.split("/", 3)[2];
+    } else {
+      this.activeLink = "";
+    }
+  }
+  navigate(dest) {
+    this.activeLink = dest;
+    this.router.navigate([dest]);
+    this.triggerCloseButtonClick();
+  }
+  triggerCloseButtonClick() {
+    const closeButton = document.querySelector(".btn-close");
+    if (closeButton) {
+      closeButton.click();
+    } else {
+      console.warn("Bottone di chiusura non trovato.");
+    }
+  }
+  scrollUp() {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
+  static \u0275fac = function SharedService_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _SharedService)(\u0275\u0275inject(TranslateService), \u0275\u0275inject(Router), \u0275\u0275inject(ViewportScroller));
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _SharedService, factory: _SharedService.\u0275fac, providedIn: "root" });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(SharedService, [{
+    type: Injectable,
+    args: [{
+      providedIn: "root"
+    }]
+  }], () => [{ type: TranslateService }, { type: Router }, { type: ViewportScroller }], null);
+})();
+
 // src/app/home/home.component.ts
 var _c0 = ["heroVideo"];
-function HomeComponent_Conditional_9_Conditional_0_Conditional_12_Template(rf, ctx) {
+function HomeComponent_Conditional_2_Conditional_0_Conditional_12_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0);
     \u0275\u0275element(1, "br");
   }
   if (rf & 2) {
-    const ctx_r0 = \u0275\u0275nextContext(3);
-    \u0275\u0275textInterpolate1(" ", ctx_r0.nextEvent.description, "");
+    const ctx_r1 = \u0275\u0275nextContext(3);
+    \u0275\u0275textInterpolate1(" ", ctx_r1.nextEvent.description, "");
   }
 }
-function HomeComponent_Conditional_9_Conditional_0_For_15_Template(rf, ctx) {
+function HomeComponent_Conditional_2_Conditional_0_For_15_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "a", 34);
-    \u0275\u0275element(1, "i", 35);
+    \u0275\u0275elementStart(0, "a", 40);
+    \u0275\u0275element(1, "i", 41);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd();
     \u0275\u0275element(3, "br");
   }
   if (rf & 2) {
-    const link_r2 = ctx.$implicit;
-    \u0275\u0275property("href", link_r2.value, \u0275\u0275sanitizeUrl);
+    const link_r3 = ctx.$implicit;
+    \u0275\u0275property("href", link_r3.value, \u0275\u0275sanitizeUrl);
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1("\xA0", link_r2.key, "");
+    \u0275\u0275textInterpolate1("\xA0", link_r3.key, "");
   }
 }
-function HomeComponent_Conditional_9_Conditional_0_Template(rf, ctx) {
+function HomeComponent_Conditional_2_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 11);
+    const _r1 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "h2", 6);
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 24)(4, "div", 25)(5, "div", 26);
+    \u0275\u0275elementStart(3, "div", 29)(4, "div", 30)(5, "div", 31);
     \u0275\u0275text(6);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "div", 27)(8, "h3", 28);
+    \u0275\u0275elementStart(7, "div", 32)(8, "h3", 33);
     \u0275\u0275text(9);
     \u0275\u0275elementEnd();
-    \u0275\u0275element(10, "hr", 29);
-    \u0275\u0275elementStart(11, "div", 30);
-    \u0275\u0275template(12, HomeComponent_Conditional_9_Conditional_0_Conditional_12_Template, 2, 1);
-    \u0275\u0275elementStart(13, "div", 31);
-    \u0275\u0275repeaterCreate(14, HomeComponent_Conditional_9_Conditional_0_For_15_Template, 4, 2, null, null, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275element(10, "hr", 34);
+    \u0275\u0275elementStart(11, "div", 35);
+    \u0275\u0275template(12, HomeComponent_Conditional_2_Conditional_0_Conditional_12_Template, 2, 1);
+    \u0275\u0275elementStart(13, "div", 36);
+    \u0275\u0275repeaterCreate(14, HomeComponent_Conditional_2_Conditional_0_For_15_Template, 4, 2, null, null, \u0275\u0275repeaterTrackByIndex);
     \u0275\u0275elementEnd()();
-    \u0275\u0275element(16, "hr", 29);
-    \u0275\u0275elementStart(17, "div", 32);
-    \u0275\u0275element(18, "i", 33);
-    \u0275\u0275text(19);
-    \u0275\u0275elementEnd()()()();
+    \u0275\u0275element(16, "hr", 34);
+    \u0275\u0275elementStart(17, "div", 37);
+    \u0275\u0275element(18, "i", 38);
+    \u0275\u0275text(19, "\xA0 ");
+    \u0275\u0275elementStart(20, "a", 39);
+    \u0275\u0275listener("click", function HomeComponent_Conditional_2_Conditional_0_Template_a_click_20_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext(2);
+      return \u0275\u0275resetView(ctx_r1.openMap(ctx_r1.nextEvent.location));
+    });
+    \u0275\u0275text(21);
+    \u0275\u0275elementEnd()()()()();
   }
   if (rf & 2) {
-    const ctx_r0 = \u0275\u0275nextContext(2);
+    const ctx_r1 = \u0275\u0275nextContext(2);
     \u0275\u0275advance();
     \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 6, "Next concert"));
     \u0275\u0275advance(5);
-    \u0275\u0275textInterpolate2(" ", ctx_r0.formatDate(ctx_r0.separateDateAndTime(ctx_r0.nextEvent.start.dateTime).date), " h", ctx_r0.formatTime(ctx_r0.nextEvent.start.dateTime), " ");
+    \u0275\u0275textInterpolate2(" ", ctx_r1.formatDate(ctx_r1.separateDateAndTime(ctx_r1.nextEvent.start.dateTime).date), " h", ctx_r1.formatTime(ctx_r1.nextEvent.start.dateTime), " ");
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate(ctx_r0.nextEvent.summary);
+    \u0275\u0275textInterpolate(ctx_r1.nextEvent.summary);
     \u0275\u0275advance(3);
-    \u0275\u0275conditional(ctx_r0.nextEvent.description != "" ? 12 : -1);
+    \u0275\u0275conditional(ctx_r1.nextEvent.description != "" ? 12 : -1);
     \u0275\u0275advance(2);
-    \u0275\u0275repeater(ctx_r0.nextEvent.links);
-    \u0275\u0275advance(5);
-    \u0275\u0275textInterpolate1(" ", ctx_r0.nextEvent.location, " ");
+    \u0275\u0275repeater(ctx_r1.nextEvent.links);
+    \u0275\u0275advance(7);
+    \u0275\u0275textInterpolate1(" ", ctx_r1.nextEvent.location, " ");
   }
 }
-function HomeComponent_Conditional_9_Conditional_1_Template(rf, ctx) {
+function HomeComponent_Conditional_2_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 11);
+    \u0275\u0275elementStart(0, "h2", 6);
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
@@ -39850,29 +39940,29 @@ function HomeComponent_Conditional_9_Conditional_1_Template(rf, ctx) {
     \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, "There are no planned upcoming events..."));
   }
 }
-function HomeComponent_Conditional_9_Template(rf, ctx) {
+function HomeComponent_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275template(0, HomeComponent_Conditional_9_Conditional_0_Template, 20, 8)(1, HomeComponent_Conditional_9_Conditional_1_Template, 3, 3, "h2", 11);
-    \u0275\u0275elementStart(2, "div", 7)(3, "button", 23);
+    \u0275\u0275template(0, HomeComponent_Conditional_2_Conditional_0_Template, 22, 8)(1, HomeComponent_Conditional_2_Conditional_1_Template, 3, 3, "h2", 6);
+    \u0275\u0275elementStart(2, "div", 2)(3, "button", 28);
     \u0275\u0275text(4);
     \u0275\u0275pipe(5, "translate");
-    \u0275\u0275element(6, "i", 14);
+    \u0275\u0275element(6, "i", 9);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
-    const ctx_r0 = \u0275\u0275nextContext();
-    \u0275\u0275conditional(ctx_r0.events.length > 0 ? 0 : ctx_r0.events.length == 0 ? 1 : -1);
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275conditional(ctx_r1.events.length > 0 ? 0 : ctx_r1.events.length == 0 ? 1 : -1);
     \u0275\u0275advance(4);
     \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 2, "Next concerts"), "\xA0");
   }
 }
-function HomeComponent_Conditional_10_Template(rf, ctx) {
+function HomeComponent_Conditional_3_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 7)(1, "h2", 36);
+    \u0275\u0275elementStart(0, "div", 2)(1, "h2", 42);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 37)(5, "span", 38);
+    \u0275\u0275elementStart(4, "div", 43)(5, "span", 44);
     \u0275\u0275text(6);
     \u0275\u0275pipe(7, "translate");
     \u0275\u0275elementEnd()()();
@@ -39894,9 +39984,12 @@ var HomeComponent = class _HomeComponent {
   nextEvent;
   heroVideo;
   loading = false;
-  constructor(calendarService, sanitizer) {
+  shared;
+  constructor(calendarService, sanitizer, shared) {
     this.sanitizer = sanitizer;
     this.calendar = calendarService;
+    this.shared = shared;
+    this.shared.scrollUp();
   }
   ngAfterViewInit() {
     const video = this.heroVideo.nativeElement;
@@ -39913,6 +40006,23 @@ var HomeComponent = class _HomeComponent {
       console.log(this.nextEvent);
       this.loading = false;
     });
+  }
+  openMap(location2) {
+    if (!location2)
+      return;
+    const encoded = encodeURIComponent(location2);
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (isIOS) {
+      const appleMapsUrl = `maps://?q=${encoded}`;
+      const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+      const timeout = setTimeout(() => {
+        window.open(googleMapsUrl, "_blank");
+      }, 500);
+      window.location.href = appleMapsUrl;
+    } else {
+      const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+      window.open(googleMapsUrl, "_blank");
+    }
   }
   filterEvents(events) {
     let todayYyyyMmDd = this.separateDateAndTime(this.today.toISOString())["date"];
@@ -40004,7 +40114,7 @@ var HomeComponent = class _HomeComponent {
     return datetimeString.slice(11, 16);
   }
   static \u0275fac = function HomeComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _HomeComponent)(\u0275\u0275directiveInject(CalendarService), \u0275\u0275directiveInject(DomSanitizer));
+    return new (__ngFactoryType__ || _HomeComponent)(\u0275\u0275directiveInject(CalendarService), \u0275\u0275directiveInject(DomSanitizer), \u0275\u0275directiveInject(SharedService));
   };
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HomeComponent, selectors: [["app-home"]], viewQuery: function HomeComponent_Query(rf, ctx) {
     if (rf & 1) {
@@ -40014,54 +40124,44 @@ var HomeComponent = class _HomeComponent {
       let _t;
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.heroVideo = _t.first);
     }
-  }, decls: 69, vars: 46, consts: [["heroVideo", ""], [1, "hero", "shadow"], [1, "video-background"], ["autoplay", "", "muted", "", "loop", "", "playsinline", "", "preload", "auto"], ["src", "/media/home/hth-promo-big-show-edit.mp4", "type", "video/mp4"], [1, "hero-content"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "banner-container", "py-3", "mt-5"], ["src", "/media/home/hero-img.jpg", "alt", "The band", 1, "banner-bg"], [1, "banner-content", "col-lg-8", "mx-auto", "my-3", "px-3", "text-justify"], [1, "anton", "text-uppercase"], [1, "fw-normal", 2, "text-align", "justify"], ["routerLink", "/band", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", 2, "text-align", "justify"], ["routerLink", "/band/matteo"], ["routerLink", "/band/lorenzo"], [1, "mt-5", "anton", "text-uppercase"], ["routerLink", "/projects", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "py-3", "mt-5", 2, "background-color", "black"], [1, "col-lg-8", "mx-auto", "my-3", "px-3", 2, "text-align", "justify"], ["routerLink", "/contacts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], ["routerLink", "/concerts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["target", "_blank", 3, "href"], [1, "fa-solid", "fa-link"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function HomeComponent_Template(rf, ctx) {
+  }, decls: 86, vars: 46, consts: [["src", "/media/home/hero-2.png", "alt", "", 1, "hero-img"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "banner-container", "py-3", "mt-5"], ["src", "/media/home/band-banner.jpg", "alt", "The band", 1, "banner-bg"], [1, "banner-content", "col-lg-8", "mx-auto", "my-3", "px-3", "text-justify"], [1, "anton", "text-uppercase"], [1, "fw-normal", 2, "text-align", "justify"], ["routerLink", "/band", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", 2, "text-align", "justify"], [1, "row", "g-4", "m-0"], [1, "col-lg-6", "col-md-6", "col-sm-12"], [1, "card", "shadow-hover", "rounded-0", "elite", "h-100", "d-flex", "justify-content-center", "clickable"], [1, "ratio", "ratio-16x9"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/v6HmgTOJjdY?si=vs-OpJ3JanG7FpEK`, "title", "Highway to Hell - Thunderstruck", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/JHIKGYqE99E?si=yUfdGJ4Mmruf8T87`, "title", "Highway to Hell - Showreel 2024", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], [1, "row", "g-4", "mb-4", "m-0"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/sxa4SvJCol0?si=IwYLu6GWB7TZH7sw`, "title", "Highway to Hell - Mega Show", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/uacN3fgVxSE?si=VSRoEsNp_le9s2ng`, "title", "Highway to Hell - Symphony of Thunder", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/band/matteo"], ["routerLink", "/band/lorenzo"], [1, "mt-5", "anton", "text-uppercase"], ["routerLink", "/projects", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "py-3", "mt-5", "banner-container"], ["src", "/media/home/band-banner-2.jpg", "alt", "The band", 1, "banner-bg"], [1, "col-lg-8", "mx-auto", "my-3", "px-3", "banner-content", 2, "text-align", "justify"], ["routerLink", "/contacts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], ["routerLink", "/concerts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], ["target", "_blank", 3, "href"], [1, "fa-solid", "fa-link"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "section", 1)(1, "div", 2)(2, "video", 3, 0);
-      \u0275\u0275element(4, "source", 4);
-      \u0275\u0275text(5);
-      \u0275\u0275pipe(6, "translate");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275element(7, "div", 5);
+      \u0275\u0275element(0, "img", 0);
+      \u0275\u0275elementStart(1, "div", 1);
+      \u0275\u0275template(2, HomeComponent_Conditional_2_Template, 7, 4)(3, HomeComponent_Conditional_3_Template, 8, 6, "div", 2);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(8, "div", 6);
-      \u0275\u0275template(9, HomeComponent_Conditional_9_Template, 7, 4)(10, HomeComponent_Conditional_10_Template, 8, 6, "div", 7);
+      \u0275\u0275elementStart(4, "div", 3);
+      \u0275\u0275element(5, "img", 4);
+      \u0275\u0275elementStart(6, "div", 5)(7, "h3", 6);
+      \u0275\u0275text(8);
+      \u0275\u0275pipe(9, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(11, "div", 8);
-      \u0275\u0275element(12, "img", 9);
-      \u0275\u0275elementStart(13, "div", 10)(14, "h3", 11);
+      \u0275\u0275elementStart(10, "p", 7);
+      \u0275\u0275text(11);
+      \u0275\u0275pipe(12, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(13, "div", 2)(14, "button", 8);
       \u0275\u0275text(15);
       \u0275\u0275pipe(16, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(17, "p", 12);
-      \u0275\u0275text(18);
-      \u0275\u0275pipe(19, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(20, "div", 7)(21, "button", 13);
-      \u0275\u0275text(22);
-      \u0275\u0275pipe(23, "translate");
-      \u0275\u0275element(24, "i", 14);
+      \u0275\u0275element(17, "i", 9);
       \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(25, "div", 15)(26, "h3", 11);
-      \u0275\u0275text(27);
-      \u0275\u0275pipe(28, "translate");
+      \u0275\u0275elementStart(18, "div", 10)(19, "h3", 6);
+      \u0275\u0275text(20);
+      \u0275\u0275pipe(21, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(29, "p");
-      \u0275\u0275text(30);
-      \u0275\u0275pipe(31, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(32, "p")(33, "a", 16);
-      \u0275\u0275text(34, "Matteo Giovannone");
-      \u0275\u0275elementEnd();
-      \u0275\u0275text(35);
-      \u0275\u0275pipe(36, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(37, "p")(38, "a", 17);
-      \u0275\u0275text(39, "Lorenzo Rossi");
-      \u0275\u0275elementEnd();
-      \u0275\u0275text(40);
-      \u0275\u0275pipe(41, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(42, "h3", 18);
+      \u0275\u0275elementStart(22, "div")(23, "div", 11)(24, "div", 12)(25, "div", 13)(26, "div", 14);
+      \u0275\u0275element(27, "iframe", 15);
+      \u0275\u0275elementEnd()()();
+      \u0275\u0275elementStart(28, "div", 12)(29, "div", 13)(30, "div", 14);
+      \u0275\u0275element(31, "iframe", 16);
+      \u0275\u0275elementEnd()()()();
+      \u0275\u0275elementStart(32, "div", 17)(33, "div", 12)(34, "div", 13)(35, "div", 14);
+      \u0275\u0275element(36, "iframe", 18);
+      \u0275\u0275elementEnd()()();
+      \u0275\u0275elementStart(37, "div", 12)(38, "div", 13)(39, "div", 14);
+      \u0275\u0275element(40, "iframe", 19);
+      \u0275\u0275elementEnd()()()()()();
+      \u0275\u0275elementStart(41, "div", 10)(42, "h3", 6);
       \u0275\u0275text(43);
       \u0275\u0275pipe(44, "translate");
       \u0275\u0275elementEnd();
@@ -40069,16 +40169,19 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275text(46);
       \u0275\u0275pipe(47, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(48, "div", 7)(49, "button", 19);
-      \u0275\u0275text(50);
-      \u0275\u0275pipe(51, "translate");
-      \u0275\u0275element(52, "i", 14);
-      \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(53, "div", 20)(54, "div", 21)(55, "h3", 18);
+      \u0275\u0275elementStart(48, "p")(49, "a", 20);
+      \u0275\u0275text(50, "Matteo Giovannone");
+      \u0275\u0275elementEnd();
+      \u0275\u0275text(51);
+      \u0275\u0275pipe(52, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(53, "p")(54, "a", 21);
+      \u0275\u0275text(55, "Lorenzo Rossi");
+      \u0275\u0275elementEnd();
       \u0275\u0275text(56);
       \u0275\u0275pipe(57, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(58, "p");
+      \u0275\u0275elementStart(58, "h3", 22);
       \u0275\u0275text(59);
       \u0275\u0275pipe(60, "translate");
       \u0275\u0275elementEnd();
@@ -40086,51 +40189,70 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275text(62);
       \u0275\u0275pipe(63, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(64, "div", 7)(65, "button", 22);
+      \u0275\u0275elementStart(64, "div", 2)(65, "button", 23);
       \u0275\u0275text(66);
       \u0275\u0275pipe(67, "translate");
-      \u0275\u0275element(68, "i", 14);
+      \u0275\u0275element(68, "i", 9);
+      \u0275\u0275elementEnd()()();
+      \u0275\u0275elementStart(69, "div", 24);
+      \u0275\u0275element(70, "img", 25);
+      \u0275\u0275elementStart(71, "div", 26)(72, "h3", 22);
+      \u0275\u0275text(73);
+      \u0275\u0275pipe(74, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(75, "p");
+      \u0275\u0275text(76);
+      \u0275\u0275pipe(77, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(78, "p");
+      \u0275\u0275text(79);
+      \u0275\u0275pipe(80, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(81, "div", 2)(82, "button", 27);
+      \u0275\u0275text(83);
+      \u0275\u0275pipe(84, "translate");
+      \u0275\u0275element(85, "i", 9);
       \u0275\u0275elementEnd()()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(5);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(6, 16, "Your browser does not support this video."), " ");
-      \u0275\u0275advance(4);
-      \u0275\u0275conditional(!ctx.loading ? 9 : ctx.loading ? 10 : -1);
+      \u0275\u0275advance(2);
+      \u0275\u0275conditional(!ctx.loading ? 2 : ctx.loading ? 3 : -1);
       \u0275\u0275advance(6);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(16, 18, "The band"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(9, 16, "The band"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(19, 20, "Highway to Hell isn't just a simple tribute band, but an authentic rock energy explosion! With an AC/DC faithful sound, obsessive attention to detail and an overwhelming stage presence, they will take the audience on an electrifying journey, just like at a real concert by the legendary Australian band."), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(12, 18, "Highway to Hell isn't just a simple tribute band, but an authentic rock energy explosion! With an AC/DC faithful sound, obsessive attention to detail and an overwhelming stage presence, they will take the audience on an electrifying journey, just like at a real concert by the legendary Australian band."), " ");
       \u0275\u0275advance(4);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 22, "Discover the band"), "\xA0");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(16, 20, "Discover the band"), "\xA0");
       \u0275\u0275advance(5);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(28, 24, "From Bon to Brian: a tribute to the history of AC/DC"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(21, 22, "Our projects"), " ");
+      \u0275\u0275advance(23);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(44, 24, "From Bon to Brian: a tribute to the history of AC/DC"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(31, 26, "Besides the classical show, Highway to Hell introduce you to a unique experience under the \u201CFrom Bon to Brian\u201D format, a journey across two legendary ages:"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(47, 26, "Besides the classical show, Highway to Hell introduce you to a unique experience under the \u201CFrom Bon to Brian\u201D format, a journey across two legendary ages:"), " ");
       \u0275\u0275advance(5);
-      \u0275\u0275textInterpolate1(", ", \u0275\u0275pipeBind1(36, 28, "the best italian Bon Scott interpreter, with an impressive vocal and physical resemblance."), " ");
+      \u0275\u0275textInterpolate1(", ", \u0275\u0275pipeBind1(52, 28, "the best italian Bon Scott interpreter, with an impressive vocal and physical resemblance."), " ");
       \u0275\u0275advance(5);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(41, 30, "on his bagpipes, to recreate the iconic sound of tracks such as \u201CIt\u2019s a Long Way to the Top\u201D."), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(57, 30, "on his bagpipes, to recreate the iconic sound of tracks such as \u201CIt\u2019s a Long Way to the Top\u201D."), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(44, 32, "Symphony of Thunder: AC/DC Symphonic Version"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(60, 32, "Symphony of Thunder: AC/DC Symphonic Version"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(47, 34, "Since 2024, Highway to Hell were the first to introduce the \u201CSymphony of Thunder\u201D show in Italy: an innovative fusion between AC/DC's pure rock and the power of a symphonic orchestra. An exciting journey through AC/DC's greatest hits, from \u201CBack in Black\u201D to \u201CThunderstruck\u201D, reimagined for orchestra for an unprecedented sound impact!"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(63, 34, "Since 2024, Highway to Hell were the first to introduce the \u201CSymphony of Thunder\u201D show in Italy: an innovative fusion between AC/DC's pure rock and the power of a symphonic orchestra. An exciting journey through AC/DC's greatest hits, from \u201CBack in Black\u201D to \u201CThunderstruck\u201D, reimagined for orchestra for an unprecedented sound impact!"), " ");
       \u0275\u0275advance(4);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(51, 36, "Discover our projects"), "\xA0");
-      \u0275\u0275advance(6);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(57, 38, "A band for your stage, a band for your event!"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(67, 36, "Discover our projects"), "\xA0");
+      \u0275\u0275advance(7);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(74, 38, "A band for your stage, a band for your event!"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(60, 40, "Highway to Hell surfed prestigious stages such as EICMA, where they have been their Motolive stage resident band, bringing their show to one of the world's largest motorsport events."), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(77, 40, "Highway to Hell surfed prestigious stages such as EICMA, where they have been their Motolive stage resident band, bringing their show to one of the world's largest motorsport events."), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(63, 42, "If your're looking for an unforgettable AC/DC concert or a professional tribute band for festivals, events or motorcycle rallies, Highway to Hell are the perfect choice for a high voltage experience!"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(80, 42, "If your're looking for an unforgettable AC/DC concert or a professional tribute band for festivals, events or motorcycle rallies, Highway to Hell are the perfect choice for a high voltage experience!"), " ");
       \u0275\u0275advance(4);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(67, 44, "Get in touch!"), "\xA0");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(84, 44, "Get in touch!"), "\xA0");
     }
   }, dependencies: [
     RouterLink,
     TranslateModule,
     TranslatePipe
-  ], styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  height: calc(100vh - 60px);\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero[_ngcontent-%COMP%] {\n    height: 100vh;\n  }\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 2rem;\n  }\n  .hero-content[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n}\n/*# sourceMappingURL=home.component.css.map */'] });
+  ], styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  height: calc(100vh - 60px);\n  overflow: hidden;\n}\n.hero[_ngcontent-%COMP%] {\n  width: 100%;\n  align-items: top;\n  justify-content: center;\n  color: white;\n}\n.hero-img[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero[_ngcontent-%COMP%] {\n    height: 100vh;\n  }\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 2rem;\n  }\n  .hero-content[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n}\n/*# sourceMappingURL=home.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HomeComponent, [{
@@ -40139,6 +40261,13 @@ var HomeComponent = class _HomeComponent {
       RouterLink,
       TranslateModule
     ], template: `<!-- Hero -->
+<!-- Hero -->
+<!-- <section class="hero"> -->
+    
+    <!-- <div class="hero-content d-flex" style="flex-direction: column; align-items: center; justify-content: space-around;">
+    </div> -->
+<!-- </section> -->
+<img src="/media/home/hero-2.png" class="hero-img" alt="">
 <!-- <section class="hero">
     <div class="video-background">
             <video autoplay muted loop playsinline preload="auto" class="img-fluid">
@@ -40155,7 +40284,7 @@ var HomeComponent = class _HomeComponent {
 </section> -->
 
 <!-- Hero -->
-<section class="hero shadow">
+<!-- <section class="hero shadow">
     <div class="video-background">
         <video #heroVideo autoplay muted loop playsinline preload="auto">
             <source src="/media/home/hth-promo-big-show-edit.mp4" type="video/mp4">
@@ -40164,11 +40293,11 @@ var HomeComponent = class _HomeComponent {
     </div>
 
     <div class="hero-content">
-        <!-- <h1 class="">Highway to Hell</h1>
+        <h1 class="">Highway to Hell</h1>
         <img class="p-3" src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 200px;">
-        <h2>AC/DC Tribute Band</h2> -->
+        <h2>AC/DC Tribute Band</h2>
     </div>
-</section>
+</section> -->
 
 
 <!-- <section class="hero">
@@ -40185,7 +40314,7 @@ var HomeComponent = class _HomeComponent {
     <h2 class="anton text-uppercase">{{'Next concert' | translate}}</h2>
     <div class="m-3 border-0 rounded-0 shadow-hover">
         <div class="row d-flex flex-wrap align-items-stretch">
-            
+
             <div
                 class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">
                 {{formatDate(separateDateAndTime(nextEvent.start.dateTime).date)}}
@@ -40197,17 +40326,21 @@ var HomeComponent = class _HomeComponent {
                 <hr class="m-0">
                 <div class="card-body">
                     @if(nextEvent.description != ""){
-                        {{nextEvent.description}}<br>
+                    {{nextEvent.description}}<br>
                     }
                     <div class="m-1">
                         @for (link of nextEvent.links; track $index) {
-                            <a target="_blank" [href]="link.value"><i class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
+                        <a target="_blank" [href]="link.value"><i
+                                class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
                         }
                     </div>
                 </div>
                 <hr class="m-0">
                 <div class="card-body rounded-0">
-                    <i class="fa-solid fa-location-dot"></i> {{nextEvent.location}}
+                    <i class="fa-solid fa-location-dot"></i>&nbsp;
+                    <a href="javascript:void(0)" (click)="openMap(nextEvent.location)">
+                        {{nextEvent.location}}
+                    </a>
                 </div>
             </div>
         </div>
@@ -40236,20 +40369,78 @@ var HomeComponent = class _HomeComponent {
 
 <!-- Banner con call to action -->
 <div class="banner-container py-3 mt-5">
-    <img src="/media/home/hero-img.jpg" alt="The band" class="banner-bg" />
+    <img src="/media/home/band-banner.jpg" alt="The band" class="banner-bg" />
 
     <div class="banner-content col-lg-8 mx-auto my-3 px-3 text-justify">
         <h3 class="anton text-uppercase">
             {{'The band' | translate}}
         </h3>
         <p class="fw-normal" style="text-align: justify;">
-            {{"Highway to Hell isn't just a simple tribute band, but an authentic rock energy explosion! With an AC/DC faithful sound, obsessive attention to detail and an overwhelming stage presence, they will take the audience on an electrifying journey, just like at a real concert by the legendary Australian band." | translate}}
+            {{"Highway to Hell isn't just a simple tribute band, but an authentic rock energy explosion! With an AC/DC
+            faithful sound, obsessive attention to detail and an overwhelming stage presence, they will take the
+            audience on an electrifying journey, just like at a real concert by the legendary Australian band." |
+            translate}}
         </p>
         <div class="text-center">
-            <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0"
-                routerLink="/band">
+            <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" routerLink="/band">
                 {{'Discover the band' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
             </button>
+        </div>
+    </div>
+</div>
+
+<!-- Video e progetti -->
+<div class="col-lg-8 mx-auto my-5 mb-0 px-3" style="text-align: justify;">
+    <h3 class="anton text-uppercase">
+        {{'Our projects' | translate}}
+    </h3>
+    <div>
+        <div class="row g-4 m-0">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="card shadow-hover rounded-0 elite h-100 d-flex justify-content-center clickable">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/v6HmgTOJjdY?si=vs-OpJ3JanG7FpEK"
+                            title="Highway to Hell - Thunderstruck" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="card shadow-hover rounded-0 elite h-100 d-flex justify-content-center clickable">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/JHIKGYqE99E?si=yUfdGJ4Mmruf8T87"
+                            title="Highway to Hell - Showreel 2024" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-4 m-0">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="card shadow-hover rounded-0 elite h-100 d-flex justify-content-center clickable">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/sxa4SvJCol0?si=IwYLu6GWB7TZH7sw"
+                            title="Highway to Hell - Mega Show" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="card shadow-hover rounded-0 elite h-100 d-flex justify-content-center clickable">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/uacN3fgVxSE?si=VSRoEsNp_le9s2ng"
+                            title="Highway to Hell - Symphony of Thunder" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -40367,8 +40558,9 @@ var HomeComponent = class _HomeComponent {
 </div>
 
 <!-- Banner con call to action -->
-<div class="py-3 mt-5" style="background-color: black;">
-    <div class="col-lg-8 mx-auto my-3 px-3" style="text-align: justify;">
+<div class="py-3 mt-5 banner-container">
+    <img src="/media/home/band-banner-2.jpg" alt="The band" class="banner-bg" />
+    <div class="col-lg-8 mx-auto my-3 px-3 banner-content" style="text-align: justify;">
         <h3 class="mt-5 anton text-uppercase">
             {{'A band for your stage, a band for your event!' | translate}}
         </h3>
@@ -40386,20 +40578,25 @@ var HomeComponent = class _HomeComponent {
             </button>
         </div>
     </div>
-</div>`, styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  width: 100%;\n  height: calc(100vh - 60px);\n  overflow: hidden;\n}\n.video-background {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background video {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .video-background video {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero {\n    height: 100vh;\n  }\n  .video-background video {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content h1 {\n    font-size: 2rem;\n  }\n  .hero-content h2 {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content {\n  position: relative;\n  z-index: 1;\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
-  }], () => [{ type: CalendarService }, { type: DomSanitizer }], { heroVideo: [{
+</div>`, styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  width: 100%;\n  height: calc(100vh - 60px);\n  overflow: hidden;\n}\n.hero {\n  width: 100%;\n  align-items: top;\n  justify-content: center;\n  color: white;\n}\n.hero-img {\n  width: 100%;\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background video {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .video-background video {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero {\n    height: 100vh;\n  }\n  .video-background video {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content h1 {\n    font-size: 2rem;\n  }\n  .hero-content h2 {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content {\n  position: relative;\n  z-index: 1;\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
+  }], () => [{ type: CalendarService }, { type: DomSanitizer }, { type: SharedService }], { heroVideo: [{
     type: ViewChild,
     args: ["heroVideo"]
   }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HomeComponent, { className: "HomeComponent", filePath: "src/app/home/home.component.ts", lineNumber: 22 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HomeComponent, { className: "HomeComponent", filePath: "src/app/home/home.component.ts", lineNumber: 23 });
 })();
 
 // src/app/page-not-found/page-not-found.component.ts
 var PageNotFoundComponent = class _PageNotFoundComponent {
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    this.shared.scrollUp();
+  }
   static \u0275fac = function PageNotFoundComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _PageNotFoundComponent)();
+    return new (__ngFactoryType__ || _PageNotFoundComponent)(\u0275\u0275directiveInject(SharedService));
   };
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PageNotFoundComponent, selectors: [["app-page-not-found"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function PageNotFoundComponent_Template(rf, ctx) {
     if (rf & 1) {
@@ -40418,18 +40615,23 @@ var PageNotFoundComponent = class _PageNotFoundComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PageNotFoundComponent, [{
     type: Component,
     args: [{ selector: "app-page-not-found", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        404: page not found!\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Sorry...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
-  }], null, null);
+  }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PageNotFoundComponent, { className: "PageNotFoundComponent", filePath: "src/app/page-not-found/page-not-found.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PageNotFoundComponent, { className: "PageNotFoundComponent", filePath: "src/app/page-not-found/page-not-found.component.ts", lineNumber: 10 });
 })();
 
 // src/app/members/members.component.ts
 var MembersComponent = class _MembersComponent {
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    this.shared.scrollUp();
+  }
   static \u0275fac = function MembersComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _MembersComponent)();
+    return new (__ngFactoryType__ || _MembersComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MembersComponent, selectors: [["app-members"]], decls: 99, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-10", "my-5", "mx-auto", "px-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase", "my-5"], [1, "cards-wrapper", "mx-3"], [1, "card-item"], ["routerLink", "/band/francesco"], [1, "card", "border-0", "rounded-0", "m-1", "mb-3", "box-shadow", "shadow-hover"], ["src", "media/band/francesco/francesco.jpg", "alt", "Francesco", 1, "card-img", "rounded-0"], [1, "card-body", "nav"], [1, "card-title", "anton", "text-uppercase"], [1, "card-text"], [1, "card-footer", "d-flex", "justify-content-end", "align-items-center", "rounded-0"], [1, "text-muted", "text-end"], [1, "fa-solid", "fa-bolt"], ["routerLink", "/band/andrea"], ["src", "media/band/andrea/andrea.jpg", "alt", "Andrea", 1, "card-img", "rounded-0"], ["routerLink", "/band/davide"], ["src", "media/band/davide/davide.jpg", "alt", "Davide", 1, "card-img", "rounded-0"], ["routerLink", "/band/jacopo"], ["src", "media/band/jacopo/jacopo.jpg", "alt", "Jacopo", 1, "card-img", "rounded-0"], ["routerLink", "/band/eros"], ["src", "media/band/eros/eros.jpg", "alt", "Eros", 1, "card-img", "rounded-0"], ["routerLink", "/band/lorenzo"], ["src", "media/band/lorenzo/lorenzo.jpg", "alt", "Lorenzo", 1, "card-img", "rounded-0"], ["routerLink", "/band/matteo"], ["src", "media/band/matteo/matteo.jpg", "alt", "Matteo", 1, "card-img", "rounded-0"]], template: function MembersComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MembersComponent, selectors: [["app-members"]], decls: 106, vars: 21, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-10", "my-5", "mx-auto", "px-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase", "my-5"], [1, "cards-wrapper", "mx-3"], [1, "card-item"], ["routerLink", "/band/francesco"], [1, "card", "border-0", "rounded-0", "m-1", "mb-3", "box-shadow", "shadow-hover"], ["src", "media/band/francesco/francesco.jpg", "alt", "Francesco", 1, "card-img", "rounded-0"], [1, "card-body", "nav"], [1, "card-title", "anton", "text-uppercase"], [1, "card-text"], [1, "card-footer", "d-flex", "justify-content-end", "align-items-center", "rounded-0"], [1, "text-muted", "text-end"], [1, "fa-solid", "fa-bolt"], ["routerLink", "/band/andrea"], ["src", "media/band/andrea/andrea.jpg", "alt", "Andrea", 1, "card-img", "rounded-0"], ["routerLink", "/band/davide"], ["src", "media/band/davide/davide.jpg", "alt", "Davide", 1, "card-img", "rounded-0"], ["routerLink", "/band/jacopo"], ["src", "media/band/jacopo/jacopo.jpg", "alt", "Jacopo", 1, "card-img", "rounded-0"], ["routerLink", "/band/eros"], ["src", "media/band/eros/eros.jpg", "alt", "Eros", 1, "card-img", "rounded-0"], ["routerLink", "/band/lorenzo"], ["src", "media/band/lorenzo/lorenzo.jpg", "alt", "Lorenzo", 1, "card-img", "rounded-0"], ["routerLink", "/band/matteo"], ["src", "media/band/matteo/matteo.jpg", "alt", "Matteo", 1, "card-img", "rounded-0"]], template: function MembersComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
       \u0275\u0275text(3, " Band ");
@@ -40446,112 +40648,138 @@ var MembersComponent = class _MembersComponent {
       \u0275\u0275text(17, "Francesco");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(18, "p", 13);
-      \u0275\u0275text(19, "Chitarra ritmica, il motore del groove, con un suono potente in perfetto stile Malcolm Young.");
+      \u0275\u0275text(19);
+      \u0275\u0275pipe(20, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(20, "div", 14)(21, "small", 15);
-      \u0275\u0275element(22, "i", 16);
+      \u0275\u0275elementStart(21, "div", 14)(22, "small", 15);
+      \u0275\u0275element(23, "i", 16);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(23, "div", 7)(24, "a", 17)(25, "div", 9);
-      \u0275\u0275element(26, "img", 18);
-      \u0275\u0275elementStart(27, "div", 11)(28, "h2", 12);
-      \u0275\u0275text(29, "Andrea");
+      \u0275\u0275elementStart(24, "div", 7)(25, "a", 17)(26, "div", 9);
+      \u0275\u0275element(27, "img", 18);
+      \u0275\u0275elementStart(28, "div", 11)(29, "h2", 12);
+      \u0275\u0275text(30, "Andrea");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(30, "p", 13);
-      \u0275\u0275text(31, "Batteria, una macchina da guerra che richiama la potenza di Chris Slade.");
+      \u0275\u0275elementStart(31, "p", 13);
+      \u0275\u0275text(32);
+      \u0275\u0275pipe(33, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(32, "div", 14)(33, "small", 15);
-      \u0275\u0275element(34, "i", 16);
+      \u0275\u0275elementStart(34, "div", 14)(35, "small", 15);
+      \u0275\u0275element(36, "i", 16);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(35, "div", 7)(36, "a", 19)(37, "div", 9);
-      \u0275\u0275element(38, "img", 20);
-      \u0275\u0275elementStart(39, "div", 11)(40, "h2", 12);
-      \u0275\u0275text(41, "Davide");
+      \u0275\u0275elementStart(37, "div", 7)(38, "a", 19)(39, "div", 9);
+      \u0275\u0275element(40, "img", 20);
+      \u0275\u0275elementStart(41, "div", 11)(42, "h2", 12);
+      \u0275\u0275text(43, "Davide");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(42, "p", 13);
-      \u0275\u0275text(43, "Basso, colonna portante che mantiene il groove solido e incalzante, proprio come Cliff Williams.");
+      \u0275\u0275elementStart(44, "p", 13);
+      \u0275\u0275text(45);
+      \u0275\u0275pipe(46, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(44, "div", 14)(45, "small", 15);
-      \u0275\u0275element(46, "i", 16);
+      \u0275\u0275elementStart(47, "div", 14)(48, "small", 15);
+      \u0275\u0275element(49, "i", 16);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(47, "div", 7)(48, "a", 21)(49, "div", 9);
-      \u0275\u0275element(50, "img", 22);
-      \u0275\u0275elementStart(51, "div", 11)(52, "h2", 12);
-      \u0275\u0275text(53, "Jacopo");
+      \u0275\u0275elementStart(50, "div", 7)(51, "a", 21)(52, "div", 9);
+      \u0275\u0275element(53, "img", 22);
+      \u0275\u0275elementStart(54, "div", 11)(55, "h2", 12);
+      \u0275\u0275text(56, "Jacopo");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(54, "p", 13);
-      \u0275\u0275text(55, "Chitarra solista, incarna lo spirito di Angus Young con riff iconici ed energia pura.");
+      \u0275\u0275elementStart(57, "p", 13);
+      \u0275\u0275text(58);
+      \u0275\u0275pipe(59, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(56, "div", 14)(57, "small", 15);
-      \u0275\u0275element(58, "i", 16);
+      \u0275\u0275elementStart(60, "div", 14)(61, "small", 15);
+      \u0275\u0275element(62, "i", 16);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(59, "div", 7)(60, "a", 23)(61, "div", 9);
-      \u0275\u0275element(62, "img", 24);
-      \u0275\u0275elementStart(63, "div", 11)(64, "h2", 12);
-      \u0275\u0275text(65, "Eros");
+      \u0275\u0275elementStart(63, "div", 7)(64, "a", 23)(65, "div", 9);
+      \u0275\u0275element(66, "img", 24);
+      \u0275\u0275elementStart(67, "div", 11)(68, "h2", 12);
+      \u0275\u0275text(69, "Eros");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(66, "p", 13);
-      \u0275\u0275text(67, "Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.");
+      \u0275\u0275elementStart(70, "p", 13);
+      \u0275\u0275text(71);
+      \u0275\u0275pipe(72, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(68, "div", 14)(69, "small", 15);
-      \u0275\u0275element(70, "i", 16);
+      \u0275\u0275elementStart(73, "div", 14)(74, "small", 15);
+      \u0275\u0275element(75, "i", 16);
       \u0275\u0275elementEnd()()()()()()();
-      \u0275\u0275elementStart(71, "div", 4)(72, "h2", 5);
-      \u0275\u0275text(73, "Collaborazioni");
+      \u0275\u0275elementStart(76, "div", 4)(77, "h2", 5);
+      \u0275\u0275text(78, "Collaborazioni");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(74, "div", 6)(75, "div", 7)(76, "a", 25)(77, "div", 9);
-      \u0275\u0275element(78, "img", 26);
-      \u0275\u0275elementStart(79, "div", 11)(80, "h2", 12);
-      \u0275\u0275text(81, "Lorenzo");
+      \u0275\u0275elementStart(79, "div", 6)(80, "div", 7)(81, "a", 25)(82, "div", 9);
+      \u0275\u0275element(83, "img", 26);
+      \u0275\u0275elementStart(84, "div", 11)(85, "h2", 12);
+      \u0275\u0275text(86, "Lorenzo");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(82, "p", 13);
-      \u0275\u0275text(83, " Il rombo della sua cornamusa incendier\xE0 il palco a ritmo di \u201CIt's a Long Way to the Top\u201D e \u201CThunderstruck\u201D. ");
+      \u0275\u0275elementStart(87, "p", 13);
+      \u0275\u0275text(88);
+      \u0275\u0275pipe(89, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(84, "div", 14)(85, "small", 15);
-      \u0275\u0275element(86, "i", 16);
+      \u0275\u0275elementStart(90, "div", 14)(91, "small", 15);
+      \u0275\u0275element(92, "i", 16);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(87, "div", 7)(88, "a", 27)(89, "div", 9);
-      \u0275\u0275element(90, "img", 28);
-      \u0275\u0275elementStart(91, "div", 11)(92, "h2", 12);
-      \u0275\u0275text(93, "Matteo");
+      \u0275\u0275elementStart(93, "div", 7)(94, "a", 27)(95, "div", 9);
+      \u0275\u0275element(96, "img", 28);
+      \u0275\u0275elementStart(97, "div", 11)(98, "h2", 12);
+      \u0275\u0275text(99, "Matteo");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(94, "p", 13);
-      \u0275\u0275text(95, " Conosciuto anche come \u201CThe Italian Bon Scott\u201D, \xE8 uno dei due protagonisti dello show \u201CFrom Bon to Brian\u201D. ");
+      \u0275\u0275elementStart(100, "p", 13);
+      \u0275\u0275text(101);
+      \u0275\u0275pipe(102, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(96, "div", 14)(97, "small", 15);
-      \u0275\u0275element(98, "i", 16);
+      \u0275\u0275elementStart(103, "div", 14)(104, "small", 15);
+      \u0275\u0275element(105, "i", 16);
       \u0275\u0275elementEnd()()()()()()()();
     }
-  }, dependencies: [RouterLink], styles: ["\n\n.card[_ngcontent-%COMP%] {\n  overflow: hidden;\n}\n.card-img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n  aspect-ratio: 1/1;\n}\n.card[_ngcontent-%COMP%]:hover   .card-img[_ngcontent-%COMP%] {\n  transform: scale(1.05);\n}\n.card-item[_ngcontent-%COMP%]    > a[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  gap: 3rem;\n}\n.card[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 1 1 100%;\n  max-width: 100%;\n}\n@media (min-width: 768px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 1 1 calc(50% - 2rem);\n    max-width: calc(50% - 2rem);\n  }\n}\n@media (min-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 1 1 calc(33.333% - 2rem);\n    max-width: calc(33.333% - 2rem);\n  }\n}\na[_ngcontent-%COMP%]:hover {\n  text-shadow: none;\n}\n.card[_ngcontent-%COMP%]:hover   .card-footer[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]   i[_ngcontent-%COMP%] {\n  color: white;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  transition: all 0.3s ease;\n}\n.card-footer[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]   i[_ngcontent-%COMP%] {\n  color: inherit;\n  text-shadow: none;\n  transition: all 0.3s ease;\n}\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/band.jpg);\n}\n/*# sourceMappingURL=members.component.css.map */"] });
+    if (rf & 2) {
+      \u0275\u0275advance(19);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(20, 7, "francesco_desc"));
+      \u0275\u0275advance(13);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(33, 9, "andrea_desc"));
+      \u0275\u0275advance(13);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(46, 11, "davide_desc"));
+      \u0275\u0275advance(13);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(59, 13, "jacopo_desc"));
+      \u0275\u0275advance(13);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(72, 15, "eros_desc"));
+      \u0275\u0275advance(17);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(89, 17, "lorenzo_desc"));
+      \u0275\u0275advance(13);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(102, 19, "matteo_desc"));
+    }
+  }, dependencies: [
+    RouterLink,
+    TranslateModule,
+    TranslatePipe
+  ], styles: ["\n\n.card[_ngcontent-%COMP%] {\n  overflow: hidden;\n}\n.card-img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n  aspect-ratio: 1/1;\n}\n.card[_ngcontent-%COMP%]:hover   .card-img[_ngcontent-%COMP%] {\n  transform: scale(1.05);\n}\n.card-item[_ngcontent-%COMP%]    > a[_ngcontent-%COMP%] {\n  text-decoration: none;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  gap: 3rem;\n}\n.card[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 1 1 100%;\n  max-width: 100%;\n}\n@media (min-width: 768px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 1 1 calc(50% - 2rem);\n    max-width: calc(50% - 2rem);\n  }\n}\n@media (min-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 1 1 calc(33.333% - 2rem);\n    max-width: calc(33.333% - 2rem);\n  }\n}\na[_ngcontent-%COMP%]:hover {\n  text-shadow: none;\n}\n.card[_ngcontent-%COMP%]:hover   .card-footer[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]   i[_ngcontent-%COMP%] {\n  color: white;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  transition: all 0.3s ease;\n}\n.card-footer[_ngcontent-%COMP%]   small[_ngcontent-%COMP%]   i[_ngcontent-%COMP%] {\n  color: inherit;\n  text-shadow: none;\n  transition: all 0.3s ease;\n}\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/band-banner.jpg);\n}\n/*# sourceMappingURL=members.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MembersComponent, [{
     type: Component,
-    args: [{ selector: "app-members", imports: [RouterLink], template: `<!-- <div class="col-lg-8 mx-auto my-5 mb-0 px-3">
-    
-</div> -->
-<div>
+    args: [{ selector: "app-members", imports: [
+      RouterLink,
+      TranslateModule
+    ], template: `<div>
     <div class="container-fluid bg-title">
-            <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
-                Band
-            </h1>
-        </div>
-        <div class="bg-grad">
-            <h1 class="text-center p-0 m-0">
-                &nbsp;
-            </h1>
-        </div>
+        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
+            Band
+        </h1>
+    </div>
+    <div class="bg-grad">
+        <h1 class="text-center p-0 m-0">
+            &nbsp;
+        </h1>
+    </div>
     <div class="col-lg-10 my-5 mx-auto px-3" style="text-align: justify;">
         <h2 class="anton text-uppercase my-5">componenti</h2>
         <div class="cards-wrapper mx-3">
-        
+
             <div class="card-item">
                 <a routerLink="/band/francesco">
                     <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
                         <img class="card-img rounded-0" src="media/band/francesco/francesco.jpg" alt="Francesco" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Francesco</h2>
-                            <p class="card-text">Chitarra ritmica, il motore del groove, con un suono potente in
-                                perfetto stile Malcolm Young.</p>
+                            <p class="card-text">{{ 'francesco_desc' | translate }}</p>
                         </div>
                         <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
                             <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
@@ -40566,8 +40794,7 @@ var MembersComponent = class _MembersComponent {
                         <img class="card-img rounded-0" src="media/band/andrea/andrea.jpg" alt="Andrea" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Andrea</h2>
-                            <p class="card-text">Batteria, una macchina da guerra che richiama la potenza di Chris
-                                Slade.</p>
+                            <p class="card-text">{{ 'andrea_desc' | translate }}</p>
                         </div>
                         <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
                             <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
@@ -40582,8 +40809,7 @@ var MembersComponent = class _MembersComponent {
                         <img class="card-img rounded-0" src="media/band/davide/davide.jpg" alt="Davide" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Davide</h2>
-                            <p class="card-text">Basso, colonna portante che mantiene il groove solido e incalzante,
-                                proprio come Cliff Williams.</p>
+                            <p class="card-text">{{ 'davide_desc' | translate }}</p>
                         </div>
                         <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
                             <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
@@ -40598,8 +40824,7 @@ var MembersComponent = class _MembersComponent {
                         <img class="card-img rounded-0" src="media/band/jacopo/jacopo.jpg" alt="Jacopo" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Jacopo</h2>
-                            <p class="card-text">Chitarra solista, incarna lo spirito di Angus Young con riff
-                                iconici ed energia pura.</p>
+                            <p class="card-text">{{ 'jacopo_desc' | translate }}</p>
                         </div>
                         <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
                             <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
@@ -40614,8 +40839,7 @@ var MembersComponent = class _MembersComponent {
                         <img class="card-img rounded-0" src="media/band/eros/eros.jpg" alt="Eros" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Eros</h2>
-                            <p class="card-text">Voce, un frontman che cattura la potenza di Brian Johnson con una
-                                grinta esplosiva.</p>
+                            <p class="card-text">{{ 'eros_desc' | translate }}</p>
                         </div>
                         <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
                             <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
@@ -40623,22 +40847,21 @@ var MembersComponent = class _MembersComponent {
                     </div>
                 </a>
             </div>
+
         </div>
     </div>
 
     <div class="col-lg-10 my-5 mx-auto px-3" style="text-align: justify;">
         <h2 class="anton text-uppercase my-5">Collaborazioni</h2>
         <div class="cards-wrapper mx-3">
-        
+
             <div class="card-item">
                 <a routerLink="/band/lorenzo">
                     <div class="card border-0 rounded-0 m-1 mb-3 box-shadow shadow-hover">
                         <img class="card-img rounded-0" src="media/band/lorenzo/lorenzo.jpg" alt="Lorenzo" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Lorenzo</h2>
-                            <p class="card-text">
-                                Il rombo della sua cornamusa incendier\xE0 il palco a ritmo di \u201CIt's a Long Way to the Top\u201D e \u201CThunderstruck\u201D.
-                            </p>
+                            <p class="card-text">{{ 'lorenzo_desc' | translate }}</p>
                         </div>
                         <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
                             <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
@@ -40653,9 +40876,7 @@ var MembersComponent = class _MembersComponent {
                         <img class="card-img rounded-0" src="media/band/matteo/matteo.jpg" alt="Matteo" />
                         <div class="card-body nav">
                             <h2 class="card-title anton text-uppercase">Matteo</h2>
-                            <p class="card-text">
-                                Conosciuto anche come \u201CThe Italian Bon Scott\u201D, \xE8 uno dei due protagonisti dello show \u201CFrom Bon to Brian\u201D.
-                            </p>
+                            <p class="card-text">{{ 'matteo_desc' | translate }}</p>
                         </div>
                         <div class="card-footer d-flex justify-content-end align-items-center rounded-0">
                             <small class="text-muted text-end"><i class="fa-solid fa-bolt"></i></small>
@@ -40663,22 +40884,28 @@ var MembersComponent = class _MembersComponent {
                     </div>
                 </a>
             </div>
+
         </div>
     </div>
-    
-</div>`, styles: ["/* src/app/members/members.component.css */\n.card {\n  overflow: hidden;\n}\n.card-img {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n  aspect-ratio: 1/1;\n}\n.card:hover .card-img {\n  transform: scale(1.05);\n}\n.card-item > a {\n  text-decoration: none;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  gap: 3rem;\n}\n.card {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n}\n.card-item {\n  flex: 1 1 100%;\n  max-width: 100%;\n}\n@media (min-width: 768px) {\n  .card-item {\n    flex: 1 1 calc(50% - 2rem);\n    max-width: calc(50% - 2rem);\n  }\n}\n@media (min-width: 992px) {\n  .card-item {\n    flex: 1 1 calc(33.333% - 2rem);\n    max-width: calc(33.333% - 2rem);\n  }\n}\na:hover {\n  text-shadow: none;\n}\n.card:hover .card-footer small i {\n  color: white;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  transition: all 0.3s ease;\n}\n.card-footer small i {\n  color: inherit;\n  text-shadow: none;\n  transition: all 0.3s ease;\n}\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/band.jpg);\n}\n/*# sourceMappingURL=members.component.css.map */\n"] }]
-  }], null, null);
+</div>
+`, styles: ["/* src/app/members/members.component.css */\n.card {\n  overflow: hidden;\n}\n.card-img {\n  width: 100%;\n  height: auto;\n  object-fit: cover;\n  transition: transform 0.3s ease;\n  display: block;\n  aspect-ratio: 1/1;\n}\n.card:hover .card-img {\n  transform: scale(1.05);\n}\n.card-item > a {\n  text-decoration: none;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n  gap: 3rem;\n}\n.card {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n}\n.card-item {\n  flex: 1 1 100%;\n  max-width: 100%;\n}\n@media (min-width: 768px) {\n  .card-item {\n    flex: 1 1 calc(50% - 2rem);\n    max-width: calc(50% - 2rem);\n  }\n}\n@media (min-width: 992px) {\n  .card-item {\n    flex: 1 1 calc(33.333% - 2rem);\n    max-width: calc(33.333% - 2rem);\n  }\n}\na:hover {\n  text-shadow: none;\n}\n.card:hover .card-footer small i {\n  color: white;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  transition: all 0.3s ease;\n}\n.card-footer small i {\n  color: inherit;\n  text-shadow: none;\n  transition: all 0.3s ease;\n}\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/band-banner.jpg);\n}\n/*# sourceMappingURL=members.component.css.map */\n"] }]
+  }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(MembersComponent, { className: "MembersComponent", filePath: "src/app/members/members.component.ts", lineNumber: 10 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(MembersComponent, { className: "MembersComponent", filePath: "src/app/members/members.component.ts", lineNumber: 15 });
 })();
 
 // src/app/members/jacopo/jacopo.component.ts
 var JacopoComponent = class _JacopoComponent {
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    this.shared.scrollUp();
+  }
   static \u0275fac = function JacopoComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _JacopoComponent)();
+    return new (__ngFactoryType__ || _JacopoComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _JacopoComponent, selectors: [["app-jacopo"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function JacopoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _JacopoComponent, selectors: [["app-jacopo"]], decls: 30, vars: 21, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"], ["src", "media/band/jacopo/jacopo.jpg", "alt", "Jacopo", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3", "text-center"]], template: function JacopoComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
       \u0275\u0275text(3, " Jacopo ");
@@ -40686,30 +40913,78 @@ var JacopoComponent = class _JacopoComponent {
       \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
       \u0275\u0275text(6, " \xA0 ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
-      \u0275\u0275text(9, "Work in progress...");
+      \u0275\u0275elementStart(7, "div", 4);
+      \u0275\u0275element(8, "img", 5);
+      \u0275\u0275elementStart(9, "p");
+      \u0275\u0275text(10);
+      \u0275\u0275pipe(11, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(10, "img", 6);
-      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(12, "p");
+      \u0275\u0275text(13);
+      \u0275\u0275pipe(14, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(15, "p");
+      \u0275\u0275text(16);
+      \u0275\u0275pipe(17, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(18, "p");
+      \u0275\u0275text(19);
+      \u0275\u0275pipe(20, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(21, "p");
+      \u0275\u0275text(22);
+      \u0275\u0275pipe(23, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(24, "p");
+      \u0275\u0275text(25);
+      \u0275\u0275pipe(26, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(27, "p");
+      \u0275\u0275text(28);
+      \u0275\u0275pipe(29, "translate");
+      \u0275\u0275elementEnd()()();
     }
-  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/jacopo/jacopo-title.jpg);\n}\n/*# sourceMappingURL=jacopo.component.css.map */"] });
+    if (rf & 2) {
+      \u0275\u0275advance(10);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 7, "jacopo_intro"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 9, "jacopo_passione_rock"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 11, "jacopo_blues"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 13, "jacopo_busking"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 15, "jacopo_studio"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 17, "jacopo_progetto"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(29, 19, "jacopo_oggi"), " ");
+    }
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/jacopo/jacopo-title.jpg);\n}\n/*# sourceMappingURL=jacopo.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(JacopoComponent, [{
     type: Component,
-    args: [{ selector: "app-jacopo", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Jacopo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/jacopo/jacopo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/jacopo/jacopo-title.jpg);\n}\n/*# sourceMappingURL=jacopo.component.css.map */\n"] }]
-  }], null, null);
+    args: [{ selector: "app-jacopo", imports: [
+      TranslateModule
+    ], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Jacopo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3 text-center" src="media/band/jacopo/jacopo.jpg"\n            alt="Jacopo" />\n        <p>\n            {{"jacopo_intro" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_passione_rock" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_blues" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_busking" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_studio" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_progetto" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_oggi" | translate}}\n        </p>\n\n    </div>\n</div>', styles: ["/* src/app/members/jacopo/jacopo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/jacopo/jacopo-title.jpg);\n}\n/*# sourceMappingURL=jacopo.component.css.map */\n"] }]
+  }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(JacopoComponent, { className: "JacopoComponent", filePath: "src/app/members/jacopo/jacopo.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(JacopoComponent, { className: "JacopoComponent", filePath: "src/app/members/jacopo/jacopo.component.ts", lineNumber: 13 });
 })();
 
 // src/app/members/eros/eros.component.ts
 var ErosComponent = class _ErosComponent {
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    this.shared.scrollUp();
+  }
   static \u0275fac = function ErosComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _ErosComponent)();
+    return new (__ngFactoryType__ || _ErosComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ErosComponent, selectors: [["app-eros"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function ErosComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ErosComponent, selectors: [["app-eros"]], decls: 30, vars: 21, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"], ["src", "media/band/eros/eros.jpg", "alt", "Eros", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3"]], template: function ErosComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
       \u0275\u0275text(3, " Eros ");
@@ -40717,30 +40992,78 @@ var ErosComponent = class _ErosComponent {
       \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
       \u0275\u0275text(6, " \xA0 ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
-      \u0275\u0275text(9, "Work in progress...");
+      \u0275\u0275elementStart(7, "div", 4);
+      \u0275\u0275element(8, "img", 5);
+      \u0275\u0275elementStart(9, "p");
+      \u0275\u0275text(10);
+      \u0275\u0275pipe(11, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(10, "img", 6);
-      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(12, "p");
+      \u0275\u0275text(13);
+      \u0275\u0275pipe(14, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(15, "p");
+      \u0275\u0275text(16);
+      \u0275\u0275pipe(17, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(18, "p");
+      \u0275\u0275text(19);
+      \u0275\u0275pipe(20, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(21, "p");
+      \u0275\u0275text(22);
+      \u0275\u0275pipe(23, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(24, "p");
+      \u0275\u0275text(25);
+      \u0275\u0275pipe(26, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(27, "p");
+      \u0275\u0275text(28);
+      \u0275\u0275pipe(29, "translate");
+      \u0275\u0275elementEnd()()();
     }
-  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/eros/eros-title.jpg);\n}\n/*# sourceMappingURL=eros.component.css.map */"] });
+    if (rf & 2) {
+      \u0275\u0275advance(10);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 7, "eros_intro"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 9, "eros_piano"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 11, "eros_chitarra_basso"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 13, "eros_primo_progetto"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 15, "eros_milano"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 17, "eros_provino"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(29, 19, "eros_professionalita"), " ");
+    }
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/eros/eros-title.jpg);\n}\n/*# sourceMappingURL=eros.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ErosComponent, [{
     type: Component,
-    args: [{ selector: "app-eros", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Eros\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/eros/eros.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/eros/eros-title.jpg);\n}\n/*# sourceMappingURL=eros.component.css.map */\n"] }]
-  }], null, null);
+    args: [{ selector: "app-eros", imports: [
+      TranslateModule
+    ], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Eros\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/eros/eros.jpg" alt="Eros" />\n        <p>\n            {{"eros_intro" | translate}}\n        </p>\n\n        <p>\n            {{"eros_piano" | translate}}\n        </p>\n\n        <p>\n            {{"eros_chitarra_basso" | translate}}\n        </p>\n\n        <p>\n            {{"eros_primo_progetto" | translate}}\n        </p>\n\n        <p>\n            {{"eros_milano" | translate}}\n        </p>\n\n        <p>\n            {{"eros_provino" | translate}}\n        </p>\n\n        <p>\n            {{"eros_professionalita" | translate}}\n        </p>\n\n    </div>\n</div>', styles: ["/* src/app/members/eros/eros.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/eros/eros-title.jpg);\n}\n/*# sourceMappingURL=eros.component.css.map */\n"] }]
+  }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ErosComponent, { className: "ErosComponent", filePath: "src/app/members/eros/eros.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ErosComponent, { className: "ErosComponent", filePath: "src/app/members/eros/eros.component.ts", lineNumber: 13 });
 })();
 
 // src/app/members/francesco/francesco.component.ts
 var FrancescoComponent = class _FrancescoComponent {
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    this.shared.scrollUp();
+  }
   static \u0275fac = function FrancescoComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _FrancescoComponent)();
+    return new (__ngFactoryType__ || _FrancescoComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FrancescoComponent, selectors: [["app-francesco"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function FrancescoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FrancescoComponent, selectors: [["app-francesco"]], decls: 42, vars: 33, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"], ["src", "media/band/francesco/francesco.jpg", "alt", "Francesco", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3", "text-center"]], template: function FrancescoComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
       \u0275\u0275text(3, " Francesco ");
@@ -40748,104 +41071,89 @@ var FrancescoComponent = class _FrancescoComponent {
       \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
       \u0275\u0275text(6, " \xA0 ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
-      \u0275\u0275text(9, "Work in progress...");
+      \u0275\u0275elementStart(7, "div", 4);
+      \u0275\u0275element(8, "img", 5);
+      \u0275\u0275elementStart(9, "p");
+      \u0275\u0275text(10);
+      \u0275\u0275pipe(11, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(10, "img", 6);
-      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(12, "p");
+      \u0275\u0275text(13);
+      \u0275\u0275pipe(14, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(15, "p");
+      \u0275\u0275text(16);
+      \u0275\u0275pipe(17, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(18, "p");
+      \u0275\u0275text(19);
+      \u0275\u0275pipe(20, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(21, "p");
+      \u0275\u0275text(22);
+      \u0275\u0275pipe(23, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(24, "p");
+      \u0275\u0275text(25);
+      \u0275\u0275pipe(26, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(27, "p");
+      \u0275\u0275text(28);
+      \u0275\u0275pipe(29, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(30, "p");
+      \u0275\u0275text(31);
+      \u0275\u0275pipe(32, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(33, "p");
+      \u0275\u0275text(34);
+      \u0275\u0275pipe(35, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(36, "p");
+      \u0275\u0275text(37);
+      \u0275\u0275pipe(38, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(39, "p");
+      \u0275\u0275text(40);
+      \u0275\u0275pipe(41, "translate");
+      \u0275\u0275elementEnd()()();
     }
-  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/francesco/francesco-title.jpg);\n}\n/*# sourceMappingURL=francesco.component.css.map */"] });
+    if (rf & 2) {
+      \u0275\u0275advance(10);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 11, "francesco_bio_1"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 13, "francesco_bio_2"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 15, "francesco_bio_3"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 17, "francesco_bio_4"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 19, "francesco_bio_5"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 21, "francesco_bio_6"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(29, 23, "francesco_bio_7"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(32, 25, "francesco_bio_8"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(35, 27, "francesco_bio_9"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(38, 29, "francesco_bio_10"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(41, 31, "francesco_bio_11"), " ");
+    }
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/francesco/francesco-title.jpg);\n}\n/*# sourceMappingURL=francesco.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FrancescoComponent, [{
     type: Component,
-    args: [{ selector: "app-francesco", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Francesco\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/francesco/francesco.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/francesco/francesco-title.jpg);\n}\n/*# sourceMappingURL=francesco.component.css.map */\n"] }]
-  }], null, null);
+    args: [{ selector: "app-francesco", imports: [
+      TranslateModule
+    ], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Francesco\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3 text-center" src="media/band/francesco/francesco.jpg"\n            alt="Francesco" />\n        <p>\n            {{ "francesco_bio_1" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_2" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_3" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_4" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_5" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_6" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_7" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_8" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_9" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_10" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_11" | translate }}\n        </p>\n    </div>\n</div>', styles: ["/* src/app/members/francesco/francesco.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/francesco/francesco-title.jpg);\n}\n/*# sourceMappingURL=francesco.component.css.map */\n"] }]
+  }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FrancescoComponent, { className: "FrancescoComponent", filePath: "src/app/members/francesco/francesco.component.ts", lineNumber: 9 });
-})();
-
-// src/app/services/shared.service.ts
-var SharedService = class _SharedService {
-  translate;
-  router;
-  viewportScroller;
-  activeLink = "default";
-  language = "en";
-  constructor(translate, router, viewportScroller) {
-    this.translate = translate;
-    this.router = router;
-    this.viewportScroller = viewportScroller;
-    this.languageSetup();
-    this.updateActiveLink(this.router.url);
-    this.router.events.subscribe(() => {
-      this.updateActiveLink(this.router.url);
-    });
-  }
-  ngOnInit() {
-  }
-  switchLanguage(lang) {
-    this.translate.use(lang);
-    this.language = lang;
-    localStorage.setItem("hth_lang", lang);
-  }
-  languageSetup() {
-    this.translate.setFallbackLang("en");
-    let localLanguage = localStorage.getItem("hth_lang");
-    if (localLanguage != void 0) {
-      this.translate.use(localLanguage);
-      this.language = localLanguage;
-    } else {
-      this.translate.use("en");
-      this.language = "en";
-    }
-  }
-  updateActiveLink(url) {
-    if (url === "/" || url === "/home") {
-      this.activeLink = "home";
-    } else if (url.startsWith("/concerts")) {
-      this.activeLink = "concerts";
-    } else if (url.startsWith("/projects")) {
-      this.activeLink = "projects";
-    } else if (url.startsWith("/bio")) {
-      this.activeLink = "bio";
-    } else if (url.startsWith("/contacts")) {
-      this.activeLink = "contacts";
-    } else if (url.startsWith("/band")) {
-      this.activeLink = url.split("/", 3)[1] + "/" + url.split("/", 3)[2];
-    } else {
-      this.activeLink = "";
-    }
-  }
-  navigate(dest) {
-    this.activeLink = dest;
-    this.router.navigate([dest]);
-    this.triggerCloseButtonClick();
-  }
-  triggerCloseButtonClick() {
-    const closeButton = document.querySelector(".btn-close");
-    if (closeButton) {
-      closeButton.click();
-    } else {
-      console.warn("Bottone di chiusura non trovato.");
-    }
-  }
-  scrollUp() {
-    this.viewportScroller.scrollToPosition([0, 0]);
-  }
-  static \u0275fac = function SharedService_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _SharedService)(\u0275\u0275inject(TranslateService), \u0275\u0275inject(Router), \u0275\u0275inject(ViewportScroller));
-  };
-  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _SharedService, factory: _SharedService.\u0275fac, providedIn: "root" });
-};
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(SharedService, [{
-    type: Injectable,
-    args: [{
-      providedIn: "root"
-    }]
-  }], () => [{ type: TranslateService }, { type: Router }, { type: ViewportScroller }], null);
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FrancescoComponent, { className: "FrancescoComponent", filePath: "src/app/members/francesco/francesco.component.ts", lineNumber: 13 });
 })();
 
 // src/app/members/davide/davide.component.ts
@@ -40854,11 +41162,12 @@ var DavideComponent = class _DavideComponent {
   constructor(shared) {
     this.shared = shared;
     console.log(this.shared.activeLink);
+    this.shared.scrollUp();
   }
   static \u0275fac = function DavideComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _DavideComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DavideComponent, selectors: [["app-davide"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function DavideComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DavideComponent, selectors: [["app-davide"]], decls: 30, vars: 21, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"], ["src", "media/band/davide/davide.jpg", "alt", "Davide", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3"]], template: function DavideComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
       \u0275\u0275text(3, " Davide ");
@@ -40866,22 +41175,65 @@ var DavideComponent = class _DavideComponent {
       \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
       \u0275\u0275text(6, " \xA0 ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
-      \u0275\u0275text(9, "Work in progress...");
+      \u0275\u0275elementStart(7, "div", 4);
+      \u0275\u0275element(8, "img", 5);
+      \u0275\u0275elementStart(9, "p");
+      \u0275\u0275text(10);
+      \u0275\u0275pipe(11, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(10, "img", 6);
-      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(12, "p");
+      \u0275\u0275text(13);
+      \u0275\u0275pipe(14, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(15, "p");
+      \u0275\u0275text(16);
+      \u0275\u0275pipe(17, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(18, "p");
+      \u0275\u0275text(19);
+      \u0275\u0275pipe(20, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(21, "p");
+      \u0275\u0275text(22);
+      \u0275\u0275pipe(23, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(24, "p");
+      \u0275\u0275text(25);
+      \u0275\u0275pipe(26, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(27, "p");
+      \u0275\u0275text(28);
+      \u0275\u0275pipe(29, "translate");
+      \u0275\u0275elementEnd()()();
     }
-  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/davide/davide-title.jpg);\n}\n/*# sourceMappingURL=davide.component.css.map */"] });
+    if (rf & 2) {
+      \u0275\u0275advance(10);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 7, "davide_intro"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 9, "davide_spark"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 11, "davide_bass_choice"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 13, "davide_first_band"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 15, "davide_growth"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 17, "davide_join_hth"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(29, 19, "davide_today"), " ");
+    }
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/davide/davide-title.jpg);\n}\n/*# sourceMappingURL=davide.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DavideComponent, [{
     type: Component,
-    args: [{ selector: "app-davide", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Davide\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/davide/davide.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/davide/davide-title.jpg);\n}\n/*# sourceMappingURL=davide.component.css.map */\n"] }]
+    args: [{ selector: "app-davide", imports: [
+      TranslateModule
+    ], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Davide\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/davide/davide.jpg" alt="Davide" />\n        <p>\n            {{"davide_intro" | translate}}\n        </p>\n\n        <p>\n            {{"davide_spark" | translate}}\n        </p>\n\n        <p>\n            {{"davide_bass_choice" | translate}}\n        </p>\n\n        <p>\n            {{"davide_first_band" | translate}}\n        </p>\n\n        <p>\n            {{"davide_growth" | translate}}\n        </p>\n\n        <p>\n            {{"davide_join_hth" | translate}}\n        </p>\n\n        <p>\n            {{"davide_today" | translate}}\n        </p>\n\n    </div>\n</div>', styles: ["/* src/app/members/davide/davide.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/davide/davide-title.jpg);\n}\n/*# sourceMappingURL=davide.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(DavideComponent, { className: "DavideComponent", filePath: "src/app/members/davide/davide.component.ts", lineNumber: 10 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(DavideComponent, { className: "DavideComponent", filePath: "src/app/members/davide/davide.component.ts", lineNumber: 13 });
 })();
 
 // src/app/members/andrea/andrea.component.ts
@@ -40890,11 +41242,12 @@ var AndreaComponent = class _AndreaComponent {
   constructor(shared) {
     this.shared = shared;
     console.log(this.shared.activeLink);
+    this.shared.scrollUp();
   }
   static \u0275fac = function AndreaComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AndreaComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AndreaComponent, selectors: [["app-andrea"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function AndreaComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AndreaComponent, selectors: [["app-andrea"]], decls: 24, vars: 15, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"], ["src", "media/band/andrea/andrea.jpg", "alt", "Andrea", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3"]], template: function AndreaComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
       \u0275\u0275text(3, " Andrea ");
@@ -40902,30 +41255,66 @@ var AndreaComponent = class _AndreaComponent {
       \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
       \u0275\u0275text(6, " \xA0 ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
-      \u0275\u0275text(9, "Work in progress...");
+      \u0275\u0275elementStart(7, "div", 4);
+      \u0275\u0275element(8, "img", 5);
+      \u0275\u0275elementStart(9, "p");
+      \u0275\u0275text(10);
+      \u0275\u0275pipe(11, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(10, "img", 6);
-      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(12, "p");
+      \u0275\u0275text(13);
+      \u0275\u0275pipe(14, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(15, "p");
+      \u0275\u0275text(16);
+      \u0275\u0275pipe(17, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(18, "p");
+      \u0275\u0275text(19);
+      \u0275\u0275pipe(20, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(21, "p");
+      \u0275\u0275text(22);
+      \u0275\u0275pipe(23, "translate");
+      \u0275\u0275elementEnd()()();
     }
-  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(/media/band/andrea/andrea-title-4.jpg);\n}\n/*# sourceMappingURL=andrea.component.css.map */"] });
+    if (rf & 2) {
+      \u0275\u0275advance(10);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 5, "andrea_born_in_saronno"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 7, "andrea_graduation_2018"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 9, "andrea_post_studies_training"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 11, "andrea_teaching_career"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 13, "andrea_music_projects"), " ");
+    }
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(/media/band/andrea/andrea-title-4.jpg);\n}\n/*# sourceMappingURL=andrea.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AndreaComponent, [{
     type: Component,
-    args: [{ selector: "app-andrea", imports: [], template: '<div>\n<div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Andrea\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/andrea/andrea.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(/media/band/andrea/andrea-title-4.jpg);\n}\n/*# sourceMappingURL=andrea.component.css.map */\n"] }]
+    args: [{ selector: "app-andrea", imports: [
+      TranslateModule
+    ], template: '<div>\n<div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Andrea\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/andrea/andrea.jpg" alt="Andrea" />\n        <p>\n            {{"andrea_born_in_saronno" | translate}} \n        </p>\n        <p>\n            {{"andrea_graduation_2018" | translate}} \n        </p>\n        <p>\n            {{"andrea_post_studies_training" | translate}} \n        </p>\n        <p>\n            {{"andrea_teaching_career" | translate}} \n        </p>\n        <p>\n            {{"andrea_music_projects" | translate}} \n        </p>\n    </div>\n</div>', styles: ["/* src/app/members/andrea/andrea.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(/media/band/andrea/andrea-title-4.jpg);\n}\n/*# sourceMappingURL=andrea.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AndreaComponent, { className: "AndreaComponent", filePath: "src/app/members/andrea/andrea.component.ts", lineNumber: 10 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AndreaComponent, { className: "AndreaComponent", filePath: "src/app/members/andrea/andrea.component.ts", lineNumber: 13 });
 })();
 
 // src/app/members/lorenzo/lorenzo.component.ts
 var LorenzoComponent = class _LorenzoComponent {
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    this.shared.scrollUp();
+  }
   static \u0275fac = function LorenzoComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _LorenzoComponent)();
+    return new (__ngFactoryType__ || _LorenzoComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LorenzoComponent, selectors: [["app-lorenzo"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function LorenzoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LorenzoComponent, selectors: [["app-lorenzo"]], decls: 33, vars: 24, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"], ["src", "media/band/lorenzo/lorenzo.jpg", "alt", "Lorenzo", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3"]], template: function LorenzoComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
       \u0275\u0275text(3, " Lorenzo ");
@@ -40933,30 +41322,84 @@ var LorenzoComponent = class _LorenzoComponent {
       \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
       \u0275\u0275text(6, " \xA0 ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
-      \u0275\u0275text(9, "Work in progress...");
+      \u0275\u0275elementStart(7, "div", 4);
+      \u0275\u0275element(8, "img", 5);
+      \u0275\u0275elementStart(9, "p");
+      \u0275\u0275text(10);
+      \u0275\u0275pipe(11, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(10, "img", 6);
-      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(12, "p");
+      \u0275\u0275text(13);
+      \u0275\u0275pipe(14, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(15, "p");
+      \u0275\u0275text(16);
+      \u0275\u0275pipe(17, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(18, "p");
+      \u0275\u0275text(19);
+      \u0275\u0275pipe(20, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(21, "p");
+      \u0275\u0275text(22);
+      \u0275\u0275pipe(23, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(24, "p");
+      \u0275\u0275text(25);
+      \u0275\u0275pipe(26, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(27, "p");
+      \u0275\u0275text(28);
+      \u0275\u0275pipe(29, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(30, "p");
+      \u0275\u0275text(31);
+      \u0275\u0275pipe(32, "translate");
+      \u0275\u0275elementEnd()()();
     }
-  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/lorenzo/lorenzo-title.jpg);\n}\n/*# sourceMappingURL=lorenzo.component.css.map */"] });
+    if (rf & 2) {
+      \u0275\u0275advance(10);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 8, "lorenzo_intro"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 10, "lorenzo_studi"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 12, "lorenzo_masterclass"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 14, "lorenzo_interesse"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 16, "lorenzo_cornamusa"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 18, "lorenzo_cornamusa_oggi"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(29, 20, "lorenzo_festival"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(32, 22, "lorenzo_hth"), " ");
+    }
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/lorenzo/lorenzo-title-2.jpg);\n}\n/*# sourceMappingURL=lorenzo.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LorenzoComponent, [{
     type: Component,
-    args: [{ selector: "app-lorenzo", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Lorenzo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/lorenzo/lorenzo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/lorenzo/lorenzo-title.jpg);\n}\n/*# sourceMappingURL=lorenzo.component.css.map */\n"] }]
-  }], null, null);
+    args: [{ selector: "app-lorenzo", imports: [
+      TranslateModule
+    ], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Lorenzo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/lorenzo/lorenzo.jpg" alt="Lorenzo" />\n        <p>\n            {{"lorenzo_intro" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_studi" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_masterclass" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_interesse" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_cornamusa" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_cornamusa_oggi" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_festival" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_hth" | translate}}\n        </p>\n\n    </div>\n</div>', styles: ["/* src/app/members/lorenzo/lorenzo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/lorenzo/lorenzo-title-2.jpg);\n}\n/*# sourceMappingURL=lorenzo.component.css.map */\n"] }]
+  }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(LorenzoComponent, { className: "LorenzoComponent", filePath: "src/app/members/lorenzo/lorenzo.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(LorenzoComponent, { className: "LorenzoComponent", filePath: "src/app/members/lorenzo/lorenzo.component.ts", lineNumber: 13 });
 })();
 
 // src/app/members/matteo/matteo.component.ts
 var MatteoComponent = class _MatteoComponent {
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    this.shared.scrollUp();
+  }
   static \u0275fac = function MatteoComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _MatteoComponent)();
+    return new (__ngFactoryType__ || _MatteoComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MatteoComponent, selectors: [["app-matteo"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function MatteoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MatteoComponent, selectors: [["app-matteo"]], decls: 12, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], ["src", "media/band/matteo/matteo.jpg", "alt", "Matteo", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function MatteoComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
       \u0275\u0275text(3, " Matteo ");
@@ -40964,28 +41407,35 @@ var MatteoComponent = class _MatteoComponent {
       \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
       \u0275\u0275text(6, " \xA0 ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
-      \u0275\u0275text(9, "Work in progress...");
+      \u0275\u0275elementStart(7, "div", 4);
+      \u0275\u0275element(8, "img", 5);
+      \u0275\u0275elementStart(9, "h2", 6);
+      \u0275\u0275text(10, "Work in progress...");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(10, "img", 6);
+      \u0275\u0275element(11, "img", 7);
       \u0275\u0275elementEnd()();
     }
-  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/matteo/matteo-title.jpg);\n}\n/*# sourceMappingURL=matteo.component.css.map */"] });
+  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/matteo/matteo-title-2.jpg);\n}\n/*# sourceMappingURL=matteo.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatteoComponent, [{
     type: Component,
-    args: [{ selector: "app-matteo", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Matteo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/matteo/matteo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/matteo/matteo-title.jpg);\n}\n/*# sourceMappingURL=matteo.component.css.map */\n"] }]
-  }], null, null);
+    args: [{ selector: "app-matteo", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Matteo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/matteo/matteo.jpg" alt="Matteo" />\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/matteo/matteo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/matteo/matteo-title-2.jpg);\n}\n/*# sourceMappingURL=matteo.component.css.map */\n"] }]
+  }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(MatteoComponent, { className: "MatteoComponent", filePath: "src/app/members/matteo/matteo.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(MatteoComponent, { className: "MatteoComponent", filePath: "src/app/members/matteo/matteo.component.ts", lineNumber: 10 });
 })();
 
 // src/app/bio/bio.component.ts
 var BioComponent = class _BioComponent {
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    this.shared.scrollUp();
+  }
   static \u0275fac = function BioComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _BioComponent)();
+    return new (__ngFactoryType__ || _BioComponent)(\u0275\u0275directiveInject(SharedService));
   };
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _BioComponent, selectors: [["app-bio"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function BioComponent_Template(rf, ctx) {
     if (rf & 1) {
@@ -41007,10 +41457,10 @@ var BioComponent = class _BioComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(BioComponent, [{
     type: Component,
     args: [{ selector: "app-bio", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n            <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n                Bio\n            </h1>\n        </div>\n        <div class="bg-grad">\n            <h1 class="text-center p-0 m-0">\n                &nbsp;\n            </h1>\n        </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/bio/bio.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/bio/bio.jpg);\n}\n/*# sourceMappingURL=bio.component.css.map */\n"] }]
-  }], null, null);
+  }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(BioComponent, { className: "BioComponent", filePath: "src/app/bio/bio.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(BioComponent, { className: "BioComponent", filePath: "src/app/bio/bio.component.ts", lineNumber: 10 });
 })();
 
 // src/app/concerts/concerts.component.ts
@@ -41020,27 +41470,30 @@ function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Condi
     \u0275\u0275element(1, "br");
   }
   if (rf & 2) {
-    const event_r1 = \u0275\u0275nextContext().$implicit;
-    \u0275\u0275textInterpolate1(" ", event_r1.description, "");
+    const event_r2 = \u0275\u0275nextContext().$implicit;
+    \u0275\u0275textInterpolate1(" ", event_r2.description, "");
   }
 }
 function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_For_12_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "a", 17);
-    \u0275\u0275element(1, "i", 18);
-    \u0275\u0275text(2);
+    \u0275\u0275element(0, "i", 18);
+    \u0275\u0275text(1, "\xA0");
+    \u0275\u0275elementStart(2, "a", 19);
+    \u0275\u0275text(3);
     \u0275\u0275elementEnd();
-    \u0275\u0275element(3, "br");
+    \u0275\u0275element(4, "br");
   }
   if (rf & 2) {
-    const link_r2 = ctx.$implicit;
-    \u0275\u0275property("href", link_r2.value, \u0275\u0275sanitizeUrl);
+    const link_r3 = ctx.$implicit;
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate1("\xA0", link_r2.key, "");
+    \u0275\u0275property("href", link_r3.value, \u0275\u0275sanitizeUrl);
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(link_r3.key);
   }
 }
 function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Template(rf, ctx) {
   if (rf & 1) {
+    const _r1 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "div", 7)(1, "div", 8)(2, "div", 9);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
@@ -41051,27 +41504,34 @@ function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Templ
     \u0275\u0275elementStart(8, "div", 13);
     \u0275\u0275template(9, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Conditional_9_Template, 2, 1);
     \u0275\u0275elementStart(10, "div", 14);
-    \u0275\u0275repeaterCreate(11, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_For_12_Template, 4, 2, null, null, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275repeaterCreate(11, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_For_12_Template, 5, 2, null, null, \u0275\u0275repeaterTrackByIndex);
     \u0275\u0275elementEnd()();
     \u0275\u0275element(13, "hr", 12);
     \u0275\u0275elementStart(14, "div", 15);
     \u0275\u0275element(15, "i", 16);
-    \u0275\u0275text(16);
-    \u0275\u0275elementEnd()()()();
+    \u0275\u0275text(16, "\xA0 ");
+    \u0275\u0275elementStart(17, "a", 17);
+    \u0275\u0275listener("click", function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Template_a_click_17_listener() {
+      const event_r2 = \u0275\u0275restoreView(_r1).$implicit;
+      const ctx_r3 = \u0275\u0275nextContext(4);
+      return \u0275\u0275resetView(ctx_r3.openMap(event_r2.location));
+    });
+    \u0275\u0275text(18);
+    \u0275\u0275elementEnd()()()()();
   }
   if (rf & 2) {
-    const event_r1 = ctx.$implicit;
-    const ctx_r2 = \u0275\u0275nextContext(4);
+    const event_r2 = ctx.$implicit;
+    const ctx_r3 = \u0275\u0275nextContext(4);
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate2(" ", ctx_r2.formatDate(ctx_r2.separateDateAndTime(event_r1.start.dateTime).date), " h", ctx_r2.formatTime(event_r1.start.dateTime), " ");
+    \u0275\u0275textInterpolate2(" ", ctx_r3.formatDate(ctx_r3.separateDateAndTime(event_r2.start.dateTime).date), " h", ctx_r3.formatTime(event_r2.start.dateTime), " ");
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate(event_r1.summary);
+    \u0275\u0275textInterpolate(event_r2.summary);
     \u0275\u0275advance(3);
-    \u0275\u0275conditional(event_r1.description != "" ? 9 : -1);
+    \u0275\u0275conditional(event_r2.description != "" ? 9 : -1);
     \u0275\u0275advance(2);
-    \u0275\u0275repeater(event_r1.links);
-    \u0275\u0275advance(5);
-    \u0275\u0275textInterpolate1(" ", event_r1.location, " ");
+    \u0275\u0275repeater(event_r2.links);
+    \u0275\u0275advance(7);
+    \u0275\u0275textInterpolate1(" ", event_r2.location, " ");
   }
 }
 function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_Template(rf, ctx) {
@@ -41080,14 +41540,14 @@ function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_Template(rf
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275repeaterCreate(3, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Template, 17, 5, "div", 7, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275repeaterCreate(3, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Template, 19, 5, "div", 7, \u0275\u0275repeaterTrackByIndex);
   }
   if (rf & 2) {
-    const ctx_r2 = \u0275\u0275nextContext(3);
+    const ctx_r3 = \u0275\u0275nextContext(3);
     \u0275\u0275advance();
     \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, "Next concerts"));
     \u0275\u0275advance(2);
-    \u0275\u0275repeater(ctx_r2.upcoming);
+    \u0275\u0275repeater(ctx_r3.upcoming);
   }
 }
 function ConcertsComponent_Conditional_9_Conditional_0_Template(rf, ctx) {
@@ -41095,8 +41555,8 @@ function ConcertsComponent_Conditional_9_Conditional_0_Template(rf, ctx) {
     \u0275\u0275template(0, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_Template, 5, 3);
   }
   if (rf & 2) {
-    const ctx_r2 = \u0275\u0275nextContext(2);
-    \u0275\u0275conditional(ctx_r2.upcoming.length > 0 ? 0 : -1);
+    const ctx_r3 = \u0275\u0275nextContext(2);
+    \u0275\u0275conditional(ctx_r3.upcoming.length > 0 ? 0 : -1);
   }
 }
 function ConcertsComponent_Conditional_9_Conditional_1_Template(rf, ctx) {
@@ -41111,17 +41571,17 @@ function ConcertsComponent_Conditional_9_Template(rf, ctx) {
     \u0275\u0275template(0, ConcertsComponent_Conditional_9_Conditional_0_Template, 1, 1)(1, ConcertsComponent_Conditional_9_Conditional_1_Template, 2, 0, "h2", 6);
   }
   if (rf & 2) {
-    const ctx_r2 = \u0275\u0275nextContext();
-    \u0275\u0275conditional(ctx_r2.events.length > 0 ? 0 : ctx_r2.events.length == 0 ? 1 : -1);
+    const ctx_r3 = \u0275\u0275nextContext();
+    \u0275\u0275conditional(ctx_r3.events.length > 0 ? 0 : ctx_r3.events.length == 0 ? 1 : -1);
   }
 }
 function ConcertsComponent_Conditional_10_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 5)(1, "h2", 19);
+    \u0275\u0275elementStart(0, "div", 5)(1, "h2", 20);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 20)(5, "span", 21);
+    \u0275\u0275elementStart(4, "div", 21)(5, "span", 22);
     \u0275\u0275text(6);
     \u0275\u0275pipe(7, "translate");
     \u0275\u0275elementEnd()()();
@@ -41142,8 +41602,11 @@ var ConcertsComponent = class _ConcertsComponent {
   pastShown = [];
   today = /* @__PURE__ */ new Date();
   loading = false;
-  constructor(calendarService) {
+  shared;
+  constructor(calendarService, shared) {
     this.calendar = calendarService;
+    this.shared = shared;
+    this.shared.scrollUp();
   }
   ngAfterViewInit() {
   }
@@ -41155,6 +41618,23 @@ var ConcertsComponent = class _ConcertsComponent {
       this.filterEvents(this.events);
       this.loading = false;
     });
+  }
+  openMap(location2) {
+    if (!location2)
+      return;
+    const encoded = encodeURIComponent(location2);
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (isIOS) {
+      const appleMapsUrl = `maps://?q=${encoded}`;
+      const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+      const timeout = setTimeout(() => {
+        window.open(googleMapsUrl, "_blank");
+      }, 500);
+      window.location.href = appleMapsUrl;
+    } else {
+      const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+      window.open(googleMapsUrl, "_blank");
+    }
   }
   filterEvents(events) {
     let todayYyyyMmDd = this.separateDateAndTime(this.today.toISOString())["date"];
@@ -41283,9 +41763,9 @@ var ConcertsComponent = class _ConcertsComponent {
     console.log(this.past);
   }
   static \u0275fac = function ConcertsComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _ConcertsComponent)(\u0275\u0275directiveInject(CalendarService));
+    return new (__ngFactoryType__ || _ConcertsComponent)(\u0275\u0275directiveInject(CalendarService), \u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 11, vars: 4, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "anton", "text-uppercase"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["target", "_blank", 3, "href"], [1, "fa-solid", "fa-link"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function ConcertsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 11, vars: 4, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "anton", "text-uppercase"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], [1, "fa-solid", "fa-link"], ["target", "_blank", 3, "href"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function ConcertsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
       \u0275\u0275text(3);
@@ -41348,13 +41828,16 @@ var ConcertsComponent = class _ConcertsComponent {
                                         }
                                         <div class="m-1">
                                             @for (link of event.links; track $index) {
-                                                <a target="_blank" [href]="link.value"><i class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
+                                                <i class="fa-solid fa-link"></i>&nbsp;<a target="_blank" [href]="link.value">{{link.key}}</a><br>
                                             }
                                         </div>
                                     </div>
                                     <hr class="m-0">
                                     <div class="card-body rounded-0">
-                                        <i class="fa-solid fa-location-dot"></i> {{event.location}}
+                                        <i class="fa-solid fa-location-dot"></i>&nbsp;
+                                        <a href="javascript:void(0)" (click)="openMap(event.location)">
+                                            {{event.location}}
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -41423,16 +41906,21 @@ var ConcertsComponent = class _ConcertsComponent {
         }
     </div>
 </div>`, styles: ["/* src/app/concerts/concerts.component.css */\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/concerts/concerts.jpg);\n}\n/*# sourceMappingURL=concerts.component.css.map */\n"] }]
-  }], () => [{ type: CalendarService }], null);
+  }], () => [{ type: CalendarService }, { type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ConcertsComponent, { className: "ConcertsComponent", filePath: "src/app/concerts/concerts.component.ts", lineNumber: 13 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ConcertsComponent, { className: "ConcertsComponent", filePath: "src/app/concerts/concerts.component.ts", lineNumber: 14 });
 })();
 
 // src/app/projects/projects.component.ts
 var ProjectsComponent = class _ProjectsComponent {
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    this.shared.scrollUp();
+  }
   static \u0275fac = function ProjectsComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _ProjectsComponent)();
+    return new (__ngFactoryType__ || _ProjectsComponent)(\u0275\u0275directiveInject(SharedService));
   };
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectsComponent, selectors: [["app-projects"]], decls: 12, vars: 3, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function ProjectsComponent_Template(rf, ctx) {
     if (rf & 1) {
@@ -41458,9 +41946,7 @@ var ProjectsComponent = class _ProjectsComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ProjectsComponent, [{
     type: Component,
-    args: [{ selector: "app-projects", imports: [
-      TranslateModule
-    ], template: `<div>
+    args: [{ selector: "app-projects", imports: [TranslateModule], template: `<div>
     <div class="container-fluid bg-title">
         <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
             {{'Projects' | translate}}
@@ -41476,18 +41962,23 @@ var ProjectsComponent = class _ProjectsComponent {
         <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">
     </div>
 </div>`, styles: ["/* src/app/projects/projects.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/projects/projects.jpg);\n}\n/*# sourceMappingURL=projects.component.css.map */\n"] }]
-  }], null, null);
+  }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ProjectsComponent, { className: "ProjectsComponent", filePath: "src/app/projects/projects.component.ts", lineNumber: 12 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ProjectsComponent, { className: "ProjectsComponent", filePath: "src/app/projects/projects.component.ts", lineNumber: 11 });
 })();
 
 // src/app/contacts/contacts.component.ts
 var ContactsComponent = class _ContactsComponent {
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    this.shared.scrollUp();
+  }
   static \u0275fac = function ContactsComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _ContactsComponent)();
+    return new (__ngFactoryType__ || _ContactsComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactsComponent, selectors: [["app-contacts"]], decls: 12, vars: 3, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function ContactsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactsComponent, selectors: [["app-contacts"]], decls: 30, vars: 6, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [2, "list-style", "none"], [1, "fa-solid", "fa-phone"], [1, "fa-solid", "fa-envelope"], ["href", "mailto:hthtribute@gmail.com"]], template: function ContactsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
       \u0275\u0275text(3);
@@ -41496,15 +41987,38 @@ var ContactsComponent = class _ContactsComponent {
       \u0275\u0275elementStart(5, "div", 2)(6, "h1", 3);
       \u0275\u0275text(7, " \xA0 ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(8, "div", 4)(9, "h2", 5);
-      \u0275\u0275text(10, "Work in progress...");
+      \u0275\u0275elementStart(8, "div", 4)(9, "p");
+      \u0275\u0275text(10);
+      \u0275\u0275pipe(11, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(11, "img", 6);
-      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(12, "ul", 5)(13, "li");
+      \u0275\u0275element(14, "i", 6);
+      \u0275\u0275text(15, "\xA0");
+      \u0275\u0275elementStart(16, "b");
+      \u0275\u0275text(17, "Jacopo:");
+      \u0275\u0275elementEnd();
+      \u0275\u0275text(18, " (+39) 334 6197414 ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(19, "li");
+      \u0275\u0275element(20, "i", 6);
+      \u0275\u0275text(21, "\xA0");
+      \u0275\u0275elementStart(22, "b");
+      \u0275\u0275text(23, "Eros:");
+      \u0275\u0275elementEnd();
+      \u0275\u0275text(24, " (+39) 327 8640017 ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(25, "li");
+      \u0275\u0275element(26, "i", 7);
+      \u0275\u0275text(27, "\xA0");
+      \u0275\u0275elementStart(28, "a", 8);
+      \u0275\u0275text(29, "hthtribute@gmail.com");
+      \u0275\u0275elementEnd()()()()();
     }
     if (rf & 2) {
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 1, "Contacts"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 2, "Contacts"), " ");
+      \u0275\u0275advance(7);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 4, "Dare to bring Highway to Hell's energy to your stage? Get in touch!"), " ");
     }
   }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/contacts/contacts.jpg);\n}\n/*# sourceMappingURL=contacts.component.css.map */"] });
 };
@@ -41515,30 +42029,48 @@ var ContactsComponent = class _ContactsComponent {
       TranslateModule
     ], template: `<div>
     <div class="container-fluid bg-title">
-            <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
-                {{'Contacts' | translate}}
-            </h1>
-        </div>
-        <div class="bg-grad">
-            <h1 class="text-center p-0 m-0">
-                &nbsp;
-            </h1>
-        </div>
+        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
+            {{'Contacts' | translate}}
+        </h1>
+    </div>
+    <div class="bg-grad">
+        <h1 class="text-center p-0 m-0">
+            &nbsp;
+        </h1>
+    </div>
     <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">
-        <h2 class="title text-uppercase anton">Work in progress...</h2>
-        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">
+        <!-- <h2 class="anton text-uppercase">{{'Get in touch!' | translate}}</h2> -->
+        <p>
+            {{ "Dare to bring Highway to Hell's energy to your stage? Get in touch!" | translate }}
+        </p>
+        <ul style="list-style: none;">
+            <li>
+                <i class="fa-solid fa-phone"></i>&nbsp;<b>Jacopo:</b> (+39) 334 6197414
+            </li>
+            <li>
+                <i class="fa-solid fa-phone"></i>&nbsp;<b>Eros:</b> (+39) 327 8640017
+            </li>
+            <li>
+                <i class="fa-solid fa-envelope"></i>&nbsp;<a href="mailto:hthtribute@gmail.com">hthtribute&#64;gmail.com</a>
+            </li>
+        </ul> 
     </div>
 </div>`, styles: ["/* src/app/contacts/contacts.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/contacts/contacts.jpg);\n}\n/*# sourceMappingURL=contacts.component.css.map */\n"] }]
-  }], null, null);
+  }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ContactsComponent, { className: "ContactsComponent", filePath: "src/app/contacts/contacts.component.ts", lineNumber: 12 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ContactsComponent, { className: "ContactsComponent", filePath: "src/app/contacts/contacts.component.ts", lineNumber: 13 });
 })();
 
 // src/app/privacy-policy/privacy-policy.component.ts
 var PrivacyPolicyComponent = class _PrivacyPolicyComponent {
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    this.shared.scrollUp();
+  }
   static \u0275fac = function PrivacyPolicyComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _PrivacyPolicyComponent)();
+    return new (__ngFactoryType__ || _PrivacyPolicyComponent)(\u0275\u0275directiveInject(SharedService));
   };
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PrivacyPolicyComponent, selectors: [["app-privacy-policy"]], decls: 2, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"]], template: function PrivacyPolicyComponent_Template(rf, ctx) {
     if (rf & 1) {
@@ -41552,10 +42084,10 @@ var PrivacyPolicyComponent = class _PrivacyPolicyComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PrivacyPolicyComponent, [{
     type: Component,
     args: [{ selector: "app-privacy-policy", imports: [], template: '<h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n    Privacy Policy\n</h1>' }]
-  }], null, null);
+  }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PrivacyPolicyComponent, { className: "PrivacyPolicyComponent", filePath: "src/app/privacy-policy/privacy-policy.component.ts", lineNumber: 9 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PrivacyPolicyComponent, { className: "PrivacyPolicyComponent", filePath: "src/app/privacy-policy/privacy-policy.component.ts", lineNumber: 10 });
 })();
 
 // src/app/app.routes.ts
@@ -46050,17 +46582,32 @@ var appConfig = {
 };
 
 // src/app/header/header.component.ts
-function HeaderComponent_Conditional_68_Template(rf, ctx) {
+function HeaderComponent_Conditional_8_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0, " \u{1F1EC}\u{1F1E7} ");
   }
 }
-function HeaderComponent_Conditional_69_Template(rf, ctx) {
+function HeaderComponent_Conditional_9_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0, " \u{1F1EE}\u{1F1F9} ");
   }
 }
-function HeaderComponent_Conditional_70_Template(rf, ctx) {
+function HeaderComponent_Conditional_10_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275text(0, " \u{1F1E9}\u{1F1EA} ");
+  }
+}
+function HeaderComponent_Conditional_85_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275text(0, " \u{1F1EC}\u{1F1E7} ");
+  }
+}
+function HeaderComponent_Conditional_86_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275text(0, " \u{1F1EE}\u{1F1F9} ");
+  }
+}
+function HeaderComponent_Conditional_87_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0, " \u{1F1E9}\u{1F1EA} ");
   }
@@ -46076,7 +46623,7 @@ var HeaderComponent = class _HeaderComponent {
   static \u0275fac = function HeaderComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _HeaderComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 81, vars: 46, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0", "my-0"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", "squealer", 3, "click"], ["src", "/media/hth-logo.png", "alt", "HTH Logo", 2, "max-height", "50px"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end", "border-0"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/projects", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/bio", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "bandDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "bandDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/band/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/band/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/band/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/band/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/band/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 98, vars: 47, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0", "my-0"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", "squealer", 3, "click"], ["src", "/media/hth-logo.png", "alt", "HTH Logo", 2, "max-height", "50px"], [1, "navbar-brand", "clickable", "my-1", "squealer", "d-none", "d-lg-inline", 3, "click"], [1, "d-lg-none", "ms-2", "position-relative"], ["data-bs-toggle", "dropdown", "type", "button", 1, "btn", "btn-sm", "dropdown-toggle"], [1, "dropdown-menu", "dropdown-menu-end", "text-center", "mobile-lang-menu"], [1, "clickable"], [1, "dropdown-item", "anton", 3, "click"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end", "border-0"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/projects", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/bio", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "bandDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "bandDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/band/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/band/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/band/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/band/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/band/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "d-none", "d-lg-block"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
       \u0275\u0275elementStart(0, "nav", 1)(1, "div", 2)(2, "span", 3);
@@ -46085,155 +46632,187 @@ var HeaderComponent = class _HeaderComponent {
         return \u0275\u0275resetView(ctx.navigate("home"));
       });
       \u0275\u0275element(3, "img", 4);
-      \u0275\u0275text(4, "\xA0Highway to Hell ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(5, "button", 5);
-      \u0275\u0275element(6, "span", 6);
+      \u0275\u0275elementStart(4, "span", 5);
+      \u0275\u0275listener("click", function HeaderComponent_Template_span_click_4_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.navigate("home"));
+      });
+      \u0275\u0275text(5, " \xA0Highway to Hell ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(7, "div", 7, 0)(9, "div", 8);
-      \u0275\u0275element(10, "img", 9)(11, "button", 10);
+      \u0275\u0275elementStart(6, "span", 6)(7, "button", 7);
+      \u0275\u0275template(8, HeaderComponent_Conditional_8_Template, 1, 0)(9, HeaderComponent_Conditional_9_Template, 1, 0)(10, HeaderComponent_Conditional_10_Template, 1, 0);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(12, "div", 11)(13, "ul", 12)(14, "li", 13)(15, "a", 14);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_15_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(16, "Home");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(17, "li", 13)(18, "a", 15);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_18_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(19);
-      \u0275\u0275pipe(20, "translate");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(21, "li", 13)(22, "a", 16);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_22_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(23);
-      \u0275\u0275pipe(24, "translate");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(25, "li", 13)(26, "a", 17);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_26_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(27, "Bio");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(28, "li", 18)(29, "button", 19);
-      \u0275\u0275text(30);
-      \u0275\u0275pipe(31, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(32, "ul", 20)(33, "li")(34, "a", 21);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_34_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(35, "Jacopo ");
-      \u0275\u0275element(36, "i", 22);
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(37, "li")(38, "a", 23);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_38_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(39, "Eros ");
-      \u0275\u0275element(40, "i", 24);
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(41, "li")(42, "a", 25);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_42_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(43, "Francesco ");
-      \u0275\u0275element(44, "i", 22);
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(45, "li")(46, "a", 26);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_46_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(47, "Davide ");
-      \u0275\u0275element(48, "i", 22);
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(49, "li")(50, "a", 27);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_50_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(51, "Andrea ");
-      \u0275\u0275element(52, "i", 28);
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(53, "li")(54, "a", 29);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_54_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(55, "Lorenzo ");
-      \u0275\u0275element(56, "i", 30);
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(57, "li")(58, "a", 31);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_58_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(59, "Matteo ");
-      \u0275\u0275element(60, "i", 24);
-      \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(61, "li", 13)(62, "a", 32);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_62_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(63);
-      \u0275\u0275pipe(64, "translate");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(65, "li", 33)(66, "button", 34);
-      \u0275\u0275text(67);
-      \u0275\u0275template(68, HeaderComponent_Conditional_68_Template, 1, 0)(69, HeaderComponent_Conditional_69_Template, 1, 0)(70, HeaderComponent_Conditional_70_Template, 1, 0);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(71, "ul", 35)(72, "li")(73, "a", 36);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_73_listener() {
+      \u0275\u0275elementStart(11, "ul", 8)(12, "li", 9)(13, "a", 10);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_13_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.switchLanguage("en"));
       });
-      \u0275\u0275text(74, "EN \u{1F1EC}\u{1F1E7}");
+      \u0275\u0275text(14, "EN \u{1F1EC}\u{1F1E7}");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(75, "li")(76, "a", 36);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_76_listener() {
+      \u0275\u0275elementStart(15, "li", 9)(16, "a", 10);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_16_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.switchLanguage("it"));
       });
-      \u0275\u0275text(77, "IT \u{1F1EE}\u{1F1F9}");
+      \u0275\u0275text(17, "IT \u{1F1EE}\u{1F1F9}");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(78, "li")(79, "a", 36);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_79_listener() {
+      \u0275\u0275elementStart(18, "li", 9)(19, "a", 10);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_19_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.switchLanguage("de"));
       });
-      \u0275\u0275text(80, "DE \u{1F1E9}\u{1F1EA}");
+      \u0275\u0275text(20, "DE \u{1F1E9}\u{1F1EA}");
+      \u0275\u0275elementEnd()()()();
+      \u0275\u0275elementStart(21, "span")(22, "button", 11);
+      \u0275\u0275element(23, "span", 12);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(24, "div", 13, 0)(26, "div", 14);
+      \u0275\u0275element(27, "img", 15)(28, "button", 16);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(29, "div", 17)(30, "ul", 18)(31, "li", 19)(32, "a", 20);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_32_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
+      });
+      \u0275\u0275text(33, "Home");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(34, "li", 19)(35, "a", 21);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_35_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
+      });
+      \u0275\u0275text(36);
+      \u0275\u0275pipe(37, "translate");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(38, "li", 19)(39, "a", 22);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_39_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
+      });
+      \u0275\u0275text(40);
+      \u0275\u0275pipe(41, "translate");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(42, "li", 19)(43, "a", 23);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_43_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
+      });
+      \u0275\u0275text(44, "Bio");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(45, "li", 24)(46, "button", 25);
+      \u0275\u0275text(47);
+      \u0275\u0275pipe(48, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(49, "ul", 26)(50, "li")(51, "a", 27);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_51_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
+      });
+      \u0275\u0275text(52, "Jacopo ");
+      \u0275\u0275element(53, "i", 28);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(54, "li")(55, "a", 29);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_55_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
+      });
+      \u0275\u0275text(56, "Eros ");
+      \u0275\u0275element(57, "i", 30);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(58, "li")(59, "a", 31);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_59_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
+      });
+      \u0275\u0275text(60, "Francesco ");
+      \u0275\u0275element(61, "i", 28);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(62, "li")(63, "a", 32);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_63_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
+      });
+      \u0275\u0275text(64, "Davide ");
+      \u0275\u0275element(65, "i", 28);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(66, "li")(67, "a", 33);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_67_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
+      });
+      \u0275\u0275text(68, "Andrea ");
+      \u0275\u0275element(69, "i", 34);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(70, "li")(71, "a", 35);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_71_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
+      });
+      \u0275\u0275text(72, "Lorenzo ");
+      \u0275\u0275element(73, "i", 36);
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(74, "li")(75, "a", 37);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_75_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
+      });
+      \u0275\u0275text(76, "Matteo ");
+      \u0275\u0275element(77, "i", 30);
+      \u0275\u0275elementEnd()()()();
+      \u0275\u0275elementStart(78, "li", 19)(79, "a", 38);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_79_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
+      });
+      \u0275\u0275text(80);
+      \u0275\u0275pipe(81, "translate");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(82, "li", 39)(83, "button", 40);
+      \u0275\u0275text(84);
+      \u0275\u0275template(85, HeaderComponent_Conditional_85_Template, 1, 0)(86, HeaderComponent_Conditional_86_Template, 1, 0)(87, HeaderComponent_Conditional_87_Template, 1, 0);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(88, "ul", 41)(89, "li")(90, "a", 42);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_90_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.switchLanguage("en"));
+      });
+      \u0275\u0275text(91, "EN \u{1F1EC}\u{1F1E7}");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(92, "li")(93, "a", 42);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_93_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.switchLanguage("it"));
+      });
+      \u0275\u0275text(94, "IT \u{1F1EE}\u{1F1F9}");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(95, "li")(96, "a", 42);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_96_listener() {
+        \u0275\u0275restoreView(_r1);
+        return \u0275\u0275resetView(ctx.shared.switchLanguage("de"));
+      });
+      \u0275\u0275text(97, "DE \u{1F1E9}\u{1F1EA}");
       \u0275\u0275elementEnd()()()()()()()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(15);
+      \u0275\u0275advance(8);
+      \u0275\u0275conditional(ctx.shared.language == "en" ? 8 : ctx.shared.language == "it" ? 9 : ctx.shared.language == "de" ? 10 : -1);
+      \u0275\u0275advance(24);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "home" || ctx.shared.activeLink === "");
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "concerts");
       \u0275\u0275advance();
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(20, 38, "Concerts"));
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(37, 39, "Concerts"));
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "projects");
       \u0275\u0275advance();
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(24, 40, "Projects"));
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(41, 41, "Projects"));
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "bio");
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.shared.activeLink.includes("band"));
       \u0275\u0275advance();
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(31, 42, "Band"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(48, 43, "Band"), " ");
       \u0275\u0275advance(4);
       \u0275\u0275classProp("active", ctx.shared.activeLink.includes("jacopo"));
       \u0275\u0275advance(4);
@@ -46251,11 +46830,11 @@ var HeaderComponent = class _HeaderComponent {
       \u0275\u0275advance(4);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "contacts");
       \u0275\u0275advance();
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(64, 44, "Contacts"));
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(81, 45, "Contacts"));
       \u0275\u0275advance(4);
       \u0275\u0275textInterpolate1(" ", ctx.shared.language, " ");
       \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.shared.language == "en" ? 68 : ctx.shared.language == "it" ? 69 : ctx.shared.language == "de" ? 70 : -1);
+      \u0275\u0275conditional(ctx.shared.language == "en" ? 85 : ctx.shared.language == "it" ? 86 : ctx.shared.language == "de" ? 87 : -1);
       \u0275\u0275advance(5);
       \u0275\u0275classProp("active", ctx.shared.language == "en");
       \u0275\u0275advance(3);
@@ -46267,7 +46846,7 @@ var HeaderComponent = class _HeaderComponent {
     RouterLink,
     TranslateModule,
     TranslatePipe
-  ], styles: ["\n\n.dropdown-menu.lang-dropdown[_ngcontent-%COMP%] {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item.active[_ngcontent-%COMP%] {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na[_ngcontent-%COMP%]:active {\n  background-color: #e60000;\n}\n.nav-link.btn[_ngcontent-%COMP%] {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn[_ngcontent-%COMP%]:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active[_ngcontent-%COMP%], \n.nav-link.btn.router-link-active[_ngcontent-%COMP%] {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n.offcanvas[_ngcontent-%COMP%] {\n  background-color: #0d0f11;\n}\n/*# sourceMappingURL=header.component.css.map */"] });
+  ], styles: ["\n\n.dropdown-menu.lang-dropdown[_ngcontent-%COMP%] {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item.active[_ngcontent-%COMP%] {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na[_ngcontent-%COMP%]:active {\n  background-color: #e60000;\n}\n.mobile-lang-menu[_ngcontent-%COMP%] {\n  left: 50% !important;\n  transform: translateX(-50%) !important;\n}\n.nav-link.btn[_ngcontent-%COMP%] {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn[_ngcontent-%COMP%]:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active[_ngcontent-%COMP%], \n.nav-link.btn.router-link-active[_ngcontent-%COMP%] {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n.offcanvas[_ngcontent-%COMP%] {\n  background-color: #0d0f11;\n}\n/*# sourceMappingURL=header.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HeaderComponent, [{
@@ -46278,12 +46857,37 @@ var HeaderComponent = class _HeaderComponent {
     ], template: `<nav class="navbar navbar-expand-lg sticky-top squealer py-0 my-0">
     <div class="container-fluid">
         <span class="navbar-brand clickable my-1 squealer" (click)="navigate('home')">
-            <img src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 50px;">&nbsp;Highway to Hell
+            <img src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 50px;">
         </span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+
+        <span class="navbar-brand clickable my-1 squealer d-none d-lg-inline" (click)="navigate('home')">
+            &nbsp;Highway to Hell
+        </span>
+
+        <span class="d-lg-none ms-2 position-relative">
+            <button class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown" type="button">
+                @if(shared.language == 'en') {
+                    \u{1F1EC}\u{1F1E7}
+                }
+                @else if(shared.language == 'it') {
+                    \u{1F1EE}\u{1F1F9}
+                }
+                @else if(shared.language == 'de') {
+                    \u{1F1E9}\u{1F1EA}
+                }
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end text-center mobile-lang-menu">
+                <li class="clickable"><a class="dropdown-item anton" (click)="shared.switchLanguage('en')">EN \u{1F1EC}\u{1F1E7}</a></li>
+                <li class="clickable"><a class="dropdown-item anton" (click)="shared.switchLanguage('it')">IT \u{1F1EE}\u{1F1F9}</a></li>
+                <li class="clickable"><a class="dropdown-item anton" (click)="shared.switchLanguage('de')">DE \u{1F1E9}\u{1F1EA}</a></li>
+            </ul>
+        </span>
+        <span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </span>
         <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="offcanvasNavbar" #offcanvasNavbar
             aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
@@ -46292,62 +46896,97 @@ var HeaderComponent = class _HeaderComponent {
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-uppercase">
-                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='home' || shared.activeLink === ''" routerLink="/" (click)="shared.triggerCloseButtonClick()">Home</a></li>
-                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='concerts'" routerLink="/concerts" (click)="shared.triggerCloseButtonClick()">{{'Concerts' | translate}}</a></li>
-                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='projects'" routerLink="/projects" (click)="shared.triggerCloseButtonClick()">{{'Projects' | translate}}</a></li>
-                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='bio'" routerLink="/bio" (click)="shared.triggerCloseButtonClick()">Bio</a></li>
+                    <li class="nav-item m-2 anton"><a class="nav-link btn"
+                            [class.active]="shared.activeLink==='home' || shared.activeLink === ''" routerLink="/"
+                            (click)="shared.triggerCloseButtonClick()">Home</a></li>
+                    <li class="nav-item m-2 anton"><a class="nav-link btn"
+                            [class.active]="shared.activeLink==='concerts'" routerLink="/concerts"
+                            (click)="shared.triggerCloseButtonClick()">{{'Concerts' | translate}}</a></li>
+                    <li class="nav-item m-2 anton"><a class="nav-link btn"
+                            [class.active]="shared.activeLink==='projects'" routerLink="/projects"
+                            (click)="shared.triggerCloseButtonClick()">{{'Projects' | translate}}</a></li>
+                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='bio'"
+                            routerLink="/bio" (click)="shared.triggerCloseButtonClick()">Bio</a></li>
                     <li class="nav-item m-2 dropdown anton">
-                        <button class="nav-link btn w-100 text-center text-uppercase dropdown-toggle" [class.active]="shared.activeLink.includes('band')" id="bandDropdown" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+                        <button class="nav-link btn w-100 text-center text-uppercase dropdown-toggle"
+                            [class.active]="shared.activeLink.includes('band')" id="bandDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false" type="button">
                             {{'Band' | translate}}
                         </button>
                         <ul class="dropdown-menu lang-dropdown text-center" aria-labelledby="bandDropdown">
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('jacopo')" routerLink="/band/jacopo" (click)="shared.triggerCloseButtonClick()">Jacopo <i class="fa-solid fa-guitar"></i></a>
+                                <a class="dropdown-item clickable anton"
+                                    [class.active]="shared.activeLink.includes('jacopo')" routerLink="/band/jacopo"
+                                    (click)="shared.triggerCloseButtonClick()">Jacopo <i
+                                        class="fa-solid fa-guitar"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('eros')" routerLink="/band/eros" (click)="shared.triggerCloseButtonClick()">Eros <i class="fa-solid fa-microphone"></i></a>
+                                <a class="dropdown-item clickable anton"
+                                    [class.active]="shared.activeLink.includes('eros')" routerLink="/band/eros"
+                                    (click)="shared.triggerCloseButtonClick()">Eros <i
+                                        class="fa-solid fa-microphone"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('francesco')" routerLink="/band/francesco" (click)="shared.triggerCloseButtonClick()">Francesco <i class="fa-solid fa-guitar"></i></a>
+                                <a class="dropdown-item clickable anton"
+                                    [class.active]="shared.activeLink.includes('francesco')"
+                                    routerLink="/band/francesco" (click)="shared.triggerCloseButtonClick()">Francesco <i
+                                        class="fa-solid fa-guitar"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('davide')" routerLink="/band/davide" (click)="shared.triggerCloseButtonClick()">Davide <i class="fa-solid fa-guitar"></i></a>
+                                <a class="dropdown-item clickable anton"
+                                    [class.active]="shared.activeLink.includes('davide')" routerLink="/band/davide"
+                                    (click)="shared.triggerCloseButtonClick()">Davide <i
+                                        class="fa-solid fa-guitar"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('andrea')" routerLink="/band/andrea" (click)="shared.triggerCloseButtonClick()">Andrea <i class="fa-solid fa-drum"></i></a>
+                                <a class="dropdown-item clickable anton"
+                                    [class.active]="shared.activeLink.includes('andrea')" routerLink="/band/andrea"
+                                    (click)="shared.triggerCloseButtonClick()">Andrea <i
+                                        class="fa-solid fa-drum"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('lorenzo')" routerLink="/band/lorenzo" (click)="shared.triggerCloseButtonClick()">Lorenzo <i class="fa-solid fa-music"></i></a>
+                                <a class="dropdown-item clickable anton"
+                                    [class.active]="shared.activeLink.includes('lorenzo')" routerLink="/band/lorenzo"
+                                    (click)="shared.triggerCloseButtonClick()">Lorenzo <i
+                                        class="fa-solid fa-music"></i></a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.activeLink.includes('matteo')" routerLink="/band/matteo" (click)="shared.triggerCloseButtonClick()">Matteo <i class="fa-solid fa-microphone"></i></a>
+                                <a class="dropdown-item clickable anton"
+                                    [class.active]="shared.activeLink.includes('matteo')" routerLink="/band/matteo"
+                                    (click)="shared.triggerCloseButtonClick()">Matteo <i
+                                        class="fa-solid fa-microphone"></i></a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='contacts'" routerLink="/contacts" (click)="shared.triggerCloseButtonClick()">{{'Contacts' | translate}}</a></li>
-                    <li class="nav-item m-2 dropdown">
-                        <button class="nav-link btn w-100 text-center dropdown-toggle text-uppercase anton" id="langDropdown"
-                            data-bs-toggle="dropdown" aria-expanded="false" type="button">
-                            {{shared.language}} 
+                    <li class="nav-item m-2 anton"><a class="nav-link btn"
+                            [class.active]="shared.activeLink==='contacts'" routerLink="/contacts"
+                            (click)="shared.triggerCloseButtonClick()">{{'Contacts' | translate}}</a></li>
+                    <li class="nav-item m-2 dropdown d-none d-lg-block">
+                        <button class="nav-link btn w-100 text-center dropdown-toggle text-uppercase anton"
+                            id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+                            {{shared.language}}
                             @if(shared.language == 'en') {
-                                \u{1F1EC}\u{1F1E7}
+                            \u{1F1EC}\u{1F1E7}
                             }
                             @else if(shared.language == 'it') {
-                                \u{1F1EE}\u{1F1F9}
+                            \u{1F1EE}\u{1F1F9}
                             }
                             @else if(shared.language == 'de') {
-                                \u{1F1E9}\u{1F1EA}
+                            \u{1F1E9}\u{1F1EA}
                             }
                         </button>
                         <ul class="dropdown-menu lang-dropdown text-center" aria-labelledby="langDropdown">
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.language == 'en'" (click)="shared.switchLanguage('en')">EN \u{1F1EC}\u{1F1E7}</a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.language == 'en'"
+                                    (click)="shared.switchLanguage('en')">EN \u{1F1EC}\u{1F1E7}</a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.language == 'it'" (click)="shared.switchLanguage('it')">IT \u{1F1EE}\u{1F1F9}</a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.language == 'it'"
+                                    (click)="shared.switchLanguage('it')">IT \u{1F1EE}\u{1F1F9}</a>
                             </li>
                             <li>
-                                <a class="dropdown-item clickable anton" [class.active]="shared.language == 'de'" (click)="shared.switchLanguage('de')">DE \u{1F1E9}\u{1F1EA}</a>
+                                <a class="dropdown-item clickable anton" [class.active]="shared.language == 'de'"
+                                    (click)="shared.switchLanguage('de')">DE \u{1F1E9}\u{1F1EA}</a>
                             </li>
                         </ul>
                     </li>
@@ -46356,7 +46995,7 @@ var HeaderComponent = class _HeaderComponent {
         </div>
     </div>
 </nav>
-<!--/header-->`, styles: ["/* src/app/header/header.component.css */\n.dropdown-menu.lang-dropdown {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item.active {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na:active {\n  background-color: #e60000;\n}\n.nav-link.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active,\n.nav-link.btn.router-link-active {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n.offcanvas {\n  background-color: #0d0f11;\n}\n/*# sourceMappingURL=header.component.css.map */\n"] }]
+<!--/header-->`, styles: ["/* src/app/header/header.component.css */\n.dropdown-menu.lang-dropdown {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item.active {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na:active {\n  background-color: #e60000;\n}\n.mobile-lang-menu {\n  left: 50% !important;\n  transform: translateX(-50%) !important;\n}\n.nav-link.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active,\n.nav-link.btn.router-link-active {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n.offcanvas {\n  background-color: #0d0f11;\n}\n/*# sourceMappingURL=header.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
