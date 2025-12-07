@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["src/app/footer/footer.component.css"],
-  "sourcesContent": ["footer {\n    background-color: #0d0f11;\n}\n\n/* --- EFFETTO GLOW ROSSO --- */\n.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n\n/* Effetto hover */\n.btn:hover {\n  color: #fff;\n  text-shadow: 0 0 10px #ff3333, 0 0 20px #ff3333, 0 0 30px #ff0000;\n  opacity: 0.9;\n}"],
+  "sourcesContent": ["footer {\n    background-color: #060607;\n}\n\n/* --- EFFETTO GLOW ROSSO --- */\n.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n\n/* Effetto hover */\n.btn:hover {\n  color: #fff;\n  text-shadow: 0 0 10px #ff3333, 0 0 20px #ff3333, 0 0 30px #ff0000;\n  opacity: 0.9;\n}"],
   "mappings": ";AAAA;AACI,oBAAkB;AACtB;AAGA,CAAC;AACC,SAAO;AACP,cAAY,IAAI,KAAK;AACrB,eAAa;AACf;AAGA,CAPC,GAOG;AACF,SAAO;AACP;AAAA,IAAa,EAAE,EAAE,KAAK,OAAO;AAAA,IAAE,EAAE,EAAE,KAAK,OAAO;AAAA,IAAE,EAAE,EAAE,KAAK;AAC1D,WAAS;AACX;",
   "names": []
 }

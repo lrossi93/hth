@@ -39813,6 +39813,8 @@ var SharedService = class _SharedService {
       this.activeLink = "concerts";
     } else if (url.startsWith("/projects")) {
       this.activeLink = "projects";
+    } else if (url.startsWith("/formats")) {
+      this.activeLink = "formats";
     } else if (url.startsWith("/bio")) {
       this.activeLink = "bio";
     } else if (url.startsWith("/contacts")) {
@@ -39855,7 +39857,7 @@ var SharedService = class _SharedService {
 
 // src/app/home/home.component.ts
 var _c0 = ["heroVideo"];
-function HomeComponent_Conditional_2_Conditional_0_Conditional_12_Template(rf, ctx) {
+function HomeComponent_Conditional_7_Conditional_0_Conditional_12_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0);
     \u0275\u0275element(1, "br");
@@ -39865,10 +39867,10 @@ function HomeComponent_Conditional_2_Conditional_0_Conditional_12_Template(rf, c
     \u0275\u0275textInterpolate1(" ", ctx_r1.nextEvent.description, "");
   }
 }
-function HomeComponent_Conditional_2_Conditional_0_For_15_Template(rf, ctx) {
+function HomeComponent_Conditional_7_Conditional_0_For_15_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "a", 40);
-    \u0275\u0275element(1, "i", 41);
+    \u0275\u0275elementStart(0, "a", 48);
+    \u0275\u0275element(1, "i", 18);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd();
     \u0275\u0275element(3, "br");
@@ -39880,31 +39882,31 @@ function HomeComponent_Conditional_2_Conditional_0_For_15_Template(rf, ctx) {
     \u0275\u0275textInterpolate1("\xA0", link_r3.key, "");
   }
 }
-function HomeComponent_Conditional_2_Conditional_0_Template(rf, ctx) {
+function HomeComponent_Conditional_7_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "h2", 6);
+    \u0275\u0275elementStart(0, "h2", 8);
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 29)(4, "div", 30)(5, "div", 31);
+    \u0275\u0275elementStart(3, "div", 37)(4, "div", 38)(5, "div", 39);
     \u0275\u0275text(6);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "div", 32)(8, "h3", 33);
+    \u0275\u0275elementStart(7, "div", 40)(8, "h3", 41);
     \u0275\u0275text(9);
     \u0275\u0275elementEnd();
-    \u0275\u0275element(10, "hr", 34);
-    \u0275\u0275elementStart(11, "div", 35);
-    \u0275\u0275template(12, HomeComponent_Conditional_2_Conditional_0_Conditional_12_Template, 2, 1);
-    \u0275\u0275elementStart(13, "div", 36);
-    \u0275\u0275repeaterCreate(14, HomeComponent_Conditional_2_Conditional_0_For_15_Template, 4, 2, null, null, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275element(10, "hr", 42);
+    \u0275\u0275elementStart(11, "div", 43);
+    \u0275\u0275template(12, HomeComponent_Conditional_7_Conditional_0_Conditional_12_Template, 2, 1);
+    \u0275\u0275elementStart(13, "div", 44);
+    \u0275\u0275repeaterCreate(14, HomeComponent_Conditional_7_Conditional_0_For_15_Template, 4, 2, null, null, \u0275\u0275repeaterTrackByIndex);
     \u0275\u0275elementEnd()();
-    \u0275\u0275element(16, "hr", 34);
-    \u0275\u0275elementStart(17, "div", 37);
-    \u0275\u0275element(18, "i", 38);
+    \u0275\u0275element(16, "hr", 42);
+    \u0275\u0275elementStart(17, "div", 45);
+    \u0275\u0275element(18, "i", 46);
     \u0275\u0275text(19, "\xA0 ");
-    \u0275\u0275elementStart(20, "a", 39);
-    \u0275\u0275listener("click", function HomeComponent_Conditional_2_Conditional_0_Template_a_click_20_listener() {
+    \u0275\u0275elementStart(20, "a", 47);
+    \u0275\u0275listener("click", function HomeComponent_Conditional_7_Conditional_0_Template_a_click_20_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.openMap(ctx_r1.nextEvent.location));
@@ -39928,9 +39930,9 @@ function HomeComponent_Conditional_2_Conditional_0_Template(rf, ctx) {
     \u0275\u0275textInterpolate1(" ", ctx_r1.nextEvent.location, " ");
   }
 }
-function HomeComponent_Conditional_2_Conditional_1_Template(rf, ctx) {
+function HomeComponent_Conditional_7_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 6);
+    \u0275\u0275elementStart(0, "h2", 8);
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
@@ -39940,29 +39942,29 @@ function HomeComponent_Conditional_2_Conditional_1_Template(rf, ctx) {
     \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, "There are no planned upcoming events..."));
   }
 }
-function HomeComponent_Conditional_2_Template(rf, ctx) {
+function HomeComponent_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275template(0, HomeComponent_Conditional_2_Conditional_0_Template, 22, 8)(1, HomeComponent_Conditional_2_Conditional_1_Template, 3, 3, "h2", 6);
-    \u0275\u0275elementStart(2, "div", 2)(3, "button", 28);
+    \u0275\u0275template(0, HomeComponent_Conditional_7_Conditional_0_Template, 22, 8)(1, HomeComponent_Conditional_7_Conditional_1_Template, 3, 3, "h2", 8);
+    \u0275\u0275elementStart(2, "div", 4)(3, "button", 36);
     \u0275\u0275text(4);
     \u0275\u0275pipe(5, "translate");
-    \u0275\u0275element(6, "i", 9);
+    \u0275\u0275element(6, "i", 11);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
     \u0275\u0275conditional(ctx_r1.events.length > 0 ? 0 : ctx_r1.events.length == 0 ? 1 : -1);
     \u0275\u0275advance(4);
-    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 2, "Next concerts"), "\xA0");
+    \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 2, "More concerts"), "\xA0");
   }
 }
-function HomeComponent_Conditional_3_Template(rf, ctx) {
+function HomeComponent_Conditional_8_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 2)(1, "h2", 42);
+    \u0275\u0275elementStart(0, "div", 4)(1, "h2", 49);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 43)(5, "span", 44);
+    \u0275\u0275elementStart(4, "div", 50)(5, "span", 51);
     \u0275\u0275text(6);
     \u0275\u0275pipe(7, "translate");
     \u0275\u0275elementEnd()()();
@@ -40124,135 +40126,170 @@ var HomeComponent = class _HomeComponent {
       let _t;
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.heroVideo = _t.first);
     }
-  }, decls: 86, vars: 46, consts: [["src", "/media/home/hero-2.png", "alt", "", 1, "hero-img"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "banner-container", "py-3", "mt-5"], ["src", "/media/home/band-banner.jpg", "alt", "The band", 1, "banner-bg"], [1, "banner-content", "col-lg-8", "mx-auto", "my-3", "px-3", "text-justify"], [1, "anton", "text-uppercase"], [1, "fw-normal", 2, "text-align", "justify"], ["routerLink", "/band", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", 2, "text-align", "justify"], [1, "row", "g-4", "m-0"], [1, "col-lg-6", "col-md-6", "col-sm-12"], [1, "card", "shadow-hover", "rounded-0", "elite", "h-100", "d-flex", "justify-content-center", "clickable"], [1, "ratio", "ratio-16x9"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/v6HmgTOJjdY?si=vs-OpJ3JanG7FpEK`, "title", "Highway to Hell - Thunderstruck", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/JHIKGYqE99E?si=yUfdGJ4Mmruf8T87`, "title", "Highway to Hell - Showreel 2024", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], [1, "row", "g-4", "mb-4", "m-0"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/sxa4SvJCol0?si=IwYLu6GWB7TZH7sw`, "title", "Highway to Hell - Mega Show", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/uacN3fgVxSE?si=VSRoEsNp_le9s2ng`, "title", "Highway to Hell - Symphony of Thunder", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/band/matteo"], ["routerLink", "/band/lorenzo"], [1, "mt-5", "anton", "text-uppercase"], ["routerLink", "/projects", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "py-3", "mt-5", "banner-container"], ["src", "/media/home/band-banner-2.jpg", "alt", "The band", 1, "banner-bg"], [1, "col-lg-8", "mx-auto", "my-3", "px-3", "banner-content", 2, "text-align", "justify"], ["routerLink", "/contacts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], ["routerLink", "/concerts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], ["target", "_blank", 3, "href"], [1, "fa-solid", "fa-link"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function HomeComponent_Template(rf, ctx) {
+  }, decls: 111, vars: 58, consts: [[1, "hero"], ["src", "/media/home/hero-2.png", "alt", "HTH header image", 1, "hero-img"], [1, "hero-content", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "banner-container", "py-3", "mt-5"], ["src", "/media/home/band-banner.jpg", "alt", "The band", 1, "banner-bg"], [1, "banner-content", "col-lg-8", "mx-auto", "my-3", "px-3", "text-justify"], [1, "anton", "text-uppercase"], [1, "fw-normal", 2, "text-align", "justify"], ["routerLink", "/band", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", 2, "text-align", "justify"], [1, "row", "g-4", "m-0"], [1, "col-lg-6", "col-md-6", "col-sm-12"], [1, "card", "shadow-hover", "rounded-0", "border-0", "elite", "h-100", "d-flex", "text-center", "justify-content-center", "clickable"], [1, "card-title", "m-2"], ["routerLink", "/formats", "fragment", "cover", 1, "anton", "white"], [1, "fa-solid", "fa-link"], [1, "ratio", "ratio-16x9"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/v6HmgTOJjdY?si=vs-OpJ3JanG7FpEK`, "title", "Highway to Hell - Thunderstruck", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/formats", "fragment", "big-show", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/JHIKGYqE99E?si=yUfdGJ4Mmruf8T87`, "title", "Highway to Hell - Showreel 2024", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], [1, "row", "g-4", "mb-4", "m-0"], ["routerLink", "/formats", "fragment", "mega-show", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/sxa4SvJCol0?si=IwYLu6GWB7TZH7sw`, "title", "Highway to Hell - Mega Show", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/formats", "fragment", "symphony-of-thunder", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/uacN3fgVxSE?si=VSRoEsNp_le9s2ng`, "title", "Highway to Hell - Symphony of Thunder", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/band/matteo"], ["routerLink", "/band/lorenzo"], [1, "mt-5", "anton", "text-uppercase"], ["routerLink", "/formats", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "py-3", "mt-5", "banner-container"], ["src", "/media/home/band-banner-2.jpg", "alt", "The band", 1, "banner-bg"], [1, "col-lg-8", "mx-auto", "my-3", "px-3", "banner-content", 2, "text-align", "justify"], ["routerLink", "/contacts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], ["routerLink", "/concerts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], ["target", "_blank", 3, "href"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275element(0, "img", 0);
-      \u0275\u0275elementStart(1, "div", 1);
-      \u0275\u0275template(2, HomeComponent_Conditional_2_Template, 7, 4)(3, HomeComponent_Conditional_3_Template, 8, 6, "div", 2);
+      \u0275\u0275elementStart(0, "section", 0);
+      \u0275\u0275element(1, "img", 1);
+      \u0275\u0275elementStart(2, "h1", 2);
+      \u0275\u0275text(3, "Highway to Hell");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(4, "div", 3);
-      \u0275\u0275element(5, "img", 4);
-      \u0275\u0275elementStart(6, "div", 5)(7, "h3", 6);
-      \u0275\u0275text(8);
-      \u0275\u0275pipe(9, "translate");
+      \u0275\u0275elementStart(4, "h2", 2);
+      \u0275\u0275text(5, "AC/DC Tribute Band");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(6, "div", 3);
+      \u0275\u0275template(7, HomeComponent_Conditional_7_Template, 7, 4)(8, HomeComponent_Conditional_8_Template, 8, 6, "div", 4);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(10, "p", 7);
-      \u0275\u0275text(11);
-      \u0275\u0275pipe(12, "translate");
+      \u0275\u0275elementStart(9, "div", 5);
+      \u0275\u0275element(10, "img", 6);
+      \u0275\u0275elementStart(11, "div", 7)(12, "h3", 8);
+      \u0275\u0275text(13);
+      \u0275\u0275pipe(14, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(13, "div", 2)(14, "button", 8);
-      \u0275\u0275text(15);
-      \u0275\u0275pipe(16, "translate");
-      \u0275\u0275element(17, "i", 9);
-      \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(18, "div", 10)(19, "h3", 6);
+      \u0275\u0275elementStart(15, "p", 9);
+      \u0275\u0275text(16);
+      \u0275\u0275pipe(17, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(18, "div", 4)(19, "button", 10);
       \u0275\u0275text(20);
       \u0275\u0275pipe(21, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(22, "div")(23, "div", 11)(24, "div", 12)(25, "div", 13)(26, "div", 14);
-      \u0275\u0275element(27, "iframe", 15);
-      \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(28, "div", 12)(29, "div", 13)(30, "div", 14);
-      \u0275\u0275element(31, "iframe", 16);
+      \u0275\u0275element(22, "i", 11);
       \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(32, "div", 17)(33, "div", 12)(34, "div", 13)(35, "div", 14);
-      \u0275\u0275element(36, "iframe", 18);
+      \u0275\u0275elementStart(23, "div", 12)(24, "h3", 8);
+      \u0275\u0275text(25);
+      \u0275\u0275pipe(26, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(27, "div")(28, "div", 13)(29, "div", 14)(30, "div", 15)(31, "p", 16)(32, "a", 17);
+      \u0275\u0275element(33, "i", 18);
+      \u0275\u0275text(34);
+      \u0275\u0275pipe(35, "translate");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(36, "div", 19);
+      \u0275\u0275element(37, "iframe", 20);
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(37, "div", 12)(38, "div", 13)(39, "div", 14);
-      \u0275\u0275element(40, "iframe", 19);
-      \u0275\u0275elementEnd()()()()()();
-      \u0275\u0275elementStart(41, "div", 10)(42, "h3", 6);
+      \u0275\u0275elementStart(38, "div", 14)(39, "div", 15)(40, "p", 16)(41, "a", 21);
+      \u0275\u0275element(42, "i", 18);
       \u0275\u0275text(43);
       \u0275\u0275pipe(44, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(45, "p");
-      \u0275\u0275text(46);
-      \u0275\u0275pipe(47, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(48, "p")(49, "a", 20);
-      \u0275\u0275text(50, "Matteo Giovannone");
-      \u0275\u0275elementEnd();
-      \u0275\u0275text(51);
-      \u0275\u0275pipe(52, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(53, "p")(54, "a", 21);
-      \u0275\u0275text(55, "Lorenzo Rossi");
-      \u0275\u0275elementEnd();
-      \u0275\u0275text(56);
-      \u0275\u0275pipe(57, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(58, "h3", 22);
-      \u0275\u0275text(59);
-      \u0275\u0275pipe(60, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(61, "p");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(45, "div", 19);
+      \u0275\u0275element(46, "iframe", 22);
+      \u0275\u0275elementEnd()()()();
+      \u0275\u0275elementStart(47, "div", 23)(48, "div", 14)(49, "div", 15)(50, "p", 16)(51, "a", 24);
+      \u0275\u0275element(52, "i", 18);
+      \u0275\u0275text(53);
+      \u0275\u0275pipe(54, "translate");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(55, "div", 19);
+      \u0275\u0275element(56, "iframe", 25);
+      \u0275\u0275elementEnd()()();
+      \u0275\u0275elementStart(57, "div", 14)(58, "div", 15)(59, "p", 16)(60, "a", 26);
+      \u0275\u0275element(61, "i", 18);
       \u0275\u0275text(62);
       \u0275\u0275pipe(63, "translate");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(64, "div", 19);
+      \u0275\u0275element(65, "iframe", 27);
+      \u0275\u0275elementEnd()()()()()();
+      \u0275\u0275elementStart(66, "div", 12)(67, "h3", 8);
+      \u0275\u0275text(68);
+      \u0275\u0275pipe(69, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(64, "div", 2)(65, "button", 23);
-      \u0275\u0275text(66);
-      \u0275\u0275pipe(67, "translate");
-      \u0275\u0275element(68, "i", 9);
-      \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(69, "div", 24);
-      \u0275\u0275element(70, "img", 25);
-      \u0275\u0275elementStart(71, "div", 26)(72, "h3", 22);
-      \u0275\u0275text(73);
-      \u0275\u0275pipe(74, "translate");
+      \u0275\u0275elementStart(70, "p");
+      \u0275\u0275text(71);
+      \u0275\u0275pipe(72, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(75, "p");
+      \u0275\u0275elementStart(73, "p")(74, "a", 28);
+      \u0275\u0275text(75, "Matteo Giovannone");
+      \u0275\u0275elementEnd();
       \u0275\u0275text(76);
       \u0275\u0275pipe(77, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(78, "p");
-      \u0275\u0275text(79);
-      \u0275\u0275pipe(80, "translate");
+      \u0275\u0275elementStart(78, "p")(79, "a", 29);
+      \u0275\u0275text(80, "Lorenzo Rossi");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(81, "div", 2)(82, "button", 27);
-      \u0275\u0275text(83);
-      \u0275\u0275pipe(84, "translate");
-      \u0275\u0275element(85, "i", 9);
+      \u0275\u0275text(81);
+      \u0275\u0275pipe(82, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(83, "h3", 30);
+      \u0275\u0275text(84);
+      \u0275\u0275pipe(85, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(86, "p");
+      \u0275\u0275text(87);
+      \u0275\u0275pipe(88, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(89, "div", 4)(90, "button", 31);
+      \u0275\u0275text(91);
+      \u0275\u0275pipe(92, "translate");
+      \u0275\u0275element(93, "i", 11);
+      \u0275\u0275elementEnd()()();
+      \u0275\u0275elementStart(94, "div", 32);
+      \u0275\u0275element(95, "img", 33);
+      \u0275\u0275elementStart(96, "div", 34)(97, "h3", 30);
+      \u0275\u0275text(98);
+      \u0275\u0275pipe(99, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(100, "p");
+      \u0275\u0275text(101);
+      \u0275\u0275pipe(102, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(103, "p");
+      \u0275\u0275text(104);
+      \u0275\u0275pipe(105, "translate");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(106, "div", 4)(107, "button", 35);
+      \u0275\u0275text(108);
+      \u0275\u0275pipe(109, "translate");
+      \u0275\u0275element(110, "i", 11);
       \u0275\u0275elementEnd()()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(2);
-      \u0275\u0275conditional(!ctx.loading ? 2 : ctx.loading ? 3 : -1);
-      \u0275\u0275advance(6);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(9, 16, "The band"), " ");
-      \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(12, 18, "Highway to Hell isn't just a simple tribute band, but an authentic rock energy explosion! With an AC/DC faithful sound, obsessive attention to detail and an overwhelming stage presence, they will take the audience on an electrifying journey, just like at a real concert by the legendary Australian band."), " ");
-      \u0275\u0275advance(4);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(16, 20, "Discover the band"), "\xA0");
-      \u0275\u0275advance(5);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(21, 22, "Our projects"), " ");
-      \u0275\u0275advance(23);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(44, 24, "From Bon to Brian: a tribute to the history of AC/DC"), " ");
-      \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(47, 26, "Besides the classical show, Highway to Hell introduce you to a unique experience under the \u201CFrom Bon to Brian\u201D format, a journey across two legendary ages:"), " ");
-      \u0275\u0275advance(5);
-      \u0275\u0275textInterpolate1(", ", \u0275\u0275pipeBind1(52, 28, "the best italian Bon Scott interpreter, with an impressive vocal and physical resemblance."), " ");
-      \u0275\u0275advance(5);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(57, 30, "on his bagpipes, to recreate the iconic sound of tracks such as \u201CIt\u2019s a Long Way to the Top\u201D."), " ");
-      \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(60, 32, "Symphony of Thunder: AC/DC Symphonic Version"), " ");
-      \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(63, 34, "Since 2024, Highway to Hell were the first to introduce the \u201CSymphony of Thunder\u201D show in Italy: an innovative fusion between AC/DC's pure rock and the power of a symphonic orchestra. An exciting journey through AC/DC's greatest hits, from \u201CBack in Black\u201D to \u201CThunderstruck\u201D, reimagined for orchestra for an unprecedented sound impact!"), " ");
-      \u0275\u0275advance(4);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(67, 36, "Discover our projects"), "\xA0");
       \u0275\u0275advance(7);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(74, 38, "A band for your stage, a band for your event!"), " ");
+      \u0275\u0275conditional(!ctx.loading ? 7 : ctx.loading ? 8 : -1);
+      \u0275\u0275advance(6);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 20, "The band"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(77, 40, "Highway to Hell surfed prestigious stages such as EICMA, where they have been their Motolive stage resident band, bringing their show to one of the world's largest motorsport events."), " ");
-      \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(80, 42, "If your're looking for an unforgettable AC/DC concert or a professional tribute band for festivals, events or motorcycle rallies, Highway to Hell are the perfect choice for a high voltage experience!"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 22, "Highway to Hell isn't just a simple tribute band, but an authentic rock energy explosion! With an AC/DC faithful sound, obsessive attention to detail and an overwhelming stage presence, they will take the audience on an electrifying journey, just like at a real concert by the legendary Australian band."), " ");
       \u0275\u0275advance(4);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(84, 44, "Get in touch!"), "\xA0");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(21, 24, "Discover the band"), "\xA0");
+      \u0275\u0275advance(5);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 26, "Our formats"), " ");
+      \u0275\u0275advance(9);
+      \u0275\u0275textInterpolate1("\xA0", \u0275\u0275pipeBind1(35, 28, "video_1_home"), "");
+      \u0275\u0275advance(9);
+      \u0275\u0275textInterpolate1("\xA0", \u0275\u0275pipeBind1(44, 30, "video_2_home"), "");
+      \u0275\u0275advance(10);
+      \u0275\u0275textInterpolate1("\xA0", \u0275\u0275pipeBind1(54, 32, "video_3_home"), "");
+      \u0275\u0275advance(9);
+      \u0275\u0275textInterpolate1("\xA0", \u0275\u0275pipeBind1(63, 34, "video_4_home"), "");
+      \u0275\u0275advance(6);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(69, 36, "From Bon to Brian: a tribute to the history of AC/DC"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(72, 38, "Besides the classical show, Highway to Hell introduce you to a unique experience under the \u201CFrom Bon to Brian\u201D format, a journey across two legendary ages:"), " ");
+      \u0275\u0275advance(5);
+      \u0275\u0275textInterpolate1(", ", \u0275\u0275pipeBind1(77, 40, "the best italian Bon Scott interpreter, with an impressive vocal and physical resemblance."), " ");
+      \u0275\u0275advance(5);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(82, 42, "on his bagpipes, to recreate the iconic sound of tracks such as \u201CIt\u2019s a Long Way to the Top\u201D."), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(85, 44, "Symphony of Thunder: AC/DC Symphonic Version"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(88, 46, "Since 2024, Highway to Hell were the first to introduce the \u201CSymphony of Thunder\u201D show in Italy: an innovative fusion between AC/DC's pure rock and the power of a symphonic orchestra. An exciting journey through AC/DC's greatest hits, from \u201CBack in Black\u201D to \u201CThunderstruck\u201D, reimagined for orchestra for an unprecedented sound impact!"), " ");
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(92, 48, "Check out our formats"), "\xA0");
+      \u0275\u0275advance(7);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(99, 50, "A band for your stage, a band for your event!"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(102, 52, "Highway to Hell surfed prestigious stages such as EICMA, where they have been their Motolive stage resident band, bringing their show to one of the world's largest motorsport events."), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(105, 54, "If your're looking for an unforgettable AC/DC concert or a professional tribute band for festivals, events or motorcycle rallies, Highway to Hell are the perfect choice for a high voltage experience!"), " ");
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(109, 56, "Get in touch!"), "\xA0");
     }
   }, dependencies: [
     RouterLink,
     TranslateModule,
     TranslatePipe
-  ], styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  height: calc(100vh - 60px);\n  overflow: hidden;\n}\n.hero[_ngcontent-%COMP%] {\n  width: 100%;\n  align-items: top;\n  justify-content: center;\n  color: white;\n}\n.hero-img[_ngcontent-%COMP%] {\n  width: 100%;\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero[_ngcontent-%COMP%] {\n    height: 100vh;\n  }\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 2rem;\n  }\n  .hero-content[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n}\n/*# sourceMappingURL=home.component.css.map */'] });
+  ], styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n}\n.hero-img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: auto;\n  display: block;\n  object-fit: cover;\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-family: "Squealer", sans-serif;\n    font-size: 2.5rem;\n    color: #fff;\n    -webkit-text-stroke: 1px black;\n  }\n  .hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-family: "Squealer", sans-serif;\n    font-size: 1.5rem;\n    color: #fff;\n    -webkit-text-stroke: 1px black;\n  }\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 2rem;\n  }\n  .hero-content[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n}\n.white[_ngcontent-%COMP%] {\n  color: #dee2e6;\n}\n/*# sourceMappingURL=home.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HomeComponent, [{
@@ -40262,50 +40299,11 @@ var HomeComponent = class _HomeComponent {
       TranslateModule
     ], template: `<!-- Hero -->
 <!-- Hero -->
-<!-- <section class="hero"> -->
-    
-    <!-- <div class="hero-content d-flex" style="flex-direction: column; align-items: center; justify-content: space-around;">
-    </div> -->
-<!-- </section> -->
-<img src="/media/home/hero-2.png" class="hero-img" alt="">
-<!-- <section class="hero">
-    <div class="video-background">
-            <video autoplay muted loop playsinline preload="auto" class="img-fluid">
-                <source src="/media/home/hth-promo-big-show.mov" type="video/mp4">
-                Il tuo browser non supporta questo video.
-            </video>
-    </div>
-
-    <div class="hero-content">
-        <h1>Highway to Hell</h1>
-        <img class="p-3" src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 200px;">
-        <h2>AC/DC Tribute Band</h2>
-    </div>
-</section> -->
-
-<!-- Hero -->
-<!-- <section class="hero shadow">
-    <div class="video-background">
-        <video #heroVideo autoplay muted loop playsinline preload="auto">
-            <source src="/media/home/hth-promo-big-show-edit.mp4" type="video/mp4">
-            {{'Your browser does not support this video.' | translate}}
-        </video>
-    </div>
-
-    <div class="hero-content">
-        <h1 class="">Highway to Hell</h1>
-        <img class="p-3" src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 200px;">
-        <h2>AC/DC Tribute Band</h2>
-    </div>
-</section> -->
-
-
-<!-- <section class="hero">
-    <div class="hero-content">
-        <h1>Highway to Hell</h1>
-        <h2>AC/DC Tribute Band</h2>
-    </div>
-</section> -->
+<section class="hero">
+    <img src="/media/home/hero-2.png" class="hero-img" alt="HTH header image">
+    <h1 class="hero-content p-0 m-0">Highway to Hell</h1>
+    <h2 class="hero-content p-0 m-0">AC/DC Tribute Band</h2>
+</section>
 
 <div class="col-lg-8 mx-auto my-5 mb-0 px-3 fs-3" style="text-align: justify;">
     <!--  -->
@@ -40330,8 +40328,7 @@ var HomeComponent = class _HomeComponent {
                     }
                     <div class="m-1">
                         @for (link of nextEvent.links; track $index) {
-                        <a target="_blank" [href]="link.value"><i
-                                class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
+                        <a target="_blank" [href]="link.value"><i class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
                         }
                     </div>
                 </div>
@@ -40353,7 +40350,7 @@ var HomeComponent = class _HomeComponent {
 
     <div class="text-center">
         <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" routerLink="/concerts">
-            {{'Next concerts' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
+            {{'More concerts' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
         </button>
     </div>
     }
@@ -40392,12 +40389,13 @@ var HomeComponent = class _HomeComponent {
 <!-- Video e progetti -->
 <div class="col-lg-8 mx-auto my-5 mb-0 px-3" style="text-align: justify;">
     <h3 class="anton text-uppercase">
-        {{'Our projects' | translate}}
+        {{'Our formats' | translate}}
     </h3>
     <div>
         <div class="row g-4 m-0">
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="card shadow-hover rounded-0 elite h-100 d-flex justify-content-center clickable">
+                <div class="card shadow-hover rounded-0 border-0 elite h-100 d-flex text-center justify-content-center clickable">
+                    <p class="card-title m-2"><a class="anton white" routerLink="/formats" fragment="cover"><i class="fa-solid fa-link"></i>&nbsp;{{ "video_1_home"| translate }}</a></p>
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.youtube.com/embed/v6HmgTOJjdY?si=vs-OpJ3JanG7FpEK"
                             title="Highway to Hell - Thunderstruck" frameborder="0"
@@ -40408,7 +40406,8 @@ var HomeComponent = class _HomeComponent {
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="card shadow-hover rounded-0 elite h-100 d-flex justify-content-center clickable">
+                <div class="card shadow-hover rounded-0 border-0 elite h-100 d-flex text-center justify-content-center clickable">
+                    <p class="card-title m-2"><a class="anton white" routerLink="/formats" fragment="big-show"><i class="fa-solid fa-link"></i>&nbsp;{{ "video_2_home"| translate }}</a></p>
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.youtube.com/embed/JHIKGYqE99E?si=yUfdGJ4Mmruf8T87"
                             title="Highway to Hell - Showreel 2024" frameborder="0"
@@ -40421,7 +40420,8 @@ var HomeComponent = class _HomeComponent {
 
         <div class="row g-4 mb-4 m-0">
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="card shadow-hover rounded-0 elite h-100 d-flex justify-content-center clickable">
+                <div class="card shadow-hover rounded-0 border-0 elite h-100 d-flex text-center justify-content-center clickable">
+                    <p class="card-title m-2"><a class="anton white" routerLink="/formats" fragment="mega-show"><i class="fa-solid fa-link"></i>&nbsp;{{ "video_3_home"| translate }}</a></p>
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.youtube.com/embed/sxa4SvJCol0?si=IwYLu6GWB7TZH7sw"
                             title="Highway to Hell - Mega Show" frameborder="0"
@@ -40432,7 +40432,8 @@ var HomeComponent = class _HomeComponent {
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="card shadow-hover rounded-0 elite h-100 d-flex justify-content-center clickable">
+                <div class="card shadow-hover rounded-0 border-0 elite h-100 d-flex text-center justify-content-center clickable">
+                    <p class="card-title m-2"><a class="anton white" routerLink="/formats" fragment="symphony-of-thunder"><i class="fa-solid fa-link"></i>&nbsp;{{ "video_4_home"| translate }}</a></p>
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.youtube.com/embed/uacN3fgVxSE?si=VSRoEsNp_le9s2ng"
                             title="Highway to Hell - Symphony of Thunder" frameborder="0"
@@ -40551,8 +40552,8 @@ var HomeComponent = class _HomeComponent {
         {{"Since 2024, Highway to Hell were the first to introduce the \u201CSymphony of Thunder\u201D show in Italy: an innovative fusion between AC/DC's pure rock and the power of a symphonic orchestra. An exciting journey through AC/DC's greatest hits, from \u201CBack in Black\u201D to \u201CThunderstruck\u201D, reimagined for orchestra for an unprecedented sound impact!" | translate}}
     </p>
     <div class="text-center">
-        <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" routerLink="/projects">
-            {{'Discover our projects' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
+        <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" routerLink="/formats">
+            {{'Check out our formats' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
         </button>
     </div>
 </div>
@@ -40578,7 +40579,7 @@ var HomeComponent = class _HomeComponent {
             </button>
         </div>
     </div>
-</div>`, styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  width: 100%;\n  height: calc(100vh - 60px);\n  overflow: hidden;\n}\n.hero {\n  width: 100%;\n  align-items: top;\n  justify-content: center;\n  color: white;\n}\n.hero-img {\n  width: 100%;\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background video {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .video-background video {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .hero {\n    height: 100vh;\n  }\n  .video-background video {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content h1 {\n    font-size: 2rem;\n  }\n  .hero-content h2 {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content {\n  position: relative;\n  z-index: 1;\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
+</div>`, styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n}\n.hero-img {\n  width: 100%;\n  height: auto;\n  display: block;\n  object-fit: cover;\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background video {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .hero h1 {\n    font-family: "Squealer", sans-serif;\n    font-size: 2.5rem;\n    color: #fff;\n    -webkit-text-stroke: 1px black;\n  }\n  .hero h2 {\n    font-family: "Squealer", sans-serif;\n    font-size: 1.5rem;\n    color: #fff;\n    -webkit-text-stroke: 1px black;\n  }\n  .video-background video {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .video-background video {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content h1 {\n    font-size: 2rem;\n  }\n  .hero-content h2 {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content {\n  position: relative;\n  z-index: 1;\n}\n.white {\n  color: #dee2e6;\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
   }], () => [{ type: CalendarService }, { type: DomSanitizer }, { type: SharedService }], { heroVideo: [{
     type: ViewChild,
     args: ["heroVideo"]
@@ -41914,15 +41915,33 @@ var ConcertsComponent = class _ConcertsComponent {
 
 // src/app/projects/projects.component.ts
 var ProjectsComponent = class _ProjectsComponent {
+  route;
+  viewportScroller;
   shared;
-  constructor(shared) {
+  constructor(route, viewportScroller, shared) {
+    this.route = route;
+    this.viewportScroller = viewportScroller;
     this.shared = shared;
     this.shared.scrollUp();
   }
+  ngAfterViewInit() {
+    this.route.fragment.subscribe((fragment) => {
+      if (fragment) {
+        setTimeout(() => {
+          const element = document.getElementById(fragment);
+          if (element) {
+            const yOffset = -80;
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+          }
+        }, 50);
+      }
+    });
+  }
   static \u0275fac = function ProjectsComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _ProjectsComponent)(\u0275\u0275directiveInject(SharedService));
+    return new (__ngFactoryType__ || _ProjectsComponent)(\u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(ViewportScroller), \u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectsComponent, selectors: [["app-projects"]], decls: 12, vars: 3, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function ProjectsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectsComponent, selectors: [["app-projects"]], decls: 36, vars: 3, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-justify", 2, "text-align", "justify"], ["id", "cover", 1, "title", "text-uppercase", "anton"], ["id", "big-show", 1, "title", "text-uppercase", "anton"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-justify", "mt-3", 2, "text-align", "justify"], ["id", "mega-show", 1, "title", "text-uppercase", "anton"], ["id", "symphony-of-thunder", 1, "title", "text-uppercase", "anton"]], template: function ProjectsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
       \u0275\u0275text(3);
@@ -41932,14 +41951,45 @@ var ProjectsComponent = class _ProjectsComponent {
       \u0275\u0275text(7, " \xA0 ");
       \u0275\u0275elementEnd()();
       \u0275\u0275elementStart(8, "div", 4)(9, "h2", 5);
-      \u0275\u0275text(10, "Work in progress...");
+      \u0275\u0275text(10, "Thunderstruck Cover");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(11, "img", 6);
+      \u0275\u0275elementStart(11, "p");
+      \u0275\u0275text(12, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(13, "p");
+      \u0275\u0275text(14, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
       \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(15, "div", 4)(16, "h2", 6);
+      \u0275\u0275text(17, "Big Show");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(18, "p");
+      \u0275\u0275text(19, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(20, "p");
+      \u0275\u0275text(21, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(22, "div", 7)(23, "h2", 8);
+      \u0275\u0275text(24, "Mega Show");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(25, "p");
+      \u0275\u0275text(26, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(27, "p");
+      \u0275\u0275text(28, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(29, "div", 4)(30, "h2", 9);
+      \u0275\u0275text(31, "Symphony of Thunder");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(32, "p");
+      \u0275\u0275text(33, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(34, "p");
+      \u0275\u0275text(35, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
+      \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 1, "Projects"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 1, "Formats"), " ");
     }
   }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/projects/projects.jpg);\n}\n/*# sourceMappingURL=projects.component.css.map */"] });
 };
@@ -41949,7 +41999,7 @@ var ProjectsComponent = class _ProjectsComponent {
     args: [{ selector: "app-projects", imports: [TranslateModule], template: `<div>
     <div class="container-fluid bg-title">
         <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
-            {{'Projects' | translate}}
+            {{'Formats' | translate}}
         </h1>
     </div>
     <div class="bg-grad">
@@ -41957,15 +42007,51 @@ var ProjectsComponent = class _ProjectsComponent {
             &nbsp;
         </h1>
     </div>
-    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">
-        <h2 class="title text-uppercase anton">Work in progress...</h2>
-        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">
+
+    <div class="col-lg-8 mx-auto my-5 px-3 text-justify" style="text-align: justify;">
+        <h2 id="cover" class="title text-uppercase anton">Thunderstruck Cover</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+
+    <div class="col-lg-8 mx-auto my-5 px-3 text-justify" style="text-align: justify;">
+        <h2 id="big-show" class="title text-uppercase anton">Big Show</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+
+    <div class="col-lg-8 mx-auto my-5 px-3 text-justify mt-3" style="text-align: justify;">
+        <h2 id="mega-show" class="title text-uppercase anton">Mega Show</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+
+    <div class="col-lg-8 mx-auto my-5 px-3 text-justify" style="text-align: justify;">
+        <h2 id="symphony-of-thunder" class="title text-uppercase anton">Symphony of Thunder</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
     </div>
 </div>`, styles: ["/* src/app/projects/projects.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/projects/projects.jpg);\n}\n/*# sourceMappingURL=projects.component.css.map */\n"] }]
-  }], () => [{ type: SharedService }], null);
+  }], () => [{ type: ActivatedRoute }, { type: ViewportScroller }, { type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ProjectsComponent, { className: "ProjectsComponent", filePath: "src/app/projects/projects.component.ts", lineNumber: 11 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ProjectsComponent, { className: "ProjectsComponent", filePath: "src/app/projects/projects.component.ts", lineNumber: 13 });
 })();
 
 // src/app/contacts/contacts.component.ts
@@ -42104,7 +42190,7 @@ var routes = [
   { path: "band/matteo", component: MatteoComponent },
   { path: "bio", component: BioComponent },
   { path: "concerts", component: ConcertsComponent },
-  { path: "projects", component: ProjectsComponent },
+  { path: "formats", component: ProjectsComponent },
   { path: "contacts", component: ContactsComponent },
   { path: "privacy-policy", component: PrivacyPolicyComponent },
   { path: "**", component: PageNotFoundComponent }
@@ -46623,7 +46709,7 @@ var HeaderComponent = class _HeaderComponent {
   static \u0275fac = function HeaderComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _HeaderComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 98, vars: 47, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0", "my-0"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", "squealer", 3, "click"], ["src", "/media/hth-logo.png", "alt", "HTH Logo", 2, "max-height", "50px"], [1, "navbar-brand", "clickable", "my-1", "squealer", "d-none", "d-lg-inline", 3, "click"], [1, "d-lg-none", "ms-2", "position-relative"], ["data-bs-toggle", "dropdown", "type", "button", 1, "btn", "btn-sm", "dropdown-toggle"], [1, "dropdown-menu", "dropdown-menu-end", "text-center", "mobile-lang-menu"], [1, "clickable"], [1, "dropdown-item", "anton", 3, "click"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end", "border-0"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/projects", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/bio", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "bandDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "bandDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/band/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/band/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/band/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/band/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/band/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "d-none", "d-lg-block"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 98, vars: 47, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0", "my-0"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", "squealer", 3, "click"], ["src", "hth-logo-clean.png", "alt", "HTH Logo", 2, "max-height", "50px"], [1, "navbar-brand", "clickable", "my-1", "squealer", "d-none", "d-lg-inline", 3, "click"], [1, "d-lg-none", "ms-2", "position-relative"], ["data-bs-toggle", "dropdown", "type", "button", 1, "btn", "btn-sm", "dropdown-toggle"], [1, "dropdown-menu", "dropdown-menu-end", "text-center", "mobile-lang-menu"], [1, "clickable"], [1, "dropdown-item", "anton", 3, "click"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end", "border-0"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/formats", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/bio", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "bandDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "bandDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/band/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/band/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/band/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/band/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/band/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "d-none", "d-lg-block"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
       \u0275\u0275elementStart(0, "nav", 1)(1, "div", 2)(2, "span", 3);
@@ -46804,9 +46890,9 @@ var HeaderComponent = class _HeaderComponent {
       \u0275\u0275advance();
       \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(37, 39, "Concerts"));
       \u0275\u0275advance(3);
-      \u0275\u0275classProp("active", ctx.shared.activeLink === "projects");
+      \u0275\u0275classProp("active", ctx.shared.activeLink === "formats");
       \u0275\u0275advance();
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(41, 41, "Projects"));
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(41, 41, "Formats"));
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "bio");
       \u0275\u0275advance(3);
@@ -46857,7 +46943,7 @@ var HeaderComponent = class _HeaderComponent {
     ], template: `<nav class="navbar navbar-expand-lg sticky-top squealer py-0 my-0">
     <div class="container-fluid">
         <span class="navbar-brand clickable my-1 squealer" (click)="navigate('home')">
-            <img src="/media/hth-logo.png" alt="HTH Logo" style="max-height: 50px;">
+            <img src="hth-logo-clean.png" alt="HTH Logo" style="max-height: 50px;">
         </span>
 
         <span class="navbar-brand clickable my-1 squealer d-none d-lg-inline" (click)="navigate('home')">
@@ -46903,8 +46989,8 @@ var HeaderComponent = class _HeaderComponent {
                             [class.active]="shared.activeLink==='concerts'" routerLink="/concerts"
                             (click)="shared.triggerCloseButtonClick()">{{'Concerts' | translate}}</a></li>
                     <li class="nav-item m-2 anton"><a class="nav-link btn"
-                            [class.active]="shared.activeLink==='projects'" routerLink="/projects"
-                            (click)="shared.triggerCloseButtonClick()">{{'Projects' | translate}}</a></li>
+                            [class.active]="shared.activeLink==='formats'" routerLink="/formats"
+                            (click)="shared.triggerCloseButtonClick()">{{'Formats' | translate}}</a></li>
                     <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='bio'"
                             routerLink="/bio" (click)="shared.triggerCloseButtonClick()">Bio</a></li>
                     <li class="nav-item m-2 dropdown anton">
@@ -47011,7 +47097,7 @@ var FooterComponent = class _FooterComponent {
   static \u0275fac = function FooterComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _FooterComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], decls: 22, vars: 1, consts: [[1, "text-center"], [1, "container"], [1, "", 2, "display", "flex", "flex-wrap", "wrap", "flex-direction", "row", "align-items", "center", "justify-content", "center"], ["data-mdb-ripple-init", "", "href", "https://www.instagram.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-instagram"], ["data-mdb-ripple-init", "", "href", "https://www.facebook.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-facebook"], ["data-mdb-ripple-init", "", "href", "https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-youtube"], ["data-mdb-ripple-init", "", "href", "https://www.tiktok.com/@hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "m-1", "rounded-circle", "circle", "m-3"], [1, "fab", "fa-tiktok"], [1, "text-center", "p-3"], ["href", "https://lrossi.xyz", "target", "_blank", 1, ""], [1, "fa-solid", "fa-bolt"], ["routerLink", "/privacy-policy", 1, "m-0", "p-0", "clickable"]], template: function FooterComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], decls: 22, vars: 1, consts: [[1, "text-center"], [1, "container"], [1, "p-4", 2, "display", "flex", "flex-wrap", "wrap", "flex-direction", "row", "align-items", "center", "justify-content", "center"], ["data-mdb-ripple-init", "", "href", "https://www.instagram.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "rounded-circle", "circle", "m-1"], [1, "fab", "fa-instagram"], ["data-mdb-ripple-init", "", "href", "https://www.facebook.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "rounded-circle", "circle", "m-1"], [1, "fab", "fa-facebook"], ["data-mdb-ripple-init", "", "href", "https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "rounded-circle", "circle", "m-1"], [1, "fab", "fa-youtube"], ["data-mdb-ripple-init", "", "href", "https://www.tiktok.com/@hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "rounded-circle", "circle", "m-1"], [1, "fab", "fa-tiktok"], [1, "text-center", "p-3"], ["href", "https://lrossi.xyz", "target", "_blank", 1, ""], [1, "fa-solid", "fa-bolt"], ["routerLink", "/privacy-policy", 1, "m-0", "p-0", "clickable"]], template: function FooterComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "footer", 0)(1, "div", 1)(2, "div", 2)(3, "a", 3);
       \u0275\u0275element(4, "i", 4);
@@ -47043,14 +47129,14 @@ var FooterComponent = class _FooterComponent {
       \u0275\u0275advance(12);
       \u0275\u0275textInterpolate1(" \xA9", ctx.year, "\xA0Highway to Hell - AC/DC Tribute Band ");
     }
-  }, dependencies: [RouterLink], styles: ["\n\nfooter[_ngcontent-%COMP%] {\n  background-color: #0d0f11;\n}\n.btn[_ngcontent-%COMP%] {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.btn[_ngcontent-%COMP%]:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  opacity: 0.9;\n}\n/*# sourceMappingURL=footer.component.css.map */"] });
+  }, dependencies: [RouterLink], styles: ["\n\nfooter[_ngcontent-%COMP%] {\n  background-color: #060607;\n}\n.btn[_ngcontent-%COMP%] {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.btn[_ngcontent-%COMP%]:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  opacity: 0.9;\n}\n/*# sourceMappingURL=footer.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FooterComponent, [{
     type: Component,
     args: [{ selector: "app-footer", imports: [
       RouterLink
-    ], template: '<!-- Footer -->\n<footer class="text-center">\n  <!-- Grid container -->\n  <div class="container">\n    <!-- Section: Social media -->\n    <div class="" style="display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;">\n      \n        <!-- Instagram -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.instagram.com/hthtribute" target="_blank" role="button">\n            <i class="fab fa-instagram"></i>\n        </a>\n\n        <!-- Facebook -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.facebook.com/hthtribute" target="_blank" role="button">\n            <i class="fab fa-facebook"></i>\n        </a>\n\n        <!-- YouTube -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g" target="_blank" role="button">\n            <i class="fab fa-youtube"></i>\n        </a>\n\n        <!-- TikTok -->\n        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3" href="https://www.tiktok.com/@hthtribute" target="_blank" role="button">\n            <i class="fab fa-tiktok"></i>\n        </a>\n\n      <!-- Spotify\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3 gradient-text"\n        href="https://open.spotify.com/artist/4kilGmYROQxMyEAMmTP82v" target="_blank" role="button"><i\n          class="fab fa-spotify"></i></a> -->\n\n      <!-- Soundcloud\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1  rounded-circle circle m-3 gradient-text"\n        href="https://soundcloud.com/lrossi93" target="_blank" role="button"><i class="fab fa-soundcloud"></i></a> -->\n    </div>\n    <!-- Section: Social media -->\n    <!-- Section: Links -->\n  </div>\n  <!-- Grid container -->\n\n  <!-- Copyright -->\n  <div class="text-center p-3 ">\n    &#169;{{year}}&nbsp;Highway to Hell - AC/DC Tribute Band\n    <br>\n    Designed by <a class="" href="https://lrossi.xyz" target="_blank">Lorenzo Rossi</a>&nbsp;<i class="fa-solid fa-bolt"></i>&nbsp;<a class="m-0 p-0 clickable " routerLink="/privacy-policy">Privacy Policy</a>\n  </div>\n  <!-- Copyright -->\n</footer>\n<!-- Footer -->\n<!--/footer-->', styles: ["/* src/app/footer/footer.component.css */\nfooter {\n  background-color: #0d0f11;\n}\n.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  opacity: 0.9;\n}\n/*# sourceMappingURL=footer.component.css.map */\n"] }]
+    ], template: '<!-- Footer -->\n<footer class="text-center">\n  <!-- Grid container -->\n  <div class="container">\n    <!-- Section: Social media -->\n    <div class="p-4"\n      style="display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;">\n\n      <!-- Instagram -->\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating rounded-circle circle m-1"\n        href="https://www.instagram.com/hthtribute" target="_blank" role="button">\n        <i class="fab fa-instagram"></i>\n      </a>\n\n      <!-- Facebook -->\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating rounded-circle circle m-1"\n        href="https://www.facebook.com/hthtribute" target="_blank" role="button">\n        <i class="fab fa-facebook"></i>\n      </a>\n\n      <!-- YouTube -->\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating rounded-circle circle m-1"\n        href="https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g" target="_blank" role="button">\n        <i class="fab fa-youtube"></i>\n      </a>\n\n      <!-- TikTok -->\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating rounded-circle circle m-1"\n        href="https://www.tiktok.com/@hthtribute" target="_blank" role="button">\n        <i class="fab fa-tiktok"></i>\n      </a>\n\n    </div>\n  </div>\n\n  <div class="text-center p-3">\n    &#169;{{year}}&nbsp;Highway to Hell - AC/DC Tribute Band\n    <br>\n    Designed by <a class="" href="https://lrossi.xyz" target="_blank">Lorenzo Rossi</a>&nbsp;<i\n      class="fa-solid fa-bolt"></i>&nbsp;<a class="m-0 p-0 clickable " routerLink="/privacy-policy">Privacy Policy</a>\n  </div>\n</footer>', styles: ["/* src/app/footer/footer.component.css */\nfooter {\n  background-color: #060607;\n}\n.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  opacity: 0.9;\n}\n/*# sourceMappingURL=footer.component.css.map */\n"] }]
   }], () => [], null);
 })();
 (() => {
@@ -47058,33 +47144,93 @@ var FooterComponent = class _FooterComponent {
 })();
 
 // src/app/app.component.ts
+function AppComponent_Conditional_0_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 1)(1, "div", 2);
+    \u0275\u0275element(2, "img", 3);
+    \u0275\u0275elementEnd();
+    \u0275\u0275namespaceSVG();
+    \u0275\u0275elementStart(3, "svg", 4);
+    \u0275\u0275element(4, "path", 5);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(5, "svg", 6);
+    \u0275\u0275element(6, "path", 7);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(7, "svg", 8);
+    \u0275\u0275element(8, "path", 9);
+    \u0275\u0275elementEnd()();
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext();
+    \u0275\u0275classProp("fade-out", ctx_r0.fadingOut);
+  }
+}
 var AppComponent = class _AppComponent {
-  title = "hth";
+  router;
+  viewportScroller;
+  loading = true;
+  // esiste nel DOM
+  fadingOut = false;
+  // attiva la dissolvenza
+  showButton = false;
+  constructor(router, viewportScroller) {
+    this.router = router;
+    this.viewportScroller = viewportScroller;
+  }
+  ngOnInit() {
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
+      setTimeout(() => {
+        this.fadingOut = true;
+        setTimeout(() => {
+          this.loading = false;
+        }, 1e3);
+      }, 500);
+    });
+  }
+  onWindowScroll() {
+    this.showButton = window.scrollY > 0;
+  }
+  scrollUp() {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
   static \u0275fac = function AppComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _AppComponent)();
+    return new (__ngFactoryType__ || _AppComponent)(\u0275\u0275directiveInject(Router), \u0275\u0275directiveInject(ViewportScroller));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], decls: 3, vars: 0, template: function AppComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], hostBindings: function AppComponent_HostBindings(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275element(0, "app-header")(1, "router-outlet")(2, "app-footer");
+      \u0275\u0275listener("scroll", function AppComponent_scroll_HostBindingHandler() {
+        return ctx.onWindowScroll();
+      }, false, \u0275\u0275resolveWindow);
+    }
+  }, decls: 4, vars: 1, consts: [["id", "loader", 1, "loader", "apocalypse", "ultimate-distortion", 3, "fade-out"], ["id", "loader", 1, "loader", "apocalypse", "ultimate-distortion"], [1, "lightning-origin", "mega-shake"], ["src", "hth-logo-clean.png", "alt", "Logo", 1, "logo", "img-fluid"], ["viewBox", "0 0 100 2000", "preserveAspectRatio", "none", 1, "lightning", "bolt", "a"], ["d", "M50 0 L35 200 L70 420 L30 700 L80 1000 L40 1400 L60 1700 L50 2000"], ["viewBox", "0 0 100 2000", "preserveAspectRatio", "none", 1, "lightning", "bolt", "b"], ["d", "M50 0 L75 240 L25 500 L85 800 L20 1100 L70 1450 L35 1750 L50 2000"], ["viewBox", "0 0 100 2000", "preserveAspectRatio", "none", 1, "lightning", "bolt", "c"], ["d", "M50 0 L20 280 L80 550 L25 900 L90 1200 L30 1500 L75 1800 L50 2000"]], template: function AppComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275template(0, AppComponent_Conditional_0_Template, 9, 2, "div", 0);
+      \u0275\u0275element(1, "app-header")(2, "router-outlet")(3, "app-footer");
+    }
+    if (rf & 2) {
+      \u0275\u0275conditional(ctx.loading ? 0 : -1);
     }
   }, dependencies: [
     RouterOutlet,
     HeaderComponent,
     FooterComponent
-  ], encapsulation: 2 });
+  ], styles: ['\n\n.loader[_ngcontent-%COMP%] {\n  position: fixed;\n  inset: 0;\n  background:\n    radial-gradient(\n      circle at center,\n      #01030a 0%,\n      #000 85%);\n  z-index: 9999;\n  overflow: hidden;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: opacity 1s ease;\n}\n.loader.fade-out[_ngcontent-%COMP%] {\n  opacity: 0;\n  pointer-events: none;\n}\n.apocalypse[_ngcontent-%COMP%]::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background: #bfe0ff;\n  opacity: 0;\n  animation: _ngcontent-%COMP%_apocalypseFlash 1.6s infinite;\n  pointer-events: none;\n  mix-blend-mode: screen;\n}\n@keyframes _ngcontent-%COMP%_apocalypseFlash {\n  0%, 82%, 100% {\n    opacity: 0;\n  }\n  83% {\n    opacity: 0.25;\n  }\n  85% {\n    opacity: 0;\n  }\n  88% {\n    opacity: 0.6;\n  }\n  90% {\n    opacity: 0;\n  }\n}\n.ultimate-distortion[_ngcontent-%COMP%] {\n  animation: _ngcontent-%COMP%_distortion 0.25s infinite;\n}\n@keyframes _ngcontent-%COMP%_distortion {\n  0% {\n    filter: none;\n  }\n  50% {\n    filter: contrast(120%) brightness(130%) saturate(120%);\n  }\n  100% {\n    filter: none;\n  }\n}\n.loader[_ngcontent-%COMP%]::before {\n  content: "";\n  position: absolute;\n  inset: 0;\n  box-shadow: inset 0 0 60px #ff0000, inset 0 0 100px rgba(255, 0, 0, 0.6);\n  opacity: 0;\n  animation: _ngcontent-%COMP%_borderGlow 2s infinite;\n  pointer-events: none;\n}\n@keyframes _ngcontent-%COMP%_borderGlow {\n  0%, 86%, 100% {\n    opacity: 0;\n  }\n  87% {\n    opacity: 1;\n  }\n  89% {\n    opacity: 0;\n  }\n}\n.lightning-origin[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 50;\n}\n.logo[_ngcontent-%COMP%] {\n  width: clamp(150px, 15vw, 330px);\n  filter: drop-shadow(0 0 10px #ff0000) drop-shadow(0 0 40px #ff2f2f);\n}\n.mega-shake[_ngcontent-%COMP%] {\n  animation: _ngcontent-%COMP%_megaShakeSoft 0.25s infinite;\n}\n@keyframes _ngcontent-%COMP%_megaShakeSoft {\n  0% {\n    transform: translate(0);\n  }\n  20% {\n    transform: translate(-1px, 1px);\n  }\n  40% {\n    transform: translate(1px, -1px);\n  }\n  60% {\n    transform: translate(-1.5px, -0.5px);\n  }\n  80% {\n    transform: translate(1px, 1px);\n  }\n  100% {\n    transform: translate(0);\n  }\n}\n.lightning[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 14px;\n  height: 200vh;\n  transform-origin: top;\n  opacity: 0;\n  stroke: #ff0000;\n  stroke-width: 4;\n  fill: none;\n  filter: drop-shadow(0 0 15px #ff0000) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 120px #8fb8ff);\n}\n.lightning[_ngcontent-%COMP%]::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      180deg,\n      transparent,\n      #4d8dff,\n      transparent);\n  width: 3px;\n  height: 60%;\n  left: 30%;\n  top: 20%;\n  transform: rotate(18deg);\n  opacity: 0.6;\n}\n.bolt.a[_ngcontent-%COMP%] {\n  animation: _ngcontent-%COMP%_strikeA 0.9s infinite steps(1);\n}\n.bolt.b[_ngcontent-%COMP%] {\n  animation: _ngcontent-%COMP%_strikeB 1.4s infinite steps(1);\n}\n.bolt.c[_ngcontent-%COMP%] {\n  animation: _ngcontent-%COMP%_strikeC 2.1s infinite steps(1);\n}\n@keyframes _ngcontent-%COMP%_strikeA {\n  0%, 68%, 100% {\n    opacity: 0;\n  }\n  69% {\n    opacity: 1;\n    transform: translate(-50%, -50%) rotate(22deg);\n  }\n  71% {\n    opacity: 0;\n  }\n}\n@keyframes _ngcontent-%COMP%_strikeB {\n  0%, 75%, 100% {\n    opacity: 0;\n  }\n  76% {\n    opacity: 1;\n    transform: translate(-50%, -50%) rotate(-38deg);\n  }\n  79% {\n    opacity: 0;\n  }\n}\n@keyframes _ngcontent-%COMP%_strikeC {\n  0%, 83%, 100% {\n    opacity: 0;\n  }\n  84% {\n    opacity: 1;\n    transform: translate(-50%, -50%) rotate(55deg);\n  }\n  87% {\n    opacity: 0;\n  }\n}\n@media (max-width: 768px) {\n  .logo[_ngcontent-%COMP%] {\n    width: clamp(90px, 22vw, 140px);\n  }\n  .ultimate-distortion[_ngcontent-%COMP%] {\n    animation: _ngcontent-%COMP%_distortion 0.45s infinite;\n  }\n  .lightning[_ngcontent-%COMP%] {\n    width: 22px;\n    height: 240vh;\n    stroke-width: 6;\n    filter: drop-shadow(0 0 25px #ff0000) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 140px #9fc2ff);\n  }\n  .lightning[_ngcontent-%COMP%]::after {\n    width: 4px;\n    opacity: 0.9;\n  }\n  .bolt.a[_ngcontent-%COMP%] {\n    animation-duration: 0.8s;\n  }\n  .bolt.b[_ngcontent-%COMP%] {\n    animation-duration: 1.1s;\n  }\n  .bolt.c[_ngcontent-%COMP%] {\n    animation-duration: 1.6s;\n  }\n  .mega-shake[_ngcontent-%COMP%] {\n    animation: _ngcontent-%COMP%_megaShakeSoft 0.35s infinite;\n  }\n  .apocalypse[_ngcontent-%COMP%]::after {\n    animation-duration: 1.2s;\n  }\n  .loader[_ngcontent-%COMP%]::before {\n    box-shadow: inset 0 0 50px #ff0000, inset 0 0 100px rgba(255, 55, 55, 0.8);\n  }\n}\n@media (max-width: 400px) {\n  .lightning[_ngcontent-%COMP%] {\n    width: 26px;\n    stroke-width: 7;\n  }\n  .logo[_ngcontent-%COMP%] {\n    width: 110px;\n  }\n}\n/*# sourceMappingURL=app.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AppComponent, [{
     type: Component,
-    args: [{ selector: "app-root", imports: [
+    args: [{ selector: "app-root", standalone: true, imports: [
       RouterOutlet,
       HeaderComponent,
       FooterComponent
-    ], template: "<app-header></app-header>\n<router-outlet></router-outlet>\n<app-footer></app-footer>" }]
-  }], null, null);
+    ], template: '<!-- loading screen -->\n@if(loading){\n<div id="loader" class="loader apocalypse ultimate-distortion" [class.fade-out]="fadingOut">\n\n    <div class="lightning-origin mega-shake">\n        <img src="hth-logo-clean.png" alt="Logo" class="logo img-fluid" />\n    </div>\n\n    <!-- Fulmini principali lunghissimi -->\n    <svg class="lightning bolt a" viewBox="0 0 100 2000" preserveAspectRatio="none">\n        <path d="M50 0 L35 200 L70 420 L30 700 L80 1000 L40 1400 L60 1700 L50 2000" />\n    </svg>\n\n    <svg class="lightning bolt b" viewBox="0 0 100 2000" preserveAspectRatio="none">\n        <path d="M50 0 L75 240 L25 500 L85 800 L20 1100 L70 1450 L35 1750 L50 2000" />\n    </svg>\n\n    <svg class="lightning bolt c" viewBox="0 0 100 2000" preserveAspectRatio="none">\n        <path d="M50 0 L20 280 L80 550 L25 900 L90 1200 L30 1500 L75 1800 L50 2000" />\n    </svg>\n\n</div>\n}\n<app-header></app-header>\n<router-outlet></router-outlet>\n<app-footer></app-footer>', styles: ['/* src/app/app.component.css */\n.loader {\n  position: fixed;\n  inset: 0;\n  background:\n    radial-gradient(\n      circle at center,\n      #01030a 0%,\n      #000 85%);\n  z-index: 9999;\n  overflow: hidden;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: opacity 1s ease;\n}\n.loader.fade-out {\n  opacity: 0;\n  pointer-events: none;\n}\n.apocalypse::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background: #bfe0ff;\n  opacity: 0;\n  animation: apocalypseFlash 1.6s infinite;\n  pointer-events: none;\n  mix-blend-mode: screen;\n}\n@keyframes apocalypseFlash {\n  0%, 82%, 100% {\n    opacity: 0;\n  }\n  83% {\n    opacity: 0.25;\n  }\n  85% {\n    opacity: 0;\n  }\n  88% {\n    opacity: 0.6;\n  }\n  90% {\n    opacity: 0;\n  }\n}\n.ultimate-distortion {\n  animation: distortion 0.25s infinite;\n}\n@keyframes distortion {\n  0% {\n    filter: none;\n  }\n  50% {\n    filter: contrast(120%) brightness(130%) saturate(120%);\n  }\n  100% {\n    filter: none;\n  }\n}\n.loader::before {\n  content: "";\n  position: absolute;\n  inset: 0;\n  box-shadow: inset 0 0 60px #ff0000, inset 0 0 100px rgba(255, 0, 0, 0.6);\n  opacity: 0;\n  animation: borderGlow 2s infinite;\n  pointer-events: none;\n}\n@keyframes borderGlow {\n  0%, 86%, 100% {\n    opacity: 0;\n  }\n  87% {\n    opacity: 1;\n  }\n  89% {\n    opacity: 0;\n  }\n}\n.lightning-origin {\n  position: relative;\n  z-index: 50;\n}\n.logo {\n  width: clamp(150px, 15vw, 330px);\n  filter: drop-shadow(0 0 10px #ff0000) drop-shadow(0 0 40px #ff2f2f);\n}\n.mega-shake {\n  animation: megaShakeSoft 0.25s infinite;\n}\n@keyframes megaShakeSoft {\n  0% {\n    transform: translate(0);\n  }\n  20% {\n    transform: translate(-1px, 1px);\n  }\n  40% {\n    transform: translate(1px, -1px);\n  }\n  60% {\n    transform: translate(-1.5px, -0.5px);\n  }\n  80% {\n    transform: translate(1px, 1px);\n  }\n  100% {\n    transform: translate(0);\n  }\n}\n.lightning {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 14px;\n  height: 200vh;\n  transform-origin: top;\n  opacity: 0;\n  stroke: #ff0000;\n  stroke-width: 4;\n  fill: none;\n  filter: drop-shadow(0 0 15px #ff0000) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 120px #8fb8ff);\n}\n.lightning::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      180deg,\n      transparent,\n      #4d8dff,\n      transparent);\n  width: 3px;\n  height: 60%;\n  left: 30%;\n  top: 20%;\n  transform: rotate(18deg);\n  opacity: 0.6;\n}\n.bolt.a {\n  animation: strikeA 0.9s infinite steps(1);\n}\n.bolt.b {\n  animation: strikeB 1.4s infinite steps(1);\n}\n.bolt.c {\n  animation: strikeC 2.1s infinite steps(1);\n}\n@keyframes strikeA {\n  0%, 68%, 100% {\n    opacity: 0;\n  }\n  69% {\n    opacity: 1;\n    transform: translate(-50%, -50%) rotate(22deg);\n  }\n  71% {\n    opacity: 0;\n  }\n}\n@keyframes strikeB {\n  0%, 75%, 100% {\n    opacity: 0;\n  }\n  76% {\n    opacity: 1;\n    transform: translate(-50%, -50%) rotate(-38deg);\n  }\n  79% {\n    opacity: 0;\n  }\n}\n@keyframes strikeC {\n  0%, 83%, 100% {\n    opacity: 0;\n  }\n  84% {\n    opacity: 1;\n    transform: translate(-50%, -50%) rotate(55deg);\n  }\n  87% {\n    opacity: 0;\n  }\n}\n@media (max-width: 768px) {\n  .logo {\n    width: clamp(90px, 22vw, 140px);\n  }\n  .ultimate-distortion {\n    animation: distortion 0.45s infinite;\n  }\n  .lightning {\n    width: 22px;\n    height: 240vh;\n    stroke-width: 6;\n    filter: drop-shadow(0 0 25px #ff0000) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 140px #9fc2ff);\n  }\n  .lightning::after {\n    width: 4px;\n    opacity: 0.9;\n  }\n  .bolt.a {\n    animation-duration: 0.8s;\n  }\n  .bolt.b {\n    animation-duration: 1.1s;\n  }\n  .bolt.c {\n    animation-duration: 1.6s;\n  }\n  .mega-shake {\n    animation: megaShakeSoft 0.35s infinite;\n  }\n  .apocalypse::after {\n    animation-duration: 1.2s;\n  }\n  .loader::before {\n    box-shadow: inset 0 0 50px #ff0000, inset 0 0 100px rgba(255, 55, 55, 0.8);\n  }\n}\n@media (max-width: 400px) {\n  .lightning {\n    width: 26px;\n    stroke-width: 7;\n  }\n  .logo {\n    width: 110px;\n  }\n}\n/*# sourceMappingURL=app.component.css.map */\n'] }]
+  }], () => [{ type: Router }, { type: ViewportScroller }], { onWindowScroll: [{
+    type: HostListener,
+    args: ["window:scroll", []]
+  }] });
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src/app/app.component.ts", lineNumber: 16 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src/app/app.component.ts", lineNumber: 19 });
 })();
 
 // src/main.ts

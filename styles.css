@@ -1,6 +1,12 @@
 @import "https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap";
 
 /* src/styles.css */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #111316;
+}
 .squealer {
   font-family: "Squealer", sans-serif;
 }
@@ -28,7 +34,6 @@ a:hover {
 h1.huge {
   font-size: 80px;
   color: white;
-  -webkit-text-stroke: 2px black;
 }
 .navbar.sticky-top {
   position: sticky !important;
@@ -105,15 +110,8 @@ h1.huge {
   -moz-text-fill-color: transparent;
 }
 .bg-title {
-  background-color: #0d0f11;
 }
 .bg-grad {
-  background-color: #000000;
-  background-image:
-    linear-gradient(
-      to bottom,
-      #0d0f11,
-      #212529);
 }
 .square {
   aspect-ratio: 1 / 1;

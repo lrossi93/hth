@@ -3,6 +3,7 @@
   "Next concert": "Nächstes Konzert",
   "There are no planned upcoming events...": "Es sind keine bevorstehenden Veranstaltungen geplant...",
   "Next concerts": "Nächste Konzerte",
+  "More concerts": "Mehr Konzerte",
   "Loading...": "Laden...",
   "The band": "Die Band",
   "Highway to Hell isn't just a simple tribute band, but an authentic rock energy explosion! With an AC/DC faithful sound, obsessive attention to detail and an overwhelming stage presence, they will take the audience on an electrifying journey, just like at a real concert by the legendary Australian band.": "Highway to Hell ist nicht nur eine einfache Tribute-Band, sondern eine authentische Explosion von Rockenergie! Mit einem AC/DC-treuen Sound, obsessiver Detailgenauigkeit und einer überwältigenden Bühnenpräsenz nehmen sie das Publikum mit auf eine elektrisierende Reise, genau wie bei einem echten Konzert der legendären australischen Band.",
@@ -77,5 +78,12 @@
   "jacopo_desc": "Leadgitarre, verkörpert den Geist von Angus Young mit ikonischen Riffs und purer Energie.",
   "eros_desc": "Gesang, ein Frontmann, der die Kraft von Brian Johnson mit explosiver Energie einfängt.",
   "lorenzo_desc": "Das Dröhnen seiner Dudelsäcke wird die Bühne im Rhythmus von “It's a Long Way to the Top” und “Thunderstruck” entfachen.",
-  "matteo_desc": "Auch bekannt als “The Italian Bon Scott”, ist er einer der beiden Protagonisten der Show “From Bon to Brian”."
+  "matteo_desc": "Auch bekannt als “The Italian Bon Scott”, ist er einer der beiden Protagonisten der Show “From Bon to Brian”.",
+  "Formats": "Formate",
+  "Our formats": "Unsere Formate",
+  "Check out our formats": "Entdecke unsere Formate",
+  "video_1_home": "Live-Aufnahme",
+  "video_2_home": "Promo-Video",
+  "video_3_home": "Mega-Show \"From Bon to Brian\"",
+  "video_4_home": "Promo-Video mit Sinfonieorchester"
 }
