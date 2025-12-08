@@ -39869,8 +39869,8 @@ function HomeComponent_Conditional_7_Conditional_0_Conditional_12_Template(rf, c
 }
 function HomeComponent_Conditional_7_Conditional_0_For_15_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "a", 48);
-    \u0275\u0275element(1, "i", 18);
+    \u0275\u0275elementStart(0, "a", 49);
+    \u0275\u0275element(1, "i", 19);
     \u0275\u0275text(2);
     \u0275\u0275elementEnd();
     \u0275\u0275element(3, "br");
@@ -39885,27 +39885,27 @@ function HomeComponent_Conditional_7_Conditional_0_For_15_Template(rf, ctx) {
 function HomeComponent_Conditional_7_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "h2", 8);
+    \u0275\u0275elementStart(0, "h2", 9);
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 37)(4, "div", 38)(5, "div", 39);
+    \u0275\u0275elementStart(3, "div", 38)(4, "div", 39)(5, "div", 40);
     \u0275\u0275text(6);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "div", 40)(8, "h3", 41);
+    \u0275\u0275elementStart(7, "div", 41)(8, "h3", 42);
     \u0275\u0275text(9);
     \u0275\u0275elementEnd();
-    \u0275\u0275element(10, "hr", 42);
-    \u0275\u0275elementStart(11, "div", 43);
+    \u0275\u0275element(10, "hr", 43);
+    \u0275\u0275elementStart(11, "div", 44);
     \u0275\u0275template(12, HomeComponent_Conditional_7_Conditional_0_Conditional_12_Template, 2, 1);
-    \u0275\u0275elementStart(13, "div", 44);
+    \u0275\u0275elementStart(13, "div", 45);
     \u0275\u0275repeaterCreate(14, HomeComponent_Conditional_7_Conditional_0_For_15_Template, 4, 2, null, null, \u0275\u0275repeaterTrackByIndex);
     \u0275\u0275elementEnd()();
-    \u0275\u0275element(16, "hr", 42);
-    \u0275\u0275elementStart(17, "div", 45);
-    \u0275\u0275element(18, "i", 46);
+    \u0275\u0275element(16, "hr", 43);
+    \u0275\u0275elementStart(17, "div", 46);
+    \u0275\u0275element(18, "i", 47);
     \u0275\u0275text(19, "\xA0 ");
-    \u0275\u0275elementStart(20, "a", 47);
+    \u0275\u0275elementStart(20, "a", 48);
     \u0275\u0275listener("click", function HomeComponent_Conditional_7_Conditional_0_Template_a_click_20_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext(2);
@@ -39932,7 +39932,7 @@ function HomeComponent_Conditional_7_Conditional_0_Template(rf, ctx) {
 }
 function HomeComponent_Conditional_7_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 8);
+    \u0275\u0275elementStart(0, "h2", 9);
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
@@ -39944,11 +39944,11 @@ function HomeComponent_Conditional_7_Conditional_1_Template(rf, ctx) {
 }
 function HomeComponent_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275template(0, HomeComponent_Conditional_7_Conditional_0_Template, 22, 8)(1, HomeComponent_Conditional_7_Conditional_1_Template, 3, 3, "h2", 8);
-    \u0275\u0275elementStart(2, "div", 4)(3, "button", 36);
+    \u0275\u0275template(0, HomeComponent_Conditional_7_Conditional_0_Template, 22, 8)(1, HomeComponent_Conditional_7_Conditional_1_Template, 3, 3, "h2", 9);
+    \u0275\u0275elementStart(2, "div", 5)(3, "button", 37);
     \u0275\u0275text(4);
     \u0275\u0275pipe(5, "translate");
-    \u0275\u0275element(6, "i", 11);
+    \u0275\u0275element(6, "i", 12);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -39960,11 +39960,11 @@ function HomeComponent_Conditional_7_Template(rf, ctx) {
 }
 function HomeComponent_Conditional_8_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 4)(1, "h2", 49);
+    \u0275\u0275elementStart(0, "div", 5)(1, "h2", 50);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 50)(5, "span", 51);
+    \u0275\u0275elementStart(4, "div", 51)(5, "span", 52);
     \u0275\u0275text(6);
     \u0275\u0275pipe(7, "translate");
     \u0275\u0275elementEnd()()();
@@ -40126,71 +40126,72 @@ var HomeComponent = class _HomeComponent {
       let _t;
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.heroVideo = _t.first);
     }
-  }, decls: 111, vars: 58, consts: [[1, "hero"], ["src", "/media/home/hero-2.png", "alt", "HTH header image", 1, "hero-img"], [1, "hero-content", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "banner-container", "py-3", "mt-5"], ["src", "/media/home/band-banner.jpg", "alt", "The band", 1, "banner-bg"], [1, "banner-content", "col-lg-8", "mx-auto", "my-3", "px-3", "text-justify"], [1, "anton", "text-uppercase"], [1, "fw-normal", 2, "text-align", "justify"], ["routerLink", "/band", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", 2, "text-align", "justify"], [1, "row", "g-4", "m-0"], [1, "col-lg-6", "col-md-6", "col-sm-12"], [1, "card", "shadow-hover", "rounded-0", "border-0", "elite", "h-100", "d-flex", "text-center", "justify-content-center", "clickable"], [1, "card-title", "m-2"], ["routerLink", "/formats", "fragment", "cover", 1, "anton", "white"], [1, "fa-solid", "fa-link"], [1, "ratio", "ratio-16x9"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/v6HmgTOJjdY?si=vs-OpJ3JanG7FpEK`, "title", "Highway to Hell - Thunderstruck", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/formats", "fragment", "big-show", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/JHIKGYqE99E?si=yUfdGJ4Mmruf8T87`, "title", "Highway to Hell - Showreel 2024", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], [1, "row", "g-4", "mb-4", "m-0"], ["routerLink", "/formats", "fragment", "mega-show", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/sxa4SvJCol0?si=IwYLu6GWB7TZH7sw`, "title", "Highway to Hell - Mega Show", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/formats", "fragment", "symphony-of-thunder", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/uacN3fgVxSE?si=VSRoEsNp_le9s2ng`, "title", "Highway to Hell - Symphony of Thunder", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/band/matteo"], ["routerLink", "/band/lorenzo"], [1, "mt-5", "anton", "text-uppercase"], ["routerLink", "/formats", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "py-3", "mt-5", "banner-container"], ["src", "/media/home/band-banner-2.jpg", "alt", "The band", 1, "banner-bg"], [1, "col-lg-8", "mx-auto", "my-3", "px-3", "banner-content", 2, "text-align", "justify"], ["routerLink", "/contacts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], ["routerLink", "/concerts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], ["target", "_blank", 3, "href"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function HomeComponent_Template(rf, ctx) {
+  }, decls: 111, vars: 58, consts: [[1, "hero", "shadow"], ["src", "/media/home/hth-alternate-hero.png", "alt", "HTH header image", 1, "hero-img", "shadow"], [1, "text-center", "squealer", "huge", "mt-5"], [1, "text-center", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "banner-container", "py-3", "mt-5"], ["src", "/media/home/band-banner.jpg", "alt", "The band", 1, "banner-bg"], [1, "banner-content", "col-lg-8", "mx-auto", "my-3", "px-3", "text-justify"], [1, "anton", "text-uppercase"], [1, "fw-normal", 2, "text-align", "justify"], ["routerLink", "/band", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", 2, "text-align", "justify"], [1, "row", "g-4", "m-0"], [1, "col-lg-6", "col-md-6", "col-sm-12"], [1, "card", "shadow-hover", "rounded-0", "border-0", "elite", "h-100", "d-flex", "text-center", "justify-content-center", "clickable"], [1, "card-title", "m-2"], ["routerLink", "/formats", "fragment", "cover", 1, "anton", "white"], [1, "fa-solid", "fa-link"], [1, "ratio", "ratio-16x9"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/v6HmgTOJjdY?si=vs-OpJ3JanG7FpEK`, "title", "Highway to Hell - Thunderstruck", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/formats", "fragment", "big-show", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/JHIKGYqE99E?si=yUfdGJ4Mmruf8T87`, "title", "Highway to Hell - Showreel 2024", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], [1, "row", "g-4", "mb-4", "m-0"], ["routerLink", "/formats", "fragment", "mega-show", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/sxa4SvJCol0?si=IwYLu6GWB7TZH7sw`, "title", "Highway to Hell - Mega Show", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/formats", "fragment", "symphony-of-thunder", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/uacN3fgVxSE?si=VSRoEsNp_le9s2ng`, "title", "Highway to Hell - Symphony of Thunder", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/band/matteo"], ["routerLink", "/band/lorenzo"], [1, "mt-5", "anton", "text-uppercase"], ["routerLink", "/formats", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "py-3", "mt-5", "banner-container"], ["src", "/media/home/band-banner-2.jpg", "alt", "The band", 1, "banner-bg"], [1, "col-lg-8", "mx-auto", "my-3", "px-3", "banner-content", 2, "text-align", "justify"], ["routerLink", "/contacts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], ["routerLink", "/concerts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], ["target", "_blank", 3, "href"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "section", 0);
       \u0275\u0275element(1, "img", 1);
+      \u0275\u0275elementEnd();
       \u0275\u0275elementStart(2, "h1", 2);
       \u0275\u0275text(3, "Highway to Hell");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(4, "h2", 2);
+      \u0275\u0275elementStart(4, "h2", 3);
       \u0275\u0275text(5, "AC/DC Tribute Band");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(6, "div", 3);
-      \u0275\u0275template(7, HomeComponent_Conditional_7_Template, 7, 4)(8, HomeComponent_Conditional_8_Template, 8, 6, "div", 4);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(9, "div", 5);
-      \u0275\u0275element(10, "img", 6);
-      \u0275\u0275elementStart(11, "div", 7)(12, "h3", 8);
+      \u0275\u0275elementStart(6, "div", 4);
+      \u0275\u0275template(7, HomeComponent_Conditional_7_Template, 7, 4)(8, HomeComponent_Conditional_8_Template, 8, 6, "div", 5);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(9, "div", 6);
+      \u0275\u0275element(10, "img", 7);
+      \u0275\u0275elementStart(11, "div", 8)(12, "h3", 9);
       \u0275\u0275text(13);
       \u0275\u0275pipe(14, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(15, "p", 9);
+      \u0275\u0275elementStart(15, "p", 10);
       \u0275\u0275text(16);
       \u0275\u0275pipe(17, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(18, "div", 4)(19, "button", 10);
+      \u0275\u0275elementStart(18, "div", 5)(19, "button", 11);
       \u0275\u0275text(20);
       \u0275\u0275pipe(21, "translate");
-      \u0275\u0275element(22, "i", 11);
+      \u0275\u0275element(22, "i", 12);
       \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(23, "div", 12)(24, "h3", 8);
+      \u0275\u0275elementStart(23, "div", 13)(24, "h3", 9);
       \u0275\u0275text(25);
       \u0275\u0275pipe(26, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(27, "div")(28, "div", 13)(29, "div", 14)(30, "div", 15)(31, "p", 16)(32, "a", 17);
-      \u0275\u0275element(33, "i", 18);
+      \u0275\u0275elementStart(27, "div")(28, "div", 14)(29, "div", 15)(30, "div", 16)(31, "p", 17)(32, "a", 18);
+      \u0275\u0275element(33, "i", 19);
       \u0275\u0275text(34);
       \u0275\u0275pipe(35, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(36, "div", 19);
-      \u0275\u0275element(37, "iframe", 20);
+      \u0275\u0275elementStart(36, "div", 20);
+      \u0275\u0275element(37, "iframe", 21);
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(38, "div", 14)(39, "div", 15)(40, "p", 16)(41, "a", 21);
-      \u0275\u0275element(42, "i", 18);
+      \u0275\u0275elementStart(38, "div", 15)(39, "div", 16)(40, "p", 17)(41, "a", 22);
+      \u0275\u0275element(42, "i", 19);
       \u0275\u0275text(43);
       \u0275\u0275pipe(44, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(45, "div", 19);
-      \u0275\u0275element(46, "iframe", 22);
+      \u0275\u0275elementStart(45, "div", 20);
+      \u0275\u0275element(46, "iframe", 23);
       \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(47, "div", 23)(48, "div", 14)(49, "div", 15)(50, "p", 16)(51, "a", 24);
-      \u0275\u0275element(52, "i", 18);
+      \u0275\u0275elementStart(47, "div", 24)(48, "div", 15)(49, "div", 16)(50, "p", 17)(51, "a", 25);
+      \u0275\u0275element(52, "i", 19);
       \u0275\u0275text(53);
       \u0275\u0275pipe(54, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(55, "div", 19);
-      \u0275\u0275element(56, "iframe", 25);
+      \u0275\u0275elementStart(55, "div", 20);
+      \u0275\u0275element(56, "iframe", 26);
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(57, "div", 14)(58, "div", 15)(59, "p", 16)(60, "a", 26);
-      \u0275\u0275element(61, "i", 18);
+      \u0275\u0275elementStart(57, "div", 15)(58, "div", 16)(59, "p", 17)(60, "a", 27);
+      \u0275\u0275element(61, "i", 19);
       \u0275\u0275text(62);
       \u0275\u0275pipe(63, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(64, "div", 19);
-      \u0275\u0275element(65, "iframe", 27);
+      \u0275\u0275elementStart(64, "div", 20);
+      \u0275\u0275element(65, "iframe", 28);
       \u0275\u0275elementEnd()()()()()();
-      \u0275\u0275elementStart(66, "div", 12)(67, "h3", 8);
+      \u0275\u0275elementStart(66, "div", 13)(67, "h3", 9);
       \u0275\u0275text(68);
       \u0275\u0275pipe(69, "translate");
       \u0275\u0275elementEnd();
@@ -40198,19 +40199,19 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275text(71);
       \u0275\u0275pipe(72, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(73, "p")(74, "a", 28);
+      \u0275\u0275elementStart(73, "p")(74, "a", 29);
       \u0275\u0275text(75, "Matteo Giovannone");
       \u0275\u0275elementEnd();
       \u0275\u0275text(76);
       \u0275\u0275pipe(77, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(78, "p")(79, "a", 29);
+      \u0275\u0275elementStart(78, "p")(79, "a", 30);
       \u0275\u0275text(80, "Lorenzo Rossi");
       \u0275\u0275elementEnd();
       \u0275\u0275text(81);
       \u0275\u0275pipe(82, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(83, "h3", 30);
+      \u0275\u0275elementStart(83, "h3", 31);
       \u0275\u0275text(84);
       \u0275\u0275pipe(85, "translate");
       \u0275\u0275elementEnd();
@@ -40218,14 +40219,14 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275text(87);
       \u0275\u0275pipe(88, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(89, "div", 4)(90, "button", 31);
+      \u0275\u0275elementStart(89, "div", 5)(90, "button", 32);
       \u0275\u0275text(91);
       \u0275\u0275pipe(92, "translate");
-      \u0275\u0275element(93, "i", 11);
+      \u0275\u0275element(93, "i", 12);
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(94, "div", 32);
-      \u0275\u0275element(95, "img", 33);
-      \u0275\u0275elementStart(96, "div", 34)(97, "h3", 30);
+      \u0275\u0275elementStart(94, "div", 33);
+      \u0275\u0275element(95, "img", 34);
+      \u0275\u0275elementStart(96, "div", 35)(97, "h3", 31);
       \u0275\u0275text(98);
       \u0275\u0275pipe(99, "translate");
       \u0275\u0275elementEnd();
@@ -40237,10 +40238,10 @@ var HomeComponent = class _HomeComponent {
       \u0275\u0275text(104);
       \u0275\u0275pipe(105, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(106, "div", 4)(107, "button", 35);
+      \u0275\u0275elementStart(106, "div", 5)(107, "button", 36);
       \u0275\u0275text(108);
       \u0275\u0275pipe(109, "translate");
-      \u0275\u0275element(110, "i", 11);
+      \u0275\u0275element(110, "i", 12);
       \u0275\u0275elementEnd()()()();
     }
     if (rf & 2) {
@@ -40289,7 +40290,7 @@ var HomeComponent = class _HomeComponent {
     RouterLink,
     TranslateModule,
     TranslatePipe
-  ], styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n}\n.hero-img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: auto;\n  display: block;\n  object-fit: cover;\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-family: "Squealer", sans-serif;\n    font-size: 2.5rem;\n    color: #fff;\n    -webkit-text-stroke: 1px black;\n  }\n  .hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-family: "Squealer", sans-serif;\n    font-size: 1.5rem;\n    color: #fff;\n    -webkit-text-stroke: 1px black;\n  }\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 2rem;\n  }\n  .hero-content[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n}\n.white[_ngcontent-%COMP%] {\n  color: #dee2e6;\n}\n/*# sourceMappingURL=home.component.css.map */'] });
+  ], styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #EDDDCE;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #EDDDCE;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  height: calc(100%);\n  overflow: hidden;\n}\n.hero-img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: auto;\n  display: block;\n  object-fit: cover;\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-family: "Squealer", sans-serif;\n    font-size: 2.5rem;\n    color: #EDDDCE;\n    -webkit-text-stroke: 1px black;\n  }\n  .hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-family: "Squealer", sans-serif;\n    font-size: 1.5rem;\n    color: #EDDDCE;\n    -webkit-text-stroke: 1px black;\n  }\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 2rem;\n  }\n  .hero-content[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n}\n.white[_ngcontent-%COMP%] {\n  color: #dee2e6;\n}\n/*# sourceMappingURL=home.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HomeComponent, [{
@@ -40299,11 +40300,13 @@ var HomeComponent = class _HomeComponent {
       TranslateModule
     ], template: `<!-- Hero -->
 <!-- Hero -->
-<section class="hero">
-    <img src="/media/home/hero-2.png" class="hero-img" alt="HTH header image">
-    <h1 class="hero-content p-0 m-0">Highway to Hell</h1>
-    <h2 class="hero-content p-0 m-0">AC/DC Tribute Band</h2>
+<section class="hero shadow">
+    <!-- <img src="/media/home/hero-2.png" class="hero-img" alt="HTH header image"> -->
+    <img src="/media/home/hth-alternate-hero.png" class="hero-img shadow" alt="HTH header image">
 </section>
+
+    <h1 class="text-center squealer huge mt-5">Highway to Hell</h1>
+    <h2 class="text-center squealer huge">AC/DC Tribute Band</h2>
 
 <div class="col-lg-8 mx-auto my-5 mb-0 px-3 fs-3" style="text-align: justify;">
     <!--  -->
@@ -40579,7 +40582,7 @@ var HomeComponent = class _HomeComponent {
             </button>
         </div>
     </div>
-</div>`, styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #fff;\n  -webkit-text-stroke: 1px black;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n}\n.hero-img {\n  width: 100%;\n  height: auto;\n  display: block;\n  object-fit: cover;\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background video {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .hero h1 {\n    font-family: "Squealer", sans-serif;\n    font-size: 2.5rem;\n    color: #fff;\n    -webkit-text-stroke: 1px black;\n  }\n  .hero h2 {\n    font-family: "Squealer", sans-serif;\n    font-size: 1.5rem;\n    color: #fff;\n    -webkit-text-stroke: 1px black;\n  }\n  .video-background video {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .video-background video {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content h1 {\n    font-size: 2rem;\n  }\n  .hero-content h2 {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content {\n  position: relative;\n  z-index: 1;\n}\n.white {\n  color: #dee2e6;\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
+</div>`, styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #EDDDCE;\n  -webkit-text-stroke: 1px black;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #EDDDCE;\n  -webkit-text-stroke: 1px black;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  height: calc(100%);\n  overflow: hidden;\n}\n.hero-img {\n  width: 100%;\n  height: auto;\n  display: block;\n  object-fit: cover;\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background video {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .hero h1 {\n    font-family: "Squealer", sans-serif;\n    font-size: 2.5rem;\n    color: #EDDDCE;\n    -webkit-text-stroke: 1px black;\n  }\n  .hero h2 {\n    font-family: "Squealer", sans-serif;\n    font-size: 1.5rem;\n    color: #EDDDCE;\n    -webkit-text-stroke: 1px black;\n  }\n  .video-background video {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .video-background video {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content h1 {\n    font-size: 2rem;\n  }\n  .hero-content h2 {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content {\n  position: relative;\n  z-index: 1;\n}\n.white {\n  color: #dee2e6;\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
   }], () => [{ type: CalendarService }, { type: DomSanitizer }, { type: SharedService }], { heroVideo: [{
     type: ViewChild,
     args: ["heroVideo"]
@@ -46709,7 +46712,7 @@ var HeaderComponent = class _HeaderComponent {
   static \u0275fac = function HeaderComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _HeaderComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 98, vars: 47, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0", "my-0"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", "squealer", 3, "click"], ["src", "hth-logo-clean.png", "alt", "HTH Logo", 2, "max-height", "50px"], [1, "navbar-brand", "clickable", "my-1", "squealer", "d-none", "d-lg-inline", 3, "click"], [1, "d-lg-none", "ms-2", "position-relative"], ["data-bs-toggle", "dropdown", "type", "button", 1, "btn", "btn-sm", "dropdown-toggle"], [1, "dropdown-menu", "dropdown-menu-end", "text-center", "mobile-lang-menu"], [1, "clickable"], [1, "dropdown-item", "anton", 3, "click"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end", "border-0"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/formats", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/bio", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "bandDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "bandDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/band/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/band/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/band/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/band/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/band/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "d-none", "d-lg-block"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 98, vars: 47, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0", "my-0", "shadow"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", "squealer", 3, "click"], ["src", "hth-logo-clean.png", "alt", "HTH Logo", 2, "max-height", "50px"], [1, "navbar-brand", "clickable", "my-1", "squealer", "d-none", "d-lg-inline", 3, "click"], [1, "d-lg-none", "ms-2", "position-relative"], ["data-bs-toggle", "dropdown", "type", "button", 1, "btn", "btn-sm", "dropdown-toggle"], [1, "dropdown-menu", "dropdown-menu-end", "text-center", "mobile-lang-menu"], [1, "clickable"], [1, "dropdown-item", "anton", 3, "click"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end", "border-0"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/formats", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/bio", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "bandDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "bandDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/band/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/band/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/band/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/band/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/band/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "d-none", "d-lg-block"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
       \u0275\u0275elementStart(0, "nav", 1)(1, "div", 2)(2, "span", 3);
@@ -46940,7 +46943,7 @@ var HeaderComponent = class _HeaderComponent {
     args: [{ selector: "app-header", imports: [
       RouterLink,
       TranslateModule
-    ], template: `<nav class="navbar navbar-expand-lg sticky-top squealer py-0 my-0">
+    ], template: `<nav class="navbar navbar-expand-lg sticky-top squealer py-0 my-0 shadow">
     <div class="container-fluid">
         <span class="navbar-brand clickable my-1 squealer" (click)="navigate('home')">
             <img src="hth-logo-clean.png" alt="HTH Logo" style="max-height: 50px;">
@@ -47183,8 +47186,8 @@ var AppComponent = class _AppComponent {
         this.fadingOut = true;
         setTimeout(() => {
           this.loading = false;
-        }, 1e3);
-      }, 500);
+        }, 1500);
+      }, 1e3);
     });
   }
   onWindowScroll() {

@@ -6,6 +6,7 @@ html {
 }
 body {
   background-color: #111316;
+  max-width: 100%;
 }
 .squealer {
   font-family: "Squealer", sans-serif;
@@ -33,7 +34,7 @@ a:hover {
 }
 h1.huge {
   font-size: 80px;
-  color: white;
+  color: #edddce;
 }
 .navbar.sticky-top {
   position: sticky !important;
