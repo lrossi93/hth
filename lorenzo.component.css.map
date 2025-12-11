@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["src/app/members/lorenzo/lorenzo.component.css"],
-  "sourcesContent": [".image-text {\n  background-image:\n    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),\n    url('/media/band/lorenzo/lorenzo-title-2.jpg');\n}\n\n\n"],
-  "mappings": ";AAAA,CAAC;AACC,oBACE,gBAAgB,KAAK,GAAG,EAAE,GAAG,EAAE,GAAG,EAAE,IAApC,EAA0C,KAAK,GAAG,EAAE,GAAG,EAAE,GAAG,EAAE,KAAK,EACnE;AACJ;",
+  "sourcesContent": [".image-text {\n  background-image:\n    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),\n    url('/media/band/lorenzo/lorenzo-title-2.jpg');\n}\n\n\n.member-img {\n  object-position: 0 -250px;\n}\n\n@media (max-width: 768px) {\n  .member-img {\n    object-position: -50px 0;\n  }\n}"],
+  "mappings": ";AAAA,CAAC;AACC,oBACE,gBAAgB,KAAK,GAAG,EAAE,GAAG,EAAE,GAAG,EAAE,IAApC,EAA0C,KAAK,GAAG,EAAE,GAAG,EAAE,GAAG,EAAE,KAAK,EACnE;AACJ;AAGA,CAAC;AACC,mBAAiB,EAAE;AACrB;AAEA,OAAO,CAAC,SAAS,EAAE;AACjB,GALD;AAMG,qBAAiB,MAAM;AACzB;AACF;",
   "names": []
 }

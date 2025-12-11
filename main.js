@@ -40126,7 +40126,7 @@ var HomeComponent = class _HomeComponent {
       let _t;
       \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx.heroVideo = _t.first);
     }
-  }, decls: 111, vars: 58, consts: [[1, "hero", "shadow"], ["src", "/media/home/hth-alternate-hero.png", "alt", "HTH header image", 1, "hero-img", "shadow"], [1, "text-center", "squealer", "huge", "mt-5"], [1, "text-center", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "banner-container", "py-3", "mt-5"], ["src", "/media/home/band-banner.jpg", "alt", "The band", 1, "banner-bg"], [1, "banner-content", "col-lg-8", "mx-auto", "my-3", "px-3", "text-justify"], [1, "anton", "text-uppercase"], [1, "fw-normal", 2, "text-align", "justify"], ["routerLink", "/band", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", 2, "text-align", "justify"], [1, "row", "g-4", "m-0"], [1, "col-lg-6", "col-md-6", "col-sm-12"], [1, "card", "shadow-hover", "rounded-0", "border-0", "elite", "h-100", "d-flex", "text-center", "justify-content-center", "clickable"], [1, "card-title", "m-2"], ["routerLink", "/formats", "fragment", "cover", 1, "anton", "white"], [1, "fa-solid", "fa-link"], [1, "ratio", "ratio-16x9"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/v6HmgTOJjdY?si=vs-OpJ3JanG7FpEK`, "title", "Highway to Hell - Thunderstruck", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/formats", "fragment", "big-show", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/JHIKGYqE99E?si=yUfdGJ4Mmruf8T87`, "title", "Highway to Hell - Showreel 2024", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], [1, "row", "g-4", "mb-4", "m-0"], ["routerLink", "/formats", "fragment", "mega-show", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/sxa4SvJCol0?si=IwYLu6GWB7TZH7sw`, "title", "Highway to Hell - Mega Show", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/formats", "fragment", "symphony-of-thunder", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/uacN3fgVxSE?si=VSRoEsNp_le9s2ng`, "title", "Highway to Hell - Symphony of Thunder", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/band/matteo"], ["routerLink", "/band/lorenzo"], [1, "mt-5", "anton", "text-uppercase"], ["routerLink", "/formats", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "py-3", "mt-5", "banner-container"], ["src", "/media/home/band-banner-2.jpg", "alt", "The band", 1, "banner-bg"], [1, "col-lg-8", "mx-auto", "my-3", "px-3", "banner-content", 2, "text-align", "justify"], ["routerLink", "/contacts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], ["routerLink", "/concerts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], ["target", "_blank", 3, "href"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function HomeComponent_Template(rf, ctx) {
+  }, decls: 111, vars: 58, consts: [[1, "hero", "shadow"], ["src", "/media/home/home-banner.jpg", "alt", "HTH header image", 1, "hero-img", "shadow"], [1, "text-center", "squealer", "huge", "mt-5", "text-uppercase"], [1, "text-center", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "banner-container", "py-3", "mt-5"], ["src", "/media/home/band-banner.jpg", "alt", "The band", 1, "banner-bg"], [1, "banner-content", "col-lg-8", "mx-auto", "my-3", "px-3", "text-justify"], [1, "anton", "text-uppercase"], [1, "fw-normal", 2, "text-align", "justify"], ["routerLink", "/band", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"], [1, "col-lg-8", "mx-auto", "my-5", "mb-0", "px-3", 2, "text-align", "justify"], [1, "row", "g-4", "m-0"], [1, "col-lg-6", "col-md-6", "col-sm-12"], [1, "card", "shadow-hover", "rounded-0", "border-0", "elite", "h-100", "d-flex", "text-center", "justify-content-center", "clickable"], [1, "card-title", "m-2"], ["routerLink", "/formats", "fragment", "cover", 1, "anton", "white"], [1, "fa-solid", "fa-link"], [1, "ratio", "ratio-16x9"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/v6HmgTOJjdY?si=vs-OpJ3JanG7FpEK`, "title", "Highway to Hell - Thunderstruck", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/formats", "fragment", "big-show", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/JHIKGYqE99E?si=yUfdGJ4Mmruf8T87`, "title", "Highway to Hell - Showreel 2024", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], [1, "row", "g-4", "mb-4", "m-0"], ["routerLink", "/formats", "fragment", "mega-show", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/sxa4SvJCol0?si=IwYLu6GWB7TZH7sw`, "title", "Highway to Hell - Mega Show", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/formats", "fragment", "symphony-of-thunder", 1, "anton", "white"], ["src", \u0275\u0275trustConstantResourceUrl`https://www.youtube.com/embed/uacN3fgVxSE?si=VSRoEsNp_le9s2ng`, "title", "Highway to Hell - Symphony of Thunder", "frameborder", "0", "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share", "referrerpolicy", "strict-origin-when-cross-origin", "allowfullscreen", ""], ["routerLink", "/band/matteo"], ["routerLink", "/band/lorenzo"], [1, "mt-5", "anton", "text-uppercase"], ["routerLink", "/formats", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "py-3", "mt-5", "banner-container"], ["src", "/media/home/band-banner-2.jpg", "alt", "The band", 1, "banner-bg"], [1, "col-lg-8", "mx-auto", "my-3", "px-3", "banner-content", 2, "text-align", "justify"], ["routerLink", "/contacts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], ["routerLink", "/concerts", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], ["target", "_blank", 3, "href"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function HomeComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "section", 0);
       \u0275\u0275element(1, "img", 1);
@@ -40290,7 +40290,7 @@ var HomeComponent = class _HomeComponent {
     RouterLink,
     TranslateModule,
     TranslatePipe
-  ], styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #EDDDCE;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #EDDDCE;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  height: calc(100%);\n  overflow: hidden;\n}\n.hero-img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: auto;\n  display: block;\n  object-fit: cover;\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-family: "Squealer", sans-serif;\n    font-size: 2.5rem;\n    color: #EDDDCE;\n    -webkit-text-stroke: 1px black;\n  }\n  .hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-family: "Squealer", sans-serif;\n    font-size: 1.5rem;\n    color: #EDDDCE;\n    -webkit-text-stroke: 1px black;\n  }\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 2rem;\n  }\n  .hero-content[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n}\n.white[_ngcontent-%COMP%] {\n  color: #dee2e6;\n}\n/*# sourceMappingURL=home.component.css.map */'] });
+  ], styles: ['\n\n.hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #EDDDCE;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #EDDDCE;\n  -webkit-text-stroke: 1px black;\n}\n.hero[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero[_ngcontent-%COMP%] {\n  position: relative;\n  height: calc(100%);\n  overflow: hidden;\n}\n.hero-img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: auto;\n  display: block;\n  object-fit: cover;\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background[_ngcontent-%COMP%] {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .hero[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-family: "Squealer", sans-serif;\n    font-size: 2.5rem;\n    color: #EDDDCE;\n    -webkit-text-stroke: 1px black;\n  }\n  .hero[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-family: "Squealer", sans-serif;\n    font-size: 1.5rem;\n    color: #EDDDCE;\n    -webkit-text-stroke: 1px black;\n  }\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .video-background[_ngcontent-%COMP%]   video[_ngcontent-%COMP%] {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 2rem;\n  }\n  .hero-content[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container[_ngcontent-%COMP%] {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n}\n.banner-bg[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 1;\n}\n.white[_ngcontent-%COMP%] {\n  color: #edddce;\n}\n/*# sourceMappingURL=home.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HomeComponent, [{
@@ -40302,10 +40302,11 @@ var HomeComponent = class _HomeComponent {
 <!-- Hero -->
 <section class="hero shadow">
     <!-- <img src="/media/home/hero-2.png" class="hero-img" alt="HTH header image"> -->
-    <img src="/media/home/hth-alternate-hero.png" class="hero-img shadow" alt="HTH header image">
+    <!-- <img src="/media/home/hth-alternate-hero.png" class="hero-img shadow" alt="HTH header image"> -->
+    <img src="/media/home/home-banner.jpg" class="hero-img shadow" alt="HTH header image">
 </section>
 
-    <h1 class="text-center squealer huge mt-5">Highway to Hell</h1>
+    <h1 class="text-center squealer huge mt-5 text-uppercase">Highway to Hell</h1>
     <h2 class="text-center squealer huge">AC/DC Tribute Band</h2>
 
 <div class="col-lg-8 mx-auto my-5 mb-0 px-3 fs-3" style="text-align: justify;">
@@ -40327,11 +40328,11 @@ var HomeComponent = class _HomeComponent {
                 <hr class="m-0">
                 <div class="card-body">
                     @if(nextEvent.description != ""){
-                    {{nextEvent.description}}<br>
+                        {{nextEvent.description}}<br>
                     }
                     <div class="m-1">
                         @for (link of nextEvent.links; track $index) {
-                        <a target="_blank" [href]="link.value"><i class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
+                            <a target="_blank" [href]="link.value"><i class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
                         }
                     </div>
                 </div>
@@ -40348,7 +40349,7 @@ var HomeComponent = class _HomeComponent {
     }
 
     @else if(events.length == 0) {
-    <h2 class="anton text-uppercase">{{'There are no planned upcoming events...' | translate}}</h2>
+        <h2 class="anton text-uppercase">{{'There are no planned upcoming events...' | translate}}</h2>
     }
 
     <div class="text-center">
@@ -40376,10 +40377,7 @@ var HomeComponent = class _HomeComponent {
             {{'The band' | translate}}
         </h3>
         <p class="fw-normal" style="text-align: justify;">
-            {{"Highway to Hell isn't just a simple tribute band, but an authentic rock energy explosion! With an AC/DC
-            faithful sound, obsessive attention to detail and an overwhelming stage presence, they will take the
-            audience on an electrifying journey, just like at a real concert by the legendary Australian band." |
-            translate}}
+            {{"Highway to Hell isn't just a simple tribute band, but an authentic rock energy explosion! With an AC/DC faithful sound, obsessive attention to detail and an overwhelming stage presence, they will take the audience on an electrifying journey, just like at a real concert by the legendary Australian band." | translate}}
         </p>
         <div class="text-center">
             <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" routerLink="/band">
@@ -40582,7 +40580,7 @@ var HomeComponent = class _HomeComponent {
             </button>
         </div>
     </div>
-</div>`, styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #EDDDCE;\n  -webkit-text-stroke: 1px black;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #EDDDCE;\n  -webkit-text-stroke: 1px black;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  height: calc(100%);\n  overflow: hidden;\n}\n.hero-img {\n  width: 100%;\n  height: auto;\n  display: block;\n  object-fit: cover;\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background video {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .hero h1 {\n    font-family: "Squealer", sans-serif;\n    font-size: 2.5rem;\n    color: #EDDDCE;\n    -webkit-text-stroke: 1px black;\n  }\n  .hero h2 {\n    font-family: "Squealer", sans-serif;\n    font-size: 1.5rem;\n    color: #EDDDCE;\n    -webkit-text-stroke: 1px black;\n  }\n  .video-background video {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  color: white;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .video-background video {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content h1 {\n    font-size: 2rem;\n  }\n  .hero-content h2 {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n  color: white;\n}\n.banner-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content {\n  position: relative;\n  z-index: 1;\n}\n.white {\n  color: #dee2e6;\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
+</div>`, styles: ['/* src/app/home/home.component.css */\n.hero h1 {\n  font-family: "Squealer", sans-serif;\n  font-size: 5rem;\n  color: #EDDDCE;\n  -webkit-text-stroke: 1px black;\n}\n.hero h2 {\n  font-family: "Squealer", sans-serif;\n  font-size: 3rem;\n  color: #EDDDCE;\n  -webkit-text-stroke: 1px black;\n}\n.hero p {\n  font-size: 1.5rem;\n  margin-top: 10px;\n}\n.hero {\n  position: relative;\n  height: calc(100%);\n  overflow: hidden;\n}\n.hero-img {\n  width: 100%;\n  height: auto;\n  display: block;\n  object-fit: cover;\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  align-items: center;\n}\n.video-background {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n}\n.video-background video {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  object-position: center;\n  transition: transform 0.3s ease;\n}\n@media (max-width: 768px) {\n  .hero h1 {\n    font-family: "Squealer", sans-serif;\n    font-size: 2.5rem;\n    color: #EDDDCE;\n    -webkit-text-stroke: 1px black;\n  }\n  .hero h2 {\n    font-family: "Squealer", sans-serif;\n    font-size: 1.5rem;\n    color: #EDDDCE;\n    -webkit-text-stroke: 1px black;\n  }\n  .video-background video {\n    transform: translate(-50%, -50%) scale(1.15);\n    object-position: center center;\n  }\n}\n.hero-content {\n  position: relative;\n  z-index: 2;\n  text-align: center;\n  top: calc(50% - 50px);\n  transform: translateY(-50%);\n  width: 100%;\n  padding: 1rem;\n  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);\n}\n@media (max-width: 768px) {\n  .video-background video {\n    object-fit: cover;\n    width: 100%;\n    height: 100%;\n  }\n  .hero-content h1 {\n    font-size: 2rem;\n  }\n  .hero-content h2 {\n    font-size: 1.2rem;\n  }\n}\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.banner-container {\n  position: relative;\n  overflow: hidden;\n  background-color: black;\n}\n.banner-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.3;\n  z-index: 0;\n}\n.banner-content {\n  position: relative;\n  z-index: 1;\n}\n.white {\n  color: #edddce;\n}\n/*# sourceMappingURL=home.component.css.map */\n'] }]
   }], () => [{ type: CalendarService }, { type: DomSanitizer }, { type: SharedService }], { heroVideo: [{
     type: ViewChild,
     args: ["heroVideo"]
@@ -40602,7 +40600,7 @@ var PageNotFoundComponent = class _PageNotFoundComponent {
   static \u0275fac = function PageNotFoundComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _PageNotFoundComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PageNotFoundComponent, selectors: [["app-page-not-found"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function PageNotFoundComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PageNotFoundComponent, selectors: [["app-page-not-found"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge", "text-center"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function PageNotFoundComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "h1", 0);
       \u0275\u0275text(2, " 404: page not found! ");
@@ -40618,7 +40616,7 @@ var PageNotFoundComponent = class _PageNotFoundComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PageNotFoundComponent, [{
     type: Component,
-    args: [{ selector: "app-page-not-found", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge">\n        404: page not found!\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Sorry...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+    args: [{ selector: "app-page-not-found", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge text-center">\n        404: page not found!\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Sorry...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -40635,120 +40633,119 @@ var MembersComponent = class _MembersComponent {
   static \u0275fac = function MembersComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _MembersComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MembersComponent, selectors: [["app-members"]], decls: 106, vars: 21, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-10", "my-5", "mx-auto", "px-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase", "my-5"], [1, "cards-wrapper", "mx-3"], [1, "card-item"], ["routerLink", "/band/francesco"], [1, "card", "border-0", "rounded-0", "m-1", "mb-3", "box-shadow", "shadow-hover"], ["src", "media/band/francesco/francesco.jpg", "alt", "Francesco", 1, "card-img", "rounded-0"], [1, "card-body", "nav"], [1, "card-title", "anton", "text-uppercase"], [1, "card-text"], [1, "card-footer", "d-flex", "justify-content-end", "align-items-center", "rounded-0"], [1, "text-muted", "text-end"], [1, "fa-solid", "fa-bolt"], ["routerLink", "/band/andrea"], ["src", "media/band/andrea/andrea.jpg", "alt", "Andrea", 1, "card-img", "rounded-0"], ["routerLink", "/band/davide"], ["src", "media/band/davide/davide.jpg", "alt", "Davide", 1, "card-img", "rounded-0"], ["routerLink", "/band/jacopo"], ["src", "media/band/jacopo/jacopo.jpg", "alt", "Jacopo", 1, "card-img", "rounded-0"], ["routerLink", "/band/eros"], ["src", "media/band/eros/eros.jpg", "alt", "Eros", 1, "card-img", "rounded-0"], ["routerLink", "/band/lorenzo"], ["src", "media/band/lorenzo/lorenzo.jpg", "alt", "Lorenzo", 1, "card-img", "rounded-0"], ["routerLink", "/band/matteo"], ["src", "media/band/matteo/matteo.jpg", "alt", "Matteo", 1, "card-img", "rounded-0"]], template: function MembersComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MembersComponent, selectors: [["app-members"]], decls: 104, vars: 21, consts: [[1, "member-header", "shadow"], ["src", "/media/band/band-banner.jpg", "alt", "Band header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-10", "my-5", "mx-auto", "px-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase", "my-5"], [1, "cards-wrapper", "mx-3"], [1, "card-item"], ["routerLink", "/band/francesco"], [1, "card", "border-0", "rounded-0", "m-1", "mb-3", "box-shadow", "shadow-hover"], ["src", "media/band/francesco/francesco.jpg", "alt", "Francesco", 1, "card-img", "rounded-0"], [1, "card-body", "nav"], [1, "card-title", "anton", "text-uppercase"], [1, "card-text"], [1, "card-footer", "d-flex", "justify-content-end", "align-items-center", "rounded-0"], [1, "text-muted", "text-end"], [1, "fa-solid", "fa-bolt"], ["routerLink", "/band/andrea"], ["src", "media/band/andrea/andrea.jpg", "alt", "Andrea", 1, "card-img", "rounded-0"], ["routerLink", "/band/davide"], ["src", "media/band/davide/davide.jpg", "alt", "Davide", 1, "card-img", "rounded-0"], ["routerLink", "/band/jacopo"], ["src", "media/band/jacopo/jacopo.jpg", "alt", "Jacopo", 1, "card-img", "rounded-0"], ["routerLink", "/band/eros"], ["src", "media/band/eros/eros.jpg", "alt", "Eros", 1, "card-img", "rounded-0"], ["routerLink", "/band/lorenzo"], ["src", "media/band/lorenzo/lorenzo.jpg", "alt", "Lorenzo", 1, "card-img", "rounded-0"], ["routerLink", "/band/matteo"], ["src", "media/band/matteo/matteo.jpg", "alt", "Matteo", 1, "card-img", "rounded-0"]], template: function MembersComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
-      \u0275\u0275text(3, " Band ");
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4, " Band ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
-      \u0275\u0275text(6, " \xA0 ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
-      \u0275\u0275text(9, "componenti");
+      \u0275\u0275elementStart(5, "div", 3)(6, "h2", 4);
+      \u0275\u0275text(7, "componenti");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(10, "div", 6)(11, "div", 7)(12, "a", 8)(13, "div", 9);
-      \u0275\u0275element(14, "img", 10);
-      \u0275\u0275elementStart(15, "div", 11)(16, "h2", 12);
-      \u0275\u0275text(17, "Francesco");
+      \u0275\u0275elementStart(8, "div", 5)(9, "div", 6)(10, "a", 7)(11, "div", 8);
+      \u0275\u0275element(12, "img", 9);
+      \u0275\u0275elementStart(13, "div", 10)(14, "h2", 11);
+      \u0275\u0275text(15, "Francesco");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(18, "p", 13);
-      \u0275\u0275text(19);
-      \u0275\u0275pipe(20, "translate");
+      \u0275\u0275elementStart(16, "p", 12);
+      \u0275\u0275text(17);
+      \u0275\u0275pipe(18, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(21, "div", 14)(22, "small", 15);
-      \u0275\u0275element(23, "i", 16);
+      \u0275\u0275elementStart(19, "div", 13)(20, "small", 14);
+      \u0275\u0275element(21, "i", 15);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(24, "div", 7)(25, "a", 17)(26, "div", 9);
-      \u0275\u0275element(27, "img", 18);
-      \u0275\u0275elementStart(28, "div", 11)(29, "h2", 12);
-      \u0275\u0275text(30, "Andrea");
+      \u0275\u0275elementStart(22, "div", 6)(23, "a", 16)(24, "div", 8);
+      \u0275\u0275element(25, "img", 17);
+      \u0275\u0275elementStart(26, "div", 10)(27, "h2", 11);
+      \u0275\u0275text(28, "Andrea");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(31, "p", 13);
-      \u0275\u0275text(32);
-      \u0275\u0275pipe(33, "translate");
+      \u0275\u0275elementStart(29, "p", 12);
+      \u0275\u0275text(30);
+      \u0275\u0275pipe(31, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(34, "div", 14)(35, "small", 15);
-      \u0275\u0275element(36, "i", 16);
+      \u0275\u0275elementStart(32, "div", 13)(33, "small", 14);
+      \u0275\u0275element(34, "i", 15);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(37, "div", 7)(38, "a", 19)(39, "div", 9);
-      \u0275\u0275element(40, "img", 20);
-      \u0275\u0275elementStart(41, "div", 11)(42, "h2", 12);
-      \u0275\u0275text(43, "Davide");
+      \u0275\u0275elementStart(35, "div", 6)(36, "a", 18)(37, "div", 8);
+      \u0275\u0275element(38, "img", 19);
+      \u0275\u0275elementStart(39, "div", 10)(40, "h2", 11);
+      \u0275\u0275text(41, "Davide");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(44, "p", 13);
-      \u0275\u0275text(45);
-      \u0275\u0275pipe(46, "translate");
+      \u0275\u0275elementStart(42, "p", 12);
+      \u0275\u0275text(43);
+      \u0275\u0275pipe(44, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(47, "div", 14)(48, "small", 15);
-      \u0275\u0275element(49, "i", 16);
+      \u0275\u0275elementStart(45, "div", 13)(46, "small", 14);
+      \u0275\u0275element(47, "i", 15);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(50, "div", 7)(51, "a", 21)(52, "div", 9);
-      \u0275\u0275element(53, "img", 22);
-      \u0275\u0275elementStart(54, "div", 11)(55, "h2", 12);
-      \u0275\u0275text(56, "Jacopo");
+      \u0275\u0275elementStart(48, "div", 6)(49, "a", 20)(50, "div", 8);
+      \u0275\u0275element(51, "img", 21);
+      \u0275\u0275elementStart(52, "div", 10)(53, "h2", 11);
+      \u0275\u0275text(54, "Jacopo");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(57, "p", 13);
-      \u0275\u0275text(58);
-      \u0275\u0275pipe(59, "translate");
+      \u0275\u0275elementStart(55, "p", 12);
+      \u0275\u0275text(56);
+      \u0275\u0275pipe(57, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(60, "div", 14)(61, "small", 15);
-      \u0275\u0275element(62, "i", 16);
+      \u0275\u0275elementStart(58, "div", 13)(59, "small", 14);
+      \u0275\u0275element(60, "i", 15);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(63, "div", 7)(64, "a", 23)(65, "div", 9);
-      \u0275\u0275element(66, "img", 24);
-      \u0275\u0275elementStart(67, "div", 11)(68, "h2", 12);
-      \u0275\u0275text(69, "Eros");
+      \u0275\u0275elementStart(61, "div", 6)(62, "a", 22)(63, "div", 8);
+      \u0275\u0275element(64, "img", 23);
+      \u0275\u0275elementStart(65, "div", 10)(66, "h2", 11);
+      \u0275\u0275text(67, "Eros");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(70, "p", 13);
-      \u0275\u0275text(71);
-      \u0275\u0275pipe(72, "translate");
+      \u0275\u0275elementStart(68, "p", 12);
+      \u0275\u0275text(69);
+      \u0275\u0275pipe(70, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(73, "div", 14)(74, "small", 15);
-      \u0275\u0275element(75, "i", 16);
+      \u0275\u0275elementStart(71, "div", 13)(72, "small", 14);
+      \u0275\u0275element(73, "i", 15);
       \u0275\u0275elementEnd()()()()()()();
-      \u0275\u0275elementStart(76, "div", 4)(77, "h2", 5);
-      \u0275\u0275text(78, "Collaborazioni");
+      \u0275\u0275elementStart(74, "div", 3)(75, "h2", 4);
+      \u0275\u0275text(76, "Collaborazioni");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(79, "div", 6)(80, "div", 7)(81, "a", 25)(82, "div", 9);
-      \u0275\u0275element(83, "img", 26);
-      \u0275\u0275elementStart(84, "div", 11)(85, "h2", 12);
-      \u0275\u0275text(86, "Lorenzo");
+      \u0275\u0275elementStart(77, "div", 5)(78, "div", 6)(79, "a", 24)(80, "div", 8);
+      \u0275\u0275element(81, "img", 25);
+      \u0275\u0275elementStart(82, "div", 10)(83, "h2", 11);
+      \u0275\u0275text(84, "Lorenzo");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(87, "p", 13);
-      \u0275\u0275text(88);
-      \u0275\u0275pipe(89, "translate");
+      \u0275\u0275elementStart(85, "p", 12);
+      \u0275\u0275text(86);
+      \u0275\u0275pipe(87, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(90, "div", 14)(91, "small", 15);
-      \u0275\u0275element(92, "i", 16);
+      \u0275\u0275elementStart(88, "div", 13)(89, "small", 14);
+      \u0275\u0275element(90, "i", 15);
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275elementStart(93, "div", 7)(94, "a", 27)(95, "div", 9);
-      \u0275\u0275element(96, "img", 28);
-      \u0275\u0275elementStart(97, "div", 11)(98, "h2", 12);
-      \u0275\u0275text(99, "Matteo");
+      \u0275\u0275elementStart(91, "div", 6)(92, "a", 26)(93, "div", 8);
+      \u0275\u0275element(94, "img", 27);
+      \u0275\u0275elementStart(95, "div", 10)(96, "h2", 11);
+      \u0275\u0275text(97, "Matteo");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(100, "p", 13);
-      \u0275\u0275text(101);
-      \u0275\u0275pipe(102, "translate");
+      \u0275\u0275elementStart(98, "p", 12);
+      \u0275\u0275text(99);
+      \u0275\u0275pipe(100, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(103, "div", 14)(104, "small", 15);
-      \u0275\u0275element(105, "i", 16);
+      \u0275\u0275elementStart(101, "div", 13)(102, "small", 14);
+      \u0275\u0275element(103, "i", 15);
       \u0275\u0275elementEnd()()()()()()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(19);
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(20, 7, "francesco_desc"));
-      \u0275\u0275advance(13);
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(33, 9, "andrea_desc"));
-      \u0275\u0275advance(13);
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(46, 11, "davide_desc"));
-      \u0275\u0275advance(13);
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(59, 13, "jacopo_desc"));
-      \u0275\u0275advance(13);
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(72, 15, "eros_desc"));
       \u0275\u0275advance(17);
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(89, 17, "lorenzo_desc"));
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(18, 7, "francesco_desc"));
       \u0275\u0275advance(13);
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(102, 19, "matteo_desc"));
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(31, 9, "andrea_desc"));
+      \u0275\u0275advance(13);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(44, 11, "davide_desc"));
+      \u0275\u0275advance(13);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(57, 13, "jacopo_desc"));
+      \u0275\u0275advance(13);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(70, 15, "eros_desc"));
+      \u0275\u0275advance(17);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(87, 17, "lorenzo_desc"));
+      \u0275\u0275advance(13);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(100, 19, "matteo_desc"));
     }
   }, dependencies: [
     RouterLink,
@@ -40763,7 +40760,7 @@ var MembersComponent = class _MembersComponent {
       RouterLink,
       TranslateModule
     ], template: `<div>
-    <div class="container-fluid bg-title">
+    <!-- <div class="container-fluid bg-title">
         <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
             Band
         </h1>
@@ -40772,7 +40769,15 @@ var MembersComponent = class _MembersComponent {
         <h1 class="text-center p-0 m-0">
             &nbsp;
         </h1>
-    </div>
+    </div> -->
+
+    <section class="member-header shadow">
+        <img src="/media/band/band-banner.jpg" class="member-img" alt="Band header image">
+        <h1 class="text-center squealer text-uppercase member-content">
+            Band
+        </h1>
+    </section>
+
     <div class="col-lg-10 my-5 mx-auto px-3" style="text-align: justify;">
         <h2 class="anton text-uppercase my-5">componenti</h2>
         <div class="cards-wrapper mx-3">
@@ -40909,16 +40914,17 @@ var JacopoComponent = class _JacopoComponent {
   static \u0275fac = function JacopoComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _JacopoComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _JacopoComponent, selectors: [["app-jacopo"]], decls: 30, vars: 21, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"], ["src", "media/band/jacopo/jacopo.jpg", "alt", "Jacopo", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3", "text-center"]], template: function JacopoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _JacopoComponent, selectors: [["app-jacopo"]], decls: 27, vars: 21, consts: [[1, "member-header", "shadow"], ["src", "media/band/jacopo/jacopo.jpg", "alt", "Jacopo header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"]], template: function JacopoComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
-      \u0275\u0275text(3, " Jacopo ");
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4, " Jacopo ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
-      \u0275\u0275text(6, " \xA0 ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4);
-      \u0275\u0275element(8, "img", 5);
+      \u0275\u0275elementStart(5, "div", 3)(6, "p");
+      \u0275\u0275text(7);
+      \u0275\u0275pipe(8, "translate");
+      \u0275\u0275elementEnd();
       \u0275\u0275elementStart(9, "p");
       \u0275\u0275text(10);
       \u0275\u0275pipe(11, "translate");
@@ -40942,36 +40948,32 @@ var JacopoComponent = class _JacopoComponent {
       \u0275\u0275elementStart(24, "p");
       \u0275\u0275text(25);
       \u0275\u0275pipe(26, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(27, "p");
-      \u0275\u0275text(28);
-      \u0275\u0275pipe(29, "translate");
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(10);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 7, "jacopo_intro"), " ");
+      \u0275\u0275advance(7);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(8, 7, "jacopo_intro"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 9, "jacopo_passione_rock"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 9, "jacopo_passione_rock"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 11, "jacopo_blues"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 11, "jacopo_blues"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 13, "jacopo_busking"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 13, "jacopo_busking"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 15, "jacopo_studio"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 15, "jacopo_studio"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 17, "jacopo_progetto"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 17, "jacopo_progetto"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(29, 19, "jacopo_oggi"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 19, "jacopo_oggi"), " ");
     }
-  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/jacopo/jacopo-title.jpg);\n}\n/*# sourceMappingURL=jacopo.component.css.map */"] });
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/jacopo/jacopo-title.jpg);\n}\n.member-img[_ngcontent-%COMP%] {\n  object-position: 0px -600px;\n}\n@media (max-width: 768px) {\n  .member-img[_ngcontent-%COMP%] {\n    object-position: 0px 0px;\n  }\n}\n/*# sourceMappingURL=jacopo.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(JacopoComponent, [{
     type: Component,
     args: [{ selector: "app-jacopo", imports: [
       TranslateModule
-    ], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Jacopo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3 text-center" src="media/band/jacopo/jacopo.jpg"\n            alt="Jacopo" />\n        <p>\n            {{"jacopo_intro" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_passione_rock" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_blues" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_busking" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_studio" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_progetto" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_oggi" | translate}}\n        </p>\n\n    </div>\n</div>', styles: ["/* src/app/members/jacopo/jacopo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/jacopo/jacopo-title.jpg);\n}\n/*# sourceMappingURL=jacopo.component.css.map */\n"] }]
+    ], template: '<div>\n    <!-- <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Jacopo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div> -->\n    <section class="member-header shadow">\n        <img src="media/band/jacopo/jacopo.jpg" class="member-img" alt="Jacopo header image">\n        <h1 class="text-center squealer text-uppercase member-content ">\n            Jacopo\n        </h1>\n    </section>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <!-- <img class="card-img rounded-0 shadow-hover square mb-3 text-center" src="media/band/jacopo/jacopo.jpg" alt="Jacopo" /> -->\n        <p>\n            {{"jacopo_intro" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_passione_rock" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_blues" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_busking" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_studio" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_progetto" | translate}}\n        </p>\n\n        <p>\n            {{"jacopo_oggi" | translate}}\n        </p>\n\n    </div>\n</div>', styles: ["/* src/app/members/jacopo/jacopo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/jacopo/jacopo-title.jpg);\n}\n.member-img {\n  object-position: 0px -600px;\n}\n@media (max-width: 768px) {\n  .member-img {\n    object-position: 0px 0px;\n  }\n}\n/*# sourceMappingURL=jacopo.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -40988,16 +40990,17 @@ var ErosComponent = class _ErosComponent {
   static \u0275fac = function ErosComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ErosComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ErosComponent, selectors: [["app-eros"]], decls: 30, vars: 21, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"], ["src", "media/band/eros/eros.jpg", "alt", "Eros", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3"]], template: function ErosComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ErosComponent, selectors: [["app-eros"]], decls: 27, vars: 21, consts: [[1, "member-header", "shadow"], ["src", "media/band/eros/eros.jpg", "alt", "Eros header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"]], template: function ErosComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
-      \u0275\u0275text(3, " Eros ");
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4, " Eros ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
-      \u0275\u0275text(6, " \xA0 ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4);
-      \u0275\u0275element(8, "img", 5);
+      \u0275\u0275elementStart(5, "div", 3)(6, "p");
+      \u0275\u0275text(7);
+      \u0275\u0275pipe(8, "translate");
+      \u0275\u0275elementEnd();
       \u0275\u0275elementStart(9, "p");
       \u0275\u0275text(10);
       \u0275\u0275pipe(11, "translate");
@@ -41021,36 +41024,32 @@ var ErosComponent = class _ErosComponent {
       \u0275\u0275elementStart(24, "p");
       \u0275\u0275text(25);
       \u0275\u0275pipe(26, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(27, "p");
-      \u0275\u0275text(28);
-      \u0275\u0275pipe(29, "translate");
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(10);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 7, "eros_intro"), " ");
+      \u0275\u0275advance(7);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(8, 7, "eros_intro"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 9, "eros_piano"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 9, "eros_piano"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 11, "eros_chitarra_basso"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 11, "eros_chitarra_basso"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 13, "eros_primo_progetto"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 13, "eros_primo_progetto"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 15, "eros_milano"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 15, "eros_milano"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 17, "eros_provino"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 17, "eros_provino"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(29, 19, "eros_professionalita"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 19, "eros_professionalita"), " ");
     }
-  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/eros/eros-title.jpg);\n}\n/*# sourceMappingURL=eros.component.css.map */"] });
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/eros/eros-title.jpg);\n}\n.member-img[_ngcontent-%COMP%] {\n  object-position: 0px -350px;\n}\n@media (max-width: 768px) {\n  .member-img[_ngcontent-%COMP%] {\n    object-position: 0px 0px;\n  }\n}\n/*# sourceMappingURL=eros.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ErosComponent, [{
     type: Component,
     args: [{ selector: "app-eros", imports: [
       TranslateModule
-    ], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Eros\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/eros/eros.jpg" alt="Eros" />\n        <p>\n            {{"eros_intro" | translate}}\n        </p>\n\n        <p>\n            {{"eros_piano" | translate}}\n        </p>\n\n        <p>\n            {{"eros_chitarra_basso" | translate}}\n        </p>\n\n        <p>\n            {{"eros_primo_progetto" | translate}}\n        </p>\n\n        <p>\n            {{"eros_milano" | translate}}\n        </p>\n\n        <p>\n            {{"eros_provino" | translate}}\n        </p>\n\n        <p>\n            {{"eros_professionalita" | translate}}\n        </p>\n\n    </div>\n</div>', styles: ["/* src/app/members/eros/eros.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/eros/eros-title.jpg);\n}\n/*# sourceMappingURL=eros.component.css.map */\n"] }]
+    ], template: '<div>\n    <!-- <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Eros\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div> -->\n    <section class="member-header shadow">\n        <img src="media/band/eros/eros.jpg" class="member-img" alt="Eros header image">\n        <h1 class="text-center squealer text-uppercase member-content ">\n            Eros\n        </h1>\n    </section>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <!-- <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/eros/eros.jpg" alt="Eros" /> -->\n        <p>\n            {{"eros_intro" | translate}}\n        </p>\n\n        <p>\n            {{"eros_piano" | translate}}\n        </p>\n\n        <p>\n            {{"eros_chitarra_basso" | translate}}\n        </p>\n\n        <p>\n            {{"eros_primo_progetto" | translate}}\n        </p>\n\n        <p>\n            {{"eros_milano" | translate}}\n        </p>\n\n        <p>\n            {{"eros_provino" | translate}}\n        </p>\n\n        <p>\n            {{"eros_professionalita" | translate}}\n        </p>\n\n    </div>\n</div>', styles: ["/* src/app/members/eros/eros.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/eros/eros-title.jpg);\n}\n.member-img {\n  object-position: 0px -350px;\n}\n@media (max-width: 768px) {\n  .member-img {\n    object-position: 0px 0px;\n  }\n}\n/*# sourceMappingURL=eros.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -41067,16 +41066,17 @@ var FrancescoComponent = class _FrancescoComponent {
   static \u0275fac = function FrancescoComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _FrancescoComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FrancescoComponent, selectors: [["app-francesco"]], decls: 42, vars: 33, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"], ["src", "media/band/francesco/francesco.jpg", "alt", "Francesco", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3", "text-center"]], template: function FrancescoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FrancescoComponent, selectors: [["app-francesco"]], decls: 39, vars: 33, consts: [[1, "member-header", "shadow"], ["src", "media/band/francesco/francesco.jpg", "alt", "Francesco header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"]], template: function FrancescoComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
-      \u0275\u0275text(3, " Francesco ");
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4, " Francesco ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
-      \u0275\u0275text(6, " \xA0 ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4);
-      \u0275\u0275element(8, "img", 5);
+      \u0275\u0275elementStart(5, "div", 3)(6, "p");
+      \u0275\u0275text(7);
+      \u0275\u0275pipe(8, "translate");
+      \u0275\u0275elementEnd();
       \u0275\u0275elementStart(9, "p");
       \u0275\u0275text(10);
       \u0275\u0275pipe(11, "translate");
@@ -41116,44 +41116,40 @@ var FrancescoComponent = class _FrancescoComponent {
       \u0275\u0275elementStart(36, "p");
       \u0275\u0275text(37);
       \u0275\u0275pipe(38, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(39, "p");
-      \u0275\u0275text(40);
-      \u0275\u0275pipe(41, "translate");
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(10);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 11, "francesco_bio_1"), " ");
+      \u0275\u0275advance(7);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(8, 11, "francesco_bio_1"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 13, "francesco_bio_2"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 13, "francesco_bio_2"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 15, "francesco_bio_3"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 15, "francesco_bio_3"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 17, "francesco_bio_4"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 17, "francesco_bio_4"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 19, "francesco_bio_5"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 19, "francesco_bio_5"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 21, "francesco_bio_6"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 21, "francesco_bio_6"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(29, 23, "francesco_bio_7"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 23, "francesco_bio_7"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(32, 25, "francesco_bio_8"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(29, 25, "francesco_bio_8"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(35, 27, "francesco_bio_9"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(32, 27, "francesco_bio_9"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(38, 29, "francesco_bio_10"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(35, 29, "francesco_bio_10"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(41, 31, "francesco_bio_11"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(38, 31, "francesco_bio_11"), " ");
     }
-  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/francesco/francesco-title.jpg);\n}\n/*# sourceMappingURL=francesco.component.css.map */"] });
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/francesco/francesco-title.jpg);\n}\n.member-img[_ngcontent-%COMP%] {\n  object-position: 0 -75px;\n}\n@media (max-width: 768px) {\n  .member-img[_ngcontent-%COMP%] {\n    object-position: -275px 0;\n  }\n}\n/*# sourceMappingURL=francesco.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FrancescoComponent, [{
     type: Component,
     args: [{ selector: "app-francesco", imports: [
       TranslateModule
-    ], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Francesco\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3 text-center" src="media/band/francesco/francesco.jpg"\n            alt="Francesco" />\n        <p>\n            {{ "francesco_bio_1" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_2" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_3" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_4" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_5" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_6" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_7" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_8" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_9" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_10" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_11" | translate }}\n        </p>\n    </div>\n</div>', styles: ["/* src/app/members/francesco/francesco.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/francesco/francesco-title.jpg);\n}\n/*# sourceMappingURL=francesco.component.css.map */\n"] }]
+    ], template: '<div>\n    <!-- <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Francesco\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div> -->\n    <section class="member-header shadow">\n        <img src="media/band/francesco/francesco.jpg" class="member-img" alt="Francesco header image">\n        <h1 class="text-center squealer text-uppercase member-content ">\n            Francesco\n        </h1>\n    </section>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <!-- <img class="card-img rounded-0 shadow-hover square mb-3 text-center" src="media/band/francesco/francesco.jpg" alt="Francesco" /> -->\n        <p>\n            {{ "francesco_bio_1" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_2" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_3" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_4" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_5" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_6" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_7" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_8" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_9" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_10" | translate }}\n        </p>\n\n        <p>\n            {{ "francesco_bio_11" | translate }}\n        </p>\n    </div>\n</div>', styles: ["/* src/app/members/francesco/francesco.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/francesco/francesco-title.jpg);\n}\n.member-img {\n  object-position: 0 -75px;\n}\n@media (max-width: 768px) {\n  .member-img {\n    object-position: -275px 0;\n  }\n}\n/*# sourceMappingURL=francesco.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -41171,16 +41167,17 @@ var DavideComponent = class _DavideComponent {
   static \u0275fac = function DavideComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _DavideComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DavideComponent, selectors: [["app-davide"]], decls: 30, vars: 21, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"], ["src", "media/band/davide/davide.jpg", "alt", "Davide", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3"]], template: function DavideComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DavideComponent, selectors: [["app-davide"]], decls: 27, vars: 21, consts: [[1, "member-header", "shadow"], ["src", "media/band/davide/davide.jpg", "alt", "Davide header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"]], template: function DavideComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
-      \u0275\u0275text(3, " Davide ");
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4, " Davide ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
-      \u0275\u0275text(6, " \xA0 ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4);
-      \u0275\u0275element(8, "img", 5);
+      \u0275\u0275elementStart(5, "div", 3)(6, "p");
+      \u0275\u0275text(7);
+      \u0275\u0275pipe(8, "translate");
+      \u0275\u0275elementEnd();
       \u0275\u0275elementStart(9, "p");
       \u0275\u0275text(10);
       \u0275\u0275pipe(11, "translate");
@@ -41204,36 +41201,32 @@ var DavideComponent = class _DavideComponent {
       \u0275\u0275elementStart(24, "p");
       \u0275\u0275text(25);
       \u0275\u0275pipe(26, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(27, "p");
-      \u0275\u0275text(28);
-      \u0275\u0275pipe(29, "translate");
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(10);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 7, "davide_intro"), " ");
+      \u0275\u0275advance(7);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(8, 7, "davide_intro"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 9, "davide_spark"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 9, "davide_spark"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 11, "davide_bass_choice"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 11, "davide_bass_choice"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 13, "davide_first_band"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 13, "davide_first_band"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 15, "davide_growth"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 15, "davide_growth"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 17, "davide_join_hth"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 17, "davide_join_hth"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(29, 19, "davide_today"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 19, "davide_today"), " ");
     }
-  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/davide/davide-title.jpg);\n}\n/*# sourceMappingURL=davide.component.css.map */"] });
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/davide/davide-title.jpg);\n}\n@media (max-width: 768px) {\n  .member-img[_ngcontent-%COMP%] {\n    object-position: -150px 0px;\n  }\n}\n/*# sourceMappingURL=davide.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DavideComponent, [{
     type: Component,
     args: [{ selector: "app-davide", imports: [
       TranslateModule
-    ], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Davide\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/davide/davide.jpg" alt="Davide" />\n        <p>\n            {{"davide_intro" | translate}}\n        </p>\n\n        <p>\n            {{"davide_spark" | translate}}\n        </p>\n\n        <p>\n            {{"davide_bass_choice" | translate}}\n        </p>\n\n        <p>\n            {{"davide_first_band" | translate}}\n        </p>\n\n        <p>\n            {{"davide_growth" | translate}}\n        </p>\n\n        <p>\n            {{"davide_join_hth" | translate}}\n        </p>\n\n        <p>\n            {{"davide_today" | translate}}\n        </p>\n\n    </div>\n</div>', styles: ["/* src/app/members/davide/davide.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/davide/davide-title.jpg);\n}\n/*# sourceMappingURL=davide.component.css.map */\n"] }]
+    ], template: '<div>\n    <!-- <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Davide\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div> -->\n    <section class="member-header shadow">\n        <img src="media/band/davide/davide.jpg" class="member-img" alt="Davide header image">\n        <h1 class="text-center squealer text-uppercase member-content ">\n            Davide\n        </h1>\n    </section>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <!-- <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/davide/davide.jpg" alt="Davide" /> -->\n        <p>\n            {{"davide_intro" | translate}}\n        </p>\n\n        <p>\n            {{"davide_spark" | translate}}\n        </p>\n\n        <p>\n            {{"davide_bass_choice" | translate}}\n        </p>\n\n        <p>\n            {{"davide_first_band" | translate}}\n        </p>\n\n        <p>\n            {{"davide_growth" | translate}}\n        </p>\n\n        <p>\n            {{"davide_join_hth" | translate}}\n        </p>\n\n        <p>\n            {{"davide_today" | translate}}\n        </p>\n\n    </div>\n</div>', styles: ["/* src/app/members/davide/davide.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/davide/davide-title.jpg);\n}\n@media (max-width: 768px) {\n  .member-img {\n    object-position: -150px 0px;\n  }\n}\n/*# sourceMappingURL=davide.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -41251,16 +41244,17 @@ var AndreaComponent = class _AndreaComponent {
   static \u0275fac = function AndreaComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AndreaComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AndreaComponent, selectors: [["app-andrea"]], decls: 24, vars: 15, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"], ["src", "media/band/andrea/andrea.jpg", "alt", "Andrea", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3"]], template: function AndreaComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AndreaComponent, selectors: [["app-andrea"]], decls: 21, vars: 15, consts: [[1, "member-header", "shadow"], ["src", "media/band/andrea/andrea.jpg", "alt", "Andrea header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"]], template: function AndreaComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
-      \u0275\u0275text(3, " Andrea ");
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4, " Andrea ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
-      \u0275\u0275text(6, " \xA0 ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4);
-      \u0275\u0275element(8, "img", 5);
+      \u0275\u0275elementStart(5, "div", 3)(6, "p");
+      \u0275\u0275text(7);
+      \u0275\u0275pipe(8, "translate");
+      \u0275\u0275elementEnd();
       \u0275\u0275elementStart(9, "p");
       \u0275\u0275text(10);
       \u0275\u0275pipe(11, "translate");
@@ -41276,32 +41270,28 @@ var AndreaComponent = class _AndreaComponent {
       \u0275\u0275elementStart(18, "p");
       \u0275\u0275text(19);
       \u0275\u0275pipe(20, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(21, "p");
-      \u0275\u0275text(22);
-      \u0275\u0275pipe(23, "translate");
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(10);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 5, "andrea_born_in_saronno"), " ");
+      \u0275\u0275advance(7);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(8, 5, "andrea_born_in_saronno"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 7, "andrea_graduation_2018"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 7, "andrea_graduation_2018"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 9, "andrea_post_studies_training"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 9, "andrea_post_studies_training"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 11, "andrea_teaching_career"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 11, "andrea_teaching_career"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 13, "andrea_music_projects"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 13, "andrea_music_projects"), " ");
     }
-  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(/media/band/andrea/andrea-title-4.jpg);\n}\n/*# sourceMappingURL=andrea.component.css.map */"] });
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(/media/band/andrea/andrea-title-4.jpg);\n}\n.member-img[_ngcontent-%COMP%] {\n  object-position: 0 -75px;\n}\n@media (max-width: 768px) {\n  .member-img[_ngcontent-%COMP%] {\n    object-position: -275px 0;\n  }\n}\n/*# sourceMappingURL=andrea.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AndreaComponent, [{
     type: Component,
     args: [{ selector: "app-andrea", imports: [
       TranslateModule
-    ], template: '<div>\n<div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Andrea\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/andrea/andrea.jpg" alt="Andrea" />\n        <p>\n            {{"andrea_born_in_saronno" | translate}} \n        </p>\n        <p>\n            {{"andrea_graduation_2018" | translate}} \n        </p>\n        <p>\n            {{"andrea_post_studies_training" | translate}} \n        </p>\n        <p>\n            {{"andrea_teaching_career" | translate}} \n        </p>\n        <p>\n            {{"andrea_music_projects" | translate}} \n        </p>\n    </div>\n</div>', styles: ["/* src/app/members/andrea/andrea.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(/media/band/andrea/andrea-title-4.jpg);\n}\n/*# sourceMappingURL=andrea.component.css.map */\n"] }]
+    ], template: '<div>\n<!-- <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Andrea\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div> -->\n    <section class="member-header shadow">\n        <img src="media/band/andrea/andrea.jpg" class="member-img" alt="Andrea header image">\n        <h1 class="text-center squealer text-uppercase member-content ">\n            Andrea\n        </h1>\n    </section>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <!-- <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/andrea/andrea.jpg" alt="Andrea" /> -->\n        <p>\n            {{"andrea_born_in_saronno" | translate}} \n        </p>\n        <p>\n            {{"andrea_graduation_2018" | translate}} \n        </p>\n        <p>\n            {{"andrea_post_studies_training" | translate}} \n        </p>\n        <p>\n            {{"andrea_teaching_career" | translate}} \n        </p>\n        <p>\n            {{"andrea_music_projects" | translate}} \n        </p>\n    </div>\n</div>', styles: ["/* src/app/members/andrea/andrea.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(/media/band/andrea/andrea-title-4.jpg);\n}\n.member-img {\n  object-position: 0 -75px;\n}\n@media (max-width: 768px) {\n  .member-img {\n    object-position: -275px 0;\n  }\n}\n/*# sourceMappingURL=andrea.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -41318,16 +41308,17 @@ var LorenzoComponent = class _LorenzoComponent {
   static \u0275fac = function LorenzoComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _LorenzoComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LorenzoComponent, selectors: [["app-lorenzo"]], decls: 33, vars: 24, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"], ["src", "media/band/lorenzo/lorenzo.jpg", "alt", "Lorenzo", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3"]], template: function LorenzoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LorenzoComponent, selectors: [["app-lorenzo"]], decls: 30, vars: 24, consts: [[1, "member-header", "shadow"], ["src", "media/band/lorenzo/lorenzo.jpg", "alt", "Lorenzo header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", 2, "text-align", "justify"]], template: function LorenzoComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
-      \u0275\u0275text(3, " Lorenzo ");
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4, " Lorenzo ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
-      \u0275\u0275text(6, " \xA0 ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4);
-      \u0275\u0275element(8, "img", 5);
+      \u0275\u0275elementStart(5, "div", 3)(6, "p");
+      \u0275\u0275text(7);
+      \u0275\u0275pipe(8, "translate");
+      \u0275\u0275elementEnd();
       \u0275\u0275elementStart(9, "p");
       \u0275\u0275text(10);
       \u0275\u0275pipe(11, "translate");
@@ -41355,38 +41346,34 @@ var LorenzoComponent = class _LorenzoComponent {
       \u0275\u0275elementStart(27, "p");
       \u0275\u0275text(28);
       \u0275\u0275pipe(29, "translate");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(30, "p");
-      \u0275\u0275text(31);
-      \u0275\u0275pipe(32, "translate");
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(10);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 8, "lorenzo_intro"), " ");
+      \u0275\u0275advance(7);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(8, 8, "lorenzo_intro"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 10, "lorenzo_studi"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 10, "lorenzo_studi"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 12, "lorenzo_masterclass"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(14, 12, "lorenzo_masterclass"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 14, "lorenzo_interesse"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(17, 14, "lorenzo_interesse"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 16, "lorenzo_cornamusa"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(20, 16, "lorenzo_cornamusa"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 18, "lorenzo_cornamusa_oggi"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(23, 18, "lorenzo_cornamusa_oggi"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(29, 20, "lorenzo_festival"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(26, 20, "lorenzo_festival"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(32, 22, "lorenzo_hth"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(29, 22, "lorenzo_hth"), " ");
     }
-  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/lorenzo/lorenzo-title-2.jpg);\n}\n/*# sourceMappingURL=lorenzo.component.css.map */"] });
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/lorenzo/lorenzo-title-2.jpg);\n}\n.member-img[_ngcontent-%COMP%] {\n  object-position: 0 -250px;\n}\n@media (max-width: 768px) {\n  .member-img[_ngcontent-%COMP%] {\n    object-position: -50px 0;\n  }\n}\n/*# sourceMappingURL=lorenzo.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LorenzoComponent, [{
     type: Component,
     args: [{ selector: "app-lorenzo", imports: [
       TranslateModule
-    ], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Lorenzo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/lorenzo/lorenzo.jpg" alt="Lorenzo" />\n        <p>\n            {{"lorenzo_intro" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_studi" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_masterclass" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_interesse" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_cornamusa" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_cornamusa_oggi" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_festival" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_hth" | translate}}\n        </p>\n\n    </div>\n</div>', styles: ["/* src/app/members/lorenzo/lorenzo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/lorenzo/lorenzo-title-2.jpg);\n}\n/*# sourceMappingURL=lorenzo.component.css.map */\n"] }]
+    ], template: '<div>\n    <!-- <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Lorenzo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div> -->\n\n    <section class="member-header shadow">\n        <img src="media/band/lorenzo/lorenzo.jpg" class="member-img" alt="Lorenzo header image">\n        <h1 class="text-center squealer text-uppercase member-content">\n            Lorenzo\n        </h1>\n    </section>\n    \n    <div class="col-lg-8 mx-auto my-5 px-3" style="text-align: justify;">\n        <!-- <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/lorenzo/lorenzo.jpg" alt="Lorenzo" /> -->\n        <p>\n            {{"lorenzo_intro" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_studi" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_masterclass" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_interesse" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_cornamusa" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_cornamusa_oggi" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_festival" | translate}}\n        </p>\n\n        <p>\n            {{"lorenzo_hth" | translate}}\n        </p>\n\n    </div>\n</div>', styles: ["/* src/app/members/lorenzo/lorenzo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/band/lorenzo/lorenzo-title-2.jpg);\n}\n.member-img {\n  object-position: 0 -250px;\n}\n@media (max-width: 768px) {\n  .member-img {\n    object-position: -50px 0;\n  }\n}\n/*# sourceMappingURL=lorenzo.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -41403,28 +41390,25 @@ var MatteoComponent = class _MatteoComponent {
   static \u0275fac = function MatteoComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _MatteoComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MatteoComponent, selectors: [["app-matteo"]], decls: 12, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], ["src", "media/band/matteo/matteo.jpg", "alt", "Matteo", 1, "card-img", "rounded-0", "shadow-hover", "square", "mb-3"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function MatteoComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MatteoComponent, selectors: [["app-matteo"]], decls: 9, vars: 0, consts: [[1, "member-header", "shadow"], ["src", "media/band/matteo/matteo.jpg", "alt", "Matteo header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function MatteoComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
-      \u0275\u0275text(3, " Matteo ");
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4, " Matteo ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
-      \u0275\u0275text(6, " \xA0 ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4);
-      \u0275\u0275element(8, "img", 5);
-      \u0275\u0275elementStart(9, "h2", 6);
-      \u0275\u0275text(10, "Work in progress...");
+      \u0275\u0275elementStart(5, "div", 3)(6, "h2", 4);
+      \u0275\u0275text(7, "Work in progress...");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(11, "img", 7);
+      \u0275\u0275element(8, "img", 5);
       \u0275\u0275elementEnd()();
     }
-  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/matteo/matteo-title-2.jpg);\n}\n/*# sourceMappingURL=matteo.component.css.map */"] });
+  }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/matteo/matteo-title-2.jpg);\n}\n.member-img[_ngcontent-%COMP%] {\n  object-position: 0 -150px;\n}\n@media (max-width: 768px) {\n  .member-img[_ngcontent-%COMP%] {\n    object-position: 0 0;\n  }\n}\n/*# sourceMappingURL=matteo.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatteoComponent, [{
     type: Component,
-    args: [{ selector: "app-matteo", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Matteo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/matteo/matteo.jpg" alt="Matteo" />\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/matteo/matteo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/matteo/matteo-title-2.jpg);\n}\n/*# sourceMappingURL=matteo.component.css.map */\n"] }]
+    args: [{ selector: "app-matteo", imports: [], template: '<div>\n    <!-- <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Matteo\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div> -->\n    <section class="member-header shadow">\n        <img src="media/band/matteo/matteo.jpg" class="member-img" alt="Matteo header image">\n        <h1 class="text-center squealer text-uppercase member-content ">\n            Matteo\n        </h1>\n    </section>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <!-- <img class="card-img rounded-0 shadow-hover square mb-3" src="media/band/matteo/matteo.jpg" alt="Matteo" /> -->\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/members/matteo/matteo.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(/media/band/matteo/matteo-title-2.jpg);\n}\n.member-img {\n  object-position: 0 -150px;\n}\n@media (max-width: 768px) {\n  .member-img {\n    object-position: 0 0;\n  }\n}\n/*# sourceMappingURL=matteo.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -41441,18 +41425,17 @@ var BioComponent = class _BioComponent {
   static \u0275fac = function BioComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _BioComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _BioComponent, selectors: [["app-bio"]], decls: 11, vars: 0, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function BioComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _BioComponent, selectors: [["app-bio"]], decls: 9, vars: 0, consts: [[1, "member-header", "shadow"], ["src", "/media/bio/bio.jpg", "alt", "Bio header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function BioComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
-      \u0275\u0275text(3, " Bio ");
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4, " Bio ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(4, "div", 2)(5, "h1", 3);
-      \u0275\u0275text(6, " \xA0 ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(7, "div", 4)(8, "h2", 5);
-      \u0275\u0275text(9, "Work in progress...");
+      \u0275\u0275elementStart(5, "div", 3)(6, "h2", 4);
+      \u0275\u0275text(7, "Work in progress...");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(10, "img", 6);
+      \u0275\u0275element(8, "img", 5);
       \u0275\u0275elementEnd()();
     }
   }, styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/bio/bio.jpg);\n}\n/*# sourceMappingURL=bio.component.css.map */"] });
@@ -41460,7 +41443,7 @@ var BioComponent = class _BioComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(BioComponent, [{
     type: Component,
-    args: [{ selector: "app-bio", imports: [], template: '<div>\n    <div class="container-fluid bg-title">\n            <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n                Bio\n            </h1>\n        </div>\n        <div class="bg-grad">\n            <h1 class="text-center p-0 m-0">\n                &nbsp;\n            </h1>\n        </div>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/bio/bio.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/bio/bio.jpg);\n}\n/*# sourceMappingURL=bio.component.css.map */\n"] }]
+    args: [{ selector: "app-bio", imports: [], template: '<div>\n    <!-- <div class="container-fluid bg-title">\n        <h1 class="text-center display-1 p-3 mb-0 squealer image-text">\n            Bio\n        </h1>\n    </div>\n    <div class="bg-grad">\n        <h1 class="text-center p-0 m-0">\n            &nbsp;\n        </h1>\n    </div> -->\n    <section class="member-header shadow">\n        <img src="/media/bio/bio.jpg" class="member-img" alt="Bio header image">\n        <h1 class="text-center squealer text-uppercase member-content">\n            Bio\n        </h1>\n    </section>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Work in progress...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>', styles: ["/* src/app/bio/bio.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/bio/bio.jpg);\n}\n/*# sourceMappingURL=bio.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -41468,7 +41451,7 @@ var BioComponent = class _BioComponent {
 })();
 
 // src/app/concerts/concerts.component.ts
-function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Conditional_9_Template(rf, ctx) {
+function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_Conditional_9_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0);
     \u0275\u0275element(1, "br");
@@ -41478,11 +41461,11 @@ function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Condi
     \u0275\u0275textInterpolate1(" ", event_r2.description, "");
   }
 }
-function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_For_12_Template(rf, ctx) {
+function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_For_12_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "i", 18);
+    \u0275\u0275element(0, "i", 17);
     \u0275\u0275text(1, "\xA0");
-    \u0275\u0275elementStart(2, "a", 19);
+    \u0275\u0275elementStart(2, "a", 18);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
     \u0275\u0275element(4, "br");
@@ -41495,27 +41478,27 @@ function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_For_1
     \u0275\u0275textInterpolate(link_r3.key);
   }
 }
-function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Template(rf, ctx) {
+function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 7)(1, "div", 8)(2, "div", 9);
+    \u0275\u0275elementStart(0, "div", 6)(1, "div", 7)(2, "div", 8);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 10)(5, "h3", 11);
+    \u0275\u0275elementStart(4, "div", 9)(5, "h3", 10);
     \u0275\u0275text(6);
     \u0275\u0275elementEnd();
-    \u0275\u0275element(7, "hr", 12);
-    \u0275\u0275elementStart(8, "div", 13);
-    \u0275\u0275template(9, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Conditional_9_Template, 2, 1);
-    \u0275\u0275elementStart(10, "div", 14);
-    \u0275\u0275repeaterCreate(11, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_For_12_Template, 5, 2, null, null, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275element(7, "hr", 11);
+    \u0275\u0275elementStart(8, "div", 12);
+    \u0275\u0275template(9, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_Conditional_9_Template, 2, 1);
+    \u0275\u0275elementStart(10, "div", 13);
+    \u0275\u0275repeaterCreate(11, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_For_12_Template, 5, 2, null, null, \u0275\u0275repeaterTrackByIndex);
     \u0275\u0275elementEnd()();
-    \u0275\u0275element(13, "hr", 12);
-    \u0275\u0275elementStart(14, "div", 15);
-    \u0275\u0275element(15, "i", 16);
+    \u0275\u0275element(13, "hr", 11);
+    \u0275\u0275elementStart(14, "div", 14);
+    \u0275\u0275element(15, "i", 15);
     \u0275\u0275text(16, "\xA0 ");
-    \u0275\u0275elementStart(17, "a", 17);
-    \u0275\u0275listener("click", function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Template_a_click_17_listener() {
+    \u0275\u0275elementStart(17, "a", 16);
+    \u0275\u0275listener("click", function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_Template_a_click_17_listener() {
       const event_r2 = \u0275\u0275restoreView(_r1).$implicit;
       const ctx_r3 = \u0275\u0275nextContext(4);
       return \u0275\u0275resetView(ctx_r3.openMap(event_r2.location));
@@ -41538,13 +41521,13 @@ function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Templ
     \u0275\u0275textInterpolate1(" ", event_r2.location, " ");
   }
 }
-function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_Template(rf, ctx) {
+function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 6);
+    \u0275\u0275elementStart(0, "h2", 5);
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275repeaterCreate(3, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_For_4_Template, 19, 5, "div", 7, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275repeaterCreate(3, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_Template, 19, 5, "div", 6, \u0275\u0275repeaterTrackByIndex);
   }
   if (rf & 2) {
     const ctx_r3 = \u0275\u0275nextContext(3);
@@ -41554,38 +41537,38 @@ function ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_Template(rf
     \u0275\u0275repeater(ctx_r3.upcoming);
   }
 }
-function ConcertsComponent_Conditional_9_Conditional_0_Template(rf, ctx) {
+function ConcertsComponent_Conditional_7_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275template(0, ConcertsComponent_Conditional_9_Conditional_0_Conditional_0_Template, 5, 3);
+    \u0275\u0275template(0, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_Template, 5, 3);
   }
   if (rf & 2) {
     const ctx_r3 = \u0275\u0275nextContext(2);
     \u0275\u0275conditional(ctx_r3.upcoming.length > 0 ? 0 : -1);
   }
 }
-function ConcertsComponent_Conditional_9_Conditional_1_Template(rf, ctx) {
+function ConcertsComponent_Conditional_7_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 6);
+    \u0275\u0275elementStart(0, "h2", 5);
     \u0275\u0275text(1, "Non ci sono eventi in programma...");
     \u0275\u0275elementEnd();
   }
 }
-function ConcertsComponent_Conditional_9_Template(rf, ctx) {
+function ConcertsComponent_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275template(0, ConcertsComponent_Conditional_9_Conditional_0_Template, 1, 1)(1, ConcertsComponent_Conditional_9_Conditional_1_Template, 2, 0, "h2", 6);
+    \u0275\u0275template(0, ConcertsComponent_Conditional_7_Conditional_0_Template, 1, 1)(1, ConcertsComponent_Conditional_7_Conditional_1_Template, 2, 0, "h2", 5);
   }
   if (rf & 2) {
     const ctx_r3 = \u0275\u0275nextContext();
     \u0275\u0275conditional(ctx_r3.events.length > 0 ? 0 : ctx_r3.events.length == 0 ? 1 : -1);
   }
 }
-function ConcertsComponent_Conditional_10_Template(rf, ctx) {
+function ConcertsComponent_Conditional_8_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 5)(1, "h2", 20);
+    \u0275\u0275elementStart(0, "div", 4)(1, "h2", 19);
     \u0275\u0275text(2);
     \u0275\u0275pipe(3, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 21)(5, "span", 22);
+    \u0275\u0275elementStart(4, "div", 20)(5, "span", 21);
     \u0275\u0275text(6);
     \u0275\u0275pipe(7, "translate");
     \u0275\u0275elementEnd()()();
@@ -41769,24 +41752,23 @@ var ConcertsComponent = class _ConcertsComponent {
   static \u0275fac = function ConcertsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ConcertsComponent)(\u0275\u0275directiveInject(CalendarService), \u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 11, vars: 4, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "anton", "text-uppercase"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], [1, "fa-solid", "fa-link"], ["target", "_blank", 3, "href"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function ConcertsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 9, vars: 4, consts: [[1, "member-header", "shadow"], ["src", "/media/concerts/concerts.jpg", "alt", "Concerts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "anton", "text-uppercase"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], [1, "fa-solid", "fa-link"], ["target", "_blank", 3, "href"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function ConcertsComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
-      \u0275\u0275text(3);
-      \u0275\u0275pipe(4, "translate");
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4);
+      \u0275\u0275pipe(5, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(5, "div", 2)(6, "h1", 3);
-      \u0275\u0275text(7, " \xA0 ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(8, "div", 4);
-      \u0275\u0275template(9, ConcertsComponent_Conditional_9_Template, 2, 1)(10, ConcertsComponent_Conditional_10_Template, 8, 6, "div", 5);
+      \u0275\u0275elementStart(6, "div", 3);
+      \u0275\u0275template(7, ConcertsComponent_Conditional_7_Template, 2, 1)(8, ConcertsComponent_Conditional_8_Template, 8, 6, "div", 4);
       \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 2, "Concerts"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 2, "Concerts"), " ");
-      \u0275\u0275advance(6);
-      \u0275\u0275conditional(!ctx.loading ? 9 : ctx.loading ? 10 : -1);
+      \u0275\u0275conditional(!ctx.loading ? 7 : ctx.loading ? 8 : -1);
     }
   }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/concerts/concerts.jpg);\n}\n/*# sourceMappingURL=concerts.component.css.map */"] });
 };
@@ -41796,7 +41778,7 @@ var ConcertsComponent = class _ConcertsComponent {
     args: [{ selector: "app-concerts", imports: [
       TranslateModule
     ], template: `<div>
-    <div class="container-fluid bg-title">
+    <!-- <div class="container-fluid bg-title">
             <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
                 {{'Concerts' | translate}}
             </h1>
@@ -41805,7 +41787,13 @@ var ConcertsComponent = class _ConcertsComponent {
             <h1 class="text-center p-0 m-0">
                 &nbsp;
             </h1>
-        </div>
+        </div> -->
+    <section class="member-header shadow">
+        <img src="/media/concerts/concerts.jpg" class="member-img" alt="Concerts header image">
+        <h1 class="text-center squealer text-uppercase member-content">
+            {{'Concerts' | translate}}
+        </h1>
+    </section>
     <div class="col-lg-8 mx-auto my-5 px-3 fs-3" style="text-align: justify;">
         <!--  -->
         @if(!loading) {
@@ -41944,26 +41932,27 @@ var ProjectsComponent = class _ProjectsComponent {
   static \u0275fac = function ProjectsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ProjectsComponent)(\u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(ViewportScroller), \u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectsComponent, selectors: [["app-projects"]], decls: 36, vars: 3, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-justify", 2, "text-align", "justify"], ["id", "cover", 1, "title", "text-uppercase", "anton"], ["id", "big-show", 1, "title", "text-uppercase", "anton"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-justify", "mt-3", 2, "text-align", "justify"], ["id", "mega-show", 1, "title", "text-uppercase", "anton"], ["id", "symphony-of-thunder", 1, "title", "text-uppercase", "anton"]], template: function ProjectsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectsComponent, selectors: [["app-projects"]], decls: 38, vars: 15, consts: [[1, "member-header", "shadow"], ["src", "/media/projects/projects.jpg", "alt", "Contacts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-justify", 2, "text-align", "justify"], ["id", "cover", 1, "title", "text-uppercase", "anton"], ["id", "big-show", 1, "title", "text-uppercase", "anton"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-justify", "mt-3", 2, "text-align", "justify"], ["id", "mega-show", 1, "title", "text-uppercase", "anton"], ["id", "symphony-of-thunder", 1, "title", "text-uppercase", "anton"]], template: function ProjectsComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
-      \u0275\u0275text(3);
-      \u0275\u0275pipe(4, "translate");
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4);
+      \u0275\u0275pipe(5, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(5, "div", 2)(6, "h1", 3);
-      \u0275\u0275text(7, " \xA0 ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(8, "div", 4)(9, "h2", 5);
-      \u0275\u0275text(10, "Thunderstruck Cover");
+      \u0275\u0275elementStart(6, "div", 3)(7, "h2", 4);
+      \u0275\u0275text(8);
+      \u0275\u0275pipe(9, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(11, "p");
-      \u0275\u0275text(12, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
+      \u0275\u0275elementStart(10, "p");
+      \u0275\u0275text(11, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(13, "p");
-      \u0275\u0275text(14, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
+      \u0275\u0275elementStart(12, "p");
+      \u0275\u0275text(13, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(15, "div", 4)(16, "h2", 6);
-      \u0275\u0275text(17, "Big Show");
+      \u0275\u0275elementStart(14, "div", 3)(15, "h2", 5);
+      \u0275\u0275text(16);
+      \u0275\u0275pipe(17, "translate");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(18, "p");
       \u0275\u0275text(19, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
@@ -41971,28 +41960,38 @@ var ProjectsComponent = class _ProjectsComponent {
       \u0275\u0275elementStart(20, "p");
       \u0275\u0275text(21, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(22, "div", 7)(23, "h2", 8);
-      \u0275\u0275text(24, "Mega Show");
+      \u0275\u0275elementStart(22, "div", 6)(23, "h2", 7);
+      \u0275\u0275text(24);
+      \u0275\u0275pipe(25, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(25, "p");
-      \u0275\u0275text(26, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
+      \u0275\u0275elementStart(26, "p");
+      \u0275\u0275text(27, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(27, "p");
-      \u0275\u0275text(28, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
+      \u0275\u0275elementStart(28, "p");
+      \u0275\u0275text(29, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(29, "div", 4)(30, "h2", 9);
-      \u0275\u0275text(31, "Symphony of Thunder");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(32, "p");
-      \u0275\u0275text(33, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
+      \u0275\u0275elementStart(30, "div", 3)(31, "h2", 8);
+      \u0275\u0275text(32);
+      \u0275\u0275pipe(33, "translate");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(34, "p");
       \u0275\u0275text(35, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(36, "p");
+      \u0275\u0275text(37, " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ");
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 1, "Formats"), " ");
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 5, "Formats"), " ");
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(9, 7, "formats_1"));
+      \u0275\u0275advance(8);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(17, 9, "formats_2"));
+      \u0275\u0275advance(8);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(25, 11, "formats_3"));
+      \u0275\u0275advance(8);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(33, 13, "formats_4"));
     }
   }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/projects/projects.jpg);\n}\n/*# sourceMappingURL=projects.component.css.map */"] });
 };
@@ -42000,7 +41999,7 @@ var ProjectsComponent = class _ProjectsComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ProjectsComponent, [{
     type: Component,
     args: [{ selector: "app-projects", imports: [TranslateModule], template: `<div>
-    <div class="container-fluid bg-title">
+    <!-- <div class="container-fluid bg-title">
         <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
             {{'Formats' | translate}}
         </h1>
@@ -42009,10 +42008,17 @@ var ProjectsComponent = class _ProjectsComponent {
         <h1 class="text-center p-0 m-0">
             &nbsp;
         </h1>
-    </div>
+    </div> -->
+
+    <section class="member-header shadow">
+        <img src="/media/projects/projects.jpg" class="member-img" alt="Contacts header image">
+        <h1 class="text-center squealer text-uppercase member-content">
+            {{'Formats' | translate}}
+        </h1>
+    </section>
 
     <div class="col-lg-8 mx-auto my-5 px-3 text-justify" style="text-align: justify;">
-        <h2 id="cover" class="title text-uppercase anton">Thunderstruck Cover</h2>
+        <h2 id="cover" class="title text-uppercase anton">{{ 'formats_1'| translate }}</h2>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
@@ -42022,7 +42028,7 @@ var ProjectsComponent = class _ProjectsComponent {
     </div>
 
     <div class="col-lg-8 mx-auto my-5 px-3 text-justify" style="text-align: justify;">
-        <h2 id="big-show" class="title text-uppercase anton">Big Show</h2>
+        <h2 id="big-show" class="title text-uppercase anton">{{ 'formats_2'| translate }}</h2>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
@@ -42032,7 +42038,7 @@ var ProjectsComponent = class _ProjectsComponent {
     </div>
 
     <div class="col-lg-8 mx-auto my-5 px-3 text-justify mt-3" style="text-align: justify;">
-        <h2 id="mega-show" class="title text-uppercase anton">Mega Show</h2>
+        <h2 id="mega-show" class="title text-uppercase anton">{{ 'formats_3'| translate }}</h2>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
@@ -42042,7 +42048,7 @@ var ProjectsComponent = class _ProjectsComponent {
     </div>
 
     <div class="col-lg-8 mx-auto my-5 px-3 text-justify" style="text-align: justify;">
-        <h2 id="symphony-of-thunder" class="title text-uppercase anton">Symphony of Thunder</h2>
+        <h2 id="symphony-of-thunder" class="title text-uppercase anton">{{ 'formats_4'| translate }}</h2>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
@@ -42067,47 +42073,46 @@ var ContactsComponent = class _ContactsComponent {
   static \u0275fac = function ContactsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ContactsComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactsComponent, selectors: [["app-contacts"]], decls: 30, vars: 6, consts: [[1, "container-fluid", "bg-title"], [1, "text-center", "display-1", "p-3", "mb-0", "squealer", "image-text"], [1, "bg-grad"], [1, "text-center", "p-0", "m-0"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [2, "list-style", "none"], [1, "fa-solid", "fa-phone"], [1, "fa-solid", "fa-envelope"], ["href", "mailto:hthtribute@gmail.com"]], template: function ContactsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactsComponent, selectors: [["app-contacts"]], decls: 28, vars: 6, consts: [[1, "member-header", "shadow"], ["src", "/media/contacts/contacts.jpg", "alt", "Contacts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [2, "list-style", "none"], [1, "fa-solid", "fa-phone"], [1, "fa-solid", "fa-envelope"], ["href", "mailto:hthtribute@gmail.com"]], template: function ContactsComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "div", 0)(2, "h1", 1);
-      \u0275\u0275text(3);
-      \u0275\u0275pipe(4, "translate");
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4);
+      \u0275\u0275pipe(5, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(5, "div", 2)(6, "h1", 3);
-      \u0275\u0275text(7, " \xA0 ");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(8, "div", 4)(9, "p");
-      \u0275\u0275text(10);
-      \u0275\u0275pipe(11, "translate");
+      \u0275\u0275elementStart(6, "div", 3)(7, "p");
+      \u0275\u0275text(8);
+      \u0275\u0275pipe(9, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(12, "ul", 5)(13, "li");
-      \u0275\u0275element(14, "i", 6);
-      \u0275\u0275text(15, "\xA0");
-      \u0275\u0275elementStart(16, "b");
-      \u0275\u0275text(17, "Jacopo:");
+      \u0275\u0275elementStart(10, "ul", 4)(11, "li");
+      \u0275\u0275element(12, "i", 5);
+      \u0275\u0275text(13, "\xA0");
+      \u0275\u0275elementStart(14, "b");
+      \u0275\u0275text(15, "Jacopo:");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(18, " (+39) 334 6197414 ");
+      \u0275\u0275text(16, " (+39) 334 6197414 ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(19, "li");
-      \u0275\u0275element(20, "i", 6);
-      \u0275\u0275text(21, "\xA0");
-      \u0275\u0275elementStart(22, "b");
-      \u0275\u0275text(23, "Eros:");
+      \u0275\u0275elementStart(17, "li");
+      \u0275\u0275element(18, "i", 5);
+      \u0275\u0275text(19, "\xA0");
+      \u0275\u0275elementStart(20, "b");
+      \u0275\u0275text(21, "Eros:");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(24, " (+39) 327 8640017 ");
+      \u0275\u0275text(22, " (+39) 327 8640017 ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(25, "li");
-      \u0275\u0275element(26, "i", 7);
-      \u0275\u0275text(27, "\xA0");
-      \u0275\u0275elementStart(28, "a", 8);
-      \u0275\u0275text(29, "hthtribute@gmail.com");
+      \u0275\u0275elementStart(23, "li");
+      \u0275\u0275element(24, "i", 6);
+      \u0275\u0275text(25, "\xA0");
+      \u0275\u0275elementStart(26, "a", 7);
+      \u0275\u0275text(27, "hthtribute@gmail.com");
       \u0275\u0275elementEnd()()()()();
     }
     if (rf & 2) {
-      \u0275\u0275advance(3);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(4, 2, "Contacts"), " ");
-      \u0275\u0275advance(7);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 4, "Dare to bring Highway to Hell's energy to your stage? Get in touch!"), " ");
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 2, "Contacts"), " ");
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(9, 4, "Dare to bring Highway to Hell's energy to your stage? Get in touch!"), " ");
     }
   }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/contacts/contacts.jpg);\n}\n/*# sourceMappingURL=contacts.component.css.map */"] });
 };
@@ -42117,7 +42122,7 @@ var ContactsComponent = class _ContactsComponent {
     args: [{ selector: "app-contacts", imports: [
       TranslateModule
     ], template: `<div>
-    <div class="container-fluid bg-title">
+    <!-- <div class="container-fluid bg-title">
         <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
             {{'Contacts' | translate}}
         </h1>
@@ -42126,7 +42131,13 @@ var ContactsComponent = class _ContactsComponent {
         <h1 class="text-center p-0 m-0">
             &nbsp;
         </h1>
-    </div>
+    </div> -->
+    <section class="member-header shadow">
+        <img src="/media/contacts/contacts.jpg" class="member-img" alt="Contacts header image">
+        <h1 class="text-center squealer text-uppercase member-content">
+            {{'Contacts' | translate}}
+        </h1>
+    </section>
     <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">
         <!-- <h2 class="anton text-uppercase">{{'Get in touch!' | translate}}</h2> -->
         <p>
@@ -46935,7 +46946,7 @@ var HeaderComponent = class _HeaderComponent {
     RouterLink,
     TranslateModule,
     TranslatePipe
-  ], styles: ["\n\n.dropdown-menu.lang-dropdown[_ngcontent-%COMP%] {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item.active[_ngcontent-%COMP%] {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na[_ngcontent-%COMP%]:active {\n  background-color: #e60000;\n}\n.mobile-lang-menu[_ngcontent-%COMP%] {\n  left: 50% !important;\n  transform: translateX(-50%) !important;\n}\n.nav-link.btn[_ngcontent-%COMP%] {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn[_ngcontent-%COMP%]:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active[_ngcontent-%COMP%], \n.nav-link.btn.router-link-active[_ngcontent-%COMP%] {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n.offcanvas[_ngcontent-%COMP%] {\n  background-color: #0d0f11;\n}\n/*# sourceMappingURL=header.component.css.map */"] });
+  ], styles: ["\n\n.dropdown-menu.lang-dropdown[_ngcontent-%COMP%] {\n  min-width: auto;\n  width: auto;\n}\n.navbar-brand[_ngcontent-%COMP%] {\n  color: #edddce;\n}\n.dropdown-item.active[_ngcontent-%COMP%] {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na[_ngcontent-%COMP%]:active {\n  background-color: #e60000;\n}\n.mobile-lang-menu[_ngcontent-%COMP%] {\n  left: 50% !important;\n  transform: translateX(-50%) !important;\n}\n.nav-link.btn[_ngcontent-%COMP%] {\n  color: #edddce;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn[_ngcontent-%COMP%]:hover {\n  color: #edddce;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active[_ngcontent-%COMP%], \n.nav-link.btn.router-link-active[_ngcontent-%COMP%] {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n.offcanvas[_ngcontent-%COMP%] {\n  background-color: #0d0f11;\n}\n/*# sourceMappingURL=header.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(HeaderComponent, [{
@@ -47084,7 +47095,7 @@ var HeaderComponent = class _HeaderComponent {
         </div>
     </div>
 </nav>
-<!--/header-->`, styles: ["/* src/app/header/header.component.css */\n.dropdown-menu.lang-dropdown {\n  min-width: auto;\n  width: auto;\n}\n.dropdown-item.active {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na:active {\n  background-color: #e60000;\n}\n.mobile-lang-menu {\n  left: 50% !important;\n  transform: translateX(-50%) !important;\n}\n.nav-link.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active,\n.nav-link.btn.router-link-active {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n.offcanvas {\n  background-color: #0d0f11;\n}\n/*# sourceMappingURL=header.component.css.map */\n"] }]
+<!--/header-->`, styles: ["/* src/app/header/header.component.css */\n.dropdown-menu.lang-dropdown {\n  min-width: auto;\n  width: auto;\n}\n.navbar-brand {\n  color: #edddce;\n}\n.dropdown-item.active {\n  background-color: #212529;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\na:active {\n  background-color: #e60000;\n}\n.mobile-lang-menu {\n  left: 50% !important;\n  transform: translateX(-50%) !important;\n}\n.nav-link.btn {\n  color: #edddce;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.nav-link.btn:hover {\n  color: #edddce;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n}\n.nav-link.btn.active,\n.nav-link.btn.router-link-active {\n  color: #fff !important;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000 !important;\n}\n.offcanvas {\n  background-color: #0d0f11;\n}\n/*# sourceMappingURL=header.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
@@ -47100,7 +47111,7 @@ var FooterComponent = class _FooterComponent {
   static \u0275fac = function FooterComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _FooterComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], decls: 22, vars: 1, consts: [[1, "text-center"], [1, "container"], [1, "p-4", 2, "display", "flex", "flex-wrap", "wrap", "flex-direction", "row", "align-items", "center", "justify-content", "center"], ["data-mdb-ripple-init", "", "href", "https://www.instagram.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "rounded-circle", "circle", "m-1"], [1, "fab", "fa-instagram"], ["data-mdb-ripple-init", "", "href", "https://www.facebook.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "rounded-circle", "circle", "m-1"], [1, "fab", "fa-facebook"], ["data-mdb-ripple-init", "", "href", "https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "rounded-circle", "circle", "m-1"], [1, "fab", "fa-youtube"], ["data-mdb-ripple-init", "", "href", "https://www.tiktok.com/@hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "rounded-circle", "circle", "m-1"], [1, "fab", "fa-tiktok"], [1, "text-center", "p-3"], ["href", "https://lrossi.xyz", "target", "_blank", 1, ""], [1, "fa-solid", "fa-bolt"], ["routerLink", "/privacy-policy", 1, "m-0", "p-0", "clickable"]], template: function FooterComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _FooterComponent, selectors: [["app-footer"]], decls: 22, vars: 1, consts: [[1, "text-center"], [1, "container"], [1, "p-4", 2, "display", "flex", "flex-wrap", "wrap", "flex-direction", "row", "align-items", "center", "justify-content", "center"], ["data-mdb-ripple-init", "", "href", "https://www.instagram.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "rounded-circle", "circle", "m-1"], [1, "fab", "fa-instagram"], ["data-mdb-ripple-init", "", "href", "https://www.facebook.com/hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "rounded-circle", "circle", "m-1"], [1, "fab", "fa-facebook"], ["data-mdb-ripple-init", "", "href", "https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "rounded-circle", "circle", "m-1"], [1, "fab", "fa-youtube"], ["data-mdb-ripple-init", "", "href", "https://www.tiktok.com/@hthtribute", "target", "_blank", "role", "button", 1, "btn", "btn-outline", "btn-floating", "rounded-circle", "circle", "m-1"], [1, "fab", "fa-tiktok"], [1, "text-center", "p-3", 2, "font-size", "15px"], ["href", "https://lrossi.xyz", "target", "_blank", 2, "font-size", "15px"], [1, "fa-solid", "fa-bolt", 2, "font-size", "15px"], ["routerLink", "/privacy-policy", 1, "m-0", "p-0", "clickable", 2, "font-size", "15px"]], template: function FooterComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "footer", 0)(1, "div", 1)(2, "div", 2)(3, "a", 3);
       \u0275\u0275element(4, "i", 4);
@@ -47139,7 +47150,7 @@ var FooterComponent = class _FooterComponent {
     type: Component,
     args: [{ selector: "app-footer", imports: [
       RouterLink
-    ], template: '<!-- Footer -->\n<footer class="text-center">\n  <!-- Grid container -->\n  <div class="container">\n    <!-- Section: Social media -->\n    <div class="p-4"\n      style="display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;">\n\n      <!-- Instagram -->\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating rounded-circle circle m-1"\n        href="https://www.instagram.com/hthtribute" target="_blank" role="button">\n        <i class="fab fa-instagram"></i>\n      </a>\n\n      <!-- Facebook -->\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating rounded-circle circle m-1"\n        href="https://www.facebook.com/hthtribute" target="_blank" role="button">\n        <i class="fab fa-facebook"></i>\n      </a>\n\n      <!-- YouTube -->\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating rounded-circle circle m-1"\n        href="https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g" target="_blank" role="button">\n        <i class="fab fa-youtube"></i>\n      </a>\n\n      <!-- TikTok -->\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating rounded-circle circle m-1"\n        href="https://www.tiktok.com/@hthtribute" target="_blank" role="button">\n        <i class="fab fa-tiktok"></i>\n      </a>\n\n    </div>\n  </div>\n\n  <div class="text-center p-3">\n    &#169;{{year}}&nbsp;Highway to Hell - AC/DC Tribute Band\n    <br>\n    Designed by <a class="" href="https://lrossi.xyz" target="_blank">Lorenzo Rossi</a>&nbsp;<i\n      class="fa-solid fa-bolt"></i>&nbsp;<a class="m-0 p-0 clickable " routerLink="/privacy-policy">Privacy Policy</a>\n  </div>\n</footer>', styles: ["/* src/app/footer/footer.component.css */\nfooter {\n  background-color: #060607;\n}\n.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  opacity: 0.9;\n}\n/*# sourceMappingURL=footer.component.css.map */\n"] }]
+    ], template: '<!-- Footer -->\n<footer class="text-center">\n  <!-- Grid container -->\n  <div class="container">\n    <!-- Section: Social media -->\n    <div class="p-4" style="display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: center;">\n\n      <!-- Instagram -->\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating rounded-circle circle m-1"\n        href="https://www.instagram.com/hthtribute" target="_blank" role="button">\n        <i class="fab fa-instagram"></i>\n      </a>\n\n      <!-- Facebook -->\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating rounded-circle circle m-1"\n        href="https://www.facebook.com/hthtribute" target="_blank" role="button">\n        <i class="fab fa-facebook"></i>\n      </a>\n\n      <!-- YouTube -->\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating rounded-circle circle m-1"\n        href="https://www.youtube.com/channel/UCFwyiKmg9AqEYVDZdqq3H_g" target="_blank" role="button">\n        <i class="fab fa-youtube"></i>\n      </a>\n\n      <!-- TikTok -->\n      <a data-mdb-ripple-init class="btn btn-outline btn-floating rounded-circle circle m-1"\n        href="https://www.tiktok.com/@hthtribute" target="_blank" role="button">\n        <i class="fab fa-tiktok"></i>\n      </a>\n\n    </div>\n  </div>\n\n  <div class="text-center p-3" style="font-size: 15px;">\n    &#169;{{year}}&nbsp;Highway to Hell - AC/DC Tribute Band\n    <br>\n    Designed by <a href="https://lrossi.xyz" target="_blank" style="font-size: 15px;">Lorenzo Rossi</a>&nbsp;<i class="fa-solid fa-bolt" style="font-size: 15px;"></i>&nbsp;<a class="m-0 p-0 clickable " routerLink="/privacy-policy" style="font-size: 15px;">Privacy Policy</a>\n  </div>\n</footer>', styles: ["/* src/app/footer/footer.component.css */\nfooter {\n  background-color: #060607;\n}\n.btn {\n  color: #fff;\n  transition: all 0.2s ease-in-out;\n  text-shadow: none;\n}\n.btn:hover {\n  color: #fff;\n  text-shadow:\n    0 0 10px #ff3333,\n    0 0 20px #ff3333,\n    0 0 30px #ff0000;\n  opacity: 0.9;\n}\n/*# sourceMappingURL=footer.component.css.map */\n"] }]
   }], () => [], null);
 })();
 (() => {
