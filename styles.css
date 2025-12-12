@@ -16,8 +16,13 @@ body {
 .navbar-brand {
   color: #edddce;
 }
+.btn-danger {
+  color: #edddce;
+  transition: all ease-in-out 0.3s;
+}
 .squealer {
   font-family: "Squealer", sans-serif;
+  text-transform: uppercase;
 }
 .anton {
   font-family: "Anton", sans-serif;

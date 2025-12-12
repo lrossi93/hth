@@ -42112,7 +42112,7 @@ var ContactsComponent = class _ContactsComponent {
       \u0275\u0275advance(4);
       \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 2, "Contacts"), " ");
       \u0275\u0275advance(4);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(9, 4, "Dare to bring Highway to Hell's energy to your stage? Get in touch!"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(9, 4, "Bring Highway to Hell to your stage!"), " ");
     }
   }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/contacts/contacts.jpg);\n}\n/*# sourceMappingURL=contacts.component.css.map */"] });
 };
@@ -42141,7 +42141,7 @@ var ContactsComponent = class _ContactsComponent {
     <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">
         <!-- <h2 class="anton text-uppercase">{{'Get in touch!' | translate}}</h2> -->
         <p>
-            {{ "Dare to bring Highway to Hell's energy to your stage? Get in touch!" | translate }}
+            {{ "Bring Highway to Hell to your stage!" | translate }}
         </p>
         <ul style="list-style: none;">
             <li>
@@ -46697,17 +46697,17 @@ function HeaderComponent_Conditional_10_Template(rf, ctx) {
     \u0275\u0275text(0, " \u{1F1E9}\u{1F1EA} ");
   }
 }
-function HeaderComponent_Conditional_85_Template(rf, ctx) {
+function HeaderComponent_Conditional_82_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0, " \u{1F1EC}\u{1F1E7} ");
   }
 }
-function HeaderComponent_Conditional_86_Template(rf, ctx) {
+function HeaderComponent_Conditional_83_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0, " \u{1F1EE}\u{1F1F9} ");
   }
 }
-function HeaderComponent_Conditional_87_Template(rf, ctx) {
+function HeaderComponent_Conditional_84_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0, " \u{1F1E9}\u{1F1EA} ");
   }
@@ -46723,7 +46723,7 @@ var HeaderComponent = class _HeaderComponent {
   static \u0275fac = function HeaderComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _HeaderComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 98, vars: 47, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0", "my-0", "shadow"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", "squealer", 3, "click"], ["src", "hth-logo-clean.png", "alt", "HTH Logo", 2, "max-height", "50px"], [1, "navbar-brand", "clickable", "my-1", "squealer", "d-none", "d-lg-inline", 3, "click"], [1, "d-lg-none", "ms-2", "position-relative"], ["data-bs-toggle", "dropdown", "type", "button", 1, "btn", "btn-sm", "dropdown-toggle"], [1, "dropdown-menu", "dropdown-menu-end", "text-center", "mobile-lang-menu"], [1, "clickable"], [1, "dropdown-item", "anton", 3, "click"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end", "border-0"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/formats", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/bio", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "bandDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "bandDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/band/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/band/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/band/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/band/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/band/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "d-none", "d-lg-block"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 95, vars: 45, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0", "my-0", "shadow"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", "squealer", 3, "click"], ["src", "hth-logo-clean.png", "alt", "HTH Logo", 2, "max-height", "50px"], [1, "navbar-brand", "clickable", "my-1", "squealer", "d-none", "d-lg-inline", 3, "click"], [1, "d-lg-none", "ms-2", "position-relative"], ["data-bs-toggle", "dropdown", "type", "button", 1, "btn", "btn-sm", "dropdown-toggle"], [1, "dropdown-menu", "dropdown-menu-end", "text-center", "mobile-lang-menu"], [1, "clickable"], [1, "dropdown-item", "anton", 3, "click"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end", "border-0"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/formats", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "bandDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "bandDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/band/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/band/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/band/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/band/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/band/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "d-none", "d-lg-block"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
       \u0275\u0275elementStart(0, "nav", 1)(1, "div", 2)(2, "span", 3);
@@ -46793,105 +46793,98 @@ var HeaderComponent = class _HeaderComponent {
       \u0275\u0275text(40);
       \u0275\u0275pipe(41, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(42, "li", 19)(43, "a", 23);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_43_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
-      });
-      \u0275\u0275text(44, "Bio");
-      \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(45, "li", 24)(46, "button", 25);
-      \u0275\u0275text(47);
-      \u0275\u0275pipe(48, "translate");
+      \u0275\u0275elementStart(42, "li", 23)(43, "button", 24);
+      \u0275\u0275text(44);
+      \u0275\u0275pipe(45, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(49, "ul", 26)(50, "li")(51, "a", 27);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_51_listener() {
+      \u0275\u0275elementStart(46, "ul", 25)(47, "li")(48, "a", 26);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_48_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(52, "Jacopo ");
-      \u0275\u0275element(53, "i", 28);
+      \u0275\u0275text(49, "Jacopo ");
+      \u0275\u0275element(50, "i", 27);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(54, "li")(55, "a", 29);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_55_listener() {
+      \u0275\u0275elementStart(51, "li")(52, "a", 28);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_52_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(56, "Eros ");
-      \u0275\u0275element(57, "i", 30);
+      \u0275\u0275text(53, "Eros ");
+      \u0275\u0275element(54, "i", 29);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(58, "li")(59, "a", 31);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_59_listener() {
+      \u0275\u0275elementStart(55, "li")(56, "a", 30);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_56_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(60, "Francesco ");
-      \u0275\u0275element(61, "i", 28);
+      \u0275\u0275text(57, "Francesco ");
+      \u0275\u0275element(58, "i", 27);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(62, "li")(63, "a", 32);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_63_listener() {
+      \u0275\u0275elementStart(59, "li")(60, "a", 31);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_60_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(64, "Davide ");
-      \u0275\u0275element(65, "i", 28);
+      \u0275\u0275text(61, "Davide ");
+      \u0275\u0275element(62, "i", 27);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(66, "li")(67, "a", 33);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_67_listener() {
+      \u0275\u0275elementStart(63, "li")(64, "a", 32);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_64_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(68, "Andrea ");
-      \u0275\u0275element(69, "i", 34);
+      \u0275\u0275text(65, "Andrea ");
+      \u0275\u0275element(66, "i", 33);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(70, "li")(71, "a", 35);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_71_listener() {
+      \u0275\u0275elementStart(67, "li")(68, "a", 34);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_68_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(72, "Lorenzo ");
-      \u0275\u0275element(73, "i", 36);
+      \u0275\u0275text(69, "Lorenzo ");
+      \u0275\u0275element(70, "i", 35);
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(74, "li")(75, "a", 37);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_75_listener() {
+      \u0275\u0275elementStart(71, "li")(72, "a", 36);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_72_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(76, "Matteo ");
-      \u0275\u0275element(77, "i", 30);
+      \u0275\u0275text(73, "Matteo ");
+      \u0275\u0275element(74, "i", 29);
       \u0275\u0275elementEnd()()()();
-      \u0275\u0275elementStart(78, "li", 19)(79, "a", 38);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_79_listener() {
+      \u0275\u0275elementStart(75, "li", 19)(76, "a", 37);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_76_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.triggerCloseButtonClick());
       });
-      \u0275\u0275text(80);
-      \u0275\u0275pipe(81, "translate");
+      \u0275\u0275text(77);
+      \u0275\u0275pipe(78, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(82, "li", 39)(83, "button", 40);
-      \u0275\u0275text(84);
-      \u0275\u0275template(85, HeaderComponent_Conditional_85_Template, 1, 0)(86, HeaderComponent_Conditional_86_Template, 1, 0)(87, HeaderComponent_Conditional_87_Template, 1, 0);
+      \u0275\u0275elementStart(79, "li", 38)(80, "button", 39);
+      \u0275\u0275text(81);
+      \u0275\u0275template(82, HeaderComponent_Conditional_82_Template, 1, 0)(83, HeaderComponent_Conditional_83_Template, 1, 0)(84, HeaderComponent_Conditional_84_Template, 1, 0);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(88, "ul", 41)(89, "li")(90, "a", 42);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_90_listener() {
+      \u0275\u0275elementStart(85, "ul", 40)(86, "li")(87, "a", 41);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_87_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.switchLanguage("en"));
       });
-      \u0275\u0275text(91, "EN \u{1F1EC}\u{1F1E7}");
+      \u0275\u0275text(88, "EN \u{1F1EC}\u{1F1E7}");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(92, "li")(93, "a", 42);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_93_listener() {
+      \u0275\u0275elementStart(89, "li")(90, "a", 41);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_90_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.switchLanguage("it"));
       });
-      \u0275\u0275text(94, "IT \u{1F1EE}\u{1F1F9}");
+      \u0275\u0275text(91, "IT \u{1F1EE}\u{1F1F9}");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(95, "li")(96, "a", 42);
-      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_96_listener() {
+      \u0275\u0275elementStart(92, "li")(93, "a", 41);
+      \u0275\u0275listener("click", function HeaderComponent_Template_a_click_93_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.shared.switchLanguage("de"));
       });
-      \u0275\u0275text(97, "DE \u{1F1E9}\u{1F1EA}");
+      \u0275\u0275text(94, "DE \u{1F1E9}\u{1F1EA}");
       \u0275\u0275elementEnd()()()()()()()()();
     }
     if (rf & 2) {
@@ -46902,17 +46895,15 @@ var HeaderComponent = class _HeaderComponent {
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "concerts");
       \u0275\u0275advance();
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(37, 39, "Concerts"));
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(37, 37, "Concerts"));
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "formats");
       \u0275\u0275advance();
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(41, 41, "Formats"));
-      \u0275\u0275advance(3);
-      \u0275\u0275classProp("active", ctx.shared.activeLink === "bio");
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(41, 39, "Formats"));
       \u0275\u0275advance(3);
       \u0275\u0275classProp("active", ctx.shared.activeLink.includes("band"));
       \u0275\u0275advance();
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(48, 43, "Band"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(45, 41, "Band"), " ");
       \u0275\u0275advance(4);
       \u0275\u0275classProp("active", ctx.shared.activeLink.includes("jacopo"));
       \u0275\u0275advance(4);
@@ -46930,11 +46921,11 @@ var HeaderComponent = class _HeaderComponent {
       \u0275\u0275advance(4);
       \u0275\u0275classProp("active", ctx.shared.activeLink === "contacts");
       \u0275\u0275advance();
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(81, 45, "Contacts"));
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(78, 43, "Contacts"));
       \u0275\u0275advance(4);
       \u0275\u0275textInterpolate1(" ", ctx.shared.language, " ");
       \u0275\u0275advance();
-      \u0275\u0275conditional(ctx.shared.language == "en" ? 85 : ctx.shared.language == "it" ? 86 : ctx.shared.language == "de" ? 87 : -1);
+      \u0275\u0275conditional(ctx.shared.language == "en" ? 82 : ctx.shared.language == "it" ? 83 : ctx.shared.language == "de" ? 84 : -1);
       \u0275\u0275advance(5);
       \u0275\u0275classProp("active", ctx.shared.language == "en");
       \u0275\u0275advance(3);
@@ -47005,8 +46996,7 @@ var HeaderComponent = class _HeaderComponent {
                     <li class="nav-item m-2 anton"><a class="nav-link btn"
                             [class.active]="shared.activeLink==='formats'" routerLink="/formats"
                             (click)="shared.triggerCloseButtonClick()">{{'Formats' | translate}}</a></li>
-                    <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='bio'"
-                            routerLink="/bio" (click)="shared.triggerCloseButtonClick()">Bio</a></li>
+                    <!-- <li class="nav-item m-2 anton"><a class="nav-link btn" [class.active]="shared.activeLink==='bio'" routerLink="/bio" (click)="shared.triggerCloseButtonClick()">Bio</a></li> -->
                     <li class="nav-item m-2 dropdown anton">
                         <button class="nav-link btn w-100 text-center text-uppercase dropdown-toggle"
                             [class.active]="shared.activeLink.includes('band')" id="bandDropdown"
