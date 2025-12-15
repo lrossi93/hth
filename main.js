@@ -41451,7 +41451,33 @@ var BioComponent = class _BioComponent {
 })();
 
 // src/app/concerts/concerts.component.ts
-function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_Conditional_9_Template(rf, ctx) {
+function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_0_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "h2", 6);
+    \u0275\u0275text(1);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const event_r2 = \u0275\u0275nextContext().$implicit;
+    const ctx_r2 = \u0275\u0275nextContext(4);
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate1(" ", ctx_r2.getEventYear(event_r2), " ");
+  }
+}
+function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_1_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "h3", 7);
+    \u0275\u0275text(1);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const event_r2 = \u0275\u0275nextContext().$implicit;
+    const ctx_r2 = \u0275\u0275nextContext(4);
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate1(" ", ctx_r2.getEventMonthLabel(event_r2), " ");
+  }
+}
+function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_21_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275text(0);
     \u0275\u0275element(1, "br");
@@ -41461,60 +41487,81 @@ function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_Condi
     \u0275\u0275textInterpolate1(" ", event_r2.description, "");
   }
 }
-function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_For_12_Template(rf, ctx) {
+function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_For_24_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "i", 17);
+    \u0275\u0275element(0, "i", 25);
     \u0275\u0275text(1, "\xA0");
-    \u0275\u0275elementStart(2, "a", 18);
+    \u0275\u0275elementStart(2, "a", 26);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
     \u0275\u0275element(4, "br");
   }
   if (rf & 2) {
-    const link_r3 = ctx.$implicit;
+    const link_r4 = ctx.$implicit;
     \u0275\u0275advance(2);
-    \u0275\u0275property("href", link_r3.value, \u0275\u0275sanitizeUrl);
+    \u0275\u0275property("href", link_r4.value, \u0275\u0275sanitizeUrl);
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate(link_r3.key);
+    \u0275\u0275textInterpolate(link_r4.key);
   }
 }
-function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_Template(rf, ctx) {
+function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 6)(1, "div", 7)(2, "div", 8);
-    \u0275\u0275text(3);
+    \u0275\u0275template(0, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_0_Template, 2, 1, "h2", 6)(1, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_1_Template, 2, 1, "h3", 7);
+    \u0275\u0275elementStart(2, "div", 8)(3, "h2", 9)(4, "button", 10)(5, "p", 11)(6, "span", 4);
+    \u0275\u0275text(7);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 9)(5, "h3", 10);
-    \u0275\u0275text(6);
+    \u0275\u0275element(8, "br");
+    \u0275\u0275text(9);
+    \u0275\u0275elementEnd()()();
+    \u0275\u0275elementStart(10, "div", 12)(11, "div", 13)(12, "div", 14)(13, "div", 15)(14, "div", 16);
+    \u0275\u0275text(15);
     \u0275\u0275elementEnd();
-    \u0275\u0275element(7, "hr", 11);
-    \u0275\u0275elementStart(8, "div", 12);
-    \u0275\u0275template(9, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_Conditional_9_Template, 2, 1);
-    \u0275\u0275elementStart(10, "div", 13);
-    \u0275\u0275repeaterCreate(11, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_For_12_Template, 5, 2, null, null, \u0275\u0275repeaterTrackByIndex);
-    \u0275\u0275elementEnd()();
-    \u0275\u0275element(13, "hr", 11);
-    \u0275\u0275elementStart(14, "div", 14);
-    \u0275\u0275element(15, "i", 15);
-    \u0275\u0275text(16, "\xA0 ");
-    \u0275\u0275elementStart(17, "a", 16);
-    \u0275\u0275listener("click", function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_Template_a_click_17_listener() {
-      const event_r2 = \u0275\u0275restoreView(_r1).$implicit;
-      const ctx_r3 = \u0275\u0275nextContext(4);
-      return \u0275\u0275resetView(ctx_r3.openMap(event_r2.location));
-    });
+    \u0275\u0275elementStart(16, "div", 17)(17, "h3", 18);
     \u0275\u0275text(18);
-    \u0275\u0275elementEnd()()()()();
+    \u0275\u0275elementEnd();
+    \u0275\u0275element(19, "hr", 19);
+    \u0275\u0275elementStart(20, "div", 20);
+    \u0275\u0275template(21, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_21_Template, 2, 1);
+    \u0275\u0275elementStart(22, "div", 21);
+    \u0275\u0275repeaterCreate(23, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_For_24_Template, 5, 2, null, null, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275elementEnd()();
+    \u0275\u0275element(25, "hr", 19);
+    \u0275\u0275elementStart(26, "div", 22);
+    \u0275\u0275element(27, "i", 23);
+    \u0275\u0275text(28, "\xA0 ");
+    \u0275\u0275elementStart(29, "a", 24);
+    \u0275\u0275listener("click", function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Template_a_click_29_listener() {
+      const event_r2 = \u0275\u0275restoreView(_r1).$implicit;
+      const ctx_r2 = \u0275\u0275nextContext(4);
+      return \u0275\u0275resetView(ctx_r2.openMap(event_r2.location));
+    });
+    \u0275\u0275text(30);
+    \u0275\u0275elementEnd()()()()()()()();
   }
   if (rf & 2) {
     const event_r2 = ctx.$implicit;
-    const ctx_r3 = \u0275\u0275nextContext(4);
+    const $index_r5 = ctx.$index;
+    const ctx_r2 = \u0275\u0275nextContext(4);
+    \u0275\u0275conditional($index_r5 === 0 || ctx_r2.getEventYear(event_r2) !== ctx_r2.getEventYear(ctx_r2.upcoming[$index_r5 - 1]) ? 0 : -1);
+    \u0275\u0275advance();
+    \u0275\u0275conditional($index_r5 === 0 || ctx_r2.getEventYear(event_r2) !== ctx_r2.getEventYear(ctx_r2.upcoming[$index_r5 - 1]) || ctx_r2.getEventMonth(event_r2) !== ctx_r2.getEventMonth(ctx_r2.upcoming[$index_r5 - 1]) ? 1 : -1);
+    \u0275\u0275advance();
+    \u0275\u0275classProp("year-start", $index_r5 === 0 || ctx_r2.getEventYear(event_r2) !== ctx_r2.getEventYear(ctx_r2.upcoming[$index_r5 - 1]))("month-start", $index_r5 === 0 || ctx_r2.getEventMonth(event_r2) !== ctx_r2.getEventMonth(ctx_r2.upcoming[$index_r5 - 1]));
+    \u0275\u0275advance(2);
+    \u0275\u0275attribute("data-bs-target", "#" + ctx_r2.getAccordionId(event_r2))("aria-controls", ctx_r2.getAccordionId(event_r2));
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate2(" ", ctx_r3.formatDate(ctx_r3.separateDateAndTime(event_r2.start.dateTime).date), " h", ctx_r3.formatTime(event_r2.start.dateTime), " ");
+    \u0275\u0275textInterpolate(event_r2.summary);
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate2(" ", ctx_r2.formatNumericDate(ctx_r2.separateDateAndTime(event_r2.start.dateTime).date), ", h", ctx_r2.formatTime(event_r2.start.dateTime), " ");
+    \u0275\u0275advance();
+    \u0275\u0275attribute("id", ctx_r2.getAccordionId(event_r2));
+    \u0275\u0275advance(5);
+    \u0275\u0275textInterpolate2(" ", ctx_r2.formatDate(ctx_r2.separateDateAndTime(event_r2.start.dateTime).date), " h", ctx_r2.formatTime(event_r2.start.dateTime), " ");
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate(event_r2.summary);
     \u0275\u0275advance(3);
-    \u0275\u0275conditional(event_r2.description != "" ? 9 : -1);
+    \u0275\u0275conditional(event_r2.description != "" ? 21 : -1);
     \u0275\u0275advance(2);
     \u0275\u0275repeater(event_r2.links);
     \u0275\u0275advance(7);
@@ -41523,61 +41570,38 @@ function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_Templ
 }
 function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 5);
+    \u0275\u0275elementStart(0, "h2", 4);
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275repeaterCreate(3, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_4_Template, 19, 5, "div", 6, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275elementStart(3, "div", 5);
+    \u0275\u0275repeaterCreate(4, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Template, 31, 17, null, null, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const ctx_r3 = \u0275\u0275nextContext(3);
+    const ctx_r2 = \u0275\u0275nextContext(3);
     \u0275\u0275advance();
     \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, "Next concerts"));
-    \u0275\u0275advance(2);
-    \u0275\u0275repeater(ctx_r3.upcoming);
+    \u0275\u0275advance(3);
+    \u0275\u0275repeater(ctx_r2.upcoming);
   }
 }
 function ConcertsComponent_Conditional_7_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275template(0, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_Template, 5, 3);
+    \u0275\u0275template(0, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_Template, 6, 3);
   }
   if (rf & 2) {
-    const ctx_r3 = \u0275\u0275nextContext(2);
-    \u0275\u0275conditional(ctx_r3.upcoming.length > 0 ? 0 : -1);
-  }
-}
-function ConcertsComponent_Conditional_7_Conditional_1_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 5);
-    \u0275\u0275text(1, "Non ci sono eventi in programma...");
-    \u0275\u0275elementEnd();
+    const ctx_r2 = \u0275\u0275nextContext(2);
+    \u0275\u0275conditional(ctx_r2.upcoming.length > 0 ? 0 : -1);
   }
 }
 function ConcertsComponent_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275template(0, ConcertsComponent_Conditional_7_Conditional_0_Template, 1, 1)(1, ConcertsComponent_Conditional_7_Conditional_1_Template, 2, 0, "h2", 5);
+    \u0275\u0275template(0, ConcertsComponent_Conditional_7_Conditional_0_Template, 1, 1);
   }
   if (rf & 2) {
-    const ctx_r3 = \u0275\u0275nextContext();
-    \u0275\u0275conditional(ctx_r3.events.length > 0 ? 0 : ctx_r3.events.length == 0 ? 1 : -1);
-  }
-}
-function ConcertsComponent_Conditional_8_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 4)(1, "h2", 19);
-    \u0275\u0275text(2);
-    \u0275\u0275pipe(3, "translate");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "div", 20)(5, "span", 21);
-    \u0275\u0275text(6);
-    \u0275\u0275pipe(7, "translate");
-    \u0275\u0275elementEnd()()();
-  }
-  if (rf & 2) {
-    \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(3, 2, "Loading..."));
-    \u0275\u0275advance(4);
-    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(7, 4, "Loading..."));
+    const ctx_r2 = \u0275\u0275nextContext();
+    \u0275\u0275conditional(ctx_r2.events.length > 0 ? 0 : -1);
   }
 }
 var ConcertsComponent = class _ConcertsComponent {
@@ -41695,6 +41719,15 @@ var ConcertsComponent = class _ConcertsComponent {
       year: "numeric"
     }).format(date);
   }
+  formatNumericDate(dateString) {
+    const date = new Date(dateString);
+    return new Intl.DateTimeFormat("it-IT", {
+      day: "2-digit",
+      month: "numeric",
+      // Abbreviated month
+      year: "numeric"
+    }).format(date);
+  }
   formatTime(datetimeString) {
     return datetimeString.slice(11, 16);
   }
@@ -41749,10 +41782,25 @@ var ConcertsComponent = class _ConcertsComponent {
     console.warn("past MINUS shown:");
     console.log(this.past);
   }
+  getAccordionId(event) {
+    const date = event.start.dateTime;
+    return "event-" + date.replace(/[^0-9]/g, "");
+  }
+  getEventYear(event) {
+    return new Date(event.start.dateTime).getFullYear();
+  }
+  getEventMonth(event) {
+    return new Date(event.start.dateTime).getMonth();
+  }
+  getEventMonthLabel(event) {
+    return new Date(event.start.dateTime).toLocaleString("it-IT", {
+      month: "long"
+    });
+  }
   static \u0275fac = function ConcertsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ConcertsComponent)(\u0275\u0275directiveInject(CalendarService), \u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 9, vars: 4, consts: [[1, "member-header", "shadow"], ["src", "/media/concerts/concerts.jpg", "alt", "Concerts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center"], [1, "anton", "text-uppercase"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], [1, "fa-solid", "fa-link"], ["target", "_blank", 3, "href"], [1, "anton"], ["role", "status", 1, "spinner-grow"], [1, "visually-hidden"]], template: function ConcertsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 8, vars: 4, consts: [[1, "member-header", "shadow"], ["src", "/media/concerts/concerts.jpg", "alt", "Concerts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase"], ["id", "eventsAccordion", 1, "accordion", "rounded-0"], [1, "anton", "text-uppercase", "mt-5", "text-center"], [1, "anton", "text-uppercase", "mt-5", "mb-2", "text-start"], [1, "accordion-item", "rounded-0"], [1, "accordion-header", "rounded-0"], ["type", "button", "data-bs-toggle", "collapse", "aria-expanded", "false", 1, "accordion-button", "collapsed", "rounded-0"], [1, "m-0", "p-0"], ["data-bs-parent", "#eventsAccordion", 1, "accordion-collapse", "collapse"], [1, "accordion-body"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], [1, "fa-solid", "fa-link"], ["target", "_blank", 3, "href"]], template: function ConcertsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "section", 0);
       \u0275\u0275element(2, "img", 1);
@@ -41761,22 +41809,23 @@ var ConcertsComponent = class _ConcertsComponent {
       \u0275\u0275pipe(5, "translate");
       \u0275\u0275elementEnd()();
       \u0275\u0275elementStart(6, "div", 3);
-      \u0275\u0275template(7, ConcertsComponent_Conditional_7_Template, 2, 1)(8, ConcertsComponent_Conditional_8_Template, 8, 6, "div", 4);
+      \u0275\u0275template(7, ConcertsComponent_Conditional_7_Template, 1, 1);
       \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
       \u0275\u0275advance(4);
       \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 2, "Concerts"), " ");
       \u0275\u0275advance(3);
-      \u0275\u0275conditional(!ctx.loading ? 7 : ctx.loading ? 8 : -1);
+      \u0275\u0275conditional(!ctx.loading ? 7 : -1);
     }
-  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/concerts/concerts.jpg);\n}\n/*# sourceMappingURL=concerts.component.css.map */"] });
+  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/concerts/concerts.jpg);\n}\n#eventsAccordion[_ngcontent-%COMP%]   .accordion-item.year-start[_ngcontent-%COMP%] {\n  border-top: 1px solid var(--bs-accordion-border-color);\n}\n.accordion-button[_ngcontent-%COMP%] {\n  color: #edddce;\n  transition: all ease-in-out 0.3s;\n}\n.accordion-button[_ngcontent-%COMP%]:hover {\n  background-color: #111;\n}\n.accordion-button[_ngcontent-%COMP%]:not(.collapsed) {\n  background-color: #111;\n  color: #edddce;\n  box-shadow: none;\n}\n.accordion-button[_ngcontent-%COMP%]:not(.collapsed)::after {\n  filter: none;\n  color: #edddce;\n}\n.accordion-button[_ngcontent-%COMP%]::after {\n  color: #edddce;\n}\n.accordion-button[_ngcontent-%COMP%]:focus {\n  box-shadow: none;\n  border-color: transparent;\n}\n#eventsAccordion[_ngcontent-%COMP%]   .accordion-item.month-start[_ngcontent-%COMP%] {\n  border-top: 1px solid var(--bs-accordion-border-color);\n}\n/*# sourceMappingURL=concerts.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ConcertsComponent, [{
     type: Component,
     args: [{ selector: "app-concerts", imports: [
-      TranslateModule
+      TranslateModule,
+      RouterLink
     ], template: `<div>
     <!-- <div class="container-fluid bg-title">
             <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
@@ -41795,22 +41844,113 @@ var ConcertsComponent = class _ConcertsComponent {
         </h1>
     </section>
     <div class="col-lg-8 mx-auto my-5 px-3 fs-3" style="text-align: justify;">
-        <!--  -->
+        <!-- Events accordion -->
         @if(!loading) {
+            @if(events.length > 0) {
+                @if(upcoming.length > 0) {
+                    <h2 class="anton text-uppercase">{{'Next concerts' | translate}}</h2>
+                    <div class="accordion rounded-0" id="eventsAccordion">
+                        @for (event of upcoming; track $index) {
+                              <!-- SEPARATORE ANNO -->
+                            @if ($index === 0 || getEventYear(event) !== getEventYear(upcoming[$index - 1])) {
+                                <h2 class="anton text-uppercase mt-5 text-center">
+                                {{ getEventYear(event) }}
+                                </h2>
+                            }
+
+                            <!-- SEPARATORE MESE -->
+                            @if ($index === 0 || getEventYear(event) !== getEventYear(upcoming[$index - 1]) || getEventMonth(event) !== getEventMonth(upcoming[$index - 1])
+                            ) {
+                                <h3 class="anton text-uppercase mt-5 mb-2 text-start">
+                                {{ getEventMonthLabel(event) }}
+                                </h3>
+                            }
+
+                            <!-- ACCORDION ITEM -->
+                            <div
+                                class="accordion-item rounded-0"
+                                [class.year-start]="$index === 0 || getEventYear(event) !== getEventYear(upcoming[$index - 1])"
+                                [class.month-start]="$index === 0 || getEventMonth(event) !== getEventMonth(upcoming[$index - 1])">
+                                <h2 class="accordion-header rounded-0">
+                                <button
+                                    class="accordion-button collapsed rounded-0"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    [attr.data-bs-target]="'#' + getAccordionId(event)"
+                                    aria-expanded="false"
+                                    [attr.aria-controls]="getAccordionId(event)"
+                                >
+                                    <p class="m-0 p-0">
+                                    <span class="anton text-uppercase">{{ event.summary }}</span><br>
+                                    {{ formatNumericDate(separateDateAndTime(event.start.dateTime).date) }},
+                                    h{{ formatTime(event.start.dateTime) }}
+                                    </p>
+                                </button>
+                                </h2>
+
+                            <div
+                                [attr.id]="getAccordionId(event)"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#eventsAccordion"
+                            >
+                                <div class="accordion-body">
+                                    <div class="m-3 border-0 rounded-0 shadow-hover">
+                                        <div class="row d-flex flex-wrap align-items-stretch">
+                                            <!-- Colonna con data e ora -->
+                                            <div
+                                                class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">
+                                                {{formatDate(separateDateAndTime(event.start.dateTime).date)}}
+                                                h{{formatTime(event.start.dateTime)}}
+                                            </div>
+
+                                            <!-- Colonna con contenuto principale -->
+                                            <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">
+                                                <h3 class="text-uppercase anton m-3 card-title">{{event.summary}}</h3>
+                                                <hr class="m-0">
+                                                <div class="card-body">
+                                                    @if(event.description != ""){
+                                                        {{event.description}}<br>
+                                                    }
+                                                    <div class="m-1">
+                                                        @for (link of event.links; track $index) {
+                                                            <i class="fa-solid fa-link"></i>&nbsp;<a target="_blank" [href]="link.value">{{link.key}}</a><br>
+                                                        }
+                                                    </div>
+                                                </div>
+                                                <hr class="m-0">
+                                                <div class="card-body rounded-0">
+                                                    <i class="fa-solid fa-location-dot"></i>&nbsp;
+                                                    <a href="javascript:void(0)" (click)="openMap(event.location)">
+                                                        {{event.location}}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        }
+                    </div>
+                }
+            }
+        }
+
+        <!-- EVENTS one by one -->
+        <!-- @if(!loading) {
             @if(events.length > 0) {
                 @if(upcoming.length > 0) {
                     <h2 class="anton text-uppercase">{{'Next concerts' | translate}}</h2>
                     @for(event of upcoming; track $index){
                         <div class="m-3 border-0 rounded-0 shadow-hover">
                             <div class="row d-flex flex-wrap align-items-stretch">
-                                <!-- Colonna con data e ora -->
                                 <div
                                     class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">
                                     {{formatDate(separateDateAndTime(event.start.dateTime).date)}}
                                     h{{formatTime(event.start.dateTime)}}
                                 </div>
 
-                                <!-- Colonna con contenuto principale -->
                                 <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">
                                     <h3 class="text-uppercase anton m-3 card-title">{{event.summary}}</h3>
                                     <hr class="m-0">
@@ -41836,52 +41976,6 @@ var ConcertsComponent = class _ConcertsComponent {
                         </div>
                     }
                 }
-                <!-- @if(upcoming.length > 0) {
-                    <div class="text-center">
-                        <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" (click)="loadMoreUpcoming(5)">
-                            Mostra altro&nbsp;<i class="fa-solid fa-bolt-lightning"></i>
-                        </button>
-                    </div>
-                } -->
-                <!-- @if(past.length > 0) {
-                    <h2 class="anton text-uppercase">Eventi passati</h2>
-                    @for(event of pastShown; track $index) {
-                        <div class="m-3 border-0 rounded-0 shadow-hover">
-                            <div class="row d-flex flex-wrap align-items-stretch">
-                                <div
-                                    class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">
-                                    {{formatDate(separateDateAndTime(event.start.dateTime).date)}}
-                                    h{{formatTime(event.start.dateTime)}}
-                                </div>
-
-                                <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">
-                                    <h3 class="text-uppercase anton m-3 card-title">{{event.summary}}</h3>
-                                    <hr class="m-0">
-                                    <div class="card-body">
-                                        {{event.description}}<br>
-                                        <div class="m-1">
-                                            @for (link of event.links; track $index) {
-                                            <a target="_blank" href={{link.value}}><i
-                                                    class="fa-solid fa-link"></i>&nbsp;{{link.key}}</a><br>
-                                            }
-                                        </div>
-                                    </div>
-                                    <hr class="m-0">
-                                    <div class="card-body rounded-0">
-                                        <i class="fa-solid fa-location-dot"></i> {{event.location}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                }
-                @if(past.length > 0) {
-                    <div class="text-center">
-                        <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" (click)="loadMorePast(5)">
-                            Mostra altro&nbsp;<i class="fa-solid fa-bolt-lightning"></i>
-                        </button>
-                    </div>
-                } -->
             }
 
             @else if(events.length == 0) {
@@ -41895,13 +41989,19 @@ var ConcertsComponent = class _ConcertsComponent {
                     <span class="visually-hidden">{{'Loading...'| translate}}</span>
                 </div>
             </div>
-        }
+        } -->
     </div>
-</div>`, styles: ["/* src/app/concerts/concerts.component.css */\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/concerts/concerts.jpg);\n}\n/*# sourceMappingURL=concerts.component.css.map */\n"] }]
+
+    <!-- <div class="text-center mb-5">
+        <button class="btn btn-danger shadow-hover anton text-uppercase border-0 rounded-0" routerLink="/concerts/past">
+            {{'Past concerts' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
+        </button>
+    </div> -->
+</div>`, styles: ["/* src/app/concerts/concerts.component.css */\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/concerts/concerts.jpg);\n}\n#eventsAccordion .accordion-item.year-start {\n  border-top: 1px solid var(--bs-accordion-border-color);\n}\n.accordion-button {\n  color: #edddce;\n  transition: all ease-in-out 0.3s;\n}\n.accordion-button:hover {\n  background-color: #111;\n}\n.accordion-button:not(.collapsed) {\n  background-color: #111;\n  color: #edddce;\n  box-shadow: none;\n}\n.accordion-button:not(.collapsed)::after {\n  filter: none;\n  color: #edddce;\n}\n.accordion-button::after {\n  color: #edddce;\n}\n.accordion-button:focus {\n  box-shadow: none;\n  border-color: transparent;\n}\n#eventsAccordion .accordion-item.month-start {\n  border-top: 1px solid var(--bs-accordion-border-color);\n}\n/*# sourceMappingURL=concerts.component.css.map */\n"] }]
   }], () => [{ type: CalendarService }, { type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ConcertsComponent, { className: "ConcertsComponent", filePath: "src/app/concerts/concerts.component.ts", lineNumber: 14 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ConcertsComponent, { className: "ConcertsComponent", filePath: "src/app/concerts/concerts.component.ts", lineNumber: 16 });
 })();
 
 // src/app/projects/projects.component.ts
@@ -42190,6 +42290,475 @@ var PrivacyPolicyComponent = class _PrivacyPolicyComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PrivacyPolicyComponent, { className: "PrivacyPolicyComponent", filePath: "src/app/privacy-policy/privacy-policy.component.ts", lineNumber: 10 });
 })();
 
+// src/app/concerts/past/past.ts
+var pastConcerts = [
+  //2022=====================================================================================================================================
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Ritrovo degli Artisti",
+    description: "",
+    location: "Grignasco (NO)",
+    start: { dateTime: "2021-07-03T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-07-03T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Trio in Piazza Duomo",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2021-07-17T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-07-17T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Trio in Piazza Duomo",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2021-07-18T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-07-18T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Concerto in Piazza",
+    description: "",
+    location: "Gorgonzola (MI)",
+    start: { dateTime: "2021-08-30T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-08-30T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Trio in Piazza Duomo",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2021-09-25T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-09-25T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Trio in Piazza Duomo",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2021-09-25T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-09-25T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Rock on the Road",
+    description: "",
+    location: "Desio (MB)",
+    start: { dateTime: "2021-09-30T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-09-30T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Trio in Piazza Duomo",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2021-10-09T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-10-09T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Trio in Piazza Duomo",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2021-10-10T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-10-10T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Dundee Pub",
+    description: "",
+    location: "Caleppio (MI)",
+    start: { dateTime: "2021-09-30T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-09-30T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Accordo Zero",
+    description: "",
+    location: "Turate (CO)",
+    start: { dateTime: "2021-10-31T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-10-31T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Soul Rock Caf\xE8",
+    description: "",
+    location: "Castellanza (VA)",
+    start: { dateTime: "2021-11-05T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-11-05T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Ritrovo degli Artisti",
+    description: "",
+    location: "Grignasco (NO)",
+    start: { dateTime: "2021-11-13T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-11-13T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Festa Privata",
+    description: "",
+    location: "Gaggiano (MI)",
+    start: { dateTime: "2021-11-19T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-11-19T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Rock on the Road",
+    description: "",
+    location: "Desio (MB)",
+    start: { dateTime: "2021-12-09T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-12-09T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax Live Music",
+    description: "",
+    location: "Parona (PV)",
+    start: { dateTime: "2021-12-10T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-12-10T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Ritrovo degli Artisti",
+    description: "",
+    location: "Grignasco (NO)",
+    start: { dateTime: "2021-04-02T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-04-02T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  //2022=====================================================================================================================================
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Raven Pub",
+    description: "",
+    location: "Raven Pub, Villasanta (MB), Italy",
+    start: { dateTime: "2022-01-29T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-01-29T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} ",
+    description: "",
+    location: "",
+    start: { dateTime: "2021-01-13T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-01-13T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  //2023========================================================================================================
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax",
+    description: "",
+    location: "BigMax, Parona (PV), Italy",
+    start: { dateTime: "2023-01-21T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-01-21T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax",
+    description: "",
+    location: "BigMax, Parona (PV), Italy",
+    start: { dateTime: "2023-07-14T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-07-14T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax",
+    description: "",
+    location: "BigMax, Parona (PV), Italy",
+    start: { dateTime: "2023-12-16T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-12-16T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  //2024========================================================================================================
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax",
+    description: "",
+    location: "BigMax, Parona (PV), Italy",
+    start: { dateTime: "2024-01-20T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-01-20T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax",
+    description: "",
+    location: "BigMax, Parona (PV), Italy",
+    start: { dateTime: "2024-07-12T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-07-12T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax",
+    description: "",
+    location: "BigMax, Parona (PV), Italy",
+    start: { dateTime: "2024-12-21T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-12-21T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  //2025========================================================================================================
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Gunther Stube",
+    description: "",
+    location: "Gunther Stube, Novara (NO), Italy",
+    start: { dateTime: "2025-01-18T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-01-18T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Gunther Stube",
+    description: "",
+    location: "Gunther Stube, Novara (NO), Italy",
+    start: { dateTime: "2025-09-27T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-09-27T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  //2026========================================================================================================
+  {
+    summary: "\u{1F1E8}\u{1F1ED} Silvercube Lounge",
+    description: "",
+    location: "Silvercube Lounge, Dielsdorf (CH)",
+    start: { dateTime: "2026-11-14T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2026-11-14T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  }
+];
+
+// src/app/concerts/past/past.component.ts
+function PastComponent_Conditional_7_Conditional_0_For_5_Conditional_0_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "h2", 6);
+    \u0275\u0275text(1);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const event_r1 = \u0275\u0275nextContext().$implicit;
+    const ctx_r1 = \u0275\u0275nextContext(3);
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate1(" ", ctx_r1.getEventYear(event_r1), " ");
+  }
+}
+function PastComponent_Conditional_7_Conditional_0_For_5_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275template(0, PastComponent_Conditional_7_Conditional_0_For_5_Conditional_0_Template, 2, 1, "h2", 6);
+    \u0275\u0275elementStart(1, "p", 7)(2, "span", 4);
+    \u0275\u0275text(3);
+    \u0275\u0275elementEnd();
+    \u0275\u0275element(4, "br");
+    \u0275\u0275text(5);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const event_r1 = ctx.$implicit;
+    const $index_r3 = ctx.$index;
+    const ctx_r1 = \u0275\u0275nextContext(3);
+    \u0275\u0275conditional($index_r3 === 0 || ctx_r1.getEventYear(event_r1) !== ctx_r1.getEventYear(ctx_r1.upcoming[$index_r3 - 1]) ? 0 : -1);
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate(event_r1.summary);
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate2(" ", ctx_r1.formatNumericDate(ctx_r1.separateDateAndTime(event_r1.start.dateTime).date), ", h", ctx_r1.formatTime(event_r1.start.dateTime), " ");
+  }
+}
+function PastComponent_Conditional_7_Conditional_0_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "h2", 4);
+    \u0275\u0275text(1);
+    \u0275\u0275pipe(2, "translate");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(3, "div", 5);
+    \u0275\u0275repeaterCreate(4, PastComponent_Conditional_7_Conditional_0_For_5_Template, 6, 4, null, null, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext(2);
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, "Next concerts"));
+    \u0275\u0275advance(3);
+    \u0275\u0275repeater(ctx_r1.pastConcerts);
+  }
+}
+function PastComponent_Conditional_7_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275template(0, PastComponent_Conditional_7_Conditional_0_Template, 6, 3);
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275conditional(ctx_r1.pastConcerts.length > 0 ? 0 : -1);
+  }
+}
+var PastComponent = class _PastComponent {
+  pastConcerts = pastConcerts;
+  // calendar!: CalendarService;
+  events = [];
+  upcoming = [];
+  upcomingShown = [];
+  past = [];
+  pastShown = [];
+  today = /* @__PURE__ */ new Date();
+  loading = false;
+  shared;
+  constructor(shared) {
+    this.shared = shared;
+    this.shared.scrollUp();
+    console.log(pastConcerts);
+  }
+  cleanDescription(description) {
+    return description.replace(/\[.*?\]/g, "").trim();
+  }
+  extractLinksFromDescription(description) {
+    let links = [];
+    if (!description) {
+      links = void 0;
+      return links;
+    }
+    let linksString = description.substring(description.indexOf("["));
+    links = this.parseTextLinkPairs(linksString);
+    return links;
+  }
+  parseTextLinkPairs(str) {
+    str = str.trim().replace(/^\[|\]$/g, "");
+    const pairs = str.split(";").filter(Boolean);
+    const result = pairs.map((pair) => {
+      let [key, value] = pair.split("@");
+      key = key?.trim().replace(/^['"]|['"]$/g, "") || "";
+      value = value?.trim() || "";
+      return { key, value };
+    });
+    return result;
+  }
+  extractLinks(text) {
+    if (!text)
+      return [];
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const matches = text.match(urlRegex);
+    return matches || [];
+  }
+  getDescriptionWithLinks(description) {
+    if (!description)
+      return "";
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    return description.replace(urlRegex, (url) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`);
+  }
+  removeLinks(text) {
+    if (!text)
+      return "";
+    const urlRegex = /(https?:\/\/[^\s]+|www\.[^\s]+)/g;
+    return text.replace(urlRegex, "");
+  }
+  separateDateAndTime(datetime) {
+    const date = datetime.split("T")[0];
+    const time = datetime.split("T")[1];
+    return {
+      date,
+      time: time.replace("Z", "")
+    };
+  }
+  formatDate(dateString) {
+    const date = new Date(dateString);
+    return new Intl.DateTimeFormat("it-IT", {
+      day: "2-digit",
+      month: "short",
+      // Abbreviated month
+      year: "numeric"
+    }).format(date);
+  }
+  formatNumericDate(dateString) {
+    const date = new Date(dateString);
+    return new Intl.DateTimeFormat("it-IT", {
+      day: "2-digit",
+      month: "numeric",
+      // Abbreviated month
+      year: "numeric"
+    }).format(date);
+  }
+  formatTime(datetimeString) {
+    return datetimeString.slice(11, 16);
+  }
+  getAccordionId(event) {
+    const date = event.start.dateTime;
+    return "event-" + date.replace(/[^0-9]/g, "");
+  }
+  getEventYear(event) {
+    return new Date(event.start.dateTime).getFullYear();
+  }
+  static \u0275fac = function PastComponent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _PastComponent)(\u0275\u0275directiveInject(SharedService));
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PastComponent, selectors: [["app-past"]], decls: 8, vars: 4, consts: [[1, "member-header", "shadow"], ["src", "/media/concerts/concerts.jpg", "alt", "Concerts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase"], ["id", "eventsAccordion", 1, "accordion", "rounded-0"], [1, "anton", "text-uppercase", "mt-5", "mb-3", "text-center"], [1, "m-0", "p-0", "text-center"]], template: function PastComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4);
+      \u0275\u0275pipe(5, "translate");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(6, "div", 3);
+      \u0275\u0275template(7, PastComponent_Conditional_7_Template, 1, 1);
+      \u0275\u0275elementEnd()();
+    }
+    if (rf & 2) {
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 2, "Concerts"), " ");
+      \u0275\u0275advance(3);
+      \u0275\u0275conditional(!ctx.loading ? 7 : -1);
+    }
+  }, dependencies: [TranslateModule, TranslatePipe], encapsulation: 2 });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PastComponent, [{
+    type: Component,
+    args: [{ selector: "app-past", imports: [
+      TranslateModule,
+      RouterLink
+    ], template: `<div>
+    <!-- <div class="container-fluid bg-title">
+            <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
+                {{'Concerts' | translate}}
+            </h1>
+        </div>
+        <div class="bg-grad">
+            <h1 class="text-center p-0 m-0">
+                &nbsp;
+            </h1>
+        </div> -->
+    <section class="member-header shadow">
+        <img src="/media/concerts/concerts.jpg" class="member-img" alt="Concerts header image">
+        <h1 class="text-center squealer text-uppercase member-content">
+            {{'Concerts' | translate}}
+        </h1>
+    </section>
+    <div class="col-lg-8 mx-auto my-5 px-3 fs-3" style="text-align: justify;">
+        <!-- Events accordion -->
+        @if(!loading) {
+            @if(pastConcerts.length > 0) {
+                <h2 class="anton text-uppercase">{{'Next concerts' | translate}}</h2>
+                <div class="accordion rounded-0" id="eventsAccordion">
+                    @for (event of pastConcerts; track $index) {
+                        @if ($index === 0 || getEventYear(event) !== getEventYear(upcoming[$index - 1])) {
+                            <h2 class="anton text-uppercase mt-5 mb-3 text-center">
+                                {{ getEventYear(event) }}
+                            </h2>
+                        }
+
+                        <p class="m-0 p-0 text-center">
+                            <span class="anton text-uppercase">{{ event.summary }}</span><br>
+                            {{ formatNumericDate(separateDateAndTime(event.start.dateTime).date) }}, h{{
+                            formatTime(event.start.dateTime) }}
+                        </p>
+                    }
+                </div>
+            }
+        }
+    </div>
+</div>
+
+<!-- TODO: non si vedono gli eventi oltre il primo -->` }]
+  }], () => [{ type: SharedService }], null);
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PastComponent, { className: "PastComponent", filePath: "src/app/concerts/past/past.component.ts", lineNumber: 16 });
+})();
+
 // src/app/app.routes.ts
 var routes = [
   { path: "", component: HomeComponent },
@@ -42204,6 +42773,7 @@ var routes = [
   { path: "band/matteo", component: MatteoComponent },
   { path: "bio", component: BioComponent },
   { path: "concerts", component: ConcertsComponent },
+  { path: "concerts/past", component: PastComponent },
   { path: "formats", component: ProjectsComponent },
   { path: "contacts", component: ContactsComponent },
   { path: "privacy-policy", component: PrivacyPolicyComponent },
