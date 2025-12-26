@@ -41453,7 +41453,7 @@ var BioComponent = class _BioComponent {
 // src/app/concerts/concerts.component.ts
 function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 6);
+    \u0275\u0275elementStart(0, "h2", 9);
     \u0275\u0275text(1);
     \u0275\u0275elementEnd();
   }
@@ -41466,7 +41466,7 @@ function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Condi
 }
 function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h3", 7);
+    \u0275\u0275elementStart(0, "h3", 10);
     \u0275\u0275text(1);
     \u0275\u0275elementEnd();
   }
@@ -41489,9 +41489,9 @@ function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Condi
 }
 function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_For_24_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "i", 25);
+    \u0275\u0275element(0, "i", 28);
     \u0275\u0275text(1, "\xA0");
-    \u0275\u0275elementStart(2, "a", 26);
+    \u0275\u0275elementStart(2, "a", 29);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
     \u0275\u0275element(4, "br");
@@ -41507,30 +41507,30 @@ function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_For_2
 function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275template(0, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_0_Template, 2, 1, "h2", 6)(1, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_1_Template, 2, 1, "h3", 7);
-    \u0275\u0275elementStart(2, "div", 8)(3, "h2", 9)(4, "button", 10)(5, "p", 11)(6, "span", 4);
+    \u0275\u0275template(0, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_0_Template, 2, 1, "h2", 9)(1, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_1_Template, 2, 1, "h3", 10);
+    \u0275\u0275elementStart(2, "div", 11)(3, "h2", 12)(4, "button", 13)(5, "p", 14)(6, "span", 7);
     \u0275\u0275text(7);
     \u0275\u0275elementEnd();
     \u0275\u0275element(8, "br");
     \u0275\u0275text(9);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(10, "div", 12)(11, "div", 13)(12, "div", 14)(13, "div", 15)(14, "div", 16);
+    \u0275\u0275elementStart(10, "div", 15)(11, "div", 16)(12, "div", 17)(13, "div", 18)(14, "div", 19);
     \u0275\u0275text(15);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(16, "div", 17)(17, "h3", 18);
+    \u0275\u0275elementStart(16, "div", 20)(17, "h3", 21);
     \u0275\u0275text(18);
     \u0275\u0275elementEnd();
-    \u0275\u0275element(19, "hr", 19);
-    \u0275\u0275elementStart(20, "div", 20);
+    \u0275\u0275element(19, "hr", 22);
+    \u0275\u0275elementStart(20, "div", 23);
     \u0275\u0275template(21, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_21_Template, 2, 1);
-    \u0275\u0275elementStart(22, "div", 21);
+    \u0275\u0275elementStart(22, "div", 24);
     \u0275\u0275repeaterCreate(23, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_For_24_Template, 5, 2, null, null, \u0275\u0275repeaterTrackByIndex);
     \u0275\u0275elementEnd()();
-    \u0275\u0275element(25, "hr", 19);
-    \u0275\u0275elementStart(26, "div", 22);
-    \u0275\u0275element(27, "i", 23);
+    \u0275\u0275element(25, "hr", 22);
+    \u0275\u0275elementStart(26, "div", 25);
+    \u0275\u0275element(27, "i", 26);
     \u0275\u0275text(28, "\xA0 ");
-    \u0275\u0275elementStart(29, "a", 24);
+    \u0275\u0275elementStart(29, "a", 27);
     \u0275\u0275listener("click", function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Template_a_click_29_listener() {
       const event_r2 = \u0275\u0275restoreView(_r1).$implicit;
       const ctx_r2 = \u0275\u0275nextContext(4);
@@ -41570,11 +41570,11 @@ function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Templ
 }
 function ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "h2", 4);
+    \u0275\u0275elementStart(0, "h2", 7);
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 5);
+    \u0275\u0275elementStart(3, "div", 8);
     \u0275\u0275repeaterCreate(4, ConcertsComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Template, 31, 17, null, null, \u0275\u0275repeaterTrackByIndex);
     \u0275\u0275elementEnd();
   }
@@ -41793,14 +41793,34 @@ var ConcertsComponent = class _ConcertsComponent {
     return new Date(event.start.dateTime).getMonth();
   }
   getEventMonthLabel(event) {
-    return new Date(event.start.dateTime).toLocaleString("it-IT", {
-      month: "long"
-    });
+    let monthLabel = "en";
+    switch (this.shared.language) {
+      case "de":
+        monthLabel = new Date(event.start.dateTime).toLocaleString("de-DE", {
+          month: "long"
+        });
+        break;
+      case "en":
+        monthLabel = new Date(event.start.dateTime).toLocaleString("en-GB", {
+          month: "long"
+        });
+        break;
+      case "it":
+        monthLabel = new Date(event.start.dateTime).toLocaleString("it-IT", {
+          month: "long"
+        });
+        break;
+      default:
+        monthLabel = new Date(event.start.dateTime).toLocaleString("en-GB", {
+          month: "long"
+        });
+    }
+    return monthLabel;
   }
   static \u0275fac = function ConcertsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ConcertsComponent)(\u0275\u0275directiveInject(CalendarService), \u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 8, vars: 4, consts: [[1, "member-header", "shadow"], ["src", "/media/concerts/concerts.jpg", "alt", "Concerts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase"], ["id", "eventsAccordion", 1, "accordion", "rounded-0"], [1, "anton", "text-uppercase", "mt-5", "text-center"], [1, "anton", "text-uppercase", "mt-5", "mb-2", "text-start"], [1, "accordion-item", "rounded-0"], [1, "accordion-header", "rounded-0"], ["type", "button", "data-bs-toggle", "collapse", "aria-expanded", "false", 1, "accordion-button", "collapsed", "rounded-0"], [1, "m-0", "p-0"], ["data-bs-parent", "#eventsAccordion", 1, "accordion-collapse", "collapse"], [1, "accordion-body"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], [1, "fa-solid", "fa-link"], ["target", "_blank", 3, "href"]], template: function ConcertsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 13, vars: 7, consts: [[1, "member-header", "shadow"], ["src", "/media/concerts/concerts.jpg", "alt", "Concerts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center", "my-5"], ["routerLink", "/concerts/past", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"], [1, "anton", "text-uppercase"], ["id", "eventsAccordion", 1, "accordion", "rounded-0"], [1, "anton", "text-uppercase", "mt-5", "text-center"], [1, "anton", "text-uppercase", "mt-5", "mb-2", "text-start"], [1, "accordion-item", "rounded-0"], [1, "accordion-header", "rounded-0"], ["type", "button", "data-bs-toggle", "collapse", "aria-expanded", "false", 1, "accordion-button", "collapsed", "rounded-0"], [1, "m-0", "p-0"], ["data-bs-parent", "#eventsAccordion", 1, "accordion-collapse", "collapse"], [1, "accordion-body"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], [1, "fa-solid", "fa-link"], ["target", "_blank", 3, "href"]], template: function ConcertsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "section", 0);
       \u0275\u0275element(2, "img", 1);
@@ -41810,15 +41830,22 @@ var ConcertsComponent = class _ConcertsComponent {
       \u0275\u0275elementEnd()();
       \u0275\u0275elementStart(6, "div", 3);
       \u0275\u0275template(7, ConcertsComponent_Conditional_7_Template, 1, 1);
-      \u0275\u0275elementEnd()();
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(8, "div", 4)(9, "button", 5);
+      \u0275\u0275text(10);
+      \u0275\u0275pipe(11, "translate");
+      \u0275\u0275element(12, "i", 6);
+      \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
       \u0275\u0275advance(4);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 2, "Concerts"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 3, "Concerts"), " ");
       \u0275\u0275advance(3);
       \u0275\u0275conditional(!ctx.loading ? 7 : -1);
+      \u0275\u0275advance(3);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 5, "Past concerts"), "\xA0");
     }
-  }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/concerts/concerts.jpg);\n}\n#eventsAccordion[_ngcontent-%COMP%]   .accordion-item.year-start[_ngcontent-%COMP%] {\n  border-top: 1px solid var(--bs-accordion-border-color);\n}\n.accordion-button[_ngcontent-%COMP%] {\n  color: #edddce;\n  transition: all ease-in-out 0.3s;\n}\n.accordion-button[_ngcontent-%COMP%]:hover {\n  background-color: #111;\n}\n.accordion-button[_ngcontent-%COMP%]:not(.collapsed) {\n  background-color: #111;\n  color: #edddce;\n  box-shadow: none;\n}\n.accordion-button[_ngcontent-%COMP%]:not(.collapsed)::after {\n  filter: none;\n  color: #edddce;\n}\n.accordion-button[_ngcontent-%COMP%]::after {\n  color: #edddce;\n}\n.accordion-button[_ngcontent-%COMP%]:focus {\n  box-shadow: none;\n  border-color: transparent;\n}\n#eventsAccordion[_ngcontent-%COMP%]   .accordion-item.month-start[_ngcontent-%COMP%] {\n  border-top: 1px solid var(--bs-accordion-border-color);\n}\n/*# sourceMappingURL=concerts.component.css.map */"] });
+  }, dependencies: [TranslateModule, TranslatePipe, RouterLink], styles: ["\n\n.shadow-hover[_ngcontent-%COMP%] {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item[_ngcontent-%COMP%] {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item[_ngcontent-%COMP%] {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/concerts/concerts.jpg);\n}\n#eventsAccordion[_ngcontent-%COMP%]   .accordion-item.year-start[_ngcontent-%COMP%] {\n  border-top: 1px solid var(--bs-accordion-border-color);\n}\n.accordion-button[_ngcontent-%COMP%] {\n  color: #edddce;\n  transition: all ease-in-out 0.3s;\n}\n.accordion-button[_ngcontent-%COMP%]:hover {\n  background-color: #111;\n}\n.accordion-button[_ngcontent-%COMP%]:not(.collapsed) {\n  background-color: #111;\n  color: #edddce;\n  box-shadow: none;\n}\n.accordion-button[_ngcontent-%COMP%]:not(.collapsed)::after {\n  filter: none;\n  color: #edddce;\n}\n.accordion-button[_ngcontent-%COMP%]::after {\n  color: #edddce;\n}\n.accordion-button[_ngcontent-%COMP%]:focus {\n  box-shadow: none;\n  border-color: transparent;\n}\n#eventsAccordion[_ngcontent-%COMP%]   .accordion-item.month-start[_ngcontent-%COMP%] {\n  border-top: 1px solid var(--bs-accordion-border-color);\n}\n/*# sourceMappingURL=concerts.component.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ConcertsComponent, [{
@@ -41843,6 +41870,7 @@ var ConcertsComponent = class _ConcertsComponent {
             {{'Concerts' | translate}}
         </h1>
     </section>
+    
     <div class="col-lg-8 mx-auto my-5 px-3 fs-3" style="text-align: justify;">
         <!-- Events accordion -->
         @if(!loading) {
@@ -41937,66 +41965,14 @@ var ConcertsComponent = class _ConcertsComponent {
             }
         }
 
-        <!-- EVENTS one by one -->
-        <!-- @if(!loading) {
-            @if(events.length > 0) {
-                @if(upcoming.length > 0) {
-                    <h2 class="anton text-uppercase">{{'Next concerts' | translate}}</h2>
-                    @for(event of upcoming; track $index){
-                        <div class="m-3 border-0 rounded-0 shadow-hover">
-                            <div class="row d-flex flex-wrap align-items-stretch">
-                                <div
-                                    class="col-12 col-md-2 text-uppercase anton fs-4 text-center d-flex align-items-center justify-content-center card-date order-0 order-md-0">
-                                    {{formatDate(separateDateAndTime(event.start.dateTime).date)}}
-                                    h{{formatTime(event.start.dateTime)}}
-                                </div>
-
-                                <div class="col-12 col-md-10 d-flex flex-column card border-0 rounded-0 order-1 order-md-1">
-                                    <h3 class="text-uppercase anton m-3 card-title">{{event.summary}}</h3>
-                                    <hr class="m-0">
-                                    <div class="card-body">
-                                        @if(event.description != ""){
-                                            {{event.description}}<br>
-                                        }
-                                        <div class="m-1">
-                                            @for (link of event.links; track $index) {
-                                                <i class="fa-solid fa-link"></i>&nbsp;<a target="_blank" [href]="link.value">{{link.key}}</a><br>
-                                            }
-                                        </div>
-                                    </div>
-                                    <hr class="m-0">
-                                    <div class="card-body rounded-0">
-                                        <i class="fa-solid fa-location-dot"></i>&nbsp;
-                                        <a href="javascript:void(0)" (click)="openMap(event.location)">
-                                            {{event.location}}
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                }
-            }
-
-            @else if(events.length == 0) {
-                <h2 class="anton text-uppercase">Non ci sono eventi in programma...</h2>
-            }
-        }
-        @else if(loading) {
-            <div class="text-center">
-                <h2 class="anton">{{'Loading...'| translate}}</h2>
-                <div class="spinner-grow" role="status">
-                    <span class="visually-hidden">{{'Loading...'| translate}}</span>
-                </div>
-            </div>
-        } -->
+        
     </div>
 
-    <!-- <div class="text-center mb-5">
-        <button class="btn btn-danger shadow-hover anton text-uppercase border-0 rounded-0" routerLink="/concerts/past">
-            {{'Past concerts' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
-        </button>
-    </div> -->
+    <div class="text-center my-5">
+            <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" routerLink="/concerts/past">
+                {{'Past concerts' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
+            </button>
+        </div>
 </div>`, styles: ["/* src/app/concerts/concerts.component.css */\n.shadow-hover {\n  transition: box-shadow 0.3s ease;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);\n}\n.shadow-hover:hover {\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);\n  cursor: pointer;\n}\n.cards-wrapper {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.card-item {\n  flex: 0 1 calc(33.333% - 20px);\n  margin: 10px;\n}\n@media (max-width: 992px) {\n  .card-item {\n    flex: 0 1 calc(50% - 20px);\n  }\n}\n@media (max-width: 576px) {\n  .card-item {\n    flex: 0 1 calc(100% - 20px);\n  }\n}\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/concerts/concerts.jpg);\n}\n#eventsAccordion .accordion-item.year-start {\n  border-top: 1px solid var(--bs-accordion-border-color);\n}\n.accordion-button {\n  color: #edddce;\n  transition: all ease-in-out 0.3s;\n}\n.accordion-button:hover {\n  background-color: #111;\n}\n.accordion-button:not(.collapsed) {\n  background-color: #111;\n  color: #edddce;\n  box-shadow: none;\n}\n.accordion-button:not(.collapsed)::after {\n  filter: none;\n  color: #edddce;\n}\n.accordion-button::after {\n  color: #edddce;\n}\n.accordion-button:focus {\n  box-shadow: none;\n  border-color: transparent;\n}\n#eventsAccordion .accordion-item.month-start {\n  border-top: 1px solid var(--bs-accordion-border-color);\n}\n/*# sourceMappingURL=concerts.component.css.map */\n"] }]
   }], () => [{ type: CalendarService }, { type: SharedService }], null);
 })();
@@ -42431,55 +42407,1352 @@ var pastConcerts = [
   },
   //2022=====================================================================================================================================
   {
-    summary: "\u{1F1EE}\u{1F1F9} Raven Pub",
+    summary: "\u{1F1EE}\u{1F1F9} Il Tiglio Pub",
     description: "",
-    location: "Raven Pub, Villasanta (MB), Italy",
-    start: { dateTime: "2022-01-29T21:00:00+01:00", timeZone: "Europe/Rome" },
-    end: { dateTime: "2022-01-29T23:30:00+01:00", timeZone: "Europe/Rome" },
+    location: "Pontecurone (AL)",
+    start: { dateTime: "2022-12-17T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-12-17T23:30:00+01:00", timeZone: "Europe/Rome" },
     links: []
   },
   {
-    summary: "\u{1F1EE}\u{1F1F9} ",
+    summary: "\u{1F1EE}\u{1F1F9} XO Pub",
     description: "",
-    location: "",
-    start: { dateTime: "2021-01-13T21:00:00+01:00", timeZone: "Europe/Rome" },
-    end: { dateTime: "2021-01-13T23:30:00+01:00", timeZone: "Europe/Rome" },
+    location: "Magenta (MI)",
+    start: { dateTime: "2022-12-16T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-12-16T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} AZ Live",
+    description: "",
+    location: "Turate (CO)",
+    start: { dateTime: "2022-12-10T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-12-10T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} EICMA",
+    description: "",
+    location: "Rho (MI)",
+    start: { dateTime: "2022-11-13T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-11-13T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} EICMA",
+    description: "",
+    location: "Rho (MI)",
+    start: { dateTime: "2022-11-12T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-11-12T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Motosplash",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2022-11-12T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-11-12T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹11 NOVEMBRE - Befed Brew Pub - San Genesio ed Uniti (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Befed Brew Pub",
+    description: "",
+    location: "San Genesio ed Uniti (PV)",
+    start: { dateTime: "2022-11-11T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-11-11T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹31 OTTOBRE - Shon Club - Busto Garolfo (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Shon Club",
+    description: "",
+    location: "Busto Garolfo (MI)",
+    start: { dateTime: "2022-10-31T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-10-31T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹29 OTTOBRE - Raven Pub - Villasanta (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Raven Pub",
+    description: "",
+    location: "Villasanta (MB)",
+    start: { dateTime: "2022-10-29T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-10-29T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹22 OTTOBRE - Al Trani Pub - Belgioioso (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Al Trani Pub",
+    description: "",
+    location: "Belgioioso (PV)",
+    start: { dateTime: "2022-10-22T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-10-22T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹20 OTTOBRE - Fabbrica in Pedavena - Vignate (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Fabbrica in Pedavena",
+    description: "",
+    location: "Vignate (MI)",
+    start: { dateTime: "2022-10-20T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-10-20T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹15 OTTOBRE - Big Lebowski - Novara (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Big Lebowski",
+    description: "",
+    location: "Novara (NO)",
+    start: { dateTime: "2022-10-15T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-10-15T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹8 OTTOBRE - BigMax Live Music - Parona (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax Live Music",
+    description: "",
+    location: "Parona (PV)",
+    start: { dateTime: "2022-10-08T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-10-08T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹7 OTTOBRE - Kiosko - Piacenza (PC)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Kiosko",
+    description: "",
+    location: "Piacenza (PC)",
+    start: { dateTime: "2022-10-07T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-10-07T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹1 OTTOBRE -La Cueva Rock Pub - Casalbeltrame (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} La Cueva Rock Pub",
+    description: "",
+    location: "Casalbeltrame (NO)",
+    start: { dateTime: "2022-10-01T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-10-01T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹17 SETTEMBRE - Rock on The Road - Senago (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Rock on The Road",
+    description: "",
+    location: "Senago (MI)",
+    start: { dateTime: "2022-09-17T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-09-17T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹3 SETTEMBRE - Universal Pub - Rivanazzano (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Universal Pub",
+    description: "",
+    location: "Rivanazzano (PV)",
+    start: { dateTime: "2022-09-03T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-09-03T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹30 LUGLIO - La Loggia Pub - Vizzolo Predabissi (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} La Loggia Pub",
+    description: "",
+    location: "Vizzolo Predabissi (MI)",
+    start: { dateTime: "2022-07-30T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-07-30T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹23 LUGLIO - Il Tiglio Pub - Pontecurone (AL)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Il Tiglio Pub",
+    description: "",
+    location: "Pontecurone (AL)",
+    start: { dateTime: "2022-07-23T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-07-23T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹22 LUGLIO - Pioncarock - Pionca di Vigonza - (PD)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Pioncarock",
+    description: "",
+    location: "Pionca di Vigonza (PD)",
+    start: { dateTime: "2022-07-22T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-07-22T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹15 LUGLIO - Concerto in Piazza - Gorgonzola (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Concerto in Piazza",
+    description: "",
+    location: "Gorgonzola (MI)",
+    start: { dateTime: "2022-07-15T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-07-15T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹2 LUGLIO - Concerto in Piazza - Valcanale (BG)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Concerto in Piazza",
+    description: "",
+    location: "Valcanale (BG)",
+    start: { dateTime: "2022-07-02T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-07-02T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹25 GIUGNO - Raven Pub - Villasanta (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Raven Pub",
+    description: "",
+    location: "Villasanta (MB)",
+    start: { dateTime: "2022-06-25T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-06-25T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹22 GIUGNO - La Baitella - Songavazzo (BG)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} La Baitella",
+    description: "",
+    location: "Songavazzo (BG)",
+    start: { dateTime: "2022-06-22T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-06-22T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹19 GIUGNO - Universal Pub - Rivanazzano (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Universal Pub",
+    description: "",
+    location: "Rivanazzano (PV)",
+    start: { dateTime: "2022-06-19T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-06-19T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹18 GIUGNO - Live Cafè - Miradolo Terme (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Live Caf\xE8",
+    description: "",
+    location: "Miradolo Terme (PV)",
+    start: { dateTime: "2022-06-18T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-06-18T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹11 GIUGNO - Stadio - Abbiategrasso (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Stadio",
+    description: "",
+    location: "Abbiategrasso (MI)",
+    start: { dateTime: "2022-06-11T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-06-11T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹28 MAGGIO - La Cueva Rock Pub - Casalbeltrame (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} La Cueva Rock Pub",
+    description: "",
+    location: "Casalbeltrame (NO)",
+    start: { dateTime: "2022-05-28T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-05-28T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹30 APRILE - BigMax Live Music - Parona (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax Live Music",
+    description: "",
+    location: "Parona (PV)",
+    start: { dateTime: "2022-04-30T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-04-30T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹23 APRILE - Big Lebowski - Novara (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Big Lebowski",
+    description: "",
+    location: "Novara (NO)",
+    start: { dateTime: "2022-04-23T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-04-23T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹16 APRILE - Rock On The Road - Desio (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Rock On The Road",
+    description: "",
+    location: "Desio (MB)",
+    start: { dateTime: "2022-04-16T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-04-16T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹9 APRILE - Green Place - Pavia (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Green Place",
+    description: "",
+    location: "Pavia (PV)",
+    start: { dateTime: "2022-04-09T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-04-09T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹02 APRILE - Ritrovo Degli Artisti - Grignasco (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Ritrovo Degli Artisti",
+    description: "",
+    location: "Grignasco (NO)",
+    start: { dateTime: "2022-04-02T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-04-02T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹27 MARZO - Trio in Piazza Duomo - Milano (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Trio in Piazza Duomo",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2022-03-27T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-03-27T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹26 MARZO - Trio in Piazza Duomo - Milano (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Trio in Piazza Duomo",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2022-03-26T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-03-26T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹25 MARZO - Trio in Piazza Duomo - Milano (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Trio in Piazza Duomo",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2022-03-25T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-03-25T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹24 MARZO - Trio in Piazza Duomo - Milano (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Trio in Piazza Duomo",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2022-03-24T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-03-24T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹19 MARZO - Casa di Paglia - Fontaneto d'Agogna (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Casa di Paglia",
+    description: "",
+    location: "Fontaneto d'Agogna (NO)",
+    start: { dateTime: "2022-03-19T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-03-19T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹12 MARZO - Dundee Pub - Caleppio (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Dundee Pub",
+    description: "",
+    location: "Caleppio (MI)",
+    start: { dateTime: "2022-03-12T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-03-12T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹10 MARZO - Universal Pub - Rivanazzano (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Universal Pub",
+    description: "",
+    location: "Rivanazzano (PV)",
+    start: { dateTime: "2022-03-10T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-03-10T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹5 MARZO - Gentleman's Garage - Parabiago (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Gentleman's Garage",
+    description: "",
+    location: "Parabiago (MI)",
+    start: { dateTime: "2022-03-05T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2022-03-05T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹29 GENNAIO - Raven Pub - Villasanta (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Raven Pub",
+    description: "",
+    location: "Villasanta (MB)",
+    start: { dateTime: "2021-01-29T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2021-01-29T23:30:00+01:00", timeZone: "Europe/Rome" },
     links: []
   },
   //2023========================================================================================================
+  // 🇮🇹15 DICEMBRE - Crazy Driver - Varedo (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Crazy Driver",
+    description: "",
+    location: "Varedo (MB)",
+    start: { dateTime: "2023-12-15T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-12-15T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹08 DICEMBRE - Molly Malone's - Nebbiuno (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Molly Malone's",
+    description: "",
+    location: "Nebbiuno (NO)",
+    start: { dateTime: "2023-12-08T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-12-08T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹25 NOVEMBRE - Cowboys Guest Ranch - Voghera (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Cowboys Guest Ranch",
+    description: "",
+    location: "Voghera (PV)",
+    start: { dateTime: "2023-11-25T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-11-25T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹18 NOVEMBRE - La Cueva Rock Pub - Casalbeltrame (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} La Cueva Rock Pub",
+    description: "",
+    location: "Casalbeltrame (NO)",
+    start: { dateTime: "2023-11-18T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-11-18T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹12 NOVEMBRE - Fiera Eicma - Rho (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Fiera Eicma",
+    description: "",
+    location: "Rho (MI)",
+    start: { dateTime: "2023-11-12T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-11-12T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹11 NOVEMBRE - Fiera Eicma - Rho (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Fiera Eicma",
+    description: "",
+    location: "Rho (MI)",
+    start: { dateTime: "2023-11-11T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-11-11T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹10 NOVEMBRE - Fiera Eicma - Rho (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Fiera Eicma",
+    description: "",
+    location: "Rho (MI)",
+    start: { dateTime: "2023-11-10T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-11-10T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹09 NOVEMBRE - Fiera Eicma - Rho (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Fiera Eicma",
+    description: "",
+    location: "Rho (MI)",
+    start: { dateTime: "2023-11-09T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-11-09T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹28 OTTOBRE - Raven Pub - Villasanta (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Raven Pub",
+    description: "",
+    location: "Villasanta (MB)",
+    start: { dateTime: "2023-10-28T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-10-28T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹21 OTTOBRE - Al Trani - Belgioioso (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Al Trani",
+    description: "",
+    location: "Belgioioso (PV)",
+    start: { dateTime: "2023-10-21T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-10-21T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹20 OTTOBRE - Spank Mi - Milano
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Spank Mi",
+    description: "",
+    location: "Milano",
+    start: { dateTime: "2023-10-20T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-10-20T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹19 OTTOBRE - Cantera Club - Biassono (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Cantera Club",
+    description: "",
+    location: "Biassono (MB)",
+    start: { dateTime: "2023-10-19T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-10-19T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹14 OTTOBRE - Circus Bar - Cureggio (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Circus Bar",
+    description: "",
+    location: "Cureggio (NO)",
+    start: { dateTime: "2023-10-14T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-10-14T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇨🇭07 OTTOBRE - Silvercube Lounge - Dielsdorf (CH)
+  {
+    summary: "\u{1F1E8}\u{1F1ED} Silvercube Lounge",
+    description: "",
+    location: "Dielsdorf (CH)",
+    start: { dateTime: "2023-10-07T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-10-07T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇩🇪06 OTTOBRE - Zom Täle - Urbach (DE)
+  {
+    summary: "\u{1F1E9}\u{1F1EA} Zom T\xE4le",
+    description: "",
+    location: "Urbach (DE)",
+    start: { dateTime: "2023-10-06T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-10-06T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹30 SETTEMBRE - The Live - Mornago (VA)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} The Live",
+    description: "",
+    location: "Mornago (VA)",
+    start: { dateTime: "2023-09-30T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-09-30T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹23 SETTEMBRE - BigMax - Parona (PV)
   {
     summary: "\u{1F1EE}\u{1F1F9} BigMax",
+    description: "",
+    location: "Parona (PV)",
+    start: { dateTime: "2023-09-23T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-09-23T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹22 SETTEMBRE - Rock on The Road - Desio (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Rock on The Road",
+    description: "",
+    location: "Desio (MB)",
+    start: { dateTime: "2023-09-22T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-09-22T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹16 SETTEMBRE - Sagra - Anzino (VB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Sagra Anzino",
+    description: "",
+    location: "Anzino (VB)",
+    start: { dateTime: "2023-09-16T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-09-16T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹10 SETTEMBRE - Hi Folks - Vittuone (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Hi Folks",
+    description: "",
+    location: "Vittuone (MI)",
+    start: { dateTime: "2023-09-10T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-09-10T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹03 SETTEMBRE - 43 Lounge Bar - Ventimiglia (IM)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} 43 Lounge Bar",
+    description: "",
+    location: "Ventimiglia (IM)",
+    start: { dateTime: "2023-09-03T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-09-03T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹02 SETTEMBRE - Sagra - Migliarino (FE)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Sagra Migliarino",
+    description: "",
+    location: "Migliarino (FE)",
+    start: { dateTime: "2023-09-02T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-09-02T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹26 AGOSTO - Sagra - Vigonza (PD)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Sagra Vigonza",
+    description: "",
+    location: "Vigonza (PD)",
+    start: { dateTime: "2023-08-26T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-08-26T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹30 LUGLIO - Beer Fest - Erve (LC)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Beer Fest",
+    description: "",
+    location: "Erve (LC)",
+    start: { dateTime: "2023-07-30T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-07-30T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹28 LUGLIO - Bim Bum Bar - Magenta (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Bim Bum Bar",
+    description: "",
+    location: "Magenta (MI)",
+    start: { dateTime: "2023-07-28T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-07-28T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹22 LUGLIO - Pioncarock - Pionca di Vigonza (PD)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Pioncarock",
+    description: "",
+    location: "Pionca di Vigonza (PD)",
+    start: { dateTime: "2023-07-22T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-07-22T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹15 LUGLIO - Il Tiglio - Pontecurone (AL)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Il Tiglio",
+    description: "",
+    location: "Pontecurone (AL)",
+    start: { dateTime: "2023-07-15T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-07-15T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹14 LUGLIO - BigMax - Parona (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax",
+    description: "",
+    location: "Parona (PV)",
+    start: { dateTime: "2023-07-14T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-07-14T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹12 LUGLIO - Motosplash - Milano
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Motosplash",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2023-07-12T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-07-12T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹09 LUGLIO - Tresinfesta - Tresigallo (FE)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Tresinfesta",
+    description: "",
+    location: "Tresigallo (FE)",
+    start: { dateTime: "2023-07-09T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-07-09T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹08 LUGLIO - Estate con Noi - Cameriano - (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Estate con Noi",
+    description: "",
+    location: "Cameriano (NO)",
+    start: { dateTime: "2023-07-08T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-07-08T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹07 LUGLIO - Beer Fest - San Donato Milanese - (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Beer Fest",
+    description: "",
+    location: "San Donato Milanese (MI)",
+    start: { dateTime: "2023-07-07T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-07-07T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹04 LUGLIO - Arizona 66 - Palazzo Pignano (CR)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Arizona 66",
+    description: "",
+    location: "Palazzo Pignano (CR)",
+    start: { dateTime: "2023-07-04T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-07-04T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹01 LUGLIO - Big Twins - Abbiategrasso (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Big Twins",
+    description: "",
+    location: "Abbiategrasso (MI)",
+    start: { dateTime: "2023-07-01T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-07-01T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹17 GIUGNO - Rock & Blues - Abbiategrasso (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Rock & Blues",
+    description: "",
+    location: "Abbiategrasso (MI)",
+    start: { dateTime: "2023-06-17T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-06-17T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹10 GIUGNO - Raven Pub - Villasanta (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Raven Pub",
+    description: "",
+    location: "Villasanta (MB)",
+    start: { dateTime: "2023-06-10T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-06-10T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹08 GIUGNO - Hard Rock Cafè - Milano
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Hard Rock Caf\xE8",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2023-06-08T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-06-08T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹04 GIUGNO - Beer Fest - Casalbeltrame (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Beer Fest",
+    description: "",
+    location: "Casalbeltrame (NO)",
+    start: { dateTime: "2023-06-04T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-06-04T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹03 GIUGNO - La Loggia - Vizzolo Predabissi (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} La Loggia",
+    description: "",
+    location: "Vizzolo Predabissi (MI)",
+    start: { dateTime: "2023-06-03T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-06-03T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹01 GIUGNO - Cantera Club - Biassono (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Cantera Club",
+    description: "",
+    location: "Biassono (MB)",
+    start: { dateTime: "2023-06-01T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-06-01T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹27 MAGGIO - La Cueva - Casalbeltrame (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} La Cueva",
+    description: "",
+    location: "Casalbeltrame (NO)",
+    start: { dateTime: "2023-05-27T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-05-27T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹26 MAGGIO - Rock on The Road - Senago (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Rock on The Road",
+    description: "",
+    location: "Senago (MB)",
+    start: { dateTime: "2023-05-26T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-05-26T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹19 MAGGIO - Kiosko - Piacenza
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Kiosko",
+    description: "",
+    location: "Piacenza (PC)",
+    start: { dateTime: "2023-05-19T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-05-19T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹06 MAGGIO - Spank Mi - Milano
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Spank Mi",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2023-05-06T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-05-06T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹05 MAGGIO - T2 Trentadue - Pombia (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} T2 Trentadue",
+    description: "",
+    location: "Pombia (NO)",
+    start: { dateTime: "2023-05-05T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-05-05T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹28 APRILE - Molly Malone's - Nebbiuno (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Molly Malone's",
+    description: "",
+    location: "Nebbiuno (NO)",
+    start: { dateTime: "2023-04-28T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-04-28T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹24 APRILE - BigMax Live Music - Parona (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax Live Music",
     description: "",
     location: "BigMax, Parona (PV), Italy",
     start: { dateTime: "2023-01-21T21:00:00+01:00", timeZone: "Europe/Rome" },
     end: { dateTime: "2023-01-21T23:30:00+01:00", timeZone: "Europe/Rome" },
     links: []
   },
+  // 🇮🇹23 APRILE - Le Trattoir alla Darsena - Milano (MI)
   {
-    summary: "\u{1F1EE}\u{1F1F9} BigMax",
+    summary: "\u{1F1EE}\u{1F1F9} Le Trattoir alla Darsena",
     description: "",
-    location: "BigMax, Parona (PV), Italy",
-    start: { dateTime: "2023-07-14T21:00:00+02:00", timeZone: "Europe/Rome" },
-    end: { dateTime: "2023-07-14T23:30:00+02:00", timeZone: "Europe/Rome" },
+    location: "Milano (MI)",
+    start: { dateTime: "2023-04-23T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-04-23T23:30:00+01:00", timeZone: "Europe/Rome" },
     links: []
   },
+  // 🇮🇹21 APRILE - KM 298 - Lodi (LO)
   {
-    summary: "\u{1F1EE}\u{1F1F9} BigMax",
+    summary: "\u{1F1EE}\u{1F1F9} KM 298",
     description: "",
-    location: "BigMax, Parona (PV), Italy",
-    start: { dateTime: "2023-12-16T21:00:00+01:00", timeZone: "Europe/Rome" },
-    end: { dateTime: "2023-12-16T23:30:00+01:00", timeZone: "Europe/Rome" },
+    location: "Lodi (LO)",
+    start: { dateTime: "2023-04-21T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-04-21T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹15 APRILE - Big Lebowski - Novara (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Big Lebowski",
+    description: "",
+    location: "Novara (NO)",
+    start: { dateTime: "2023-04-15T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-04-15T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹08 APRILE - Beer Station - Paderno Dugnano (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Beer Station",
+    description: "",
+    location: "Paderno Dugnano (MI)",
+    start: { dateTime: "2023-04-08T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-04-08T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹02 APRILE - Festa Privata - Ceto (BS)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Festa Privata",
+    description: "",
+    location: "Ceto (BS)",
+    start: { dateTime: "2023-04-02T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-04-02T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹01 APRILE - 43 Lounge Bar - Ventimiglia (IM)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} 43 Lounge Bar",
+    description: "",
+    location: "Ventimiglia (IM)",
+    start: { dateTime: "2023-04-01T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-04-01T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹25 MARZO - Universal Pub - Rivanazzano (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Universal Pub",
+    description: "",
+    location: "Rivanazzano (PV)",
+    start: { dateTime: "2023-03-25T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-03-25T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹18 MARZO - Al Trani Pub - Belgioioso (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Al Trani Pub",
+    description: "",
+    location: "Belgioioso (PV)",
+    start: { dateTime: "2023-03-18T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-03-18T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹11 MARZO - Spank - Milano (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Spank",
+    description: "",
+    location: "Milano (MI)",
+    start: { dateTime: "2023-03-11T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-03-11T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹11 FEBBRAIO - Rock on the Road - Desio (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Rock on the Road",
+    description: "",
+    location: "Desio (MB)",
+    start: { dateTime: "2023-02-11T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-02-11T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹03 FEBBRAIO - Tortuga - Varese (VA)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Tortuga",
+    description: "",
+    location: "Varese (VA)",
+    start: { dateTime: "2023-02-03T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-02-03T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹21 GENNAIO - Volk - Pombia (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Volk",
+    description: "",
+    location: "Pombia (NO)",
+    start: { dateTime: "2023-01-21T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2023-01-21T23:30:00+01:00", timeZone: "Europe/Rome" },
     links: []
   },
   //2024========================================================================================================
+  // 🇮🇹21 DICEMBRE - BigMax - Parona (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax",
+    description: "",
+    location: "Parona (PV)",
+    start: { dateTime: "2024-12-21T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-12-21T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹20 DICEMBRE - Osteria degli Artisti - Capiago Intimiano (CO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Osteria degli Artisti",
+    description: "",
+    location: "Osteria degli Artisti, Capiago Intimiano (CO)",
+    start: { dateTime: "2024-12-20T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-12-20T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇨🇭5 DICEMBRE - Piazza Grande - Locarno (CH)
+  {
+    summary: "\u{1F1E8}\u{1F1ED} Piazza Grande",
+    description: "",
+    location: "Piazza Grande, Locarno (CH)",
+    start: { dateTime: "2024-12-05T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-12-05T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹29 NOVEMBRE - Circus - Cureggio (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Circus",
+    description: "",
+    location: "Circus, Cureggio (NO), Italy",
+    start: { dateTime: "2024-11-29T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-11-29T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹23 NOVEMBRE - Raven Pub - Villasanta (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Raven Pub",
+    description: "",
+    location: "Raven Pub, Villasanta (MB), Italy",
+    start: { dateTime: "2024-11-23T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-11-23T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹16 NOVEMBRE - Volume - Castel del Piano (GR)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Volume",
+    description: "",
+    location: "Volume, Castel del Piano (GR), Italy",
+    start: { dateTime: "2024-11-16T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-11-16T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇨🇭15 NOVEMBRE - Delta Beach - Ascona (CH)
+  {
+    summary: "\u{1F1E8}\u{1F1ED} Delta Beach",
+    description: "",
+    location: "Delta Beach, Ascona (CH), Switzerland",
+    start: { dateTime: "2024-11-15T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-11-15T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹2 NOVEMBRE - Smood - Ceparana (SP)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Smood",
+    description: "",
+    location: "Smood, Ceparana (SP), Italy",
+    start: { dateTime: "2024-11-02T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-11-02T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹1 NOVEMBRE -🎻"SYMPHONY OF THUNDER"🎻- Phenomenon - Fontaneto d'Agogna (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Phenomenon - SYMPHONY OF THUNDER \u{1F3BB}",
+    description: "",
+    location: "Phenomenon, Fontaneto d'Agogna (NO), Italy",
+    start: { dateTime: "2024-11-01T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-11-01T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹26 OTTOBRE - Al Trani Pub - Belgioioso (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Al Trani Pub",
+    description: "",
+    location: "Al Trani Pub, Belgioioso (PV), Italy",
+    start: { dateTime: "2024-10-26T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-10-26T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹18 OTTOBRE - Crazy Driver - Varedo (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Crazy Driver",
+    description: "",
+    location: "Crazy Driver, Varedo (MB), Italy",
+    start: { dateTime: "2024-10-18T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-10-18T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹12 OTTOBRE - The Live - Mornago (VA)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} The Live",
+    description: "",
+    location: "The Live, Mornago (VA), Italy",
+    start: { dateTime: "2024-10-12T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-10-12T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇨🇭30 SETTEMBRE - Foire du Valais - Martigny (CH)
+  {
+    summary: "\u{1F1E8}\u{1F1ED} Foire du Valais",
+    description: "",
+    location: "Foire du Valais, Martigny (CH), Switzerland",
+    start: { dateTime: "2024-09-30T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-09-30T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹21 SETTEMBRE - Gunther Stube - Torrion Quartara (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Gunther Stube",
+    description: "",
+    location: "Gunther Stube, Torrion Quartara (NO), Italy",
+    start: { dateTime: "2024-09-21T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-09-21T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹07 SETTEMBRE - Cowboys Guest Ranch - Voghera (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Cowboys Guest Ranch",
+    description: "",
+    location: "Cowboys Guest Ranch, Voghera (PV), Italy",
+    start: { dateTime: "2024-09-07T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-09-07T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹15 SETTEMBRE - Smood - Ceparana (SP)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Smood",
+    description: "",
+    location: "Smood, Ceparana (SP), Italy",
+    start: { dateTime: "2024-11-02T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-11-02T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹31 AGOSTO - Beer Fest - Cagnano Amiterno (AQ)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Beer Fest",
+    description: "",
+    location: "Cagnano Amiterno (AQ), Italy",
+    start: { dateTime: "2024-08-31T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-08-31T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹20 LUGLIO - Phenomenon - Fontaneto D'Agogna (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Phenomenon",
+    description: "",
+    location: "Phenomenon, Fontaneto D'Agogna (NO), Italy",
+    start: { dateTime: "2024-07-20T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-07-20T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹14 LUGLIO - La Botte - Carate Brianza (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} La Botte",
+    description: "",
+    location: "La Botte, Carate Brianza (MB), Italy",
+    start: { dateTime: "2024-07-14T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-07-14T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹12 LUGLIO - Beer Fest - Piedimonte Matese (CE)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Beer Fest",
+    description: "",
+    location: "Piedimonte Matese (CE), Italy",
+    start: { dateTime: "2024-07-12T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-07-12T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹16 GIUGNO - Festa dei giovani - Roverchiara (VR)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Festa dei giovani",
+    description: "",
+    location: "Roverchiara (VR), Italy",
+    start: { dateTime: "2024-06-16T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-06-16T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹29 GIUGNO - Cowboys Guest Ranch - Voghera (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Cowboys Guest Ranch",
+    description: "",
+    location: "Cowboys Guest Ranch, Voghera (PV), Italy",
+    start: { dateTime: "2024-06-29T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-06-29T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹28 GIUGNO - BigMax - Parona (PV)
   {
     summary: "\u{1F1EE}\u{1F1F9} BigMax",
     description: "",
     location: "BigMax, Parona (PV), Italy",
-    start: { dateTime: "2024-01-20T21:00:00+01:00", timeZone: "Europe/Rome" },
-    end: { dateTime: "2024-01-20T23:30:00+01:00", timeZone: "Europe/Rome" },
+    start: { dateTime: "2024-06-28T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-06-28T23:30:00+02:00", timeZone: "Europe/Rome" },
     links: []
   },
+  // 🇮🇹22 GIUGNO - Live in Brianza - Alzate Brianza (CO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Live in Brianza",
+    description: "",
+    location: "Live in Brianza, Alzate Brianza (CO), Italy",
+    start: { dateTime: "2024-06-22T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-06-22T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹21 GIUGNO - Slaughter Club - Paderno Dugnano (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Slaughter Club",
+    description: "",
+    location: "Slaughter Club, Paderno Dugnano (MI), Italy",
+    start: { dateTime: "2024-06-21T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-06-21T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹16 GIUGNO - Festa dei giovani - Roverchiara (VR)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Festa dei giovani",
+    description: "",
+    location: "Roverchiara (VR), Italy",
+    start: { dateTime: "2024-06-16T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-06-16T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹15 GIUGNO - La Cueva - Casalbeltrame (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} La Cueva",
+    description: "",
+    location: "La Cueva, Casalbeltrame (NO), Italy",
+    start: { dateTime: "2024-06-15T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-06-15T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹14 GIUGNO - Circus - Briga Novarese (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Circus",
+    description: "",
+    location: "Circus, Briga Novarese (NO), Italy",
+    start: { dateTime: "2024-06-14T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-06-14T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇨🇭08 GIUGNO - Notte Bianca - Locarno(CH)
+  {
+    summary: "\u{1F1E8}\u{1F1ED} Notte Bianca",
+    description: "",
+    location: "Notte Bianca, Locarno (CH)",
+    start: { dateTime: "2024-06-08T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-06-08T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹07 GIUGNO - Beer Fest - Oglianico (TO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Beer Fest",
+    description: "",
+    location: "Beer Fest, Oglianico (TO), Italy",
+    start: { dateTime: "2024-06-07T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-06-07T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹17 MAGGIO - Phenomenon - Fontaneto d'Agogna (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Phenomenon",
+    description: "",
+    location: "Phenomenon, Fontaneto d'Agogna (NO), Italy",
+    start: { dateTime: "2024-05-17T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-05-17T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹11 MAGGIO - Smood - Ceparana (SP)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Smood",
+    description: "",
+    location: "Smood, Ceparana (SP), Italy",
+    start: { dateTime: "2024-05-11T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-05-11T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹10 MAGGIO - Crazy Driver - Varedo (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Crazy Driver",
+    description: "",
+    location: "Crazy Driver, Varedo (MB), Italy",
+    start: { dateTime: "2024-05-10T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-05-10T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹27 APRILE - Varese Rock Fest - Varese (VA)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Varese Rock Fest",
+    description: "",
+    location: "Varese Rock Fest, Varese (VA), Italy",
+    start: { dateTime: "2024-04-27T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-04-27T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇨🇭20 APRILE - Silvercube Lounge - Dielsdorf (CH)
+  {
+    summary: "\u{1F1E8}\u{1F1ED} Silvercube Lounge",
+    description: "",
+    location: "Silvercube Lounge, Dielsdorf (CH)",
+    start: { dateTime: "2024-04-20T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-04-20T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇨🇭19 APRILE - Delta Beach - Ascona (CH)
+  {
+    summary: "\u{1F1E8}\u{1F1ED} Delta Beach",
+    description: "",
+    location: "Delta Beach, Ascona (CH), Switzerland",
+    start: { dateTime: "2024-04-19T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-04-19T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹14 APRILE - Teatro Celebrazioni (Symphonica on the Rock)- Bologna (BO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Teatro Celebrazioni (Symphonica on the Rock)",
+    description: "",
+    location: "Teatro Celebrazioni (Symphonica on the Rock), Bologna (BO), Italy",
+    start: { dateTime: "2024-04-14T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-04-14T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹13 APRILE - Teatro Montegrappa (Symphonica on the Rock) - Rosà (VI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Teatro Montegrappa (Symphonica on the Rock)",
+    description: "",
+    location: "Teatro Montegrappa (Symphonica on the Rock), Ros\xE0 (VI), Italy",
+    start: { dateTime: "2024-04-13T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-04-13T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹13 APRILE - Teatro Montegrappa (Symphonica on the Rock) - Rosà (VI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Teatro Montegrappa (Symphonica on the Rock)",
+    description: "",
+    location: "Teatro Montegrappa (Symphonica on the Rock), Ros\xE0 (VI), Italy",
+    start: { dateTime: "2024-04-13T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-04-13T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹30 MARZO - BigMax - Parona (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax",
+    description: "",
+    location: "BigMax, Parona (PV), Italy",
+    start: { dateTime: "2024-03-30T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-03-30T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹29 MARZO - Spank Mi - Milano
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Spank Mi",
+    description: "",
+    location: "Spank Mi, Milano, Italy",
+    start: { dateTime: "2024-03-29T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-03-29T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇨🇭23 MARZO - Bar Incontro - Muralto (CH)
+  {
+    summary: "\u{1F1E8}\u{1F1ED} Bar Incontro",
+    description: "",
+    location: "Bar Incontro, Muralto (CH), Switzerland",
+    start: { dateTime: "2024-03-23T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-03-23T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹15 MARZO - Ristorante del Sole - Magenta (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Ristorante del Sole",
+    description: "",
+    location: "Ristorante del Sole, Magenta (MI), Italy",
+    start: { dateTime: "2024-03-15T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-03-15T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹09 MARZO - Osteria degli Artisti - Capiago Intimiano (CO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Osteria degli Artisti",
+    description: "",
+    location: "Osteria degli Artisti, Capiago Intimiano (CO), Italy",
+    start: { dateTime: "2024-03-09T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-03-09T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹02 MARZO - Al Trani Pub - Belgioioso (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Al Trani Pub",
+    description: "",
+    location: "Al Trani Pub, Belgioioso (PV), Italy",
+    start: { dateTime: "2024-03-02T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-03-02T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹 1 MARZO - Phenomenon - Fontaneto d'Agogna (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Phenomenon",
+    description: "",
+    location: "Phenomenon, Fontaneto d'Agogna (NO), Italy",
+    start: { dateTime: "2024-03-01T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-03-01T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹24 FEBBRAIO - The Live - Mornago (VA)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} The Live",
+    description: "",
+    location: "The Live, Mornago (VA), Italy",
+    start: { dateTime: "2024-02-24T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-02-24T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹16 FEBBRAIO - Rock on The Road - Desio (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Rock on The Road",
+    description: "",
+    location: "Rock on The Road, Desio (MB), Italy",
+    start: { dateTime: "2024-02-16T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-02-16T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹27 GENNAIO - BigMax - Parona (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} BigMax",
+    description: "",
+    location: "BigMax, Parona (PV), Italy",
+    start: { dateTime: "2024-01-27T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-01-27T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹27 GENNAIO - BigMax - Parona (PV)
   {
     summary: "\u{1F1EE}\u{1F1F9} BigMax",
     description: "",
@@ -42488,44 +43761,325 @@ var pastConcerts = [
     end: { dateTime: "2024-07-12T23:30:00+02:00", timeZone: "Europe/Rome" },
     links: []
   },
+  // 🇮🇹20 GENNAIO - Sette Giò - Cornate D'Adda (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Sette Gi\xF2",
+    description: "",
+    location: "Sette Gi\xF2, Cornate D'Adda (MB), Italy",
+    start: { dateTime: "2024-01-20T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-01-20T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹13 GENNAIO - Beer Station - Paderno Dugnano (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Beer Station",
+    description: "",
+    location: "Beer Station, Paderno Dugnano (MI), Italy",
+    start: { dateTime: "2024-01-13T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2024-01-13T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  //2025========================================================================================================
+  // 🇮🇹26 LUGLIO - Phenomenon - Fontaneto d'Agogna (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Phenomenon",
+    description: "",
+    location: "Phenomenon, Fontaneto d'Agogna (NO), Italy",
+    start: { dateTime: "2025-07-26T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-07-26T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹25 LUGLIO - Festa degli Omeni - Portegrandi (VE)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Festa degli Omeni",
+    description: "",
+    location: "Festa degli Omeni, Portegrandi (VE), Italy",
+    start: { dateTime: "2025-07-25T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-07-25T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹19 LUGLIO - Pioncarock - Pionca di Vigonza (PD)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Pioncarock",
+    description: "",
+    location: "Pioncarock, Pionca di Vigonza (PD), Italy",
+    start: { dateTime: "2025-07-19T21:38+1448", timeZone: "Europe/Rome" },
+    end: { dateTime: "2999-11-19T18.38.44.444Z", timeZone: "Europe/Rome" }
+  },
+  // 🇮🇹18 LUGLIO - Leffestate - Leffe (BG)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Leffestate",
+    description: "",
+    location: "Leffestate, Leffe (BG), Italy",
+    start: { dateTime: "2025-07-18T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-07-18T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹17 LUGLIO - Beerfest - Cologne (BS)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Beerfest",
+    description: "",
+    location: "Beerfest, Cologne (BS), Italy",
+    start: { dateTime: "2025-07-17T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-07-17T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹12 LUGLIO - Cotton MM - Olgiate Comasco (CO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Cotton MM",
+    description: "",
+    location: "Cotton MM, Olgiate Comasco (CO), Italy",
+    start: { dateTime: "2025-07-12T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-07-12T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹4 LUGLIO - Lago di Paderno - Paderno Dugnano (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Lago di Paderno",
+    description: "",
+    location: "Lago di Paderno, Paderno Dugnano (MI), Italy",
+    start: { dateTime: "2025-07-04T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-07-04T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹3 LUGLIO - Beach Rock Festival - Pavone del Mella (BS)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Beach Rock Festival",
+    description: "",
+    location: "Beach Rock Festival, Pavone del Mella (BS), Italy",
+    start: { dateTime: "2025-07-03T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-07-03T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹2 LUGLIO - Poviglio Beer Fest - Poviglio (RE)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Poviglio Beer Fest",
+    description: "",
+    location: "Poviglio Beer Fest, Poviglio (RE), Italy",
+    start: { dateTime: "2025-07-02T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-07-02T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹29 GIUGNO - La Botte - Carate Brianza (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} La Botte",
+    description: "",
+    location: "La Botte, Carate Brianza (MB), Italy",
+    start: { dateTime: "2025-06-29T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-06-29T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹27 GIUGNO - Beer Fest - Piedimonte Matese (CE)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Beer Fest",
+    description: "",
+    location: "Beer Fest, Piedimonte Matese (CE), Italy",
+    start: { dateTime: "2999-11-19T18.38.44.444Z", timeZone: "Europe/Rome" },
+    end: { dateTime: "2999-11-19T23.38.44.444Z", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹21 GIUGNO - Stadio - Torrita di Siena (SI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Stadio",
+    description: "",
+    location: "Stadio, Torrita di Siena (SI), Italy",
+    start: { dateTime: "2025-06-21T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-06-21T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹20 GIUGNO - Beer Fest - Levizzano di Baiso (MO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Beer Fest",
+    description: "",
+    location: "Beer Fest, Levizzano di Baiso (MO), Italy",
+    start: { dateTime: "2025-06-20T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-06-20T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹18 GIUGNO - Parco Res - Fino del Monte (BG)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Parco Res",
+    description: "",
+    location: "Parco Res, Fino del Monte (BG), Italy",
+    start: { dateTime: "2025-06-18T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-06-18T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹12 GIUGNO - Tower Fest - Casalpusterlengo (LO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Tower Fest",
+    description: "",
+    location: "Tower Fest, Casalpusterlengo (LO), Italy",
+    start: { dateTime: "2025-06-12T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-06-12T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹08 GIUGNO - Villanova MusicFest - Bernareggio (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Villanova MusicFest",
+    description: "",
+    location: "Villanova MusicFest, Bernareggio (MB), Italy",
+    start: { dateTime: "2025-06-08T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-06-08T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹18 GIUGNO - Parco Res - Fino del Monte (BG)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Parco Res",
+    description: "",
+    location: "Parco Res, Fino del Monte (BG), Italy",
+    start: { dateTime: "2025-06-18T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-06-18T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹31 MAGGIO - Castello - Lardirago (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Castello",
+    description: "",
+    location: "Castello, Lardirago (PV), Italy",
+    start: { dateTime: "2025-05-31T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-05-31T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹30 MAGGIO - Crazy Driver - Varedo (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Crazy Driver",
+    description: "",
+    location: "Crazy Driver, Varedo (MB), Italy",
+    start: { dateTime: "2025-05-30T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-05-30T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇨🇭28 MAGGIO - Bar Castello - Bellinzona (CH)
+  {
+    summary: "\u{1F1E8}\u{1F1ED} Bar Castello",
+    description: "",
+    location: "Bar Castello, Bellinzona (CH), Switzerland",
+    start: { dateTime: "2025-05-28T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-05-28T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹23 MAGGIO - Arizona 66 - Palazzo Pignano (CR)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Arizona 66",
+    description: "",
+    location: "Arizona 66, Palazzo Pignano (CR), Italy",
+    start: { dateTime: "2025-05-23T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-05-23T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹10 MAGGIO - Smood - Ceparana (SP)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Smood",
+    description: "",
+    location: "Smood, Ceparana (SP), Italy",
+    start: { dateTime: "2025-05-10T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-05-10T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇨🇭03 MAGGIO - Delta Beach - Ascona (CH)
+  {
+    summary: "\u{1F1E8}\u{1F1ED} Delta Beach",
+    description: "",
+    location: "Delta Beach, Ascona (CH), Switzerland",
+    start: { dateTime: "2025-05-03T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-05-03T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹12 APRILE - La Cueva - Casalbeltrame (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} La Cueva",
+    description: "",
+    location: "La Cueva, Casalbeltrame (NO), Italy",
+    start: { dateTime: "2025-04-12T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-04-12T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇨🇭05 APRILE - Campo Sportivo - Golino (CH)
+  {
+    summary: "\u{1F1E8}\u{1F1ED} Campo Sportivo",
+    description: "",
+    location: "Campo Sportivo, Golino (CH), Switzerland",
+    start: { dateTime: "2025-04-05T21:00:00+02:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-04-05T23:30:00+02:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹29 MARZO - Kustom Rooster Garage - Villanterio (PV)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Kustom Rooster Garage",
+    description: "",
+    location: "Kustom Rooster Garage, Villanterio (PV), Italy",
+    start: { dateTime: "2025-03-29T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-03-29T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹28 MARZO - Bambolo - Ponsacco (PI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Bambolo",
+    description: "",
+    location: "Bambolo, Ponsacco (PI), Italy",
+    start: { dateTime: "2025-03-28T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-03-28T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹22 MARZO - Raven Pub - Villasanta (MB)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Raven Pub",
+    description: "",
+    location: "Raven Pub, Villasanta (MB), Italy",
+    start: { dateTime: "2025-03-22T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-03-22T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹14 MARZO - Phenomenon - Fontaneto D'Agogna (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Phenomenon",
+    description: "",
+    location: "Phenomenon, Fontaneto D'Agogna (NO), Italy",
+    start: { dateTime: "2025-03-14T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-03-14T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹01 MARZO - BigMax - Parona (PV)
   {
     summary: "\u{1F1EE}\u{1F1F9} BigMax",
     description: "",
     location: "BigMax, Parona (PV), Italy",
-    start: { dateTime: "2024-12-21T21:00:00+01:00", timeZone: "Europe/Rome" },
-    end: { dateTime: "2024-12-21T23:30:00+01:00", timeZone: "Europe/Rome" },
+    start: { dateTime: "2025-03-01T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-03-01T23:30:00+01:00", timeZone: "Europe/Rome" },
     links: []
   },
-  //2025========================================================================================================
-  {
-    summary: "\u{1F1EE}\u{1F1F9} Gunther Stube",
-    description: "",
-    location: "Gunther Stube, Novara (NO), Italy",
-    start: { dateTime: "2025-01-18T21:00:00+01:00", timeZone: "Europe/Rome" },
-    end: { dateTime: "2025-01-18T23:30:00+01:00", timeZone: "Europe/Rome" },
-    links: []
-  },
-  {
-    summary: "\u{1F1EE}\u{1F1F9} Gunther Stube",
-    description: "",
-    location: "Gunther Stube, Novara (NO), Italy",
-    start: { dateTime: "2025-09-27T21:00:00+02:00", timeZone: "Europe/Rome" },
-    end: { dateTime: "2025-09-27T23:30:00+02:00", timeZone: "Europe/Rome" },
-    links: []
-  },
-  //2026========================================================================================================
+  // 🇨🇭01 FEBBRAIO - Silvercube Lounge - Dielsdorf (CH)
   {
     summary: "\u{1F1E8}\u{1F1ED} Silvercube Lounge",
     description: "",
     location: "Silvercube Lounge, Dielsdorf (CH)",
-    start: { dateTime: "2026-11-14T21:00:00+01:00", timeZone: "Europe/Rome" },
-    end: { dateTime: "2026-11-14T23:30:00+01:00", timeZone: "Europe/Rome" },
+    start: { dateTime: "2025-02-01T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-02-01T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹31 GENNAIO - Spank - Milano (MI)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} Spank",
+    description: "",
+    location: "Spank, Milano (MI), Italy",
+    start: { dateTime: "2025-01-31T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-01-31T23:30:00+01:00", timeZone: "Europe/Rome" },
+    links: []
+  },
+  // 🇮🇹11 GENNAIO - La Cueva - Casalbeltrame (NO)
+  {
+    summary: "\u{1F1EE}\u{1F1F9} La Cueva",
+    description: "",
+    location: "La Cueva, Casalbeltrame (NO), Italy",
+    start: { dateTime: "2025-01-11T21:00:00+01:00", timeZone: "Europe/Rome" },
+    end: { dateTime: "2025-01-11T23:30:00+01:00", timeZone: "Europe/Rome" },
     links: []
   }
 ];
 
 // src/app/concerts/past/past.component.ts
-function PastComponent_Conditional_7_Conditional_0_For_5_Conditional_0_Template(rf, ctx) {
+function PastComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "h2", 6);
     \u0275\u0275text(1);
@@ -42533,60 +44087,85 @@ function PastComponent_Conditional_7_Conditional_0_For_5_Conditional_0_Template(
   }
   if (rf & 2) {
     const event_r1 = \u0275\u0275nextContext().$implicit;
-    const ctx_r1 = \u0275\u0275nextContext(3);
+    const ctx_r1 = \u0275\u0275nextContext(4);
     \u0275\u0275advance();
     \u0275\u0275textInterpolate1(" ", ctx_r1.getEventYear(event_r1), " ");
   }
 }
-function PastComponent_Conditional_7_Conditional_0_For_5_Template(rf, ctx) {
+function PastComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275template(0, PastComponent_Conditional_7_Conditional_0_For_5_Conditional_0_Template, 2, 1, "h2", 6);
-    \u0275\u0275elementStart(1, "p", 7)(2, "span", 4);
-    \u0275\u0275text(3);
+    \u0275\u0275elementStart(0, "h3", 7);
+    \u0275\u0275text(1);
     \u0275\u0275elementEnd();
-    \u0275\u0275element(4, "br");
-    \u0275\u0275text(5);
+  }
+  if (rf & 2) {
+    const event_r1 = \u0275\u0275nextContext().$implicit;
+    const ctx_r1 = \u0275\u0275nextContext(4);
+    \u0275\u0275advance();
+    \u0275\u0275textInterpolate1(" ", ctx_r1.getEventMonthLabel(event_r1), " ");
+  }
+}
+function PastComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275template(0, PastComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_0_Template, 2, 1, "h2", 6)(1, PastComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Conditional_1_Template, 2, 1, "h3", 7);
+    \u0275\u0275elementStart(2, "div", 8)(3, "h2", 9)(4, "p", 10)(5, "span", 4);
+    \u0275\u0275text(6);
     \u0275\u0275elementEnd();
+    \u0275\u0275element(7, "br");
+    \u0275\u0275text(8);
+    \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
     const event_r1 = ctx.$implicit;
     const $index_r3 = ctx.$index;
-    const ctx_r1 = \u0275\u0275nextContext(3);
-    \u0275\u0275conditional($index_r3 === 0 || ctx_r1.getEventYear(event_r1) !== ctx_r1.getEventYear(ctx_r1.upcoming[$index_r3 - 1]) ? 0 : -1);
-    \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate(event_r1.summary);
+    const ctx_r1 = \u0275\u0275nextContext(4);
+    \u0275\u0275conditional($index_r3 === 0 || ctx_r1.getEventYear(event_r1) !== ctx_r1.getEventYear(ctx_r1.past[$index_r3 - 1]) ? 0 : -1);
+    \u0275\u0275advance();
+    \u0275\u0275conditional($index_r3 === 0 || ctx_r1.getEventYear(event_r1) !== ctx_r1.getEventYear(ctx_r1.past[$index_r3 - 1]) || ctx_r1.getEventMonth(event_r1) !== ctx_r1.getEventMonth(ctx_r1.past[$index_r3 - 1]) ? 1 : -1);
+    \u0275\u0275advance(5);
+    \u0275\u0275textInterpolate2("", event_r1.summary, " - ", ctx_r1.formatNumericDate(ctx_r1.separateDateAndTime(event_r1.start.dateTime).date), "");
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate2(" ", ctx_r1.formatNumericDate(ctx_r1.separateDateAndTime(event_r1.start.dateTime).date), ", h", ctx_r1.formatTime(event_r1.start.dateTime), " ");
+    \u0275\u0275textInterpolate1(" ", event_r1.location, " ");
   }
 }
-function PastComponent_Conditional_7_Conditional_0_Template(rf, ctx) {
+function PastComponent_Conditional_7_Conditional_0_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "h2", 4);
     \u0275\u0275text(1);
     \u0275\u0275pipe(2, "translate");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(3, "div", 5);
-    \u0275\u0275repeaterCreate(4, PastComponent_Conditional_7_Conditional_0_For_5_Template, 6, 4, null, null, \u0275\u0275repeaterTrackByIndex);
+    \u0275\u0275repeaterCreate(4, PastComponent_Conditional_7_Conditional_0_Conditional_0_For_5_Template, 9, 5, null, null, \u0275\u0275repeaterTrackByIndex);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext(2);
+    const ctx_r1 = \u0275\u0275nextContext(3);
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, "Next concerts"));
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(2, 1, "Past concerts"));
     \u0275\u0275advance(3);
-    \u0275\u0275repeater(ctx_r1.pastConcerts);
+    \u0275\u0275repeater(ctx_r1.past);
+  }
+}
+function PastComponent_Conditional_7_Conditional_0_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275template(0, PastComponent_Conditional_7_Conditional_0_Conditional_0_Template, 6, 3);
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext(2);
+    \u0275\u0275conditional(ctx_r1.past.length > 0 ? 0 : -1);
   }
 }
 function PastComponent_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275template(0, PastComponent_Conditional_7_Conditional_0_Template, 6, 3);
+    \u0275\u0275template(0, PastComponent_Conditional_7_Conditional_0_Template, 1, 1);
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275conditional(ctx_r1.pastConcerts.length > 0 ? 0 : -1);
+    \u0275\u0275conditional(ctx_r1.events.length > 0 ? 0 : -1);
   }
 }
 var PastComponent = class _PastComponent {
+  calendar;
   pastConcerts = pastConcerts;
   // calendar!: CalendarService;
   events = [];
@@ -42597,10 +44176,35 @@ var PastComponent = class _PastComponent {
   today = /* @__PURE__ */ new Date();
   loading = false;
   shared;
-  constructor(shared) {
+  constructor(shared, calendar) {
+    this.calendar = calendar;
     this.shared = shared;
     this.shared.scrollUp();
-    console.log(pastConcerts);
+  }
+  ngOnInit() {
+    this.loading = true;
+    this.calendar.getCalendarEventsPromise().subscribe((res) => {
+      let response = res;
+      this.events = response.items;
+      this.events = this.events.concat(this.pastConcerts);
+      this.events.sort((a, b) => {
+        return new Date(a.start.dateTime).getTime() - new Date(b.start.dateTime).getTime();
+      });
+      this.filterEvents(this.events);
+      this.loading = false;
+    });
+  }
+  filterEvents(events) {
+    let todayYyyyMmDd = this.separateDateAndTime(this.today.toISOString())["date"];
+    for (let i = 0; i < events.length; ++i) {
+      events[i].links = this.extractLinksFromDescription(events[i].description);
+      events[i].description = this.cleanDescription(events[i].description);
+      if (this.separateDateAndTime(events[i].start.dateTime)["date"] >= todayYyyyMmDd) {
+        this.upcoming.push(events[i]);
+      } else {
+        this.past.unshift(events[i]);
+      }
+    }
   }
   cleanDescription(description) {
     return description.replace(/\[.*?\]/g, "").trim();
@@ -42681,10 +44285,38 @@ var PastComponent = class _PastComponent {
   getEventYear(event) {
     return new Date(event.start.dateTime).getFullYear();
   }
+  getEventMonth(event) {
+    return new Date(event.start.dateTime).getMonth();
+  }
+  getEventMonthLabel(event) {
+    let monthLabel = "en";
+    switch (this.shared.language) {
+      case "de":
+        monthLabel = new Date(event.start.dateTime).toLocaleString("de-DE", {
+          month: "long"
+        });
+        break;
+      case "en":
+        monthLabel = new Date(event.start.dateTime).toLocaleString("en-GB", {
+          month: "long"
+        });
+        break;
+      case "it":
+        monthLabel = new Date(event.start.dateTime).toLocaleString("it-IT", {
+          month: "long"
+        });
+        break;
+      default:
+        monthLabel = new Date(event.start.dateTime).toLocaleString("en-GB", {
+          month: "long"
+        });
+    }
+    return monthLabel;
+  }
   static \u0275fac = function PastComponent_Factory(__ngFactoryType__) {
-    return new (__ngFactoryType__ || _PastComponent)(\u0275\u0275directiveInject(SharedService));
+    return new (__ngFactoryType__ || _PastComponent)(\u0275\u0275directiveInject(SharedService), \u0275\u0275directiveInject(CalendarService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PastComponent, selectors: [["app-past"]], decls: 8, vars: 4, consts: [[1, "member-header", "shadow"], ["src", "/media/concerts/concerts.jpg", "alt", "Concerts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase"], ["id", "eventsAccordion", 1, "accordion", "rounded-0"], [1, "anton", "text-uppercase", "mt-5", "mb-3", "text-center"], [1, "m-0", "p-0", "text-center"]], template: function PastComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PastComponent, selectors: [["app-past"]], decls: 8, vars: 4, consts: [[1, "member-header", "shadow"], ["src", "/media/concerts/concerts.jpg", "alt", "Concerts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "center"], [1, "anton", "text-uppercase"], ["id", "eventsAccordion", 1, "accordion", "rounded-0"], [1, "anton", "text-uppercase", "mt-5", "text-center"], [1, "anton", "text-uppercase", "mt-5", "mb-4", "text-center"], [1, "rounded-0", "mb-4"], [1, ""], [1, "m-0", "p-0"]], template: function PastComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "section", 0);
       \u0275\u0275element(2, "img", 1);
@@ -42698,7 +44330,7 @@ var PastComponent = class _PastComponent {
     }
     if (rf & 2) {
       \u0275\u0275advance(4);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 2, "Concerts"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 2, "Past concerts"), " ");
       \u0275\u0275advance(3);
       \u0275\u0275conditional(!ctx.loading ? 7 : -1);
     }
@@ -42707,10 +44339,7 @@ var PastComponent = class _PastComponent {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PastComponent, [{
     type: Component,
-    args: [{ selector: "app-past", imports: [
-      TranslateModule,
-      RouterLink
-    ], template: `<div>
+    args: [{ selector: "app-past", imports: [TranslateModule, RouterLink], template: `<div>
     <!-- <div class="container-fluid bg-title">
             <h1 class="text-center display-1 p-3 mb-0 squealer image-text">
                 {{'Concerts' | translate}}
@@ -42724,39 +44353,55 @@ var PastComponent = class _PastComponent {
     <section class="member-header shadow">
         <img src="/media/concerts/concerts.jpg" class="member-img" alt="Concerts header image">
         <h1 class="text-center squealer text-uppercase member-content">
-            {{'Concerts' | translate}}
+            {{'Past concerts' | translate}}
         </h1>
     </section>
-    <div class="col-lg-8 mx-auto my-5 px-3 fs-3" style="text-align: justify;">
+    <div class="col-lg-8 mx-auto my-5 px-3 fs-3" style="text-align: center;">
         <!-- Events accordion -->
         @if(!loading) {
-            @if(pastConcerts.length > 0) {
-                <h2 class="anton text-uppercase">{{'Next concerts' | translate}}</h2>
+            @if(events.length > 0) {
+                @if(past.length > 0) {
+                <h2 class="anton text-uppercase">{{'Past concerts' | translate}}</h2>
                 <div class="accordion rounded-0" id="eventsAccordion">
-                    @for (event of pastConcerts; track $index) {
-                        @if ($index === 0 || getEventYear(event) !== getEventYear(upcoming[$index - 1])) {
-                            <h2 class="anton text-uppercase mt-5 mb-3 text-center">
-                                {{ getEventYear(event) }}
-                            </h2>
-                        }
+                    @for (event of past; track $index) {
+                    <!-- SEPARATORE ANNO -->
+                    @if ($index === 0 || getEventYear(event) !== getEventYear(past[$index - 1])) {
+                    <h2 class="anton text-uppercase mt-5 text-center">
+                        {{ getEventYear(event) }}
+                    </h2>
+                    }
 
-                        <p class="m-0 p-0 text-center">
-                            <span class="anton text-uppercase">{{ event.summary }}</span><br>
-                            {{ formatNumericDate(separateDateAndTime(event.start.dateTime).date) }}, h{{
-                            formatTime(event.start.dateTime) }}
-                        </p>
+                    <!-- SEPARATORE MESE -->
+                    @if ($index === 0 || getEventYear(event) !== getEventYear(past[$index - 1]) || getEventMonth(event) !== getEventMonth(past[$index - 1])
+                    ) {
+                    <h3 class="anton text-uppercase mt-5 mb-4 text-center">
+                        {{ getEventMonthLabel(event) }}
+                    </h3>
+                    }
+
+                    <!-- ACCORDION ITEM -->
+                    <div class="rounded-0 mb-4">
+                        <h2 class="">
+                            <p class="m-0 p-0">
+                                    <span class="anton text-uppercase">{{ event.summary }} - {{ formatNumericDate(separateDateAndTime(event.start.dateTime).date) }}</span><br>
+                                    <!-- h{{ formatTime(event.start.dateTime) }} -->
+                                     {{event.location}}
+                                </p>
+                        </h2>
+                    </div>
                     }
                 </div>
+                }
             }
         }
     </div>
 </div>
 
 <!-- TODO: non si vedono gli eventi oltre il primo -->` }]
-  }], () => [{ type: SharedService }], null);
+  }], () => [{ type: SharedService }, { type: CalendarService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PastComponent, { className: "PastComponent", filePath: "src/app/concerts/past/past.component.ts", lineNumber: 16 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PastComponent, { className: "PastComponent", filePath: "src/app/concerts/past/past.component.ts", lineNumber: 14 });
 })();
 
 // src/app/app.routes.ts
