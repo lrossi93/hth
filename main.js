@@ -39817,8 +39817,8 @@ var SharedService = class _SharedService {
       this.activeLink = "formats";
     } else if (url.startsWith("/bio")) {
       this.activeLink = "bio";
-    } else if (url.startsWith("/contacts")) {
-      this.activeLink = "contacts";
+    } else if (url.startsWith("/booking")) {
+      this.activeLink = "booking";
     } else if (url.startsWith("/band")) {
       this.activeLink = url.split("/", 3)[1] + "/" + url.split("/", 3)[2];
     } else {
@@ -40600,27 +40600,52 @@ var PageNotFoundComponent = class _PageNotFoundComponent {
   static \u0275fac = function PageNotFoundComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _PageNotFoundComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PageNotFoundComponent, selectors: [["app-page-not-found"]], decls: 7, vars: 0, consts: [[1, "title", "display-4", "lh-1", "text-body-emphasis", "m-3", "text-border", "squealer", "huge", "text-center"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "title", "text-uppercase", "anton"], ["src", "media/home/spiderman-wip.gif", "alt", "Work in progress!", 1, "img-fluid"]], template: function PageNotFoundComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PageNotFoundComponent, selectors: [["app-page-not-found"]], decls: 13, vars: 3, consts: [[1, "member-header", "shadow"], ["src", "/media/lightning-bg.png", "alt", "Contacts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "text-center"], ["routerLink", "/", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"]], template: function PageNotFoundComponent_Template(rf, ctx) {
     if (rf & 1) {
-      \u0275\u0275elementStart(0, "div")(1, "h1", 0);
-      \u0275\u0275text(2, " 404: page not found! ");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(3, "div", 1)(4, "h2", 2);
-      \u0275\u0275text(5, "Sorry...");
-      \u0275\u0275elementEnd();
-      \u0275\u0275element(6, "img", 3);
+      \u0275\u0275elementStart(0, "div")(1, "section", 0);
+      \u0275\u0275element(2, "img", 1);
+      \u0275\u0275elementStart(3, "h1", 2);
+      \u0275\u0275text(4, " 404: page");
+      \u0275\u0275element(5, "br");
+      \u0275\u0275text(6, "not found! ");
       \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(7, "div", 3)(8, "div", 4)(9, "button", 5);
+      \u0275\u0275text(10);
+      \u0275\u0275pipe(11, "translate");
+      \u0275\u0275element(12, "i", 6);
+      \u0275\u0275elementEnd()()()();
     }
-  }, encapsulation: 2 });
+    if (rf & 2) {
+      \u0275\u0275advance(10);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(11, 1, "Back to home"), "\xA0");
+    }
+  }, dependencies: [TranslateModule, TranslatePipe], encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PageNotFoundComponent, [{
     type: Component,
-    args: [{ selector: "app-page-not-found", imports: [], template: '<div>\n    <h1 class="title display-4 lh-1 text-body-emphasis m-3 text-border squealer huge text-center">\n        404: page not found!\n    </h1>\n    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">\n        <h2 class="title text-uppercase anton">Sorry...</h2>\n        <img class="img-fluid" src="media/home/spiderman-wip.gif" alt="Work in progress!">\n    </div>\n</div>' }]
+    args: [{ selector: "app-page-not-found", imports: [
+      TranslateModule
+    ], template: `<div>
+    <section class="member-header shadow">
+        <img src="/media/lightning-bg.png" class="member-img" alt="Contacts header image">
+        <h1 class="text-center squealer text-uppercase member-content">
+            404: page<br>not found!
+        </h1>
+    </section>
+    <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">
+        <!-- <h2 class="anton text-uppercase">{{'Get in touch!' | translate}}</h2> -->
+        <div class="text-center">
+        <button class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" routerLink="/">
+            {{'Back to home' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
+        </button>
+    </div>
+    </div>
+</div>` }]
   }], () => [{ type: SharedService }], null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PageNotFoundComponent, { className: "PageNotFoundComponent", filePath: "src/app/page-not-found/page-not-found.component.ts", lineNumber: 10 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PageNotFoundComponent, { className: "PageNotFoundComponent", filePath: "src/app/page-not-found/page-not-found.component.ts", lineNumber: 13 });
 })();
 
 // src/app/members/members.component.ts
@@ -40633,7 +40658,7 @@ var MembersComponent = class _MembersComponent {
   static \u0275fac = function MembersComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _MembersComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MembersComponent, selectors: [["app-members"]], decls: 104, vars: 21, consts: [[1, "member-header", "shadow"], ["src", "/media/band/band-banner.jpg", "alt", "Band header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-10", "my-5", "mx-auto", "px-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase", "my-5"], [1, "cards-wrapper", "mx-3"], [1, "card-item"], ["routerLink", "/band/francesco"], [1, "card", "border-0", "rounded-0", "m-1", "mb-3", "box-shadow", "shadow-hover"], ["src", "media/band/francesco/francesco.jpg", "alt", "Francesco", 1, "card-img", "rounded-0"], [1, "card-body", "nav"], [1, "card-title", "anton", "text-uppercase"], [1, "card-text"], [1, "card-footer", "d-flex", "justify-content-end", "align-items-center", "rounded-0"], [1, "text-muted", "text-end"], [1, "fa-solid", "fa-bolt"], ["routerLink", "/band/andrea"], ["src", "media/band/andrea/andrea.jpg", "alt", "Andrea", 1, "card-img", "rounded-0"], ["routerLink", "/band/davide"], ["src", "media/band/davide/davide.jpg", "alt", "Davide", 1, "card-img", "rounded-0"], ["routerLink", "/band/jacopo"], ["src", "media/band/jacopo/jacopo.jpg", "alt", "Jacopo", 1, "card-img", "rounded-0"], ["routerLink", "/band/eros"], ["src", "media/band/eros/eros.jpg", "alt", "Eros", 1, "card-img", "rounded-0"], ["routerLink", "/band/lorenzo"], ["src", "media/band/lorenzo/lorenzo.jpg", "alt", "Lorenzo", 1, "card-img", "rounded-0"], ["routerLink", "/band/matteo"], ["src", "media/band/matteo/matteo.jpg", "alt", "Matteo", 1, "card-img", "rounded-0"]], template: function MembersComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MembersComponent, selectors: [["app-members"]], decls: 104, vars: 21, consts: [[1, "member-header", "shadow"], ["src", "/media/lightning-bg.png", "alt", "Band header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-10", "my-5", "mx-auto", "px-3", 2, "text-align", "justify"], [1, "anton", "text-uppercase", "my-5"], [1, "cards-wrapper", "mx-3"], [1, "card-item"], ["routerLink", "/band/francesco"], [1, "card", "border-0", "rounded-0", "m-1", "mb-3", "box-shadow", "shadow-hover"], ["src", "media/band/francesco/francesco.jpg", "alt", "Francesco", 1, "card-img", "rounded-0"], [1, "card-body", "nav"], [1, "card-title", "anton", "text-uppercase"], [1, "card-text"], [1, "card-footer", "d-flex", "justify-content-end", "align-items-center", "rounded-0"], [1, "text-muted", "text-end"], [1, "fa-solid", "fa-bolt"], ["routerLink", "/band/andrea"], ["src", "media/band/andrea/andrea.jpg", "alt", "Andrea", 1, "card-img", "rounded-0"], ["routerLink", "/band/davide"], ["src", "media/band/davide/davide.jpg", "alt", "Davide", 1, "card-img", "rounded-0"], ["routerLink", "/band/jacopo"], ["src", "media/band/jacopo/jacopo.jpg", "alt", "Jacopo", 1, "card-img", "rounded-0"], ["routerLink", "/band/eros"], ["src", "media/band/eros/eros.jpg", "alt", "Eros", 1, "card-img", "rounded-0"], ["routerLink", "/band/lorenzo"], ["src", "media/band/lorenzo/lorenzo.jpg", "alt", "Lorenzo", 1, "card-img", "rounded-0"], ["routerLink", "/band/matteo"], ["src", "media/band/matteo/matteo.jpg", "alt", "Matteo", 1, "card-img", "rounded-0"]], template: function MembersComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "section", 0);
       \u0275\u0275element(2, "img", 1);
@@ -40772,7 +40797,7 @@ var MembersComponent = class _MembersComponent {
     </div> -->
 
     <section class="member-header shadow">
-        <img src="/media/band/band-banner.jpg" class="member-img" alt="Band header image">
+        <img src="/media/lightning-bg.png" class="member-img" alt="Band header image">
         <h1 class="text-center squealer text-uppercase member-content">
             Band
         </h1>
@@ -41820,7 +41845,7 @@ var ConcertsComponent = class _ConcertsComponent {
   static \u0275fac = function ConcertsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ConcertsComponent)(\u0275\u0275directiveInject(CalendarService), \u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 13, vars: 7, consts: [[1, "member-header", "shadow"], ["src", "/media/concerts/concerts.jpg", "alt", "Concerts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center", "my-5"], ["routerLink", "/concerts/past", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"], [1, "anton", "text-uppercase"], ["id", "eventsAccordion", 1, "accordion", "rounded-0"], [1, "anton", "text-uppercase", "mt-5", "text-center"], [1, "anton", "text-uppercase", "mt-5", "mb-2", "text-start"], [1, "accordion-item", "rounded-0"], [1, "accordion-header", "rounded-0"], ["type", "button", "data-bs-toggle", "collapse", "aria-expanded", "false", 1, "accordion-button", "collapsed", "rounded-0"], [1, "m-0", "p-0"], ["data-bs-parent", "#eventsAccordion", 1, "accordion-collapse", "collapse"], [1, "accordion-body"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], [1, "fa-solid", "fa-link"], ["target", "_blank", 3, "href"]], template: function ConcertsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConcertsComponent, selectors: [["app-concerts"]], decls: 13, vars: 7, consts: [[1, "member-header", "shadow"], ["src", "/media/lightning-bg.png", "alt", "Concerts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "justify"], [1, "text-center", "my-5"], ["routerLink", "/concerts/past", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"], [1, "anton", "text-uppercase"], ["id", "eventsAccordion", 1, "accordion", "rounded-0"], [1, "anton", "text-uppercase", "mt-5", "text-center"], [1, "anton", "text-uppercase", "mt-5", "mb-2", "text-start"], [1, "accordion-item", "rounded-0"], [1, "accordion-header", "rounded-0"], ["type", "button", "data-bs-toggle", "collapse", "aria-expanded", "false", 1, "accordion-button", "collapsed", "rounded-0"], [1, "m-0", "p-0"], ["data-bs-parent", "#eventsAccordion", 1, "accordion-collapse", "collapse"], [1, "accordion-body"], [1, "m-3", "border-0", "rounded-0", "shadow-hover"], [1, "row", "d-flex", "flex-wrap", "align-items-stretch"], [1, "col-12", "col-md-2", "text-uppercase", "anton", "fs-4", "text-center", "d-flex", "align-items-center", "justify-content-center", "card-date", "order-0", "order-md-0"], [1, "col-12", "col-md-10", "d-flex", "flex-column", "card", "border-0", "rounded-0", "order-1", "order-md-1"], [1, "text-uppercase", "anton", "m-3", "card-title"], [1, "m-0"], [1, "card-body"], [1, "m-1"], [1, "card-body", "rounded-0"], [1, "fa-solid", "fa-location-dot"], ["href", "javascript:void(0)", 3, "click"], [1, "fa-solid", "fa-link"], ["target", "_blank", 3, "href"]], template: function ConcertsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "section", 0);
       \u0275\u0275element(2, "img", 1);
@@ -41865,7 +41890,7 @@ var ConcertsComponent = class _ConcertsComponent {
             </h1>
         </div> -->
     <section class="member-header shadow">
-        <img src="/media/concerts/concerts.jpg" class="member-img" alt="Concerts header image">
+        <img src="/media/lightning-bg.png" class="member-img" alt="Concerts header image">
         <h1 class="text-center squealer text-uppercase member-content">
             {{'Concerts' | translate}}
         </h1>
@@ -42008,7 +42033,7 @@ var ProjectsComponent = class _ProjectsComponent {
   static \u0275fac = function ProjectsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ProjectsComponent)(\u0275\u0275directiveInject(ActivatedRoute), \u0275\u0275directiveInject(ViewportScroller), \u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectsComponent, selectors: [["app-projects"]], decls: 38, vars: 15, consts: [[1, "member-header", "shadow"], ["src", "/media/projects/projects.jpg", "alt", "Contacts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-justify", 2, "text-align", "justify"], ["id", "cover", 1, "title", "text-uppercase", "anton"], ["id", "big-show", 1, "title", "text-uppercase", "anton"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-justify", "mt-3", 2, "text-align", "justify"], ["id", "mega-show", 1, "title", "text-uppercase", "anton"], ["id", "symphony-of-thunder", 1, "title", "text-uppercase", "anton"]], template: function ProjectsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectsComponent, selectors: [["app-projects"]], decls: 38, vars: 15, consts: [[1, "member-header", "shadow"], ["src", "/media/lightning-bg.png", "alt", "Contacts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-justify", 2, "text-align", "justify"], ["id", "cover", 1, "title", "text-uppercase", "anton"], ["id", "big-show", 1, "title", "text-uppercase", "anton"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-justify", "mt-3", 2, "text-align", "justify"], ["id", "mega-show", 1, "title", "text-uppercase", "anton"], ["id", "symphony-of-thunder", 1, "title", "text-uppercase", "anton"]], template: function ProjectsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "section", 0);
       \u0275\u0275element(2, "img", 1);
@@ -42087,7 +42112,7 @@ var ProjectsComponent = class _ProjectsComponent {
     </div> -->
 
     <section class="member-header shadow">
-        <img src="/media/projects/projects.jpg" class="member-img" alt="Contacts header image">
+        <img src="/media/lightning-bg.png" class="member-img" alt="Contacts header image">
         <h1 class="text-center squealer text-uppercase member-content">
             {{'Formats' | translate}}
         </h1>
@@ -42149,7 +42174,7 @@ var ContactsComponent = class _ContactsComponent {
   static \u0275fac = function ContactsComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ContactsComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactsComponent, selectors: [["app-contacts"]], decls: 28, vars: 6, consts: [[1, "member-header", "shadow"], ["src", "/media/contacts/contacts.jpg", "alt", "Contacts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [2, "list-style", "none"], [1, "fa-solid", "fa-phone"], [1, "fa-solid", "fa-envelope"], ["href", "mailto:hthtribute@gmail.com"]], template: function ContactsComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ContactsComponent, selectors: [["app-contacts"]], decls: 36, vars: 12, consts: [[1, "member-header", "shadow"], ["src", "/media/lightning-bg.png", "alt", "Booking header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "text-center", 2, "text-align", "justify"], [1, "anton", "text-uppercase", "my-5"], [1, "fa-solid", "fa-phone"], [1, "fa-solid", "fa-envelope"], ["href", "mailto:hthtribute@gmail.com"], [1, "text-center"], ["href", "https://www.ac-dc-tribute-band.it/docs/hth-tech-rider.pdf", "target", "_blank", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"], [1, "fa-solid", "fa-bolt"], ["href", "https://www.ac-dc-tribute-band.it/docs/hth-press-kit.pdf", "target", "_blank", 1, "btn", "btn-danger", "shadow-hover", "anton", "text-uppercase", "m-3", "border-0", "rounded-0"]], template: function ContactsComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "section", 0);
       \u0275\u0275element(2, "img", 1);
@@ -42157,38 +42182,52 @@ var ContactsComponent = class _ContactsComponent {
       \u0275\u0275text(4);
       \u0275\u0275pipe(5, "translate");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(6, "div", 3)(7, "p");
+      \u0275\u0275elementStart(6, "div", 3)(7, "h2", 4);
       \u0275\u0275text(8);
       \u0275\u0275pipe(9, "translate");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(10, "ul", 4)(11, "li");
-      \u0275\u0275element(12, "i", 5);
-      \u0275\u0275text(13, "\xA0");
-      \u0275\u0275elementStart(14, "b");
-      \u0275\u0275text(15, "Jacopo:");
+      \u0275\u0275elementStart(10, "p");
+      \u0275\u0275element(11, "i", 5);
+      \u0275\u0275text(12, "\xA0");
+      \u0275\u0275elementStart(13, "b");
+      \u0275\u0275text(14, "Jacopo:");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(16, " (+39) 334 6197414 ");
+      \u0275\u0275text(15, " (+39) 334 6197414 ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(17, "li");
-      \u0275\u0275element(18, "i", 5);
-      \u0275\u0275text(19, "\xA0");
-      \u0275\u0275elementStart(20, "b");
-      \u0275\u0275text(21, "Eros:");
+      \u0275\u0275elementStart(16, "p");
+      \u0275\u0275element(17, "i", 5);
+      \u0275\u0275text(18, "\xA0");
+      \u0275\u0275elementStart(19, "b");
+      \u0275\u0275text(20, "Eros:");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(22, " (+39) 327 8640017 ");
+      \u0275\u0275text(21, " (+39) 327 8640017 ");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(23, "li");
-      \u0275\u0275element(24, "i", 6);
-      \u0275\u0275text(25, "\xA0");
-      \u0275\u0275elementStart(26, "a", 7);
-      \u0275\u0275text(27, "hthtribute@gmail.com");
-      \u0275\u0275elementEnd()()()()();
+      \u0275\u0275elementStart(22, "p");
+      \u0275\u0275element(23, "i", 6);
+      \u0275\u0275text(24, "\xA0");
+      \u0275\u0275elementStart(25, "a", 7);
+      \u0275\u0275text(26, "hthtribute@gmail.com");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(27, "div", 8)(28, "a", 9);
+      \u0275\u0275text(29);
+      \u0275\u0275pipe(30, "translate");
+      \u0275\u0275element(31, "i", 10);
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(32, "a", 11);
+      \u0275\u0275text(33);
+      \u0275\u0275pipe(34, "translate");
+      \u0275\u0275element(35, "i", 10);
+      \u0275\u0275elementEnd()()()();
     }
     if (rf & 2) {
       \u0275\u0275advance(4);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 2, "Contacts"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(5, 4, "Booking"), " ");
       \u0275\u0275advance(4);
-      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(9, 4, "Bring Highway to Hell to your stage!"), " ");
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(9, 6, "Bring Highway to Hell to your stage!"), " ");
+      \u0275\u0275advance(21);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(30, 8, "Tech Rider"), "\xA0");
+      \u0275\u0275advance(4);
+      \u0275\u0275textInterpolate1(" ", \u0275\u0275pipeBind1(34, 10, "Press Kit"), "\xA0");
     }
   }, dependencies: [TranslateModule, TranslatePipe], styles: ["\n\n.image-text[_ngcontent-%COMP%] {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/contacts/contacts.jpg);\n}\n/*# sourceMappingURL=contacts.component.css.map */"] });
 };
@@ -42209,27 +42248,36 @@ var ContactsComponent = class _ContactsComponent {
         </h1>
     </div> -->
     <section class="member-header shadow">
-        <img src="/media/contacts/contacts.jpg" class="member-img" alt="Contacts header image">
+        <img src="/media/lightning-bg.png" class="member-img" alt="Booking header image">
         <h1 class="text-center squealer text-uppercase member-content">
-            {{'Contacts' | translate}}
+            {{'Booking' | translate}}
         </h1>
     </section>
     <div class="col-lg-8 mx-auto my-5 px-3 text-center" style="text-align: justify;">
         <!-- <h2 class="anton text-uppercase">{{'Get in touch!' | translate}}</h2> -->
-        <p>
+         <h2 class="anton text-uppercase my-5">
             {{ "Bring Highway to Hell to your stage!" | translate }}
-        </p>
-        <ul style="list-style: none;">
-            <li>
+         </h2>
+            <p>
                 <i class="fa-solid fa-phone"></i>&nbsp;<b>Jacopo:</b> (+39) 334 6197414
-            </li>
-            <li>
+            </p>
+            <p>
                 <i class="fa-solid fa-phone"></i>&nbsp;<b>Eros:</b> (+39) 327 8640017
-            </li>
-            <li>
+            </p>
+            <p>
                 <i class="fa-solid fa-envelope"></i>&nbsp;<a href="mailto:hthtribute@gmail.com">hthtribute&#64;gmail.com</a>
-            </li>
-        </ul> 
+            </p>
+        
+
+        <div class="text-center">
+            <a class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" href="https://www.ac-dc-tribute-band.it/docs/hth-tech-rider.pdf" target="_blank">
+                {{'Tech Rider' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
+            </a>
+
+            <a class="btn btn-danger shadow-hover anton text-uppercase m-3 border-0 rounded-0" href="https://www.ac-dc-tribute-band.it/docs/hth-press-kit.pdf" target="_blank">
+                {{'Press Kit' | translate}}&nbsp;<i class="fa-solid fa-bolt"></i>
+            </a>
+        </div>
     </div>
 </div>`, styles: ["/* src/app/contacts/contacts.component.css */\n.image-text {\n  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(/media/contacts/contacts.jpg);\n}\n/*# sourceMappingURL=contacts.component.css.map */\n"] }]
   }], () => [{ type: SharedService }], null);
@@ -44316,7 +44364,7 @@ var PastComponent = class _PastComponent {
   static \u0275fac = function PastComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _PastComponent)(\u0275\u0275directiveInject(SharedService), \u0275\u0275directiveInject(CalendarService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PastComponent, selectors: [["app-past"]], decls: 8, vars: 4, consts: [[1, "member-header", "shadow"], ["src", "/media/concerts/concerts.jpg", "alt", "Concerts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "center"], [1, "anton", "text-uppercase"], ["id", "eventsAccordion", 1, "accordion", "rounded-0"], [1, "anton", "text-uppercase", "mt-5", "text-center"], [1, "anton", "text-uppercase", "mt-5", "mb-4", "text-center"], [1, "rounded-0", "mb-4"], [1, ""], [1, "m-0", "p-0"]], template: function PastComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PastComponent, selectors: [["app-past"]], decls: 8, vars: 4, consts: [[1, "member-header", "shadow"], ["src", "/media/lightning-bg.png", "alt", "Concerts header image", 1, "member-img"], [1, "text-center", "squealer", "text-uppercase", "member-content"], [1, "col-lg-8", "mx-auto", "my-5", "px-3", "fs-3", 2, "text-align", "center"], [1, "anton", "text-uppercase"], ["id", "eventsAccordion", 1, "accordion", "rounded-0"], [1, "anton", "text-uppercase", "mt-5", "text-center"], [1, "anton", "text-uppercase", "mt-5", "mb-4", "text-center"], [1, "rounded-0", "mb-4"], [1, ""], [1, "m-0", "p-0"]], template: function PastComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div")(1, "section", 0);
       \u0275\u0275element(2, "img", 1);
@@ -44351,7 +44399,7 @@ var PastComponent = class _PastComponent {
             </h1>
         </div> -->
     <section class="member-header shadow">
-        <img src="/media/concerts/concerts.jpg" class="member-img" alt="Concerts header image">
+        <img src="/media/lightning-bg.png" class="member-img" alt="Concerts header image">
         <h1 class="text-center squealer text-uppercase member-content">
             {{'Past concerts' | translate}}
         </h1>
@@ -44420,7 +44468,8 @@ var routes = [
   { path: "concerts", component: ConcertsComponent },
   { path: "concerts/past", component: PastComponent },
   { path: "formats", component: ProjectsComponent },
-  { path: "contacts", component: ContactsComponent },
+  // { path: 'contacts', component: ContactsComponent },
+  { path: "booking", component: ContactsComponent },
   { path: "privacy-policy", component: PrivacyPolicyComponent },
   { path: "**", component: PageNotFoundComponent }
 ];
@@ -48938,7 +48987,7 @@ var HeaderComponent = class _HeaderComponent {
   static \u0275fac = function HeaderComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _HeaderComponent)(\u0275\u0275directiveInject(SharedService));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 95, vars: 45, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0", "my-0", "shadow"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", "squealer", 3, "click"], ["src", "hth-logo-clean.png", "alt", "HTH Logo", 2, "max-height", "50px"], [1, "navbar-brand", "clickable", "my-1", "squealer", "d-none", "d-lg-inline", 3, "click"], [1, "d-lg-none", "ms-2", "position-relative"], ["data-bs-toggle", "dropdown", "type", "button", 1, "btn", "btn-sm", "dropdown-toggle"], [1, "dropdown-menu", "dropdown-menu-end", "text-center", "mobile-lang-menu"], [1, "clickable"], [1, "dropdown-item", "anton", 3, "click"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end", "border-0"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/formats", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "bandDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "bandDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/band/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/band/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/band/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/band/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/band/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/contacts", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "d-none", "d-lg-block"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], decls: 95, vars: 45, consts: [["offcanvasNavbar", ""], [1, "navbar", "navbar-expand-lg", "sticky-top", "squealer", "py-0", "my-0", "shadow"], [1, "container-fluid"], [1, "navbar-brand", "clickable", "my-1", "squealer", 3, "click"], ["src", "hth-logo-resized.png", "alt", "HTH Logo", 2, "max-height", "50px"], [1, "navbar-brand", "clickable", "my-1", "squealer", "d-none", "d-lg-inline", 3, "click"], [1, "d-lg-none", "ms-2", "position-relative"], ["data-bs-toggle", "dropdown", "type", "button", 1, "btn", "btn-sm", "dropdown-toggle"], [1, "dropdown-menu", "dropdown-menu-end", "text-center", "mobile-lang-menu"], [1, "clickable"], [1, "dropdown-item", "anton", 3, "click"], ["type", "button", "data-bs-toggle", "offcanvas", "data-bs-target", "#offcanvasNavbar", "aria-controls", "offcanvasNavbar", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["tabindex", "-1", "id", "offcanvasNavbar", "aria-labelledby", "offcanvasNavbarLabel", 1, "offcanvas", "offcanvas-end", "border-0"], [1, "offcanvas-header"], ["src", "", "alt", "", 2, "max-height", "30px"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close"], [1, "offcanvas-body"], [1, "navbar-nav", "justify-content-end", "flex-grow-1", "pe-3", "text-uppercase"], [1, "nav-item", "m-2", "anton"], ["routerLink", "/", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/concerts", 1, "nav-link", "btn", 3, "click"], ["routerLink", "/formats", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "anton"], ["id", "bandDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "text-uppercase", "dropdown-toggle"], ["aria-labelledby", "bandDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], ["routerLink", "/band/jacopo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-guitar"], ["routerLink", "/band/eros", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-microphone"], ["routerLink", "/band/francesco", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/davide", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/band/andrea", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-drum"], ["routerLink", "/band/lorenzo", 1, "dropdown-item", "clickable", "anton", 3, "click"], [1, "fa-solid", "fa-music"], ["routerLink", "/band/matteo", 1, "dropdown-item", "clickable", "anton", 3, "click"], ["routerLink", "/booking", 1, "nav-link", "btn", 3, "click"], [1, "nav-item", "m-2", "dropdown", "d-none", "d-lg-block"], ["id", "langDropdown", "data-bs-toggle", "dropdown", "aria-expanded", "false", "type", "button", 1, "nav-link", "btn", "w-100", "text-center", "dropdown-toggle", "text-uppercase", "anton"], ["aria-labelledby", "langDropdown", 1, "dropdown-menu", "lang-dropdown", "text-center"], [1, "dropdown-item", "clickable", "anton", 3, "click"]], template: function HeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
       \u0275\u0275elementStart(0, "nav", 1)(1, "div", 2)(2, "span", 3);
@@ -49134,9 +49183,9 @@ var HeaderComponent = class _HeaderComponent {
       \u0275\u0275advance(4);
       \u0275\u0275classProp("active", ctx.shared.activeLink.includes("matteo"));
       \u0275\u0275advance(4);
-      \u0275\u0275classProp("active", ctx.shared.activeLink === "contacts");
+      \u0275\u0275classProp("active", ctx.shared.activeLink === "booking");
       \u0275\u0275advance();
-      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(78, 43, "Contacts"));
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(78, 43, "Booking"));
       \u0275\u0275advance(4);
       \u0275\u0275textInterpolate1(" ", ctx.shared.language, " ");
       \u0275\u0275advance();
@@ -49163,7 +49212,7 @@ var HeaderComponent = class _HeaderComponent {
     ], template: `<nav class="navbar navbar-expand-lg sticky-top squealer py-0 my-0 shadow">
     <div class="container-fluid">
         <span class="navbar-brand clickable my-1 squealer" (click)="navigate('home')">
-            <img src="hth-logo-clean.png" alt="HTH Logo" style="max-height: 50px;">
+            <img src="hth-logo-resized.png" alt="HTH Logo" style="max-height: 50px;">
         </span>
 
         <span class="navbar-brand clickable my-1 squealer d-none d-lg-inline" (click)="navigate('home')">
@@ -49264,8 +49313,8 @@ var HeaderComponent = class _HeaderComponent {
                         </ul>
                     </li>
                     <li class="nav-item m-2 anton"><a class="nav-link btn"
-                            [class.active]="shared.activeLink==='contacts'" routerLink="/contacts"
-                            (click)="shared.triggerCloseButtonClick()">{{'Contacts' | translate}}</a></li>
+                            [class.active]="shared.activeLink==='booking'" routerLink="/booking"
+                            (click)="shared.triggerCloseButtonClick()">{{'Booking' | translate}}</a></li>
                     <li class="nav-item m-2 dropdown d-none d-lg-block">
                         <button class="nav-link btn w-100 text-center dropdown-toggle text-uppercase anton"
                             id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false" type="button">
@@ -49421,7 +49470,7 @@ var AppComponent = class _AppComponent {
         return ctx.onWindowScroll();
       }, false, \u0275\u0275resolveWindow);
     }
-  }, decls: 4, vars: 1, consts: [["id", "loader", 1, "loader", "apocalypse", "ultimate-distortion", 3, "fade-out"], ["id", "loader", 1, "loader", "apocalypse", "ultimate-distortion"], [1, "lightning-origin", "mega-shake"], ["src", "hth-logo-clean.png", "alt", "Logo", 1, "logo", "img-fluid"], ["viewBox", "0 0 100 2000", "preserveAspectRatio", "none", 1, "lightning", "bolt", "a"], ["d", "M50 0 L35 200 L70 420 L30 700 L80 1000 L40 1400 L60 1700 L50 2000"], ["viewBox", "0 0 100 2000", "preserveAspectRatio", "none", 1, "lightning", "bolt", "b"], ["d", "M50 0 L75 240 L25 500 L85 800 L20 1100 L70 1450 L35 1750 L50 2000"], ["viewBox", "0 0 100 2000", "preserveAspectRatio", "none", 1, "lightning", "bolt", "c"], ["d", "M50 0 L20 280 L80 550 L25 900 L90 1200 L30 1500 L75 1800 L50 2000"]], template: function AppComponent_Template(rf, ctx) {
+  }, decls: 4, vars: 1, consts: [["id", "loader", 1, "loader", "apocalypse", "ultimate-distortion", 3, "fade-out"], ["id", "loader", 1, "loader", "apocalypse", "ultimate-distortion"], [1, "lightning-origin", "mega-shake"], ["src", "hth-logo-resized.png", "alt", "Logo", 1, "logo", "img-fluid"], ["viewBox", "0 0 100 2000", "preserveAspectRatio", "none", 1, "lightning", "bolt", "a"], ["d", "M50 0 L35 200 L70 420 L30 700 L80 1000 L40 1400 L60 1700 L50 2000"], ["viewBox", "0 0 100 2000", "preserveAspectRatio", "none", 1, "lightning", "bolt", "b"], ["d", "M50 0 L75 240 L25 500 L85 800 L20 1100 L70 1450 L35 1750 L50 2000"], ["viewBox", "0 0 100 2000", "preserveAspectRatio", "none", 1, "lightning", "bolt", "c"], ["d", "M50 0 L20 280 L80 550 L25 900 L90 1200 L30 1500 L75 1800 L50 2000"]], template: function AppComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275template(0, AppComponent_Conditional_0_Template, 9, 2, "div", 0);
       \u0275\u0275element(1, "app-header")(2, "router-outlet")(3, "app-footer");
@@ -49442,7 +49491,7 @@ var AppComponent = class _AppComponent {
       RouterOutlet,
       HeaderComponent,
       FooterComponent
-    ], template: '<!-- loading screen -->\n@if(loading){\n<div id="loader" class="loader apocalypse ultimate-distortion" [class.fade-out]="fadingOut">\n\n    <div class="lightning-origin mega-shake">\n        <img src="hth-logo-clean.png" alt="Logo" class="logo img-fluid" />\n    </div>\n\n    <!-- Fulmini principali lunghissimi -->\n    <svg class="lightning bolt a" viewBox="0 0 100 2000" preserveAspectRatio="none">\n        <path d="M50 0 L35 200 L70 420 L30 700 L80 1000 L40 1400 L60 1700 L50 2000" />\n    </svg>\n\n    <svg class="lightning bolt b" viewBox="0 0 100 2000" preserveAspectRatio="none">\n        <path d="M50 0 L75 240 L25 500 L85 800 L20 1100 L70 1450 L35 1750 L50 2000" />\n    </svg>\n\n    <svg class="lightning bolt c" viewBox="0 0 100 2000" preserveAspectRatio="none">\n        <path d="M50 0 L20 280 L80 550 L25 900 L90 1200 L30 1500 L75 1800 L50 2000" />\n    </svg>\n\n</div>\n}\n<app-header></app-header>\n<router-outlet></router-outlet>\n<app-footer></app-footer>', styles: ['/* src/app/app.component.css */\n.loader {\n  position: fixed;\n  inset: 0;\n  background:\n    radial-gradient(\n      circle at center,\n      #01030a 0%,\n      #000 85%);\n  z-index: 9999;\n  overflow: hidden;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: opacity 1s ease;\n}\n.loader.fade-out {\n  opacity: 0;\n  pointer-events: none;\n}\n.apocalypse::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background: #bfe0ff;\n  opacity: 0;\n  animation: apocalypseFlash 1.6s infinite;\n  pointer-events: none;\n  mix-blend-mode: screen;\n}\n@keyframes apocalypseFlash {\n  0%, 82%, 100% {\n    opacity: 0;\n  }\n  83% {\n    opacity: 0.25;\n  }\n  85% {\n    opacity: 0;\n  }\n  88% {\n    opacity: 0.6;\n  }\n  90% {\n    opacity: 0;\n  }\n}\n.ultimate-distortion {\n  animation: distortion 0.25s infinite;\n}\n@keyframes distortion {\n  0% {\n    filter: none;\n  }\n  50% {\n    filter: contrast(120%) brightness(130%) saturate(120%);\n  }\n  100% {\n    filter: none;\n  }\n}\n.loader::before {\n  content: "";\n  position: absolute;\n  inset: 0;\n  box-shadow: inset 0 0 60px #ff0000, inset 0 0 100px rgba(255, 0, 0, 0.6);\n  opacity: 0;\n  animation: borderGlow 2s infinite;\n  pointer-events: none;\n}\n@keyframes borderGlow {\n  0%, 86%, 100% {\n    opacity: 0;\n  }\n  87% {\n    opacity: 1;\n  }\n  89% {\n    opacity: 0;\n  }\n}\n.lightning-origin {\n  position: relative;\n  z-index: 50;\n}\n.logo {\n  width: clamp(150px, 15vw, 330px);\n  filter: drop-shadow(0 0 10px #ff0000) drop-shadow(0 0 40px #ff2f2f);\n}\n.mega-shake {\n  animation: megaShakeSoft 0.25s infinite;\n}\n@keyframes megaShakeSoft {\n  0% {\n    transform: translate(0);\n  }\n  20% {\n    transform: translate(-1px, 1px);\n  }\n  40% {\n    transform: translate(1px, -1px);\n  }\n  60% {\n    transform: translate(-1.5px, -0.5px);\n  }\n  80% {\n    transform: translate(1px, 1px);\n  }\n  100% {\n    transform: translate(0);\n  }\n}\n.lightning {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 14px;\n  height: 200vh;\n  transform-origin: top;\n  opacity: 0;\n  stroke: #ff0000;\n  stroke-width: 4;\n  fill: none;\n  filter: drop-shadow(0 0 15px #ff0000) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 120px #8fb8ff);\n}\n.lightning::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      180deg,\n      transparent,\n      #4d8dff,\n      transparent);\n  width: 3px;\n  height: 60%;\n  left: 30%;\n  top: 20%;\n  transform: rotate(18deg);\n  opacity: 0.6;\n}\n.bolt.a {\n  animation: strikeA 0.9s infinite steps(1);\n}\n.bolt.b {\n  animation: strikeB 1.4s infinite steps(1);\n}\n.bolt.c {\n  animation: strikeC 2.1s infinite steps(1);\n}\n@keyframes strikeA {\n  0%, 68%, 100% {\n    opacity: 0;\n  }\n  69% {\n    opacity: 1;\n    transform: translate(-50%, -50%) rotate(22deg);\n  }\n  71% {\n    opacity: 0;\n  }\n}\n@keyframes strikeB {\n  0%, 75%, 100% {\n    opacity: 0;\n  }\n  76% {\n    opacity: 1;\n    transform: translate(-50%, -50%) rotate(-38deg);\n  }\n  79% {\n    opacity: 0;\n  }\n}\n@keyframes strikeC {\n  0%, 83%, 100% {\n    opacity: 0;\n  }\n  84% {\n    opacity: 1;\n    transform: translate(-50%, -50%) rotate(55deg);\n  }\n  87% {\n    opacity: 0;\n  }\n}\n@media (max-width: 768px) {\n  .logo {\n    width: clamp(90px, 22vw, 140px);\n  }\n  .ultimate-distortion {\n    animation: distortion 0.45s infinite;\n  }\n  .lightning {\n    width: 22px;\n    height: 240vh;\n    stroke-width: 6;\n    filter: drop-shadow(0 0 25px #ff0000) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 140px #9fc2ff);\n  }\n  .lightning::after {\n    width: 4px;\n    opacity: 0.9;\n  }\n  .bolt.a {\n    animation-duration: 0.8s;\n  }\n  .bolt.b {\n    animation-duration: 1.1s;\n  }\n  .bolt.c {\n    animation-duration: 1.6s;\n  }\n  .mega-shake {\n    animation: megaShakeSoft 0.35s infinite;\n  }\n  .apocalypse::after {\n    animation-duration: 1.2s;\n  }\n  .loader::before {\n    box-shadow: inset 0 0 50px #ff0000, inset 0 0 100px rgba(255, 55, 55, 0.8);\n  }\n}\n@media (max-width: 400px) {\n  .lightning {\n    width: 26px;\n    stroke-width: 7;\n  }\n  .logo {\n    width: 110px;\n  }\n}\n/*# sourceMappingURL=app.component.css.map */\n'] }]
+    ], template: '<!-- loading screen -->\n@if(loading){\n<div id="loader" class="loader apocalypse ultimate-distortion" [class.fade-out]="fadingOut">\n\n    <div class="lightning-origin mega-shake">\n        <img src="hth-logo-resized.png" alt="Logo" class="logo img-fluid" />\n    </div>\n\n    <!-- Fulmini principali lunghissimi -->\n    <svg class="lightning bolt a" viewBox="0 0 100 2000" preserveAspectRatio="none">\n        <path d="M50 0 L35 200 L70 420 L30 700 L80 1000 L40 1400 L60 1700 L50 2000" />\n    </svg>\n\n    <svg class="lightning bolt b" viewBox="0 0 100 2000" preserveAspectRatio="none">\n        <path d="M50 0 L75 240 L25 500 L85 800 L20 1100 L70 1450 L35 1750 L50 2000" />\n    </svg>\n\n    <svg class="lightning bolt c" viewBox="0 0 100 2000" preserveAspectRatio="none">\n        <path d="M50 0 L20 280 L80 550 L25 900 L90 1200 L30 1500 L75 1800 L50 2000" />\n    </svg>\n\n</div>\n}\n<app-header></app-header>\n<router-outlet></router-outlet>\n<app-footer></app-footer>', styles: ['/* src/app/app.component.css */\n.loader {\n  position: fixed;\n  inset: 0;\n  background:\n    radial-gradient(\n      circle at center,\n      #01030a 0%,\n      #000 85%);\n  z-index: 9999;\n  overflow: hidden;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: opacity 1s ease;\n}\n.loader.fade-out {\n  opacity: 0;\n  pointer-events: none;\n}\n.apocalypse::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background: #bfe0ff;\n  opacity: 0;\n  animation: apocalypseFlash 1.6s infinite;\n  pointer-events: none;\n  mix-blend-mode: screen;\n}\n@keyframes apocalypseFlash {\n  0%, 82%, 100% {\n    opacity: 0;\n  }\n  83% {\n    opacity: 0.25;\n  }\n  85% {\n    opacity: 0;\n  }\n  88% {\n    opacity: 0.6;\n  }\n  90% {\n    opacity: 0;\n  }\n}\n.ultimate-distortion {\n  animation: distortion 0.25s infinite;\n}\n@keyframes distortion {\n  0% {\n    filter: none;\n  }\n  50% {\n    filter: contrast(120%) brightness(130%) saturate(120%);\n  }\n  100% {\n    filter: none;\n  }\n}\n.loader::before {\n  content: "";\n  position: absolute;\n  inset: 0;\n  box-shadow: inset 0 0 60px #ff0000, inset 0 0 100px rgba(255, 0, 0, 0.6);\n  opacity: 0;\n  animation: borderGlow 2s infinite;\n  pointer-events: none;\n}\n@keyframes borderGlow {\n  0%, 86%, 100% {\n    opacity: 0;\n  }\n  87% {\n    opacity: 1;\n  }\n  89% {\n    opacity: 0;\n  }\n}\n.lightning-origin {\n  position: relative;\n  z-index: 50;\n}\n.logo {\n  width: clamp(150px, 15vw, 330px);\n  filter: drop-shadow(0 0 10px #ff0000) drop-shadow(0 0 40px #ff2f2f);\n}\n.mega-shake {\n  animation: megaShakeSoft 0.25s infinite;\n}\n@keyframes megaShakeSoft {\n  0% {\n    transform: translate(0);\n  }\n  20% {\n    transform: translate(-1px, 1px);\n  }\n  40% {\n    transform: translate(1px, -1px);\n  }\n  60% {\n    transform: translate(-1.5px, -0.5px);\n  }\n  80% {\n    transform: translate(1px, 1px);\n  }\n  100% {\n    transform: translate(0);\n  }\n}\n.lightning {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 14px;\n  height: 200vh;\n  transform-origin: top;\n  opacity: 0;\n  stroke: #ff0000;\n  stroke-width: 4;\n  fill: none;\n  filter: drop-shadow(0 0 15px #ff0000) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 120px #8fb8ff);\n}\n.lightning::after {\n  content: "";\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(\n      180deg,\n      transparent,\n      #4d8dff,\n      transparent);\n  width: 3px;\n  height: 60%;\n  left: 30%;\n  top: 20%;\n  transform: rotate(18deg);\n  opacity: 0.6;\n}\n.bolt.a {\n  animation: strikeA 0.9s infinite steps(1);\n}\n.bolt.b {\n  animation: strikeB 1.4s infinite steps(1);\n}\n.bolt.c {\n  animation: strikeC 2.1s infinite steps(1);\n}\n@keyframes strikeA {\n  0%, 68%, 100% {\n    opacity: 0;\n  }\n  69% {\n    opacity: 1;\n    transform: translate(-50%, -50%) rotate(22deg);\n  }\n  71% {\n    opacity: 0;\n  }\n}\n@keyframes strikeB {\n  0%, 75%, 100% {\n    opacity: 0;\n  }\n  76% {\n    opacity: 1;\n    transform: translate(-50%, -50%) rotate(-38deg);\n  }\n  79% {\n    opacity: 0;\n  }\n}\n@keyframes strikeC {\n  0%, 83%, 100% {\n    opacity: 0;\n  }\n  84% {\n    opacity: 1;\n    transform: translate(-50%, -50%) rotate(55deg);\n  }\n  87% {\n    opacity: 0;\n  }\n}\n@media (max-width: 768px) {\n  .logo {\n    width: clamp(90px, 22vw, 140px);\n  }\n  .ultimate-distortion {\n    animation: distortion 0.45s infinite;\n  }\n  .lightning {\n    width: 22px;\n    height: 240vh;\n    stroke-width: 6;\n    filter: drop-shadow(0 0 25px #ff0000) drop-shadow(0 0 40px #ff0000) drop-shadow(0 0 140px #9fc2ff);\n  }\n  .lightning::after {\n    width: 4px;\n    opacity: 0.9;\n  }\n  .bolt.a {\n    animation-duration: 0.8s;\n  }\n  .bolt.b {\n    animation-duration: 1.1s;\n  }\n  .bolt.c {\n    animation-duration: 1.6s;\n  }\n  .mega-shake {\n    animation: megaShakeSoft 0.35s infinite;\n  }\n  .apocalypse::after {\n    animation-duration: 1.2s;\n  }\n  .loader::before {\n    box-shadow: inset 0 0 50px #ff0000, inset 0 0 100px rgba(255, 55, 55, 0.8);\n  }\n}\n@media (max-width: 400px) {\n  .lightning {\n    width: 26px;\n    stroke-width: 7;\n  }\n  .logo {\n    width: 110px;\n  }\n}\n/*# sourceMappingURL=app.component.css.map */\n'] }]
   }], () => [{ type: Router }, { type: ViewportScroller }], { onWindowScroll: [{
     type: HostListener,
     args: ["window:scroll", []]
