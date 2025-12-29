@@ -69,5 +69,64 @@
   "More concerts": "More concerts",
   "Bring Highway to Hell to your stage!": "Bring Highway to Hell to your stage!",
   "Past concerts": "Past concerts",
-  "Back to home": "Back to home"
+  "Back to home": "Back to home",
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Privacy notice",
+    "intro": "In accordance with EU Regulation 2016/679 (GDPR), this Privacy Policy describes how this website of the tribute band Highway to Hell – AC/DC Tribute Band manages users’ personal data.",
+
+    "controller": {
+      "title": "Data Controller",
+      "text": "The data controller is:",
+      "name": "Highway to Hell – AC/DC Tribute Band",
+      "email_label": "Email:"
+    },
+
+    "data": {
+      "title": "Types of data processed",
+      "no_personal_data": "This website does not collect personally identifiable user data.",
+      "language_storage": "The only technical information used concerns the selected browsing language, which is stored locally in the user’s browser.",
+      "details_intro": "This information:",
+      "details": {
+        "1": "does not allow user identification;",
+        "2": "is not transmitted to external servers;",
+        "3": "is not used for profiling or marketing purposes."
+      }
+    },
+
+    "cookies": {
+      "title": "Cookies",
+      "1": "the website does not use third-party cookies;",
+      "2": "the website does not use profiling cookies;",
+      "3": "the website only uses technical local storage tools necessary for proper operation.",
+      "no_consent": "Therefore, no prior user consent is required."
+    },
+
+    "purpose": {
+      "title": "Purpose of processing",
+      "text": "The sole purpose of processing is to improve the user’s browsing experience by displaying the website in the selected language."
+    },
+
+    "legal_basis": {
+      "title": "Legal basis",
+      "text": "The legal basis for processing is the legitimate interest of the data controller pursuant to Article 6(1)(f) GDPR."
+    },
+
+    "retention": {
+      "title": "Data retention",
+      "text": "The selected language is stored exclusively on the user’s device and can be removed by clearing browser data."
+    },
+
+    "rights": {
+      "title": "User rights",
+      "text": "Since no identifiable personal data is processed, GDPR Articles 15–22 do not apply.",
+      "contact": "For any clarification, users may contact the data controller."
+    },
+
+    "changes": {
+      "title": "Changes to this Privacy Policy",
+      "text": "The data controller reserves the right to update this Privacy Policy at any time."
+    }
+  },
+  "Past": "Past"
 }

@@ -88,5 +88,64 @@
   "video_4_home": "Symphony of Thunder",
   "Bring Highway to Hell to your stage!": "Bring Highway to Hell auf deine Bühne!",
   "Past concerts": "Vergangene Konzerte",
-  "Back to home": "Zurück zur Startseite"
+  "Back to home": "Zurück zur Startseite",
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "subtitle": "Datenschutzhinweise",
+    "intro": "Gemäß der EU-Verordnung 2016/679 (DSGVO) beschreibt diese Datenschutzerklärung die Verarbeitung personenbezogener Daten auf der Website der Tribute-Band Highway to Hell – AC/DC Tribute Band.",
+
+    "controller": {
+      "title": "Verantwortlicher",
+      "text": "Verantwortlich für die Datenverarbeitung ist:",
+      "name": "Highway to Hell – AC/DC Tribute Band",
+      "email_label": "E-Mail:"
+    },
+
+    "data": {
+      "title": "Art der verarbeiteten Daten",
+      "no_personal_data": "Diese Website erhebt keine personenbezogenen Daten der Nutzer.",
+      "language_storage": "Die einzige verwendete technische Information betrifft die ausgewählte Sprache, die lokal im Browser des Nutzers gespeichert wird.",
+      "details_intro": "Diese Information:",
+      "details": {
+        "1": "ermöglicht keine Identifizierung des Nutzers;",
+        "2": "wird nicht an externe Server übertragen;",
+        "3": "wird nicht zu Profiling- oder Marketingzwecken verwendet."
+      }
+    },
+
+    "cookies": {
+      "title": "Cookies",
+      "1": "die Website verwendet keine Cookies von Drittanbietern;",
+      "2": "die Website verwendet keine Profiling-Cookies;",
+      "3": "die Website nutzt ausschließlich technische lokale Speicherfunktionen.",
+      "no_consent": "Daher ist keine vorherige Einwilligung des Nutzers erforderlich."
+    },
+
+    "purpose": {
+      "title": "Zweck der Verarbeitung",
+      "text": "Der einzige Zweck der Verarbeitung ist die Verbesserung der Nutzererfahrung durch Anzeige der gewählten Sprache."
+    },
+
+    "legal_basis": {
+      "title": "Rechtsgrundlage",
+      "text": "Rechtsgrundlage ist das berechtigte Interesse des Verantwortlichen gemäß Art. 6 Abs. 1 lit. f DSGVO."
+    },
+
+    "retention": {
+      "title": "Speicherdauer",
+      "text": "Die Sprachwahl wird ausschließlich auf dem Gerät des Nutzers gespeichert und kann durch Löschen der Browserdaten entfernt werden."
+    },
+
+    "rights": {
+      "title": "Rechte der Nutzer",
+      "text": "Da keine personenbezogenen Daten verarbeitet werden, finden die Artikel 15–22 DSGVO keine Anwendung.",
+      "contact": "Bei Fragen kann der Verantwortliche kontaktiert werden."
+    },
+
+    "changes": {
+      "title": "Änderungen dieser Datenschutzerklärung",
+      "text": "Der Verantwortliche behält sich das Recht vor, diese Datenschutzerklärung jederzeit zu ändern."
+    }
+  },
+  "Past": "Vergangen"
 }

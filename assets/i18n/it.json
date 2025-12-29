@@ -95,5 +95,64 @@
   "formats_4": "Symphony of Thunder",
   "Bring Highway to Hell to your stage!": "Porta gli Highway to Hell sul tuo palco!",
   "Past concerts": "Concerti passati",
-  "Back to home": "Torna alla home"
+  "Back to home": "Torna alla home",
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Informativa sulla privacy",
+    "intro": "Ai sensi del Regolamento UE 2016/679 (GDPR), la presente Privacy Policy descrive le modalità di gestione di questo sito web della tribute band Highway to Hell – AC/DC Tribute Band, in riferimento al trattamento dei dati personali degli utenti che lo consultano.",
+
+    "controller": {
+      "title": "Titolare del trattamento",
+      "text": "Il titolare del trattamento dei dati è:",
+      "name": "Highway to Hell – AC/DC Tribute Band",
+      "email_label": "Email:"
+    },
+
+    "data": {
+      "title": "Tipologia di dati trattati",
+      "no_personal_data": "Questo sito non raccoglie dati personali identificativi degli utenti.",
+      "language_storage": "L’unica informazione tecnica utilizzata riguarda la scelta della lingua di navigazione, che viene salvata localmente nel browser dell’utente.",
+      "details_intro": "Tale informazione:",
+      "details": {
+        "1": "non consente l’identificazione dell’utente;",
+        "2": "non viene trasmessa a server esterni;",
+        "3": "non viene utilizzata per finalità di profilazione o marketing."
+      }
+    },
+
+    "cookies": {
+      "title": "Cookie",
+      "1": "il sito non utilizza cookie di terze parti;",
+      "2": "il sito non utilizza cookie di profilazione;",
+      "3": "il sito utilizza esclusivamente strumenti tecnici di memorizzazione locale necessari al corretto funzionamento del sito.",
+      "no_consent": "Per questo motivo non è richiesto il consenso preventivo dell’utente."
+    },
+
+    "purpose": {
+      "title": "Finalità del trattamento",
+      "text": "L’unica finalità del trattamento è migliorare l’esperienza di navigazione dell’utente mostrando il sito nella lingua selezionata."
+    },
+
+    "legal_basis": {
+      "title": "Base giuridica del trattamento",
+      "text": "La base giuridica del trattamento è il legittimo interesse del titolare ai sensi dell’art. 6, par. 1, lett. f) del GDPR."
+    },
+
+    "retention": {
+      "title": "Conservazione dei dati",
+      "text": "La scelta della lingua viene conservata esclusivamente sul dispositivo dell’utente e può essere rimossa cancellando i dati di navigazione del browser."
+    },
+
+    "rights": {
+      "title": "Diritti dell’utente",
+      "text": "Poiché il sito non tratta dati personali identificativi, non vengono effettuati trattamenti soggetti ai diritti previsti dagli articoli 15–22 del GDPR.",
+      "contact": "Per qualsiasi chiarimento è possibile contattare il titolare del trattamento."
+    },
+
+    "changes": {
+      "title": "Modifiche alla Privacy Policy",
+      "text": "Il titolare si riserva il diritto di modificare la presente Privacy Policy in qualsiasi momento."
+    }
+  },
+  "Past": "Passati"
 }
