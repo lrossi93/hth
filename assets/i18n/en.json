@@ -1,7 +1,26 @@
 {
   "Your browser does not support this video.": "Your browser does not support this video.",
   "Next concert": "Next concert",
+  "Next concerts": "Next concerts",
+  "Past concerts": "Past concerts",
+  "Concerts": "Concerts",
+  "The band": "The band",
+  "Discover the band": "Discover the band",
+  "From Bon to Brian: a tribute to the history of AC/DC": "From Bon to Brian: a tribute to the history of AC/DC",
+  "Besides the classical show, Highway to Hell introduce you to a unique experience under the “From Bon to Brian” format, a journey across two legendary ages:": "Besides the classical show, Highway to Hell introduce you to a unique experience under the “From Bon to Brian” format, a journey across two legendary ages:",
+  "the best italian Bon Scott interpreter, with an impressive vocal and physical resemblance.": "the best italian Bon Scott interpreter, with an impressive vocal and physical resemblance.",
+  "on his bagpipes, to recreate the iconic sound of tracks such as “It’s a Long Way to the Top”.": "on his bagpipes, to recreate the iconic sound of tracks such as “It’s a Long Way to the Top”.",
+  "Symphony of Thunder: AC/DC Symphonic Version": "Symphony of Thunder: AC/DC Symphonic Version",
+  "Since 2024, Highway to Hell were the first to introduce the “Symphony of Thunder” show in Italy: an innovative fusion between AC/DC's pure rock and the power of a symphonic orchestra. An exciting journey through AC/DC's greatest hits, from “Back in Black” to “Thunderstruck”, reimagined for orchestra for an unprecedented sound impact!": "Since 2024, Highway to Hell were the first to introduce the “Symphony of Thunder” show in Italy: an innovative fusion between AC/DC's pure rock and the power of a symphonic orchestra. An exciting journey through AC/DC's greatest hits, from “Back in Black” to “Thunderstruck”, reimagined for orchestra for an unprecedented sound impact!",
+  "Highway to Hell surfed prestigious stages such as EICMA, where they have been their Motolive stage resident band, bringing their show to one of the world's largest motorsport events.": "Highway to Hell surfed prestigious stages such as EICMA, where they have been their Motolive stage resident band, bringing their show to one of the world's largest motorsport events.",
+  "If your're looking for an unforgettable AC/DC concert or a professional tribute band for festivals, events or motorcycle rallies, Highway to Hell are the perfect choice for a high voltage experience!": "If your're looking for an unforgettable AC/DC concert or a professional tribute band for festivals, events or motorcycle rallies, Highway to Hell are the perfect choice for a high voltage experience!",
+  "Get in touch!": "Get in touch!",
+  "A band for your stage, a band for your event!": "A band for your stage, a band for your event!",
+  "Highway to Hell isn't just a simple tribute band, but an authentic rock energy explosion! With an AC/DC faithful sound, obsessive attention to detail and an overwhelming stage presence, they will take the audience on an electrifying journey, just like at a real concert by the legendary Australian band.": "Highway to Hell isn't just a simple tribute band, but an authentic rock energy explosion! With an AC/DC faithful sound, obsessive attention to detail and an overwhelming stage presence, they will take the audience on an electrifying journey, just like at a real concert by the legendary Australian band.",
   "There are no planned upcoming events...": "There are no planned upcoming events...",
+
+  "Members": "Members",
+  "Collaborations": "Collaborations",
   "andrea_born_in_saronno": "Born in Saronno (Milan) on 21/01/1991. Since childhood he was introduced to music thanks to his maternal grandfather, who was the conductor of the local town band. At the age of 6 he began studying solfège and instrument with his father (also a musician). As a teenager he approached the world of drumming with various private teachers.",
   "andrea_graduation_2018": "In 2018 he graduated in jazz drums at the Conservatory of Piacenza, where he had the pleasure of studying with great masters such as Stefano Bagnoli, Riccardo Fioravanti, Umberto Petrin, Achille Succi, Riccardo Dapelo and many others.",
   "andrea_post_studies_training": "After completing his studies, he continued his training with maestro Giovanni Giorgi, with whom he further developed technique, styles, precision, feel, groove and more. He also attended seminars held by renowned drummers such as Federico Paulovich, Riccardo Lombardo, and Walter Calloni.",
@@ -52,6 +71,12 @@
   "lorenzo_festival": "Since 2022 he has been part of Celtic Knot Pipes and Drums, a Scottish bagpipe and percussion band founded in 2020, performing at major Celtic festivals in northern Italy (Celtica, Claddagh Fest, Insubria Festival, Bustofolk) and at internationally significant events such as the 'Six Nations' rugby trophy, playing for the Scottish national team at the Stadio Olimpico in Rome, guided by the Jedburgh Pipe Band.",
   "lorenzo_hth": "His collaboration with Highway to Hell began by chance in 2022 when the band, shortly before a live show in the Novara area, said 'it would be really great if, for this piece, there was a real bagpipe...'.",
 
+  "matteo_bio1": "After over 20 years of involvement in various musical projects, from blues to rock, from pop to metal, both as a singer and as a drummer, in 2011 Matteo founded his first tribute band: I Buon Scotch, a tribute group to AC/DC from the Bon Scott era.",
+
+  "matteo_bio2": "A few months later, in April 2012, Matteo was called with the band to perform as headliner at Bonfest, the festival dedicated to Bon Scott held in Kirriemuir, Scotland. He returned the following year, but in the meantime he was also invited to Germany at the International Fantreffen in Geiselwind. In that same year and in the following two years, he performed in various venues across Germany and at Wacken Open Air, again in German territory.",
+
+  "matteo_bio3": "In 2015, in Geiselwind, he met the Moscow-based Easy Dizzy, who hired him as a second singer for several concerts in Russia, Ukraine, Belarus and the Czech Republic, also accompanied by a 45-piece symphonic orchestra, in theatres and large venues.\n\nIn Ukraine he also collaborated with other local bands at the 'Ternopil or bust' festival and in Kyiv at the Doker Pub. With Easy Dizzy he also performed on the stage of the Kyiv Sports Palace, in front of 3000 people. During this period he also became part of the German band Stinger, with whom he returned to Bonfest in 2017. He also recorded 2 tracks on their first album 'Disadvantaged'.",
+  
   "francesco_desc": "Rhythm guitar, the engine of the groove, with a powerful sound in perfect Malcolm Young style.",
   "andrea_desc": "Drums, a war machine that evokes the power of Chris Slade.",
   "davide_desc": "Bass, the backbone that keeps the groove solid and driving, just like Cliff Williams.",
@@ -64,11 +89,10 @@
   "Check out our formats": "Check out our formats",
   "video_1_home": "Live recording",
   "video_2_home": "Big Show",
-  "video_3_home": "From Bon to Brian",
+  "video_3_home": "Mega Show: From Bon to Brian",
   "video_4_home": "Symphony of Thunder",
   "More concerts": "More concerts",
   "Bring Highway to Hell to your stage!": "Bring Highway to Hell to your stage!",
-  "Past concerts": "Past concerts",
   "Back to home": "Back to home",
   "privacy": {
     "title": "Privacy Policy",
@@ -128,5 +152,10 @@
       "text": "The data controller reserves the right to update this Privacy Policy at any time."
     }
   },
-  "Past": "Past"
+  "Past": "Past",
+
+  "standard_show": "The greatest AC/DC hits from both the Bon Scott and Brian Johnson eras. A lean lineup that fits any stage setting, delivering a breathtaking concert!",
+  "big_show": "Is the Standard Show not enough? The Big Show takes the musical experience to the next level with a stage set entirely handcrafted by the band!",
+  "mega_show": "Ready to raise the bar even higher? Here’s the evolution of the Big Show: two vocalists, for a performance split into two acts retracing the major hits from both the Scott and Johnson eras, plus the essential bagpipes to relive masterpieces like “It’s a Long Way to the Top”",
+  "symphony_of_thunder": "The final level: the endless energy of AC/DC’s rock powered by a full symphony orchestra. A unique and unforgettable experience."
 }

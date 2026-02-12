@@ -81,12 +81,17 @@
   "eros_desc": "Voce, un frontman che cattura la potenza di Brian Johnson con una grinta esplosiva.",
   "lorenzo_desc": "Il rombo della sua cornamusa incendierà il palco a ritmo di “It's a Long Way to the Top” e “Thunderstruck”.",
   "matteo_desc": "Conosciuto anche come “The Italian Bon Scott”, è uno dei due protagonisti dello show “From Bon to Brian”.",
+  "matteo_bio1": "Dopo oltre 20 anni di militanza in svariati progetti musicali, dal blues al rock, dal pop al metal, sia come cantante Che come batterista, nel 2011 Matteo fonda la sua prima tribute band : I Buon Scotch,gruppo tributo agli ac dc dell'era Bon Scott.",
+
+  "matteo_bio2": "Pochi mesi dopo, ad Aprile del 2012,Matteo e chiamato con la band ad esibirsi come headliner al Bonfest, festival dedicato a Bon Che si svolge a Kirriemuir, in Scozia. Ci torna l'anno successivo, ma nel frattempo viene chiamato anche in Germania all'international Fantreffen a Geiselwind. Nello stesso anno e nei 2 anni successivi si esibisce in vari locali della Germania e al wacken open air, sempre in terra teutonica.",
+
+  "matteo_bio3": "Nel  2015,a Geiselwind, incontra I moscoviti Easy Dizzy Che lo ingaggiano come secondo cantante per diversi concerti in Russia, Ucraina, Bielorussia e Repubblica Ceca, anche accompagnati da un'orchestra sinfonica di 45 elementi, in teatri e grandi locali.\n\nIn Ucraina collabora anche con altre band locali al festival \"Ternopil or bust\" e a Kiev al Doker pub. Con gli Easy Dizzy calca anche il palco del palasport di Kiev, davanti a 3000 persone. Durante questo periodo e tra a far parte anche della band tedesca Stinger, con la quale torna al Bonfest nel 2017. Incide anche 2 brani nel loro primo album \"Disadvantaged\".",
   "Formats": "Format",
   "Our formats": "I nostri format",
   "Check out our formats": "Scopri i nostri format",
   "video_1_home": "Registrazione dal vivo",
   "video_2_home": "Big Show",
-  "video_3_home": "From Bon to Brian",
+  "video_3_home": "Mega Show: From Bon to Brian",
   "video_4_home": "Symphony of Thunder",
   "More concerts": "Altri concerti",
   "formats_1": "Registrazioni dal vivo",
@@ -154,5 +159,9 @@
       "text": "Il titolare si riserva il diritto di modificare la presente Privacy Policy in qualsiasi momento."
     }
   },
-  "Past": "Passati"
+  "Past": "Passati",
+  "standard_show": "I migliori successi degli AC/DC dell'era di Bon Scott e dell'era di Brian Johnson. Una formazione snella che si adatta a tutti i tipi di palco, per garantire un concerto mozzafiato!",
+  "big_show": "Lo Standard Show non basta? Il Big Show porta al livello successivo l'esperienza musicale grazie alla scenografia, interamente realizzata a mano dalla band!",
+  "mega_show": "Alziamo ancora l'asticella? Ecco l'evoluzione del Big Show: due cantanti, per uno spettacolo suddiviso in due atti dove si ripercorrono i maggiori successi dell'era Scott e dell'era Johnson, e l'immancabile cornamusa per riscoprire capolavori come “It’s a Long Way to the Top”.",
+  "symphony_of_thunder": "Il livello finale: la carica infinita del rock degli AC/DC, sostenuta da un'intera orchestra sinfonica. Un'esperienza unica e indimenticabile."
 }

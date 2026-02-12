@@ -24,6 +24,7 @@
   "Bio": "Biografie",
   "Members": "Mitglieder",
   "Contacts": "Kontakte",
+  "Collaborations": "Kollaborationen",
   "Our projects": "Unsere Projekte",
   "Dare to bring Highway to Hell's energy to your stage? Get in touch!": "Trauen Sie sich, die Energie von Highway to Hell auf Ihre Bühne zu bringen? Kontaktieren Sie uns!",
   "andrea_born_in_saronno": "Geboren in Saronno am 21.01.1991. Schon als Kind kam er durch seinen mütterlichen Großvater, der der Leiter der Dorfkapelle war, zur Musik. Mit 6 Jahren beginnt er Gehörbildung und Instrumentalunterricht bei seinem Vater (ebenfalls Musiker). Schon als Teenager nähert er sich dem Schlagzeug mit verschiedenen privaten Lehrern.",
@@ -71,7 +72,12 @@
   "lorenzo_cornamusa_oggi": "Derzeit studiert er regelmäßig schottische Dudelsäcke unter der Anleitung von Wilson Brown, Dozent am National Piping Centre (NPC) in Glasgow, und Alberto Massi, und besitzt die PDQB-Zertifizierung Level 5.",
   "lorenzo_festival": "Seit 2022 ist er Teil von Celtic Knot Pipes and Drums, einer schottischen Dudelsack- und Percussion-Band, die 2020 gegründet wurde. Mit ihr trat er auf mehreren wichtigen keltischen Festivals Norditaliens auf (Celtica, Claddagh Fest, Insubria Festival, Bustofolk) und bei international bedeutenden Events wie dem Rugby-Sechs-Nationen-Turnier, wo er für die schottische Nationalmannschaft im Stadio Olimpico in Rom spielte, geleitet von der Jedburgh Pipe Band.",
   "lorenzo_hth": "Seine Zusammenarbeit mit Highway to Hell begann zufällig im Jahr 2022, als die Band kurz vor einem Live-Auftritt in der Provinz Novara sagte: 'Es wäre wirklich toll, wenn wir für dieses Stück einen echten Dudelsack hätten...'.",
+  "matteo_bio1": "Nach über 20 Jahren Tätigkeit in verschiedenen Musikprojekten – vom Blues bis zum Rock, vom Pop bis zum Metal – sowohl als Sänger als auch als Schlagzeuger gründete Matteo 2011 seine erste Tribute-Band: I Buon Scotch, eine Tribute-Gruppe an AC/DC aus der Bon-Scott-Ära.",
 
+  "matteo_bio2": "Wenige Monate später, im April 2012, wurde Matteo mit der Band eingeladen, als Headliner beim Bonfest aufzutreten, dem Bon-Scott-Festival in Kirriemuir, Schottland. Er kehrte im folgenden Jahr zurück, wurde aber inzwischen auch nach Deutschland zum International Fantreffen in Geiselwind eingeladen. Im selben Jahr und in den zwei darauffolgenden trat er in verschiedenen deutschen Lokalen sowie beim Wacken Open Air auf, ebenfalls auf deutschem Boden.",
+
+  "matteo_bio3": "Im Jahr 2015 traf er in Geiselwind die Moskauer Easy Dizzy, die ihn als zweiten Sänger für mehrere Konzerte in Russland, der Ukraine, Belarus und der Tschechischen Republik engagierten, begleitet von einem 45-köpfigen Sinfonieorchester, in Theatern und großen Veranstaltungsorten.\n\nIn der Ukraine arbeitete er außerdem mit anderen lokalen Bands beim Festival „Ternopil or bust“ sowie in Kiew im Doker Pub zusammen. Mit Easy Dizzy stand er auch auf der Bühne des Sportpalastes in Kiew vor 3000 Menschen. In dieser Zeit wurde er außerdem Mitglied der deutschen Band Stinger, mit der er 2017 zum Bonfest zurückkehrte. Er nahm zudem 2 Songs für ihr erstes Album „Disadvantaged“ auf.",
+  
   "francesco_desc": "Rhythmusgitarre, der Motor des Grooves, mit einem kraftvollen Sound im perfekten Stil von Malcolm Young.",
   "andrea_desc": "Schlagzeug, eine Kriegsmaschine, die an die Kraft von Chris Slade erinnert.",
   "davide_desc": "Bass, das Rückgrat, das den Groove solide und treibend hält, genau wie Cliff Williams.",
@@ -84,7 +90,7 @@
   "Check out our formats": "Entdecke unsere Formate",
   "video_1_home": "Live-Aufnahme",
   "video_2_home": "Big Show",
-  "video_3_home": "From Bon to Brian",
+  "video_3_home": "Mega Show: From Bon to Brian",
   "video_4_home": "Symphony of Thunder",
   "Bring Highway to Hell to your stage!": "Bring Highway to Hell auf deine Bühne!",
   "Past concerts": "Vergangene Konzerte",
@@ -147,5 +153,10 @@
       "text": "Der Verantwortliche behält sich das Recht vor, diese Datenschutzerklärung jederzeit zu ändern."
     }
   },
-  "Past": "Vergangen"
+  "Past": "Vergangen",
+   "standard_show": "Die größten AC/DC-Hits aus der Bon-Scott-Ära und der Brian-Johnson-Ära. Eine schlanke Besetzung, die auf jede Bühne passt und ein atemberaubendes Konzert garantiert!",
+  "big_show": "Ist die Standard Show nicht genug? Die Big Show hebt das Musikerlebnis mit einem vollständig von der Band handgefertigten Bühnenbild auf die nächste Stufe!",
+  "mega_show": "Noch eine Stufe höher? Hier ist die Weiterentwicklung der Big Show: zwei Sänger, für eine in zwei Akte geteilte Performance, die die größten Erfolge der Scott- und Johnson-Ära nachzeichnet, sowie der unverzichtbare Dudelsack, um Meisterwerke wie “It’s a Long Way to the Top”",
+  "symphony_of_thunder": "Die finale Stufe: die unendliche Energie des AC/DC-Rock, getragen von einem vollständigen Symphonieorchester. Ein einzigartiges und unvergessliches Erlebnis."
+
 }
